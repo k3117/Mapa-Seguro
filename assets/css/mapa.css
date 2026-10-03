@@ -145,3 +145,7 @@ body.painel-aberto .chat-fab { display: none; }
   .cm-tabela th:nth-child(4), .cm-tabela td:nth-child(4) { display: none; }
 }
 .hbar { grid-template-columns: minmax(110px, 1.3fr) 1.6fr auto; }
+
+.pop-resumo { font-size: 13px; line-height: 1.45; margin: 6px 0; padding: 8px; background: var(--surface-2); border-radius: 6px; }
+.pop-rep { font-size: 13px; margin-top: 6px; }
+.pop .acoes a { white-space: nowrap; }

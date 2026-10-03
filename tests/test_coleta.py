@@ -9,17 +9,19 @@ import coletar_ocorrencias as C
 POSTS = {
  "PCGO": [
   {"id": 1, "date": "2026-09-10T10:00:00", "modified": "2026-09-10T10:00:00", "link": "https://goias.gov.br/policiacivil/a/",
-   "title": {"rendered": "PCGO prende em flagrante homem por agressão contra companheira em Goiânia"},
-   "content": {"rendered": "<p>O fato ocorreu em 8 de setembro, no Setor Bueno, em Goiânia. O investigado, João da Silva, 40 anos, foi preso em flagrante.</p>"}},
+   "title": {"rendered": "PCGO prende em flagrante homem por tentativa de feminicídio contra companheira em Goiânia"},
+   "content": {"rendered": "<p>O fato ocorreu em 8 de setembro, no Setor Bueno, em Goiânia. O investigado, João da Silva, 40 anos, foi preso em flagrante. A vítima Maria Aparecida Souza foi socorrida.</p>"}},
   {"id": 2, "date": "2026-09-11T10:00:00", "modified": "2026-09-11T10:00:00", "link": "https://goias.gov.br/policiacivil/b/",
    "title": {"rendered": "PCGO prende investigado por estupro de vulnerável contra enteada em Goiânia"},
    "content": {"rendered": "<p>A criança de 9 anos morava no Jardim América, em Goiânia.</p>"}},
+  {"id": 4, "date": "2026-09-12T11:00:00", "modified": "2026-09-12T11:00:00", "link": "https://goias.gov.br/policiacivil/e/",
+   "title": {"rendered": "PCGO prende homem por ameaça contra ex-companheira em Goiânia"}, "content": {"rendered": "<p>Preso.</p>"}},
   {"id": 3, "date": "2026-09-12T10:00:00", "modified": "2026-09-12T10:00:00", "link": "https://goias.gov.br/policiacivil/c/",
    "title": {"rendered": "PCGO promove palestra sobre violência doméstica"}, "content": {"rendered": "<p>Evento.</p>"}},
  ],
  "SSP-GO": [
   {"id": 9, "date": "2026-09-11T12:00:00", "modified": "2026-09-11T12:00:00", "link": "https://goias.gov.br/seguranca/d/",
-   "title": {"rendered": "Polícia prende homem que agrediu companheira em Goiânia"}, "content": {"rendered": "<p>Preso em flagrante em Goiânia.</p>"}},
+   "title": {"rendered": "Polícia prende homem por tentativa de feminicídio contra companheira em Goiânia"}, "content": {"rendered": "<p>Preso em flagrante em Goiânia.</p>"}},
  ],
  "PMGO": [],
 }
@@ -39,6 +41,11 @@ class FakeSess:
                 return Resp(POSTS[s["sigla"]] if params.get("page") == 1 else [], {"X-WP-TotalPages": "1"})
         return Resp([], status=404)
 
+def b_ok(regs):
+    b = regs["pcgo-2"]
+    return b["resumo_oficial"] is None  # criança: sem resumo
+
+
 @pytest.fixture
 def ambiente(tmp_path, monkeypatch):
     d = tmp_path / "data"; d.mkdir()
@@ -54,15 +61,17 @@ def test_coleta(ambiente):
     assert C.main() == 0
     out = json.loads((ambiente / "ocorrencias.json").read_text())
     regs = {r["id"]: r for r in out["ocorrencias"]}
-    assert "pcgo-3" not in regs                          # evento institucional ignorado
+    assert "pcgo-3" not in regs and "pcgo-4" not in regs  # institucional e não grave                          # evento institucional ignorado
     a = regs["pcgo-1"]
-    assert a["categoria"] == "lesao_corporal" and a["bairro"] == "Setor Bueno" and a["precisao_local"] == "bairro"
+    assert a["categoria"] == "tentativa_feminicidio" and a["bairro"] == "Setor Bueno" and a["precisao_local"] == "bairro"
     assert a["data_fato"] == "2026-09-08"
+    assert a["resumo_oficial"] and "Setor Bueno" in a["resumo_oficial"]
+    assert b_ok(regs)
     assert "sspgo-9" not in regs and len(a["fontes"]) == 2  # mesma ocorrência em outra fonte oficial -> fundida
     b = regs["pcgo-2"]
     assert b["categoria"] == "violencia_sexual_crianca" and b["bairro"] is None and b["precisao_local"] == "municipio"
     bruto = json.dumps(out, ensure_ascii=False)
-    for proibido in ("João", "Silva", "40 anos", "Setor Bueno, em Goiânia. O investigado", "morava"):
+    for proibido in ("João", "Silva", "Maria Aparecida", "morava"):
         assert proibido not in bruto                     # nenhum texto/nome da nota é armazenado
     assert (ambiente.parent / "feed.xml").exists()
     # segunda execução idempotente (não duplica fontes)

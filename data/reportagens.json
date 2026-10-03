@@ -1,0 +1,16 @@
+{
+  "_comentario": "Curadoria: links de reportagens verificados pela administração, por id de caso. Só domínios de imprensa da lista em scripts/coletar_ocorrencias.py (DOMINIOS_IMPRENSA). 'destaque': true marca casos de grande repercussão. Não copie trechos de matérias nem nomes para cá.",
+  "exemplo": {
+    "pcgo-195226": {
+      "destaque": true,
+      "reportagens": [
+        {
+          "veiculo": "G1 Goiás",
+          "data": "2026-04-30",
+          "url": "https://g1.globo.com/go/goias/noticia/..."
+        }
+      ]
+    }
+  },
+  "casos": {}
+}

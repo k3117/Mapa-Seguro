@@ -42,8 +42,7 @@ const TOPICOS = [
 const CORES = ["vermelho", "roxo", "rosa", "laranja", "amarelo", "azul", "marrom", "verde", "branco"];
 const ROT = {
   feminicidio: "feminicídio", tentativa_feminicidio: "tentativa de feminicídio", violencia_sexual: "violência sexual",
-  violencia_domestica: "violência doméstica", lesao_corporal: "lesão corporal/agressão", ameaca: "ameaça", perseguicao: "perseguição",
-  violencia_sexual_crianca: "violência sexual contra criança/adolescente", outros_crianca: "outros crimes contra criança/adolescente",
+    violencia_sexual_crianca: "violência sexual contra criança/adolescente", outros_crianca: "homicídio, tortura ou maus-tratos contra criança/adolescente",
   descumprimento_mp: "descumprimento de medida protetiva",
 };
 
@@ -95,6 +94,10 @@ function periodoMapa(t, agora) {
   if (/(24|vinte e quatro) meses|dois anos|2 anos/.test(t)) return { periodo: "24m" };
   if (/ano atual|este ano|esse ano|neste ano/.test(t)) return { periodo: "ano" };
   if (/ano passado/.test(t)) return { inicio: `${y - 1}-01-01`, fim: `${y - 1}-12-31` };
+  const desde = t.match(/(?:desde|a partir de) (20\d{2})/);
+  if (desde) return { inicio: `${desde[1]}-01-01`, fim: agora.toISOString().slice(0, 10) };
+  const entre = t.match(/(?:de|entre) (20\d{2}) (?:a|e|ate) (20\d{2})/);
+  if (entre) return { inicio: `${entre[1]}-01-01`, fim: `${entre[2]}-12-31` };
   const anos = [...t.matchAll(/\b(20\d{2})\b/g)].map((m) => Number(m[1]));
   const mesIdx = MESES_N.findIndex((m) => new RegExp(`\\b${m}\\b`).test(t));
   if (mesIdx >= 0 && anos.length === 1) {
@@ -103,7 +106,8 @@ function periodoMapa(t, agora) {
     return { inicio: `${anos[0]}-${mm}-01`, fim: `${anos[0]}-${mm}-${ult}` };
   }
   if (anos.length === 1) return { inicio: `${anos[0]}-01-01`, fim: `${anos[0]}-12-31` };
-  if (/desde|todos|total geral|historic/.test(t)) return { periodo: "24m" };
+  if (/(5|cinco) anos/.test(t)) return { periodo: "5a" };
+  if (/desde|todos|total geral|historic/.test(t)) return { periodo: "tudo" };
   return null;
 }
 
@@ -133,6 +137,8 @@ function textoCaso(c) {
     `- Situação jurídica: ${c.situacao}${c.medidas.length ? ` (${c.medidas.join(", ")})` : ""}`,
     `- Situação da fonte: ${c.fonte_status}`,
     `- Localização: ${c.precisao}`,
+    c.resumo_oficial ? `- Trecho da nota oficial: "${c.resumo_oficial}"` : "",
+    c.reportagens.length ? `- Reportagens verificadas: ${c.reportagens.length} (links abaixo da página do caso)` : "",
     c.possivel_duplicidade.length ? `- Possível duplicidade com: ${c.possivel_duplicidade.map((x) => "#" + x.toUpperCase()).join(", ")} (em revisão)` : "",
     "",
     `Interpretação: é um registro policial; a pessoa apontada deve ser chamada de "${c.termo_pessoa}", não de criminosa.`,
@@ -162,6 +168,11 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
   // 2. saudação
   if (/^(oi|ola|bom dia|boa tarde|boa noite|ajuda|help|o que (voce|vc) (faz|pode)|como (te )?usar)\b/.test(t.trim())) {
     return fim("Olá! Posso consultar os registros do mapa (notas oficiais da Polícia Civil, SSP-GO e PM de Goiás) e as estatísticas oficiais da SSP-GO, explicar a legenda, as fontes, a metodologia e os canais de ajuda.\n\nExemplos: \"Quantos casos de violência doméstica em Goiânia nos últimos 12 meses?\", \"Quais municípios têm mais registros de feminicídio?\", \"Quantos feminicídios houve em Goiás em 2025?\", \"O que significa o marcador marrom?\".");
+  }
+
+  // 2b. categorias fora do escopo (só crimes graves)
+  if (/\b(ameac|lesao corporal|agress|perseguic|stalking|violencia domestica|medidas? protetiv|descumprimento)/.test(t) && !/feminic|estupr|sexual|crianc/.test(t)) {
+    return fim("O MAPA SEGURO reúne apenas crimes graves: feminicídio, tentativa de feminicídio, violência sexual, violência sexual contra criança/adolescente e homicídio, tortura ou maus-tratos contra criança/adolescente. Ameaça, lesão corporal, perseguição, violência doméstica sem esses crimes e descumprimento de medida protetiva não estão na base.\n\nSe você precisa de ajuda, ligue 180 (Central de Atendimento à Mulher) ou 190 em emergência.");
   }
 
   // 3. caso aberto na página / id citado
@@ -200,7 +211,7 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
 
   // 7. ranking de municípios
   if (/(quais|que) (municipios|cidades|regioes|lugares|bairros)|(municipio|cidade|regiao|bairro)s? com mais|onde (ha|tem|ocorre)m? mais|mais (casos|registros|ocorrencias)/.test(t)) {
-    const per = periodoMapa(t, agora) || { periodo: "12m" };
+    const per = periodoMapa(t, agora) || { periodo: "tudo" };
     const r = usar("municipios_com_mais_registros", { categorias: cats, ...per });
     if (!r.total) return fim(`${NAO_ENCONTRADO}\n\nNão há registros no mapa para esses filtros (${r.periodo}).`);
     return fim(`Informação encontrada: municípios com mais registros no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""} — ${r.periodo}:\n${r.municipios.slice(0, 10).map((m) => `- ${m.chave}: ${m.total}`).join("\n")}\n\nInterpretação: é a contagem de notas oficiais divulgadas, não uma taxa de criminalidade; municípios maiores e com delegacias especializadas tendem a divulgar mais.\nLimitação: as notas não cobrem todas as ocorrências e não indicam que um lugar é mais ou menos seguro.${/bairro/.test(t) ? " Não há ranking por bairro: a maioria das notas não informa bairro." : ""}`, fontesDoResultado(r));
@@ -236,7 +247,7 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
   // 9. registros do mapa (contagem / lista)
   const pedeNumero = /quant|numero|total|estatistic|registr|casos|ocorrencias|houve|teve|aconteceram|existem|ha casos|lista|liste|mostre|quais casos|ultimos casos|recentes/.test(t);
   if (cats.length || municipio || bairro || pedeNumero) {
-    const per = periodoMapa(t, agora) || (contexto.filtros?.periodo && typeof contexto.filtros.periodo === "string" ? { periodo: contexto.filtros.periodo } : { periodo: "12m" });
+    const per = periodoMapa(t, agora) || (contexto.filtros?.periodo && typeof contexto.filtros.periodo === "string" ? { periodo: contexto.filtros.periodo } : { periodo: "tudo" });
     const filtro = { categorias: cats, municipio: municipio || undefined, bairro: bairro || undefined, ...per };
     if (/lista|liste|mostre|quais (foram|sao) os casos|quais casos|ultimos casos|recentes/.test(t)) {
       const r = usar("buscar_ocorrencias", filtro);

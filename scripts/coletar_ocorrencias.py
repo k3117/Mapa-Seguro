@@ -28,8 +28,8 @@ from xml.sax.saxutils import escape
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from classificador import (ROTULOS, Localizador, bairro, classificar, data_do_fato,  # noqa: E402
-                           html_para_texto, situacao)
+from classificador import (CLASSIFICADOR_VERSAO, ROTULOS, Localizador, bairro, classificar,  # noqa: E402
+                           data_do_fato, html_para_texto, resumo_oficial, situacao)
 
 RAIZ = Path(__file__).resolve().parent.parent
 D = RAIZ / "data"
@@ -40,15 +40,19 @@ SITES = [
     {"sigla": "SSP-GO", "orgao": "Secretaria de Estado da Segurança Pública de Goiás", "base": "https://goias.gov.br/seguranca"},
     {"sigla": "PMGO", "orgao": "Polícia Militar do Estado de Goiás", "base": "https://goias.gov.br/policiamilitar"},
 ]
+# Somente crimes graves (decisão editorial): ameaça, lesão corporal, perseguição,
+# violência doméstica genérica e descumprimento de medida protetiva não entram no mapa.
+GRAVES = {"feminicidio", "tentativa_feminicidio", "violencia_sexual", "violencia_sexual_crianca", "outros_crianca"}
+DESDE = "2015-01-01"  # início do histórico
+
 TERMOS = [
-    "feminicídio", "tentativa de feminicídio", "estupro", "estupro de vulnerável", "violência doméstica",
-    "Maria da Penha", "medida protetiva", "medidas protetivas", "importunação sexual", "assédio sexual",
-    "perseguição", "ameaça companheira", "agressão mulher", "lesão corporal mulher", "violência contra a mulher",
-    "abuso sexual", "abuso sexual infantil", "exploração sexual", "criança", "adolescente", "maus-tratos",
-    "abandono de incapaz", "Deam", "DPCA",
+    "feminicídio", "tentativa de feminicídio", "matou companheira", "matou esposa", "matou a ex",
+    "estupro", "estupro de vulnerável", "abuso sexual", "abuso sexual infantil", "exploração sexual",
+    "pornografia infantil", "importunação sexual", "violência sexual", "criança", "adolescente",
+    "maus-tratos", "tortura criança", "homicídio criança", "Deam", "DPCA",
 ]
 POR_PAGINA = 100
-MAX_PAGINAS = 5
+MAX_PAGINAS = 30
 
 
 def agora_iso() -> str:
@@ -128,7 +132,7 @@ def montar_registro(site, post, loc: Localizador, sess, geocache, log, extracao=
     titulo = html_para_texto(post.get("title", {}).get("rendered", "") if isinstance(post.get("title"), dict) else post.get("title", ""))
     texto = html_para_texto(post.get("content", {}).get("rendered", "")) if isinstance(post.get("content"), dict) else ""
     cls = classificar(titulo, texto)
-    if not cls:
+    if not cls or cls["categoria"] not in GRAVES:
         return None
     mun = loc.municipio(titulo, texto)
     if not mun:
@@ -152,6 +156,8 @@ def montar_registro(site, post, loc: Localizador, sess, geocache, log, extracao=
         "medidas": sit["medidas"],
         "fonte_status": "oficial_confirmada",
         "fontes": [{"orgao": site["orgao"], "sigla": site["sigla"], "url": post["link"], "data_publicacao": data_pub, "tipo": "nota_oficial"}],
+        "resumo_oficial": None,
+        "classificador": CLASSIFICADOR_VERSAO,
         "extracao": extracao,
         "coletado_em": dt.date.today().isoformat(),
         "modificado_fonte": (post.get("modified") or "")[:19] or None,
@@ -164,6 +170,9 @@ def montar_registro(site, post, loc: Localizador, sess, geocache, log, extracao=
             reg["bairro"] = b
             if g:
                 reg.update({"lat": g["lat"], "lon": g["lon"], "precisao_local": "bairro"})
+    # Resumo da própria nota oficial, sem nomes nem endereços; nunca em casos com criança/adolescente
+    if not cls["envolve_crianca"] and texto:
+        reg["resumo_oficial"] = resumo_oficial(texto, mun["nome"], reg["bairro"])
     return reg
 
 
@@ -192,6 +201,24 @@ def marcar_duplicidades(regs: list[dict]) -> None:
             else:
                 a["possivel_duplicidade"].append(b["id"]); b["possivel_duplicidade"].append(a["id"])
     regs[:] = [r for r in regs if r["id"] not in removidos]
+
+
+DOMINIOS_IMPRENSA = ("g1.globo.com", "opopular.com.br", "maisgoias.com.br", "jornalopcao.com.br", "dm.com.br",
+                     "diariodegoias.com.br", "sagresonline.com.br", "tvanhanguera", "metropoles.com", "uol.com.br",
+                     "folha.uol.com.br", "estadao.com.br", "cnnbrasil.com.br", "agenciabrasil.ebc.com.br", "r7.com", "band.uol.com.br")
+
+
+def aplicar_reportagens(regs: list[dict]) -> None:
+    """data/reportagens.json: links de reportagens verificados pela administração (curadoria)."""
+    cur = ler("reportagens.json", {"casos": {}}).get("casos", {})
+    for r in regs:
+        links = []
+        for x in cur.get(r["id"], {}).get("reportagens", []):
+            url = str(x.get("url", ""))
+            if url.startswith("https://") and any(d in url for d in DOMINIOS_IMPRENSA):
+                links.append({"veiculo": str(x.get("veiculo", ""))[:60], "data": str(x.get("data", ""))[:10], "url": url})
+        r["reportagens"] = links[:6]
+        r["destaque"] = bool(cur.get(r["id"], {}).get("destaque"))
 
 
 def aplicar_moderacao(regs: list[dict]) -> list[dict]:
@@ -234,7 +261,7 @@ def gerar_feed(regs: list[dict], site_url: str) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dias", type=int, default=730)
+    ap.add_argument("--dias", type=int, default=None, help="padrão: histórico desde 2015")
     args = ap.parse_args()
     site_url = os.environ.get("SITE_URL", "https://k3117.github.io/Mapa-Seguro/")
 
@@ -247,7 +274,7 @@ def main() -> int:
     log: list = []
     sess = requests.Session()
     sess.headers["User-Agent"] = UA
-    apos = (dt.date.today() - dt.timedelta(days=args.dias)).isoformat() + "T00:00:00"
+    apos = (DESDE if args.dias is None else (dt.date.today() - dt.timedelta(days=args.dias)).isoformat()) + "T00:00:00"
 
     vistos = 0
     sucesso_rede = False
@@ -262,23 +289,25 @@ def main() -> int:
             vistos += 1
             rid = f"{site['sigla'].lower().replace('-', '')}-{p['id']}"
             ant = por_id.get(rid)
-            if ant and ant.get("extracao") == "conteudo" and ant.get("modificado_fonte") == (p.get("modified") or "")[:19]:
+            if (ant and ant.get("extracao") == "conteudo" and ant.get("classificador") == CLASSIFICADOR_VERSAO
+                    and ant.get("modificado_fonte") == (p.get("modified") or "")[:19]):
                 continue
             reg = montar_registro(site, p, loc, sess, geocache, log)
             if reg:
                 por_id[rid] = reg
-            elif ant and ant.get("extracao") == "titulo":
-                por_id.pop(rid)  # registro provisório que o conteúdo completo não confirmou
+            elif ant:
+                por_id.pop(rid)  # não é (mais) crime grave pelas regras atuais
 
-    brutos = [r for r in por_id.values() if r["data_publicacao"] >= apos[:10]]
+    brutos = [r for r in por_id.values() if r["data_publicacao"] >= apos[:10] and r["categoria"] in GRAVES]
     gravar("coleta_bruta.json", {"gerado_em": agora_iso(), "registros": sorted(brutos, key=lambda r: r["id"])})
     regs = json.loads(json.dumps(brutos))  # cópia: fusões não alteram a base bruta
     marcar_duplicidades(regs)
     regs = aplicar_moderacao(regs)
+    aplicar_reportagens(regs)
     gravar("ocorrencias.json", {
         "_comentario": "Gerado por scripts/coletar_ocorrencias.py a partir de notas oficiais. Nenhum texto, nome ou endereço é armazenado.",
         "gerado_em": agora_iso(),
-        "janela_dias": args.dias,
+        "desde": apos[:10],
         "fontes_consultadas": [{"sigla": s["sigla"], "orgao": s["orgao"], "api": f"{s['base']}/wp-json/wp/v2/posts"} for s in SITES],
         "total": len(regs),
         "ocorrencias": sorted(regs, key=lambda r: r["data_publicacao"], reverse=True),

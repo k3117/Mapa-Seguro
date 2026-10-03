@@ -10,8 +10,8 @@ const INDICADORES = ["feminicidio", "estupro"];
 const TOPICOS = ["finalidade", "fontes", "classificacao", "localizacao", "atualizacao", "correcoes",
   "privacidade", "investigacao_condenacao", "limitacoes", "mapa", "ia"];
 const CORES = ["vermelho", "roxo", "rosa", "laranja", "amarelo", "azul", "marrom", "verde", "branco"];
-const CATEGORIAS = ["feminicidio", "tentativa_feminicidio", "violencia_sexual", "violencia_domestica", "lesao_corporal", "ameaca", "perseguicao", "violencia_sexual_crianca", "outros_crianca", "descumprimento_mp"];
-const PERIODOS_OC = ["7d", "30d", "90d", "6m", "12m", "24m", "ano"];
+const CATEGORIAS = ["feminicidio", "tentativa_feminicidio", "violencia_sexual", "violencia_sexual_crianca", "outros_crianca"];
+const PERIODOS_OC = ["7d", "30d", "90d", "6m", "12m", "24m", "5a", "ano", "tudo"];
 
 const filtroOcSchema = {
   type: "object",
@@ -20,7 +20,7 @@ const filtroOcSchema = {
     municipio: { type: "string", description: "Nome do município de Goiás (ex.: Goiânia)" },
     bairro: { type: "string", description: "Nome do bairro/setor" },
     publico: { type: "string", enum: ["todos", "mulheres", "criancas_adolescentes", "nao_informado"] },
-    periodo: { type: "string", enum: PERIODOS_OC, description: "Padrão 12m" },
+    periodo: { type: "string", enum: PERIODOS_OC, description: "Padrão tudo (desde 2015)" },
     inicio: { type: "string", description: "AAAA-MM-DD (período personalizado)" },
     fim: { type: "string", description: "AAAA-MM-DD (período personalizado)" },
   },
@@ -146,7 +146,7 @@ function validarFiltroOc(a = {}) {
   if (typeof a.bairro === "string" && a.bairro.trim()) f.bairro = a.bairro.trim().slice(0, 60);
   if (["mulheres", "criancas_adolescentes", "nao_informado"].includes(a.publico)) f.publico = a.publico;
   if (/^\d{4}-\d{2}-\d{2}$/.test(a.inicio || "") && /^\d{4}-\d{2}-\d{2}$/.test(a.fim || "")) f.periodo = { inicio: a.inicio, fim: a.fim };
-  else f.periodo = PERIODOS_OC.includes(a.periodo) ? a.periodo : "12m";
+  else f.periodo = PERIODOS_OC.includes(a.periodo) ? a.periodo : "tudo";
   return f;
 }
 
@@ -181,7 +181,8 @@ export function executarFerramenta(base, nome, args = {}) {
       case "obter_caso": {
         const r = O.obterCaso(base, String(args.caso_id || "").toLowerCase().trim());
         if (!r) return { ok: false, erro: "caso_nao_encontrado" };
-        return { ok: true, caso: O.resumoPublico(base, r), fontes: O.resumoPublico(base, r).fontes,
+        const pub = O.resumoPublico(base, r);
+        return { ok: true, caso: pub, fontes: [...pub.fontes, ...pub.reportagens.map((x) => ({ titulo: `Reportagem — ${x.veiculo} (${x.data.split("-").reverse().join("/")})`, url: x.url, orgao: x.veiculo }))],
           observacao: "A plataforma não armazena nomes, idades, endereços nem texto da nota. Para detalhes, a pessoa deve abrir a fonte oficial." };
       }
       case "listar_indicadores":

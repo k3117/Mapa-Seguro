@@ -9,7 +9,7 @@ export function definirContextoChat(ctx) { contextoPagina = { ...ctx }; }
 
 const SUGESTOES = [
   "Qual é a finalidade do site?",
-  "Quantos casos de violência doméstica nos últimos 12 meses?",
+  "Quantos feminicídios em Goiânia desde 2015?",
   "Quais municípios têm mais registros?",
   "Total oficial de feminicídios em Goiás em 2025",
   "O que significa o marcador marrom?",

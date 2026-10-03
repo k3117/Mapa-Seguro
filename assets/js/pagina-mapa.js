@@ -19,7 +19,7 @@ const dataBR = (d) => (d ? d.split("-").reverse().join("/") : "não informada");
 const estado = {
   categorias: new Set(CATS.map((c) => c.id)),
   publico: "todos",
-  periodo: "12m",
+  periodo: "tudo",
   municipio: "",
   limites: null,
 };
@@ -77,10 +77,12 @@ function popupHTML(r) {
       <dt>Publicado</dt><dd>${dataBR(r.data_publicacao)}</dd>
       ${r.data_fato ? `<dt>Data do fato</dt><dd>${dataBR(r.data_fato)}</dd>` : ""}
       <dt>Situação</dt><dd>${esc(STATUS[r.status_juridico] || "Não informado")}${r.medidas?.length ? ` · ${esc(r.medidas.join(", "))}` : ""}</dd>
-      <dt>Fonte</dt><dd>${r.fontes.map((f) => `<a href="${esc(urlSegura(f.url))}" target="_blank" rel="noopener">${esc(f.sigla)}</a>`).join(", ")} <span class="selo oficial" style="font-size:10px">oficial</span></dd>
+      <dt>Fonte</dt><dd>${r.fontes.map((f) => `<a href="${esc(urlSegura(f.url))}" target="_blank" rel="noopener">Nota oficial ${esc(f.sigla)} ↗</a>`).join(", ")}</dd>
     </dl>
+    ${r.resumo_oficial ? `<p class="pop-resumo">${esc(r.resumo_oficial)}</p>` : ""}
     <div class="rotulo-peq">${esc(O.notaPrecisao(r))}</div>
-    <div class="acoes"><a href="caso.html?id=${encodeURIComponent(r.id)}">Ver detalhes do caso</a>${issue ? `<a href="${esc(issue)}" target="_blank" rel="noopener">⚠ Informar correção</a>` : ""}</div>
+    ${(r.reportagens || []).length ? `<div class="pop-rep"><strong>Reportagens:</strong> ${r.reportagens.map((x) => `<a href="${esc(urlSegura(x.url))}" target="_blank" rel="noopener">${esc(x.veiculo || "matéria")}</a>`).join(" · ")}</div>` : ""}
+    <div class="acoes"><a href="caso.html?id=${encodeURIComponent(r.id)}">Ver detalhes do caso</a><a href="${esc(O.linkBuscaImprensa(base, r))}" target="_blank" rel="noopener">Buscar na imprensa ↗</a>${issue ? `<a href="${esc(issue)}" target="_blank" rel="noopener">⚠ Informar correção</a>` : ""}</div>
   </div>`;
 }
 
@@ -197,6 +199,13 @@ function alternarArea() {
   render();
 }
 $("btn-area-mapa").addEventListener("click", alternarArea);
+// com o filtro de área ativo, ele acompanha o mapa ao arrastar/aproximar
+mapa.on("moveend", () => {
+  if (!estado.limites) return;
+  const b = mapa.getBounds();
+  estado.limites = { sul: b.getSouth(), norte: b.getNorth(), oeste: b.getWest(), leste: b.getEast() };
+  render();
+});
 $("btn-area").addEventListener("click", alternarArea);
 
 /* ------------------------------------------------------------------ painéis (trilho) */
@@ -286,6 +295,7 @@ $("form-busca").addEventListener("submit", (e) => {
     avisar("A busca aceita apenas município ou bairro. Endereços, pessoas e localização de tornozeleiras não são pesquisáveis.");
     return;
   }
+  if (estado.limites) alternarArea(); // nova busca começa sem filtro de área
   const nq = O.norm(q.split(",")[0]);
   const b = bairros.find((x) => O.norm(x.bairro) === nq || O.norm(`${x.bairro}, ${x.municipio}`) === O.norm(q));
   if (b) { mapa.flyTo([b.lat, b.lon], 14); return; }

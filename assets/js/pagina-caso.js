@@ -30,6 +30,11 @@ if (!r) {
     </div>
     <h2>Resumo</h2>
     <p>Registro de <strong>${esc(c.rotulo.toLowerCase())}</strong> em ${esc(O.rotuloLocal(r))}, divulgado em nota oficial ${r.fontes.map((f) => `da ${esc(f.sigla)}`).join(" e ")} em ${dataBR(r.data_publicacao)}. Segundo a fonte, a situação é: ${esc(p.situacao.toLowerCase())}${r.medidas?.length ? ` (${esc(r.medidas.join(", "))})` : ""}. A pessoa apontada deve ser referida como <strong>${esc(p.termo_pessoa)}</strong>.</p>
+    ${r.resumo_oficial ? `<h2>O que diz a nota oficial</h2><blockquote class="destaque" style="margin:0">${esc(r.resumo_oficial)}</blockquote><p class="rotulo-peq">Trecho da nota ${esc(r.fontes[0].sigla)}, sem nomes nem endereços. <a href="${esc(urlSegura(r.fontes[0].url))}" target="_blank" rel="noopener">Ler a nota completa ↗</a></p>` : (r.publico === "criancas_adolescentes" ? `<p class="rotulo-peq">Para proteger a criança/adolescente, o MAPA SEGURO não reproduz detalhes deste caso.</p>` : "")}
+    <h2>Reportagens</h2>
+    ${(r.reportagens || []).length ? `<ul class="fontes-lista">${r.reportagens.map((x) => `<li><a href="${esc(urlSegura(x.url))}" target="_blank" rel="noopener">${esc(x.veiculo || "Reportagem")}${x.data ? ` — ${dataBR(x.data)}` : ""} ↗</a> <span class="selo">jornalismo</span></li>`).join("")}</ul>` : `<p class="rotulo-peq">Nenhuma reportagem verificada cadastrada ainda.</p>`}
+    <p><a class="btn" style="display:inline-block;text-decoration:none" href="${esc(O.linkBuscaImprensa(base, r))}" target="_blank" rel="noopener">🔎 Buscar cobertura na imprensa ↗</a></p>
+    <p class="rotulo-peq">A busca abre em outro site. Reportagens podem citar nomes; aqui eles não são reproduzidos. Investigação não é condenação.</p>
     <div class="aviso">Um registro policial não equivale a acusação formal, processo ou condenação. O MAPA SEGURO não publica nomes, idades, endereços nem outros dados que identifiquem vítimas ou investigados. Para os detalhes, consulte a nota oficial.</div>
     <h2>Informações judiciais</h2>
     <p>${r.status_juridico === "condenacao" ? "A fonte informa condenação." : "Não há, nas fontes cadastradas, informação pública sobre denúncia, processo ou condenação neste caso."}</p>

@@ -39,7 +39,7 @@ REGRAS = [
     ("feminicidio",              [r"(?<!tentativa de )feminicidio", r"\bmatou (a |sua )?(propria )?(companheira|esposa|mulher|ex-companheira|namorada|ex-namorada|ex-mulher)"], None),
     ("tentativa_feminicidio",    [r"tentativa de feminicidio", r"tentou matar (a |sua )?(propria )?(companheira|esposa|mulher|ex|namorada)", r"atirou contra (a |sua )?(propria )?(companheira|esposa|mulher|namorada|ex)"], None),
     ("violencia_sexual_crianca", [r"estupro de vulneravel", r"estupro de crianca", r"abuso sexual infantil", r"conteudo sexual infantil", r"material de abuso sexual", r"pornografia infantil", r"exploracao sexual", r"(estupr\w*|abus\w* sexual\w*|crimes? sexua\w*|cunho sexual|fotos intimas)"], "crianca"),
-    ("outros_crianca",           [r"maus-?tratos", r"abandono de incapaz", r"tortura", r"homicidio", r"lesao corporal", r"agress\w+", r"espanc\w+"], "crianca"),
+    ("outros_crianca",           [r"maus-?tratos", r"tortura", r"homicidio", r"\bmatou\b", r"\bmorte\b", r"espancamento"], "crianca"),
     ("violencia_sexual",         [r"estupr\w*", r"importunacao sexual", r"assedio sexual", r"violencia sexual", r"crimes? sexua\w*", r"imagens intimas", r"fotos intimas", r"registro nao autorizado da intimidade"], None),
     ("descumprimento_mp",        [r"descumpri\w* (de |as |a )?medidas? protetivas?", r"descumprimento de medidas? protetivas?"], None),
     ("perseguicao",              [r"perseguicao", r"perseguir", r"stalking"], "mulher"),
@@ -52,7 +52,7 @@ ROTULOS = {
     "feminicidio": "Feminicídio",
     "tentativa_feminicidio": "Tentativa de feminicídio",
     "violencia_sexual_crianca": "Violência sexual contra criança/adolescente",
-    "outros_crianca": "Outros crimes contra criança/adolescente",
+    "outros_crianca": "Homicídio, tortura ou maus-tratos contra criança/adolescente",
     "violencia_sexual": "Violência sexual",
     "descumprimento_mp": "Descumprimento de medida protetiva",
     "perseguicao": "Perseguição (stalking)",
@@ -251,3 +251,41 @@ def bairro(texto: str, municipio_nome: str) -> str | None:
         nome = " ".join(w if w.lower() in ("de", "da", "do", "das", "dos", "e") else (w if w.isupper() and len(w) <= 4 else w[:1].upper() + w[1:]) for w in nome.split())
         return nome
     return None
+
+
+# --------------------------------------------------------------------------- resumo oficial (sem dados pessoais)
+CLASSIFICADOR_VERSAO = 3
+RE_ENDERECO = re.compile(r"\b(rua|avenida|av\.|alameda|travessa|quadra|qd\.?|lote|lt\.?|n[º°o]\.?\s*\d|apartamento|apto|bloco|condom[ií]nio|cep)\b", re.I)
+RE_NOME_EXPLICITO = re.compile(r"identificad[oa] como|conhecid[oa] (como|por)|de nome|chamad[oa] de|vulgo|apelidad[oa]", re.I)
+RE_NOME_PROPRIO = re.compile(r"\b[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]+(?:\s+(?:d[aoe]s?|e)\s+|\s+)[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]+")
+PERMITIDOS_CAPS = re.compile(r"Pol[íi]cia|Delegacia|Deam|Dpca|Civil|Militar|Justiça|Poder|Judici|Minist|Público|Goiás|Goi[aâ]nia|Secretaria|Segurança|Estado|Operação|Tribunal|Conselho|Tutelar|Instituto|Médico|Legal|Grupo|Batalhão|Regional|Especializada|Atendimento|Mulher|Criança|Adolescente|Distrito|Federal|Brasil")
+
+
+def resumo_oficial(texto: str, municipio: str, bairro_txt: str | None, max_chars: int = 420) -> str | None:
+    """Até 2 frases da nota oficial, descartando qualquer frase com endereço ou possível nome próprio de pessoa."""
+    if not texto:
+        return None
+    locais = {norm(municipio)} | ({norm(bairro_txt)} if bairro_txt else set())
+    frases = re.split(r"(?<=[.!?])\s+", re.sub(r"\s+", " ", texto).strip())
+    out = []
+    for f in frases:
+        if len(f) < 30 or RE_ENDERECO.search(f) or RE_NOME_EXPLICITO.search(f) or "“" in f or '"' in f:
+            continue
+        suspeito = False
+        for m in RE_NOME_PROPRIO.finditer(f):
+            trecho = m.group(0)
+            if trecho in ("Maria da Penha",) or PERMITIDOS_CAPS.search(trecho) or norm(trecho) in locais or any(norm(trecho) in l or l in norm(trecho) for l in locais):
+                continue
+            if m.start() == 0 and len(trecho.split()) == 2 and trecho.split()[0] in ("Segundo", "Conforme", "Após", "Durante", "Ainda", "Na", "No", "Em", "De", "Diante"):
+                continue
+            suspeito = True
+            break
+        if suspeito:
+            continue
+        out.append(f)
+        if len(out) == 2 or sum(len(x) for x in out) > max_chars:
+            break
+    txt = " ".join(out)
+    if len(txt) > max_chars:
+        txt = txt[:max_chars].rsplit(" ", 1)[0] + "…"
+    return txt or None

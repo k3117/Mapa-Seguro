@@ -11,7 +11,7 @@
     },
     "classificacao": {
       "titulo": "Como os dados são classificados?",
-      "texto": "Cada nota oficial é classificada por regras públicas e auditáveis (scripts/classificador.py): a categoria vem das palavras do título e do texto (por exemplo, 'tentativa de feminicídio', 'descumprimento de medida protetiva', 'estupro de vulnerável' com menção a criança). Notas institucionais (palestras, eventos, entregas) são descartadas. Quando a nota cita mais de um crime, vale o mais grave e os demais ficam como categorias secundárias. Notas sobre o mesmo fato em órgãos diferentes são unificadas; possíveis duplicidades na mesma fonte são sinalizadas para revisão."
+      "texto": "Cada nota oficial é classificada por regras públicas e auditáveis (scripts/classificador.py): a categoria vem das palavras do título e do texto (por exemplo, 'tentativa de feminicídio', 'descumprimento de medida protetiva', 'estupro de vulnerável' com menção a criança). Notas institucionais (palestras, eventos, entregas) são descartadas. Quando a nota cita mais de um crime, vale o mais grave e os demais ficam como categorias secundárias. Notas sobre o mesmo fato em órgãos diferentes são unificadas; possíveis duplicidades na mesma fonte são sinalizadas para revisão. Por decisão editorial, a plataforma reúne apenas crimes graves: feminicídio, tentativa de feminicídio, violência sexual, violência sexual contra criança/adolescente e homicídio, tortura ou maus-tratos contra criança/adolescente."
     },
     "localizacao": {
       "titulo": "Como a localização é definida?",
@@ -27,7 +27,7 @@
     },
     "privacidade": {
       "titulo": "Como a privacidade é protegida?",
-      "texto": "A plataforma não guarda o texto das notas, nomes, idades, profissões, endereços ou qualquer dado que identifique vítimas, investigados, crianças ou adolescentes — apenas categoria, município/bairro aproximado, datas, situação jurídica e o link da fonte oficial. Não há cadastro de usuários. As conversas com o Assistente não são gravadas pelo MAPA SEGURO; quando um provedor de IA externo é configurado, a pergunta é enviada a ele para gerar a resposta. Princípios (LGPD): necessidade, finalidade, proporcionalidade, verificação, segurança, privacidade e transparência."
+      "texto": "A plataforma não guarda o texto das notas, nomes, idades, profissões, endereços ou qualquer dado que identifique vítimas, investigados, crianças ou adolescentes — apenas categoria, município/bairro aproximado, datas, situação jurídica e o link da fonte oficial. Não há cadastro de usuários. As conversas com o Assistente não são gravadas pelo MAPA SEGURO; quando um provedor de IA externo é configurado, a pergunta é enviada a ele para gerar a resposta. Princípios (LGPD): necessidade, finalidade, proporcionalidade, verificação, segurança, privacidade e transparência. Nomes de vítimas e de investigados não são reproduzidos: quando há reportagens, o site leva o leitor à matéria original."
     },
     "investigacao_condenacao": {
       "titulo": "Investigação não é condenação",
@@ -35,7 +35,7 @@
     },
     "limitacoes": {
       "titulo": "Limitações",
-      "texto": "1) Os registros do mapa vêm de notas divulgadas pelos órgãos e não cobrem todas as ocorrências: a contagem não é taxa de criminalidade. 2) A localização é aproximada (bairro ou município). 3) A classificação é automática por regras e pode errar — use 'Informar correção'. 4) A situação jurídica reflete o momento da nota (em geral, investigação). 5) As estatísticas agregadas da SSP-GO cobrem só feminicídio e estupro (total), sem recorte por município. 6) Registro de ocorrência não significa condenação."
+      "texto": "1) Os registros do mapa vêm de notas divulgadas pelos órgãos e não cobrem todas as ocorrências: a contagem não é taxa de criminalidade. 2) A localização é aproximada (bairro ou município). 3) A classificação é automática por regras e pode errar — use 'Informar correção'. 4) A situação jurídica reflete o momento da nota (em geral, investigação). 5) As estatísticas agregadas da SSP-GO cobrem só feminicídio e estupro (total), sem recorte por município. 6) Durante o período eleitoral a lei restringe a publicidade dos órgãos estaduais, e os portais podem deixar de publicar notas — por isso podem faltar casos recentes. 7) Ameaça, lesão corporal, perseguição e violência doméstica sem crime grave não estão na base. 8) Registro de ocorrência não significa condenação."
     },
     "mapa": {
       "titulo": "Como funciona o mapa?",

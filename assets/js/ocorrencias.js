@@ -14,7 +14,9 @@ export const PERIODOS = {
   "6m": { rotulo: "Últimos 6 meses", dias: 182 },
   "12m": { rotulo: "Últimos 12 meses", dias: 365 },
   "24m": { rotulo: "Últimos 24 meses", dias: 730 },
+  "5a": { rotulo: "Últimos 5 anos", dias: 1826 },
   ano: { rotulo: "Ano atual" },
+  tudo: { rotulo: "Todo o histórico (desde 2015)" },
 };
 
 const iso = (d) => d.toISOString().slice(0, 10);
@@ -28,6 +30,7 @@ export function intervaloDoPeriodo(periodo, hoje = new Date()) {
   const chave = typeof periodo === "string" ? periodo : periodo?.chave || "12m";
   const fim = iso(hoje);
   if (chave === "ano") return { inicio: `${hoje.getFullYear()}-01-01`, fim };
+  if (chave === "tudo") return { inicio: "2015-01-01", fim };
   const dias = PERIODOS[chave]?.dias ?? 365;
   return { inicio: iso(new Date(hoje.getTime() - (dias - 1) * DIA)), fim };
 }
@@ -108,6 +111,8 @@ export function resumoPublico(base, r) {
     medidas: r.medidas || [],
     fonte_status: base.categorias.fonte_status[r.fonte_status] || r.fonte_status,
     possivel_duplicidade: r.possivel_duplicidade || [],
+    resumo_oficial: r.resumo_oficial || null,
+    reportagens: r.reportagens || [],
     fontes: r.fontes.map((f) => ({ titulo: `Nota oficial — ${f.orgao} (${f.data_publicacao.split("-").reverse().join("/")})`, orgao: f.orgao, url: f.url, data_consulta_fonte: f.data_publicacao })),
   };
 }
@@ -122,4 +127,16 @@ export function bairrosConhecidos(base) {
     if (r.bairro && r.precisao_local === "bairro") m.set(`${norm(r.bairro)}|${norm(r.municipio)}`, { bairro: r.bairro, municipio: r.municipio, lat: r.lat, lon: r.lon });
   }
   return [...m.values()];
+}
+
+/** Link de busca de cobertura jornalística (aberto pelo próprio usuário; o site não copia matérias). */
+export function linkBuscaImprensa(base, r) {
+  const cat = base.categorias.categorias.find((c) => c.id === r.categoria);
+  const termo = { feminicidio: "feminicídio", tentativa_feminicidio: "tentativa de feminicídio", violencia_sexual: "estupro",
+    violencia_sexual_crianca: "estupro de vulnerável", outros_crianca: "criança" }[r.categoria] || cat?.rotulo || "";
+  const d = new Date(r.data_publicacao + "T12:00:00");
+  const ini = new Date(d.getTime() - 10 * 86400000).toISOString().slice(0, 10);
+  const fim = new Date(d.getTime() + 20 * 86400000).toISOString().slice(0, 10);
+  const q = `"${termo}" "${r.municipio}" after:${ini} before:${fim}`;
+  return `https://www.google.com/search?tbm=nws&hl=pt-BR&q=${encodeURIComponent(q)}`;
 }

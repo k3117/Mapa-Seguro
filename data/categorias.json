@@ -1,21 +1,66 @@
 {
-  "_comentario": "Taxonomia do MAPA SEGURO. Os ids das categorias são os mesmos usados por scripts/classificador.py. 'indicador_ssp' liga a categoria às estatísticas agregadas da SSP-GO quando existem.",
+  "_comentario": "Somente crimes graves. Ameaça, lesão corporal, perseguição, violência doméstica genérica e descumprimento de medida protetiva foram excluídos por decisão editorial.",
   "grupos": [
-    { "id": "mulheres", "rotulo": "Mulheres" },
-    { "id": "criancas_adolescentes", "rotulo": "Crianças e adolescentes" },
-    { "id": "medidas_protetivas", "rotulo": "Medidas protetivas" }
+    {
+      "id": "mulheres",
+      "rotulo": "Mulheres"
+    },
+    {
+      "id": "criancas_adolescentes",
+      "rotulo": "Crianças e adolescentes"
+    }
   ],
   "categorias": [
-    { "id": "feminicidio", "rotulo": "Feminicídio", "grupo": "mulheres", "cor": "#c1121f", "cor_icone": "#ffffff", "nome_cor": "Vermelho", "icone": "mulher", "indicador_ssp": "feminicidio" },
-    { "id": "tentativa_feminicidio", "rotulo": "Tentativa de feminicídio", "grupo": "mulheres", "cor": "#ef476f", "cor_icone": "#ffffff", "nome_cor": "Vermelho claro", "icone": "mulher_alerta", "indicador_ssp": null },
-    { "id": "violencia_sexual", "rotulo": "Violência sexual (vítima adulta ou não informada)", "grupo": "mulheres", "cor": "#7b2cbf", "cor_icone": "#ffffff", "nome_cor": "Roxo", "icone": "mao", "indicador_ssp": null },
-    { "id": "violencia_domestica", "rotulo": "Violência doméstica", "grupo": "mulheres", "cor": "#e5679b", "cor_icone": "#ffffff", "nome_cor": "Rosa", "icone": "casa", "indicador_ssp": null },
-    { "id": "lesao_corporal", "rotulo": "Lesão corporal / agressão", "grupo": "mulheres", "cor": "#f77f00", "cor_icone": "#ffffff", "nome_cor": "Laranja", "icone": "impacto", "indicador_ssp": null },
-    { "id": "ameaca", "rotulo": "Ameaça", "grupo": "mulheres", "cor": "#f4c430", "cor_icone": "#1b1b1b", "nome_cor": "Amarelo", "icone": "balao", "indicador_ssp": null },
-    { "id": "perseguicao", "rotulo": "Perseguição (stalking)", "grupo": "mulheres", "cor": "#1d70b8", "cor_icone": "#ffffff", "nome_cor": "Azul", "icone": "olho", "indicador_ssp": null },
-    { "id": "violencia_sexual_crianca", "rotulo": "Violência sexual contra criança/adolescente", "grupo": "criancas_adolescentes", "cor": "#7f5539", "cor_icone": "#ffffff", "nome_cor": "Marrom", "icone": "crianca", "indicador_ssp": null },
-    { "id": "outros_crianca", "rotulo": "Outros crimes contra criança/adolescente", "grupo": "criancas_adolescentes", "cor": "#2d6a4f", "cor_icone": "#ffffff", "nome_cor": "Verde", "icone": "crianca", "indicador_ssp": null },
-    { "id": "descumprimento_mp", "rotulo": "Descumprimento de medida protetiva", "grupo": "medidas_protetivas", "cor": "#ffffff", "cor_icone": "#1b1b1b", "nome_cor": "Branco", "icone": "escudo", "indicador_ssp": null }
+    {
+      "id": "feminicidio",
+      "rotulo": "Feminicídio",
+      "grupo": "mulheres",
+      "cor": "#c1121f",
+      "cor_icone": "#ffffff",
+      "nome_cor": "Vermelho",
+      "icone": "mulher",
+      "indicador_ssp": "feminicidio"
+    },
+    {
+      "id": "tentativa_feminicidio",
+      "rotulo": "Tentativa de feminicídio",
+      "grupo": "mulheres",
+      "cor": "#ef476f",
+      "cor_icone": "#ffffff",
+      "nome_cor": "Vermelho claro",
+      "icone": "mulher_alerta",
+      "indicador_ssp": null
+    },
+    {
+      "id": "violencia_sexual",
+      "rotulo": "Violência sexual (vítima adulta ou não informada)",
+      "grupo": "mulheres",
+      "cor": "#7b2cbf",
+      "cor_icone": "#ffffff",
+      "nome_cor": "Roxo",
+      "icone": "mao",
+      "indicador_ssp": null
+    },
+    {
+      "id": "violencia_sexual_crianca",
+      "rotulo": "Violência sexual contra criança/adolescente",
+      "grupo": "criancas_adolescentes",
+      "cor": "#7f5539",
+      "cor_icone": "#ffffff",
+      "nome_cor": "Marrom",
+      "icone": "crianca",
+      "indicador_ssp": null
+    },
+    {
+      "id": "outros_crianca",
+      "rotulo": "Homicídio, tortura ou maus-tratos contra criança/adolescente",
+      "grupo": "criancas_adolescentes",
+      "cor": "#2d6a4f",
+      "cor_icone": "#ffffff",
+      "nome_cor": "Verde",
+      "icone": "crianca",
+      "indicador_ssp": null
+    }
   ],
   "status_juridico": {
     "investigacao": "Investigação policial",

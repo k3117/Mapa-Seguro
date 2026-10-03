@@ -72,8 +72,8 @@ test("motor local: perguntas típicas", () => {
   const r2 = responderLocal(base, "Compare estupros de 2023 e 2024", {}, AGORA);
   assert.match(r2.texto, /2023: 777/);
 
-  const r3 = responderLocal(base, "Quantos casos de descumprimento de medida protetiva em Luziânia nos últimos 24 meses?", {}, AGORA);
-  const esperado = base.ocorrencias.ocorrencias.filter((r) => r.categoria === "descumprimento_mp" && r.municipio === "Luziânia").length;
+  const r3 = responderLocal(base, "Quantos casos de feminicídio em Anápolis desde 2015?", {}, AGORA);
+  const esperado = base.ocorrencias.ocorrencias.filter((r) => r.categoria === "feminicidio" && r.municipio === "Anápolis").length;
   assert.ok(esperado > 0);
   assert.match(r3.texto, new RegExp(`${esperado} registro`));
   assert.ok(r3.fontes.length >= 1);
@@ -81,7 +81,7 @@ test("motor local: perguntas típicas", () => {
   const r4 = responderLocal(base, "O que significa o marcador marrom?", {}, AGORA);
   assert.match(r4.texto, /criança/);
 
-  const r5 = responderLocal(base, "Quais municípios têm mais registros nos últimos 24 meses?", {}, AGORA);
+  const r5 = responderLocal(base, "Quais municípios têm mais registros?", {}, AGORA);
   assert.match(r5.texto, /não uma taxa de criminalidade/);
 
   const caso = base.ocorrencias.ocorrencias[0];
@@ -98,9 +98,11 @@ test("motor local: perguntas típicas", () => {
   const r9 = responderLocal(base, "Quantos feminicídios em março de 2025 segundo a SSP?", {}, AGORA);
   assert.match(r9.texto, /7 ocorrências/);
 
-  const r10 = responderLocal(base, "Quantos casos de ameaça em Goiânia nos últimos 7 dias?", {}, AGORA);
+  const r10 = responderLocal(base, "Quantos casos de estupro em Goiânia nos últimos 7 dias?", {}, AGORA);
   assert.ok(r10.texto.startsWith(NAO_ENCONTRADO));
   assert.match(r10.texto, /não significa que não houve/);
+  const r11 = responderLocal(base, "Quantos casos de ameaça em Goiânia?", {}, AGORA);
+  assert.match(r11.texto, /apenas crimes graves/);
 });
 
 test("registros do mapa: nenhum dado pessoal nem endereço", () => {
