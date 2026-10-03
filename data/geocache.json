@@ -67,5 +67,208 @@
  "Setor Vila Cristina|5208707": null,
  "Vila Irany|5208707": null,
  "Setor Cidade Vera Cruz|5201405": null,
- "Setor Centro-Oeste|5208707": null
+ "Setor Centro-Oeste|5208707": null,
+ "Setor Bouganville|5209101": null,
+ "Residencial Santa Luzia|5215231": null,
+ "das Américas|5205109": null,
+ "Jardim Nova Esperança|5208707": {
+  "lat": -16.6448,
+  "lon": -49.3242,
+  "tipo": "suburb"
+ },
+ "Setor de Inteligência da PCPB|5218805": null,
+ "Santa Fé|5212501": null,
+ "Setor Novo Horizonte|5211503": {
+  "lat": -18.4117,
+  "lon": -49.2383,
+  "tipo": "suburb"
+ },
+ "Vila São Tomaz|5208707": null,
+ "Setor Cândida de Morais|5208707": {
+  "lat": -16.649,
+  "lon": -49.3294,
+  "tipo": "suburb"
+ },
+ "Vila Colombo|5211800": null,
+ "Jardim Esperança|5201108": {
+  "lat": -16.4108,
+  "lon": -48.896,
+  "tipo": "suburb"
+ },
+ "Setor Bueno|5208707": {
+  "lat": -16.6979,
+  "lon": -49.2779,
+  "tipo": "suburb"
+ },
+ "Nossa Senhora da Saúde|5211503": {
+  "lat": -18.3933,
+  "lon": -49.1985,
+  "tipo": "suburb"
+ },
+ "Residencial Real Conquista|5208707": {
+  "lat": -16.7822,
+  "lon": -49.3853,
+  "tipo": "suburb"
+ },
+ "Setor Juliana|5203559": {
+  "lat": -16.6157,
+  "lon": -48.9545,
+  "tipo": "quarter"
+ },
+ "Adriana Park|5201108": null,
+ "Setor Perim|5208707": {
+  "lat": -16.648,
+  "lon": -49.2965,
+  "tipo": "suburb"
+ },
+ "Setor Jardim das Esmeraldas|5201405": null,
+ "Nilson Veloso|5218805": {
+  "lat": -17.7547,
+  "lon": -50.8997,
+  "tipo": "suburb"
+ },
+ "Setor Chácara Vilage Santa Rita|5208707": null,
+ "Setor Centro Oeste|5208707": null,
+ "Carrilho|5208608": null,
+ "Jardim Curitiba IV|5208707": {
+  "lat": -16.6003,
+  "lon": -49.331,
+  "tipo": "suburb"
+ },
+ "Setor Santa Helena|5208707": null,
+ "Vila Canaã|5208707": null,
+ "Setor Solange Park|5208707": null,
+ "Nossa Senhora Aparecida|5201108": {
+  "lat": -16.3177,
+  "lon": -48.9666,
+  "tipo": "suburb"
+ },
+ "Lunabel 3A|5215231": null,
+ "Jardim Guanabara|5209705": null,
+ "Primavera|5208608": null,
+ "Parque Sol Nascente|5212501": {
+  "lat": -16.1835,
+  "lon": -47.9398,
+  "tipo": "suburb"
+ },
+ "Residencial José Basílio|5200555": null,
+ "Santa Helena e Discutiu|5208707": null,
+ "Setor Parque Floresta|5201405": null,
+ "Setor Jardim Nova Goiânia|5220454": null,
+ "Jardim Europa|5201108": {
+  "lat": -16.3378,
+  "lon": -48.9262,
+  "tipo": "suburb"
+ },
+ "Parque Macambira|5208707": null,
+ "Setor São Judas Tadeu|5208707": null,
+ "Setor Central|5211503": null,
+ "Setor Mansões Paraíso|5201405": null,
+ "Jardim Novo Mundo|5208707": {
+  "lat": -16.677,
+  "lon": -49.2183,
+  "tipo": "suburb"
+ },
+ "Setor Cidade Jardim|5208707": null,
+ "Setor Bela Vista|5208707": {
+  "lat": -16.7183,
+  "lon": -49.2607,
+  "tipo": "suburb"
+ },
+ "Jardim Goiás|5208707": {
+  "lat": -16.7024,
+  "lon": -49.2386,
+  "tipo": "suburb"
+ },
+ "Setor Santa Rita|5211503": null,
+ "Setor JK Nova Capital|5201108": null,
+ "Setor Tiradentes|5201405": null,
+ "Setor Vila Santa Rita|5208707": null,
+ "Setor Leste|5217609": {
+  "lat": -15.4576,
+  "lon": -47.6035,
+  "tipo": "suburb"
+ },
+ "Conjunto Águas Claras|5210208": null,
+ "Setor São Bernardo|5221403": {
+  "lat": -16.5903,
+  "lon": -49.4011,
+  "tipo": "residential"
+ },
+ "Setor Maysa 2|5221403": null,
+ "Conjunto Sol Dourado|5221403": null,
+ "Setor Parque Oeste Industrial|5208707": null,
+ "Jardim Dom Bosco|5201405": {
+  "lat": -16.8207,
+  "lon": -49.3642,
+  "tipo": "suburb"
+ },
+ "Setor Chácara Angico|5220454": null,
+ "Setor Urias Magalhães|5208707": {
+  "lat": -16.6404,
+  "lon": -49.2711,
+  "tipo": "suburb"
+ },
+ "Setor Vila Pedroso|5220454": null,
+ "Aníbal Lima|5203500": null,
+ "Jardim Copacabana|5201405": null,
+ "Setor Garavelo B|5208707": {
+  "lat": -16.7676,
+  "lon": -49.3426,
+  "tipo": "suburb"
+ },
+ "São Francisco|5208707": {
+  "lat": -16.6916,
+  "lon": -49.216,
+  "tipo": "suburb"
+ },
+ "Setor Goiânia Viva|5208707": null,
+ "Vila União|5215231": {
+  "lat": -16.0737,
+  "lon": -48.0378,
+  "tipo": "residential"
+ },
+ "Conjunto Vera Cruz|5208707": {
+  "lat": -16.6708,
+  "lon": -49.3865,
+  "tipo": "suburb"
+ },
+ "Jardim Riviera|5201405": {
+  "lat": -16.8245,
+  "lon": -49.299,
+  "tipo": "suburb"
+ },
+ "Setor Leste Universitário|5208707": {
+  "lat": -16.677,
+  "lon": -49.2439,
+  "tipo": "suburb"
+ },
+ "Setor Vila Brasília|5201405": {
+  "lat": -16.7414,
+  "lon": -49.2648,
+  "tipo": "suburb"
+ },
+ "Parque Flamboyant|5208707": {
+  "lat": -16.737,
+  "lon": -49.2192,
+  "tipo": "suburb"
+ },
+ "Residencial Eldorado|5208707": null,
+ "Setor Residencial Eldorado|5208707": null,
+ "Setor Sollar Ville|5201405": null,
+ "Setor Colonial Sul|5201405": {
+  "lat": -16.7977,
+  "lon": -49.3207,
+  "tipo": "suburb"
+ },
+ "Setor Esplanada do Anicuns|5208806": null,
+ "Setor Expansul Em Aparecida de Goiânia|5201405": null,
+ "Setor Jardim dos Buritis|5201405": null,
+ "Setor dos Bandeirantes Em Trindade|5221403": null,
+ "Setor Ulisses Guimarães|5208707": null,
+ "Maracanã Durante A Tarde|5201108": null,
+ "Setor Aeroporto Sul|5201405": null,
+ "Jardim das Paineiras Em Planaltina-GO|5217609": null,
+ "Vila Bela|5220405": null,
+ "Setor Vila Maria|5208707": null
 }
