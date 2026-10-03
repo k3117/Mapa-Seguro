@@ -11,10 +11,15 @@
       "publico": "mulheres",
       "endereco": "Rua 24, nº 203, Qd. 49, Lt. 27, Centro – CEP 74030-060 – Goiânia/GO",
       "consulta_geocodificacao": "Rua 24, 203, Centro, Goiânia, Goiás, 74030-060, Brasil",
-      "telefones": ["(62) 3201-2802", "(62) 3201-6344"],
+      "telefones": [
+        "(62) 3201-2802",
+        "(62) 3201-6344"
+      ],
       "email": "deaem.pcgo@pc.goias.gov.br",
       "observacao": "A página oficial informa plantão 24 horas no mesmo endereço.",
-      "lat": null, "lon": null, "precisao_coordenada": null
+      "lat": -16.67256,
+      "lon": -49.25247,
+      "precisao_coordenada": "nominatim:road"
     },
     {
       "id": "deam-goiania-noroeste",
@@ -23,10 +28,16 @@
       "publico": "mulheres",
       "endereco": "Av. do Povo com Rua E, Qd. 10, Lt. 101, Jardim Curitiba II – CEP 74480-110 – Goiânia/GO",
       "consulta_geocodificacao": "Avenida do Povo, Jardim Curitiba, Goiânia, Goiás, 74480-110, Brasil",
-      "telefones": ["(62) 3201-6344", "(62) 3201-6332", "(62) 3201-6331"],
+      "telefones": [
+        "(62) 3201-6344",
+        "(62) 3201-6332",
+        "(62) 3201-6331"
+      ],
       "email": null,
       "observacao": null,
-      "lat": null, "lon": null, "precisao_coordenada": null
+      "lat": -16.60782,
+      "lon": -49.33921,
+      "precisao_coordenada": "nominatim:road"
     },
     {
       "id": "dpca-goiania",
@@ -35,10 +46,16 @@
       "publico": "criancas_adolescentes",
       "endereco": "Rua C-190, esquina com a C-107, Qd. 226, Lt. 13, Jardim América – CEP 74255-080 – Goiânia/GO",
       "consulta_geocodificacao": "Rua C-190, Jardim América, Goiânia, Goiás, 74255-080, Brasil",
-      "telefones": ["(62) 3286-1540", "(62) 3286-1298", "(62) 3286-1552"],
+      "telefones": [
+        "(62) 3286-1540",
+        "(62) 3286-1298",
+        "(62) 3286-1552"
+      ],
       "email": "dpca.goiania.pcgo@pc.goias.gov.br",
       "observacao": null,
-      "lat": null, "lon": null, "precisao_coordenada": null
+      "lat": -16.70271,
+      "lon": -49.28592,
+      "precisao_coordenada": "nominatim:road"
     }
   ]
 }

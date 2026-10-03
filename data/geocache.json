@@ -1,0 +1,71 @@
+{
+ "Setor Social|5211503": null,
+ "Popular|5218805": null,
+ "Residencial Solar São Francisco|5221403": null,
+ "Setor Parque Industrial João Braz|5208707": null,
+ "Setor Sul|5208707": {
+  "lat": -16.6913,
+  "lon": -49.2522,
+  "tipo": "suburb"
+ },
+ "Jardim Ingá|5212501": {
+  "lat": -16.1368,
+  "lon": -47.9567,
+  "tipo": "suburb"
+ },
+ "Setor Rio Formoso|5208707": null,
+ "Jardim Lago Azul|5215231": null,
+ "Setor Residencial das Brisas|5211909": null,
+ "Jardim Céu Azul|5221858": {
+  "lat": -16.0542,
+  "lon": -48.0011,
+  "tipo": "suburb"
+ },
+ "Morada do Morro|5220454": {
+  "lat": -16.6898,
+  "lon": -49.118,
+  "tipo": "suburb"
+ },
+ "Setor Campos Verdes|5221502": null,
+ "Beatriz I|5219753": {
+  "lat": -15.9463,
+  "lon": -48.2974,
+  "tipo": "suburb"
+ },
+ "Parque Santo Antônio|5219753": {
+  "lat": -15.9346,
+  "lon": -48.2943,
+  "tipo": "suburb"
+ },
+ "Jardim Guanabara|5208707": {
+  "lat": -16.6222,
+  "lon": -49.212,
+  "tipo": "suburb"
+ },
+ "Setor Central de Chapadão do Céu|5205471": null,
+ "Parque Estrela Dalva IX|5212501": null,
+ "Setor Central|5206404": {
+  "lat": -14.5308,
+  "lon": -49.9629,
+  "tipo": "suburb"
+ },
+ "Setor Barrolândia|5217609": null,
+ "Santa Rita|5211503": {
+  "lat": -18.3735,
+  "lon": -49.2146,
+  "tipo": "suburb"
+ },
+ "Vila Vitória|5211503": {
+  "lat": -18.4153,
+  "lon": -49.2396,
+  "tipo": "suburb"
+ },
+ "Residencial Parque Imperial|5205109": null,
+ "Setor Jardim Progresso|5201108": null,
+ "Setor Jardins Barcelona|5220454": null,
+ "Setor Vila Adélia|5208707": null,
+ "Setor Vila Cristina|5208707": null,
+ "Vila Irany|5208707": null,
+ "Setor Cidade Vera Cruz|5201405": null,
+ "Setor Centro-Oeste|5208707": null
+}
