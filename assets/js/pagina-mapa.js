@@ -46,9 +46,10 @@ function gravarHash() {
 const mapa = L.map("mapa", { zoomControl: false, preferCanvas: false, minZoom: 6 })
   .setView([CONFIG.cidadeFoco.lat, CONFIG.cidadeFoco.lon], 11);
 L.control.zoom({ position: "bottomright" }).addTo(mapa);
+// Mapas base gratuitos e sem chave: OpenStreetMap (padrão) e OpenStreetMap Humanitário (alternativo)
 const camadas = {
-  claro: L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", { maxZoom: 19, subdomains: "abcd", attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>' }),
-  ruas: L.tileLayer(CONFIG.mapa.tiles, { maxZoom: 19, attribution: CONFIG.mapa.atribuicao }),
+  claro: L.tileLayer(CONFIG.mapa.tiles, { maxZoom: 19, attribution: CONFIG.mapa.atribuicao }),
+  ruas: L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", { maxZoom: 19, subdomains: "abc", attribution: CONFIG.mapa.atribuicao + ' · estilo <a href="https://www.hotosm.org/">HOT</a>' }),
 };
 camadas.claro.addTo(mapa);
 $("f-camada").addEventListener("change", (e) => {
