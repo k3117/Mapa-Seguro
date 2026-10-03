@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Estatísticas — MAPA SEGURO</title>
+  <meta name="description" content="Estatísticas oficiais da SSP-GO sobre feminicídio e estupro no Estado de Goiás.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://generativelanguage.googleapis.com https:; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z' fill='%234b2a7b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="module" src="assets/js/pagina-estatisticas.js"></script>
+</head>
+<body data-pagina="estatisticas">
+  <header id="topo"></header>
+  <main id="principal" class="conteudo">
+    <h1>Estatísticas oficiais</h1>
+    <p class="lead">Estatística agregada publicada pela Secretaria de Segurança Pública de Goiás (SSP-GO) para o <strong>Estado de Goiás</strong> (sem recorte por município), e a contagem dos registros do mapa no mesmo período.</p>
+    <form class="barra-filtros" aria-label="Período">
+      <div class="campo"><label for="p-tipo">Período</label><select id="p-tipo"></select></div>
+      <div class="campo" id="c-ano" hidden><label for="p-ano">Ano</label><select id="p-ano"></select></div>
+      <div class="campo" id="c-custom" hidden><label for="p-inicio">De / até</label><div class="linha"><input id="p-inicio" type="month" aria-label="Mês inicial"><input id="p-fim" type="month" aria-label="Mês final"></div></div>
+    </form>
+    <p id="cobertura" class="rotulo-peq"></p>
+    <div id="kpis" class="kpis" aria-live="polite"></div>
+    <div class="aviso">Os números são <strong>ocorrências registradas</strong>, não condenações. O indicador “Estupro” reúne todas as vítimas — a fonte não separa sexo nem idade. A SSP-GO publica estatística agregada apenas desses dois indicadores.</div>
+    <section class="grafico" id="g-feminicidio"></section>
+    <section class="grafico" id="g-estupro"></section>
+    <div class="grade">
+      <section class="grafico" id="a-feminicidio"></section>
+      <section class="grafico" id="a-estupro"></section>
+    </div>
+    <h2>Registros do mapa no período</h2>
+    <div id="registros-mapa"></div>
+    <h2>Fontes utilizadas</h2>
+    <ul id="fontes" class="fontes-lista"></ul>
+    <p id="correcao" class="rotulo-peq"></p>
+  </main>
+  <footer id="rodape"></footer>
+</body>
+</html>

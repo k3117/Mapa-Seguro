@@ -1,0 +1,1481 @@
+{
+"_fonte": "Códigos e nomes: IBGE. Coordenadas da sede municipal: conjunto 'municipios-brasileiros' (kelvins, licença MIT), derivado de dados do IBGE. Usadas apenas para posicionar registros cuja fonte informa só o município.",
+"municipios": [
+{
+"codigo_ibge": "5200050",
+"nome": "Abadia de Goiás",
+"lat": -16.7573,
+"lon": -49.4412
+},
+{
+"codigo_ibge": "5200100",
+"nome": "Abadiânia",
+"lat": -16.197,
+"lon": -48.7057
+},
+{
+"codigo_ibge": "5200134",
+"nome": "Acreúna",
+"lat": -17.396,
+"lon": -50.3749
+},
+{
+"codigo_ibge": "5200159",
+"nome": "Adelândia",
+"lat": -16.4127,
+"lon": -50.1657
+},
+{
+"codigo_ibge": "5200308",
+"nome": "Alexânia",
+"lat": -16.0834,
+"lon": -48.5076
+},
+{
+"codigo_ibge": "5200506",
+"nome": "Aloândia",
+"lat": -17.7292,
+"lon": -49.4769
+},
+{
+"codigo_ibge": "5200555",
+"nome": "Alto Horizonte",
+"lat": -14.1978,
+"lon": -49.3378
+},
+{
+"codigo_ibge": "5200605",
+"nome": "Alto Paraíso de Goiás",
+"lat": -14.1305,
+"lon": -47.51
+},
+{
+"codigo_ibge": "5200803",
+"nome": "Alvorada do Norte",
+"lat": -14.4797,
+"lon": -46.491
+},
+{
+"codigo_ibge": "5200829",
+"nome": "Amaralina",
+"lat": -13.9236,
+"lon": -49.2962
+},
+{
+"codigo_ibge": "5200852",
+"nome": "Americano do Brasil",
+"lat": -16.2514,
+"lon": -49.9831
+},
+{
+"codigo_ibge": "5200902",
+"nome": "Amorinópolis",
+"lat": -16.6151,
+"lon": -51.0919
+},
+{
+"codigo_ibge": "5201207",
+"nome": "Anhanguera",
+"lat": -18.3339,
+"lon": -48.2204
+},
+{
+"codigo_ibge": "5201306",
+"nome": "Anicuns",
+"lat": -16.4642,
+"lon": -49.9617
+},
+{
+"codigo_ibge": "5201108",
+"nome": "Anápolis",
+"lat": -16.3281,
+"lon": -48.953
+},
+{
+"codigo_ibge": "5201405",
+"nome": "Aparecida de Goiânia",
+"lat": -16.8198,
+"lon": -49.2469
+},
+{
+"codigo_ibge": "5201454",
+"nome": "Aparecida do Rio Doce",
+"lat": -18.2941,
+"lon": -51.1516
+},
+{
+"codigo_ibge": "5201504",
+"nome": "Aporé",
+"lat": -18.9607,
+"lon": -51.9232
+},
+{
+"codigo_ibge": "5201702",
+"nome": "Aragarças",
+"lat": -15.8955,
+"lon": -52.2372
+},
+{
+"codigo_ibge": "5201801",
+"nome": "Aragoiânia",
+"lat": -16.9087,
+"lon": -49.4476
+},
+{
+"codigo_ibge": "5202155",
+"nome": "Araguapaz",
+"lat": -15.0909,
+"lon": -50.6315
+},
+{
+"codigo_ibge": "5201603",
+"nome": "Araçu",
+"lat": -16.3563,
+"lon": -49.6804
+},
+{
+"codigo_ibge": "5202353",
+"nome": "Arenópolis",
+"lat": -16.3837,
+"lon": -51.5563
+},
+{
+"codigo_ibge": "5202502",
+"nome": "Aruanã",
+"lat": -14.9166,
+"lon": -51.075
+},
+{
+"codigo_ibge": "5202601",
+"nome": "Aurilândia",
+"lat": -16.6773,
+"lon": -50.4641
+},
+{
+"codigo_ibge": "5202809",
+"nome": "Avelinópolis",
+"lat": -16.4672,
+"lon": -49.7579
+},
+{
+"codigo_ibge": "5203104",
+"nome": "Baliza",
+"lat": -16.1966,
+"lon": -52.5393
+},
+{
+"codigo_ibge": "5203203",
+"nome": "Barro Alto",
+"lat": -14.9658,
+"lon": -48.9086
+},
+{
+"codigo_ibge": "5203302",
+"nome": "Bela Vista de Goiás",
+"lat": -16.9693,
+"lon": -48.9513
+},
+{
+"codigo_ibge": "5203401",
+"nome": "Bom Jardim de Goiás",
+"lat": -16.2063,
+"lon": -52.1728
+},
+{
+"codigo_ibge": "5203500",
+"nome": "Bom Jesus de Goiás",
+"lat": -18.2173,
+"lon": -49.74
+},
+{
+"codigo_ibge": "5203559",
+"nome": "Bonfinópolis",
+"lat": -16.6173,
+"lon": -48.9616
+},
+{
+"codigo_ibge": "5203575",
+"nome": "Bonópolis",
+"lat": -13.6329,
+"lon": -49.8106
+},
+{
+"codigo_ibge": "5203609",
+"nome": "Brazabrantes",
+"lat": -16.4281,
+"lon": -49.3863
+},
+{
+"codigo_ibge": "5203807",
+"nome": "Britânia",
+"lat": -15.2428,
+"lon": -51.1602
+},
+{
+"codigo_ibge": "5203906",
+"nome": "Buriti Alegre",
+"lat": -18.1378,
+"lon": -49.0404
+},
+{
+"codigo_ibge": "5203939",
+"nome": "Buriti de Goiás",
+"lat": -16.1792,
+"lon": -50.4302
+},
+{
+"codigo_ibge": "5203962",
+"nome": "Buritinópolis",
+"lat": -14.4772,
+"lon": -46.4076
+},
+{
+"codigo_ibge": "5204003",
+"nome": "Cabeceiras",
+"lat": -15.7995,
+"lon": -46.9265
+},
+{
+"codigo_ibge": "5204102",
+"nome": "Cachoeira Alta",
+"lat": -18.7618,
+"lon": -50.9432
+},
+{
+"codigo_ibge": "5204250",
+"nome": "Cachoeira Dourada",
+"lat": -18.4859,
+"lon": -49.4766
+},
+{
+"codigo_ibge": "5204201",
+"nome": "Cachoeira de Goiás",
+"lat": -16.6635,
+"lon": -50.646
+},
+{
+"codigo_ibge": "5204409",
+"nome": "Caiapônia",
+"lat": -16.9539,
+"lon": -51.8091
+},
+{
+"codigo_ibge": "5204508",
+"nome": "Caldas Novas",
+"lat": -17.7441,
+"lon": -48.6246
+},
+{
+"codigo_ibge": "5204557",
+"nome": "Caldazinha",
+"lat": -16.7117,
+"lon": -49.0013
+},
+{
+"codigo_ibge": "5204607",
+"nome": "Campestre de Goiás",
+"lat": -16.7624,
+"lon": -49.695
+},
+{
+"codigo_ibge": "5204656",
+"nome": "Campinaçu",
+"lat": -13.787,
+"lon": -48.5704
+},
+{
+"codigo_ibge": "5204706",
+"nome": "Campinorte",
+"lat": -14.3137,
+"lon": -49.1511
+},
+{
+"codigo_ibge": "5204805",
+"nome": "Campo Alegre de Goiás",
+"lat": -17.6363,
+"lon": -47.7768
+},
+{
+"codigo_ibge": "5204854",
+"nome": "Campo Limpo de Goiás",
+"lat": -16.2971,
+"lon": -49.0895
+},
+{
+"codigo_ibge": "5204904",
+"nome": "Campos Belos",
+"lat": -13.035,
+"lon": -46.7681
+},
+{
+"codigo_ibge": "5204953",
+"nome": "Campos Verdes",
+"lat": -14.2442,
+"lon": -49.6528
+},
+{
+"codigo_ibge": "5205000",
+"nome": "Carmo do Rio Verde",
+"lat": -15.3549,
+"lon": -49.708
+},
+{
+"codigo_ibge": "5205059",
+"nome": "Castelândia",
+"lat": -18.0921,
+"lon": -50.203
+},
+{
+"codigo_ibge": "5205109",
+"nome": "Catalão",
+"lat": -18.1656,
+"lon": -47.944
+},
+{
+"codigo_ibge": "5205208",
+"nome": "Caturaí",
+"lat": -16.4447,
+"lon": -49.4936
+},
+{
+"codigo_ibge": "5205307",
+"nome": "Cavalcante",
+"lat": -13.7976,
+"lon": -47.4566
+},
+{
+"codigo_ibge": "5204300",
+"nome": "Caçu",
+"lat": -18.5594,
+"lon": -51.1328
+},
+{
+"codigo_ibge": "5205406",
+"nome": "Ceres",
+"lat": -15.3061,
+"lon": -49.6
+},
+{
+"codigo_ibge": "5205455",
+"nome": "Cezarina",
+"lat": -16.9718,
+"lon": -49.7758
+},
+{
+"codigo_ibge": "5205471",
+"nome": "Chapadão do Céu",
+"lat": -18.4073,
+"lon": -52.549
+},
+{
+"codigo_ibge": "5205497",
+"nome": "Cidade Ocidental",
+"lat": -16.0765,
+"lon": -47.9252
+},
+{
+"codigo_ibge": "5205513",
+"nome": "Cocalzinho de Goiás",
+"lat": -15.7914,
+"lon": -48.7747
+},
+{
+"codigo_ibge": "5205521",
+"nome": "Colinas do Sul",
+"lat": -14.1528,
+"lon": -48.076
+},
+{
+"codigo_ibge": "5205901",
+"nome": "Corumbaíba",
+"lat": -18.1415,
+"lon": -48.5626
+},
+{
+"codigo_ibge": "5205802",
+"nome": "Corumbá de Goiás",
+"lat": -15.9245,
+"lon": -48.8117
+},
+{
+"codigo_ibge": "5206206",
+"nome": "Cristalina",
+"lat": -16.7676,
+"lon": -47.6131
+},
+{
+"codigo_ibge": "5206305",
+"nome": "Cristianópolis",
+"lat": -17.1987,
+"lon": -48.7034
+},
+{
+"codigo_ibge": "5206404",
+"nome": "Crixás",
+"lat": -14.5412,
+"lon": -49.974
+},
+{
+"codigo_ibge": "5206503",
+"nome": "Cromínia",
+"lat": -17.2883,
+"lon": -49.3798
+},
+{
+"codigo_ibge": "5206602",
+"nome": "Cumari",
+"lat": -18.2644,
+"lon": -48.1511
+},
+{
+"codigo_ibge": "5205703",
+"nome": "Córrego do Ouro",
+"lat": -16.2918,
+"lon": -50.5503
+},
+{
+"codigo_ibge": "5206701",
+"nome": "Damianópolis",
+"lat": -14.5604,
+"lon": -46.178
+},
+{
+"codigo_ibge": "5206800",
+"nome": "Damolândia",
+"lat": -16.2544,
+"lon": -49.3631
+},
+{
+"codigo_ibge": "5206909",
+"nome": "Davinópolis",
+"lat": -18.1501,
+"lon": -47.5568
+},
+{
+"codigo_ibge": "5207105",
+"nome": "Diorama",
+"lat": -16.2329,
+"lon": -51.2543
+},
+{
+"codigo_ibge": "5208301",
+"nome": "Divinópolis de Goiás",
+"lat": -13.2853,
+"lon": -46.3999
+},
+{
+"codigo_ibge": "5207253",
+"nome": "Doverlândia",
+"lat": -16.7188,
+"lon": -52.3189
+},
+{
+"codigo_ibge": "5207352",
+"nome": "Edealina",
+"lat": -17.4239,
+"lon": -49.6644
+},
+{
+"codigo_ibge": "5207402",
+"nome": "Edéia",
+"lat": -17.3406,
+"lon": -49.9295
+},
+{
+"codigo_ibge": "5207501",
+"nome": "Estrela do Norte",
+"lat": -13.8665,
+"lon": -49.0716
+},
+{
+"codigo_ibge": "5207535",
+"nome": "Faina",
+"lat": -15.4473,
+"lon": -50.3622
+},
+{
+"codigo_ibge": "5207600",
+"nome": "Fazenda Nova",
+"lat": -16.1834,
+"lon": -50.7781
+},
+{
+"codigo_ibge": "5207808",
+"nome": "Firminópolis",
+"lat": -16.5778,
+"lon": -50.304
+},
+{
+"codigo_ibge": "5207907",
+"nome": "Flores de Goiás",
+"lat": -14.4451,
+"lon": -47.0417
+},
+{
+"codigo_ibge": "5208004",
+"nome": "Formosa",
+"lat": -15.54,
+"lon": -47.337
+},
+{
+"codigo_ibge": "5208103",
+"nome": "Formoso",
+"lat": -13.6499,
+"lon": -48.8775
+},
+{
+"codigo_ibge": "5208152",
+"nome": "Gameleira de Goiás",
+"lat": -16.4854,
+"lon": -48.6454
+},
+{
+"codigo_ibge": "5208509",
+"nome": "Goiandira",
+"lat": -18.1352,
+"lon": -48.0875
+},
+{
+"codigo_ibge": "5208806",
+"nome": "Goianira",
+"lat": -16.4947,
+"lon": -49.427
+},
+{
+"codigo_ibge": "5208400",
+"nome": "Goianápolis",
+"lat": -16.5098,
+"lon": -49.0234
+},
+{
+"codigo_ibge": "5208608",
+"nome": "Goianésia",
+"lat": -15.3118,
+"lon": -49.1162
+},
+{
+"codigo_ibge": "5209101",
+"nome": "Goiatuba",
+"lat": -18.0105,
+"lon": -49.3658
+},
+{
+"codigo_ibge": "5208905",
+"nome": "Goiás",
+"lat": -15.9333,
+"lon": -50.14
+},
+{
+"codigo_ibge": "5208707",
+"nome": "Goiânia",
+"lat": -16.6864,
+"lon": -49.2643
+},
+{
+"codigo_ibge": "5209150",
+"nome": "Gouvelândia",
+"lat": -18.6238,
+"lon": -50.0805
+},
+{
+"codigo_ibge": "5209200",
+"nome": "Guapó",
+"lat": -16.8297,
+"lon": -49.5345
+},
+{
+"codigo_ibge": "5209408",
+"nome": "Guarani de Goiás",
+"lat": -13.9421,
+"lon": -46.4868
+},
+{
+"codigo_ibge": "5209291",
+"nome": "Guaraíta",
+"lat": -15.6121,
+"lon": -50.0265
+},
+{
+"codigo_ibge": "5209457",
+"nome": "Guarinos",
+"lat": -14.7292,
+"lon": -49.7006
+},
+{
+"codigo_ibge": "5209606",
+"nome": "Heitoraí",
+"lat": -15.719,
+"lon": -49.8268
+},
+{
+"codigo_ibge": "5209804",
+"nome": "Hidrolina",
+"lat": -14.7261,
+"lon": -49.4634
+},
+{
+"codigo_ibge": "5209705",
+"nome": "Hidrolândia",
+"lat": -16.9626,
+"lon": -49.2265
+},
+{
+"codigo_ibge": "5209903",
+"nome": "Iaciara",
+"lat": -14.1011,
+"lon": -46.6335
+},
+{
+"codigo_ibge": "5209937",
+"nome": "Inaciolândia",
+"lat": -18.4869,
+"lon": -49.9888
+},
+{
+"codigo_ibge": "5209952",
+"nome": "Indiara",
+"lat": -17.1387,
+"lon": -49.9862
+},
+{
+"codigo_ibge": "5210000",
+"nome": "Inhumas",
+"lat": -16.3611,
+"lon": -49.5001
+},
+{
+"codigo_ibge": "5210109",
+"nome": "Ipameri",
+"lat": -17.7215,
+"lon": -48.1581
+},
+{
+"codigo_ibge": "5210158",
+"nome": "Ipiranga de Goiás",
+"lat": -15.1689,
+"lon": -49.6695
+},
+{
+"codigo_ibge": "5210208",
+"nome": "Iporá",
+"lat": -16.4398,
+"lon": -51.118
+},
+{
+"codigo_ibge": "5210307",
+"nome": "Israelândia",
+"lat": -16.3144,
+"lon": -50.9087
+},
+{
+"codigo_ibge": "5210406",
+"nome": "Itaberaí",
+"lat": -16.0206,
+"lon": -49.806
+},
+{
+"codigo_ibge": "5210562",
+"nome": "Itaguari",
+"lat": -15.918,
+"lon": -49.6071
+},
+{
+"codigo_ibge": "5210604",
+"nome": "Itaguaru",
+"lat": -15.7565,
+"lon": -49.6354
+},
+{
+"codigo_ibge": "5210802",
+"nome": "Itajá",
+"lat": -19.0673,
+"lon": -51.5495
+},
+{
+"codigo_ibge": "5210901",
+"nome": "Itapaci",
+"lat": -14.9522,
+"lon": -49.5511
+},
+{
+"codigo_ibge": "5211008",
+"nome": "Itapirapuã",
+"lat": -15.8205,
+"lon": -50.6094
+},
+{
+"codigo_ibge": "5211206",
+"nome": "Itapuranga",
+"lat": -15.5606,
+"lon": -49.949
+},
+{
+"codigo_ibge": "5211305",
+"nome": "Itarumã",
+"lat": -18.7646,
+"lon": -51.3485
+},
+{
+"codigo_ibge": "5211404",
+"nome": "Itauçu",
+"lat": -16.2029,
+"lon": -49.6109
+},
+{
+"codigo_ibge": "5211503",
+"nome": "Itumbiara",
+"lat": -18.4093,
+"lon": -49.2158
+},
+{
+"codigo_ibge": "5211602",
+"nome": "Ivolândia",
+"lat": -16.5995,
+"lon": -50.7921
+},
+{
+"codigo_ibge": "5211701",
+"nome": "Jandaia",
+"lat": -17.0481,
+"lon": -50.1453
+},
+{
+"codigo_ibge": "5211800",
+"nome": "Jaraguá",
+"lat": -15.7529,
+"lon": -49.3344
+},
+{
+"codigo_ibge": "5211909",
+"nome": "Jataí",
+"lat": -17.8784,
+"lon": -51.7204
+},
+{
+"codigo_ibge": "5212006",
+"nome": "Jaupaci",
+"lat": -16.1773,
+"lon": -50.9508
+},
+{
+"codigo_ibge": "5212055",
+"nome": "Jesúpolis",
+"lat": -15.9484,
+"lon": -49.3739
+},
+{
+"codigo_ibge": "5212105",
+"nome": "Joviânia",
+"lat": -17.802,
+"lon": -49.6197
+},
+{
+"codigo_ibge": "5212204",
+"nome": "Jussara",
+"lat": -15.8659,
+"lon": -50.8668
+},
+{
+"codigo_ibge": "5212253",
+"nome": "Lagoa Santa",
+"lat": -19.1832,
+"lon": -51.3998
+},
+{
+"codigo_ibge": "5212303",
+"nome": "Leopoldo de Bulhões",
+"lat": -16.619,
+"lon": -48.7428
+},
+{
+"codigo_ibge": "5212501",
+"nome": "Luziânia",
+"lat": -16.253,
+"lon": -47.95
+},
+{
+"codigo_ibge": "5212600",
+"nome": "Mairipotaba",
+"lat": -17.2975,
+"lon": -49.4898
+},
+{
+"codigo_ibge": "5212709",
+"nome": "Mambaí",
+"lat": -14.4823,
+"lon": -46.1165
+},
+{
+"codigo_ibge": "5212808",
+"nome": "Mara Rosa",
+"lat": -14.0148,
+"lon": -49.1777
+},
+{
+"codigo_ibge": "5212907",
+"nome": "Marzagão",
+"lat": -17.983,
+"lon": -48.6415
+},
+{
+"codigo_ibge": "5212956",
+"nome": "Matrinchã",
+"lat": -15.4342,
+"lon": -50.7456
+},
+{
+"codigo_ibge": "5213004",
+"nome": "Maurilândia",
+"lat": -17.9719,
+"lon": -50.3388
+},
+{
+"codigo_ibge": "5213053",
+"nome": "Mimoso de Goiás",
+"lat": -15.0515,
+"lon": -48.1611
+},
+{
+"codigo_ibge": "5213087",
+"nome": "Minaçu",
+"lat": -13.5304,
+"lon": -48.2206
+},
+{
+"codigo_ibge": "5213103",
+"nome": "Mineiros",
+"lat": -17.5654,
+"lon": -52.5537
+},
+{
+"codigo_ibge": "5213400",
+"nome": "Moiporá",
+"lat": -16.5434,
+"lon": -50.739
+},
+{
+"codigo_ibge": "5213509",
+"nome": "Monte Alegre de Goiás",
+"lat": -13.2552,
+"lon": -46.8928
+},
+{
+"codigo_ibge": "5213707",
+"nome": "Montes Claros de Goiás",
+"lat": -16.0059,
+"lon": -51.3979
+},
+{
+"codigo_ibge": "5213756",
+"nome": "Montividiu",
+"lat": -17.4439,
+"lon": -51.1728
+},
+{
+"codigo_ibge": "5213772",
+"nome": "Montividiu do Norte",
+"lat": -13.3485,
+"lon": -48.6853
+},
+{
+"codigo_ibge": "5213806",
+"nome": "Morrinhos",
+"lat": -17.7334,
+"lon": -49.1059
+},
+{
+"codigo_ibge": "5213855",
+"nome": "Morro Agudo de Goiás",
+"lat": -15.3184,
+"lon": -50.0553
+},
+{
+"codigo_ibge": "5213905",
+"nome": "Mossâmedes",
+"lat": -16.124,
+"lon": -50.2136
+},
+{
+"codigo_ibge": "5214002",
+"nome": "Mozarlândia",
+"lat": -14.7457,
+"lon": -50.5713
+},
+{
+"codigo_ibge": "5214051",
+"nome": "Mundo Novo",
+"lat": -13.7729,
+"lon": -50.2814
+},
+{
+"codigo_ibge": "5214101",
+"nome": "Mutunópolis",
+"lat": -13.7303,
+"lon": -49.2745
+},
+{
+"codigo_ibge": "5214408",
+"nome": "Nazário",
+"lat": -16.5808,
+"lon": -49.8817
+},
+{
+"codigo_ibge": "5214507",
+"nome": "Nerópolis",
+"lat": -16.4047,
+"lon": -49.2227
+},
+{
+"codigo_ibge": "5214606",
+"nome": "Niquelândia",
+"lat": -14.4662,
+"lon": -48.4599
+},
+{
+"codigo_ibge": "5214705",
+"nome": "Nova América",
+"lat": -15.0206,
+"lon": -49.8953
+},
+{
+"codigo_ibge": "5214804",
+"nome": "Nova Aurora",
+"lat": -18.0597,
+"lon": -48.2552
+},
+{
+"codigo_ibge": "5214838",
+"nome": "Nova Crixás",
+"lat": -14.0957,
+"lon": -50.33
+},
+{
+"codigo_ibge": "5214861",
+"nome": "Nova Glória",
+"lat": -15.145,
+"lon": -49.5737
+},
+{
+"codigo_ibge": "5214879",
+"nome": "Nova Iguaçu de Goiás",
+"lat": -14.2868,
+"lon": -49.3872
+},
+{
+"codigo_ibge": "5214903",
+"nome": "Nova Roma",
+"lat": -13.7388,
+"lon": -46.8734
+},
+{
+"codigo_ibge": "5215009",
+"nome": "Nova Veneza",
+"lat": -16.3695,
+"lon": -49.3168
+},
+{
+"codigo_ibge": "5215207",
+"nome": "Novo Brasil",
+"lat": -16.0313,
+"lon": -50.7113
+},
+{
+"codigo_ibge": "5215231",
+"nome": "Novo Gama",
+"lat": -16.0592,
+"lon": -48.0417
+},
+{
+"codigo_ibge": "5215256",
+"nome": "Novo Planalto",
+"lat": -13.2424,
+"lon": -49.506
+},
+{
+"codigo_ibge": "5215306",
+"nome": "Orizona",
+"lat": -17.0334,
+"lon": -48.2964
+},
+{
+"codigo_ibge": "5215405",
+"nome": "Ouro Verde de Goiás",
+"lat": -16.2181,
+"lon": -49.1942
+},
+{
+"codigo_ibge": "5215504",
+"nome": "Ouvidor",
+"lat": -18.2277,
+"lon": -47.8355
+},
+{
+"codigo_ibge": "5215603",
+"nome": "Padre Bernardo",
+"lat": -15.1605,
+"lon": -48.2833
+},
+{
+"codigo_ibge": "5215652",
+"nome": "Palestina de Goiás",
+"lat": -16.7392,
+"lon": -51.5309
+},
+{
+"codigo_ibge": "5215702",
+"nome": "Palmeiras de Goiás",
+"lat": -16.8044,
+"lon": -49.924
+},
+{
+"codigo_ibge": "5215801",
+"nome": "Palmelo",
+"lat": -17.3258,
+"lon": -48.426
+},
+{
+"codigo_ibge": "5215900",
+"nome": "Palminópolis",
+"lat": -16.7924,
+"lon": -50.1652
+},
+{
+"codigo_ibge": "5216007",
+"nome": "Panamá",
+"lat": -18.1783,
+"lon": -49.355
+},
+{
+"codigo_ibge": "5216304",
+"nome": "Paranaiguara",
+"lat": -18.9141,
+"lon": -50.6539
+},
+{
+"codigo_ibge": "5216403",
+"nome": "Paraúna",
+"lat": -16.9463,
+"lon": -50.4484
+},
+{
+"codigo_ibge": "5216452",
+"nome": "Perolândia",
+"lat": -17.5258,
+"lon": -52.065
+},
+{
+"codigo_ibge": "5216809",
+"nome": "Petrolina de Goiás",
+"lat": -16.0968,
+"lon": -49.3364
+},
+{
+"codigo_ibge": "5216908",
+"nome": "Pilar de Goiás",
+"lat": -14.7608,
+"lon": -49.5784
+},
+{
+"codigo_ibge": "5217104",
+"nome": "Piracanjuba",
+"lat": -17.302,
+"lon": -49.017
+},
+{
+"codigo_ibge": "5217203",
+"nome": "Piranhas",
+"lat": -16.4258,
+"lon": -51.8235
+},
+{
+"codigo_ibge": "5217302",
+"nome": "Pirenópolis",
+"lat": -15.8507,
+"lon": -48.9584
+},
+{
+"codigo_ibge": "5217401",
+"nome": "Pires do Rio",
+"lat": -17.3019,
+"lon": -48.2768
+},
+{
+"codigo_ibge": "5217609",
+"nome": "Planaltina",
+"lat": -15.452,
+"lon": -47.6089
+},
+{
+"codigo_ibge": "5217708",
+"nome": "Pontalina",
+"lat": -17.5225,
+"lon": -49.4489
+},
+{
+"codigo_ibge": "5218003",
+"nome": "Porangatu",
+"lat": -13.4391,
+"lon": -49.1503
+},
+{
+"codigo_ibge": "5218052",
+"nome": "Porteirão",
+"lat": -17.8143,
+"lon": -50.1653
+},
+{
+"codigo_ibge": "5218102",
+"nome": "Portelândia",
+"lat": -17.3554,
+"lon": -52.6799
+},
+{
+"codigo_ibge": "5218300",
+"nome": "Posse",
+"lat": -14.0859,
+"lon": -46.3704
+},
+{
+"codigo_ibge": "5218391",
+"nome": "Professor Jamil",
+"lat": -17.2497,
+"lon": -49.244
+},
+{
+"codigo_ibge": "5218508",
+"nome": "Quirinópolis",
+"lat": -18.4472,
+"lon": -50.4547
+},
+{
+"codigo_ibge": "5218607",
+"nome": "Rialma",
+"lat": -15.3145,
+"lon": -49.5814
+},
+{
+"codigo_ibge": "5218706",
+"nome": "Rianápolis",
+"lat": -15.4456,
+"lon": -49.5114
+},
+{
+"codigo_ibge": "5218789",
+"nome": "Rio Quente",
+"lat": -17.774,
+"lon": -48.7725
+},
+{
+"codigo_ibge": "5218805",
+"nome": "Rio Verde",
+"lat": -17.7923,
+"lon": -50.9192
+},
+{
+"codigo_ibge": "5218904",
+"nome": "Rubiataba",
+"lat": -15.1617,
+"lon": -49.8048
+},
+{
+"codigo_ibge": "5219001",
+"nome": "Sanclerlândia",
+"lat": -16.197,
+"lon": -50.3124
+},
+{
+"codigo_ibge": "5219100",
+"nome": "Santa Bárbara de Goiás",
+"lat": -16.5714,
+"lon": -49.6954
+},
+{
+"codigo_ibge": "5219209",
+"nome": "Santa Cruz de Goiás",
+"lat": -17.3155,
+"lon": -48.4809
+},
+{
+"codigo_ibge": "5219258",
+"nome": "Santa Fé de Goiás",
+"lat": -15.7664,
+"lon": -51.1037
+},
+{
+"codigo_ibge": "5219308",
+"nome": "Santa Helena de Goiás",
+"lat": -17.8115,
+"lon": -50.5977
+},
+{
+"codigo_ibge": "5219357",
+"nome": "Santa Isabel",
+"lat": -15.2958,
+"lon": -49.4259
+},
+{
+"codigo_ibge": "5219407",
+"nome": "Santa Rita do Araguaia",
+"lat": -17.3269,
+"lon": -53.2012
+},
+{
+"codigo_ibge": "5219456",
+"nome": "Santa Rita do Novo Destino",
+"lat": -15.1351,
+"lon": -49.1203
+},
+{
+"codigo_ibge": "5219506",
+"nome": "Santa Rosa de Goiás",
+"lat": -16.084,
+"lon": -49.4953
+},
+{
+"codigo_ibge": "5219605",
+"nome": "Santa Tereza de Goiás",
+"lat": -13.7138,
+"lon": -49.0144
+},
+{
+"codigo_ibge": "5219704",
+"nome": "Santa Terezinha de Goiás",
+"lat": -14.4326,
+"lon": -49.7091
+},
+{
+"codigo_ibge": "5219712",
+"nome": "Santo Antônio da Barra",
+"lat": -17.5585,
+"lon": -50.6345
+},
+{
+"codigo_ibge": "5219738",
+"nome": "Santo Antônio de Goiás",
+"lat": -16.4815,
+"lon": -49.3096
+},
+{
+"codigo_ibge": "5219753",
+"nome": "Santo Antônio do Descoberto",
+"lat": -15.9412,
+"lon": -48.2578
+},
+{
+"codigo_ibge": "5220454",
+"nome": "Senador Canedo",
+"lat": -16.7084,
+"lon": -49.0914
+},
+{
+"codigo_ibge": "5220504",
+"nome": "Serranópolis",
+"lat": -18.3067,
+"lon": -51.9586
+},
+{
+"codigo_ibge": "5220603",
+"nome": "Silvânia",
+"lat": -16.66,
+"lon": -48.6083
+},
+{
+"codigo_ibge": "5220686",
+"nome": "Simolândia",
+"lat": -14.4644,
+"lon": -46.4847
+},
+{
+"codigo_ibge": "5219803",
+"nome": "São Domingos",
+"lat": -13.621,
+"lon": -46.7415
+},
+{
+"codigo_ibge": "5219902",
+"nome": "São Francisco de Goiás",
+"lat": -15.9256,
+"lon": -49.2605
+},
+{
+"codigo_ibge": "5220009",
+"nome": "São João d'Aliança",
+"lat": -14.7048,
+"lon": -47.5228
+},
+{
+"codigo_ibge": "5220058",
+"nome": "São João da Paraúna",
+"lat": -16.8126,
+"lon": -50.4092
+},
+{
+"codigo_ibge": "5220157",
+"nome": "São Luiz do Norte",
+"lat": -14.8608,
+"lon": -49.3285
+},
+{
+"codigo_ibge": "5220108",
+"nome": "São Luís de Montes Belos",
+"lat": -16.5211,
+"lon": -50.3726
+},
+{
+"codigo_ibge": "5220207",
+"nome": "São Miguel do Araguaia",
+"lat": -13.2731,
+"lon": -50.1634
+},
+{
+"codigo_ibge": "5220264",
+"nome": "São Miguel do Passa Quatro",
+"lat": -17.0582,
+"lon": -48.662
+},
+{
+"codigo_ibge": "5220280",
+"nome": "São Patrício",
+"lat": -15.35,
+"lon": -49.818
+},
+{
+"codigo_ibge": "5220405",
+"nome": "São Simão",
+"lat": -18.996,
+"lon": -50.547
+},
+{
+"codigo_ibge": "5220702",
+"nome": "Sítio d'Abadia",
+"lat": -14.7992,
+"lon": -46.2506
+},
+{
+"codigo_ibge": "5221007",
+"nome": "Taquaral de Goiás",
+"lat": -16.0521,
+"lon": -49.6039
+},
+{
+"codigo_ibge": "5221080",
+"nome": "Teresina de Goiás",
+"lat": -13.7801,
+"lon": -47.2659
+},
+{
+"codigo_ibge": "5221197",
+"nome": "Terezópolis de Goiás",
+"lat": -16.3945,
+"lon": -49.0797
+},
+{
+"codigo_ibge": "5221403",
+"nome": "Trindade",
+"lat": -16.6517,
+"lon": -49.4927
+},
+{
+"codigo_ibge": "5221452",
+"nome": "Trombas",
+"lat": -13.5079,
+"lon": -48.7417
+},
+{
+"codigo_ibge": "5221304",
+"nome": "Três Ranchos",
+"lat": -18.3539,
+"lon": -47.776
+},
+{
+"codigo_ibge": "5221551",
+"nome": "Turvelândia",
+"lat": -17.8502,
+"lon": -50.3024
+},
+{
+"codigo_ibge": "5221502",
+"nome": "Turvânia",
+"lat": -16.6125,
+"lon": -50.1369
+},
+{
+"codigo_ibge": "5221577",
+"nome": "Uirapuru",
+"lat": -14.2835,
+"lon": -49.9201
+},
+{
+"codigo_ibge": "5221700",
+"nome": "Uruana",
+"lat": -15.4993,
+"lon": -49.6861
+},
+{
+"codigo_ibge": "5221601",
+"nome": "Uruaçu",
+"lat": -14.5238,
+"lon": -49.1396
+},
+{
+"codigo_ibge": "5221809",
+"nome": "Urutaí",
+"lat": -17.4651,
+"lon": -48.2015
+},
+{
+"codigo_ibge": "5221858",
+"nome": "Valparaíso de Goiás",
+"lat": -16.0651,
+"lon": -47.9757
+},
+{
+"codigo_ibge": "5221908",
+"nome": "Varjão",
+"lat": -17.0471,
+"lon": -49.6312
+},
+{
+"codigo_ibge": "5222005",
+"nome": "Vianópolis",
+"lat": -16.7405,
+"lon": -48.5159
+},
+{
+"codigo_ibge": "5222054",
+"nome": "Vicentinópolis",
+"lat": -17.7322,
+"lon": -49.8047
+},
+{
+"codigo_ibge": "5222203",
+"nome": "Vila Boa",
+"lat": -15.0387,
+"lon": -47.052
+},
+{
+"codigo_ibge": "5222302",
+"nome": "Vila Propício",
+"lat": -15.4542,
+"lon": -48.8819
+},
+{
+"codigo_ibge": "5200175",
+"nome": "Água Fria de Goiás",
+"lat": -14.9778,
+"lon": -47.7823
+},
+{
+"codigo_ibge": "5200209",
+"nome": "Água Limpa",
+"lat": -18.0771,
+"lon": -48.7603
+},
+{
+"codigo_ibge": "5200258",
+"nome": "Águas Lindas de Goiás",
+"lat": -15.7617,
+"lon": -48.2816
+}
+]
+}

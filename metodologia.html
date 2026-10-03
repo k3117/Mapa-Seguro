@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Metodologia — MAPA SEGURO</title>
+  <meta name="description" content="Como os dados do MAPA SEGURO são coletados, classificados, atualizados e corrigidos.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://generativelanguage.googleapis.com https:; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z' fill='%234b2a7b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="module" src="assets/js/pagina-conteudo.js"></script>
+</head>
+<body data-pagina="metodologia">
+  <header id="topo"></header>
+  <main id="principal" class="conteudo estreito">
+    <h1>Metodologia</h1>
+    <p class="lead">Como o MAPA SEGURO obtém, confere e apresenta os dados — e o que não é possível afirmar com eles.</p>
+    <div data-topico="fontes"></div>
+    <h2>Fontes oficiais cadastradas</h2>
+    <div id="lista-fontes" class="grade"></div>
+    <div data-topico="classificacao"></div>
+    <h2>Cobertura por categoria</h2>
+    <div class="tabela-wrap" id="cobertura-categorias"></div>
+    <div data-topico="localizacao"></div>
+    <div data-topico="atualizacao"></div>
+    <h2>Fluxo de atualização (diário, automático)</h2>
+    <ol>
+      <li><strong>Coleta:</strong> a rotina consulta a API pública dos portais da PCGO, SSP-GO e PMGO com termos como feminicídio, estupro, violência doméstica, medida protetiva, criança e adolescente.</li>
+      <li><strong>Classificação:</strong> regras públicas (<code>scripts/classificador.py</code>) definem a categoria e descartam notas institucionais (palestras, eventos, entregas).</li>
+      <li><strong>Privacidade:</strong> nenhum texto da nota é guardado; nomes, idades, ruas, números e condomínios nunca são extraídos. Casos com criança/adolescente ficam só no município.</li>
+      <li><strong>Localização:</strong> bairro citado → centro aproximado do bairro (OpenStreetMap); sem bairro → sede do município (IBGE).</li>
+      <li><strong>Deduplicação:</strong> o mesmo fato divulgado por órgãos diferentes vira um registro com várias fontes; possíveis duplicidades na mesma fonte são sinalizadas.</li>
+      <li><strong>Revisão:</strong> a administração pode ocultar ou corrigir registros em <code>data/moderacao.json</code>, sempre com motivo (auditoria no histórico do repositório).</li>
+      <li><strong>Publicação:</strong> o site, o feed de alertas e a base do Assistente são atualizados juntos.</li>
+    </ol>
+    <div data-topico="correcoes" id="correcoes"></div>
+    <div id="acao-correcao"></div>
+    <div data-topico="privacidade"></div>
+    <div data-topico="investigacao_condenacao"></div>
+    <div data-topico="ia"></div>
+    <div data-topico="limitacoes"></div>
+  </main>
+  <footer id="rodape"></footer>
+</body>
+</html>

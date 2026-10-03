@@ -1,0 +1,44 @@
+{
+  "_comentario": "Unidades PÚBLICAS de atendimento (não são endereços de pessoas). Endereços copiados da página oficial da Polícia Civil. Coordenadas são preenchidas por scripts/geocodificar_servicos.py (Nominatim/OSM) e marcadas com a precisão obtida; sem coordenada, a unidade aparece só na lista.",
+  "fonte_id": "pcgo-delegacias-especializadas",
+  "fonte_url": "https://goias.gov.br/policiacivil/delegacias-especializadas/",
+  "data_consulta": "2026-10-03",
+  "servicos": [
+    {
+      "id": "deam-goiania-sede",
+      "nome": "DEAM — Delegacia Estadual de Atendimento Especializado à Mulher (sede)",
+      "tipo": "delegacia_mulher",
+      "publico": "mulheres",
+      "endereco": "Rua 24, nº 203, Qd. 49, Lt. 27, Centro – CEP 74030-060 – Goiânia/GO",
+      "consulta_geocodificacao": "Rua 24, 203, Centro, Goiânia, Goiás, 74030-060, Brasil",
+      "telefones": ["(62) 3201-2802", "(62) 3201-6344"],
+      "email": "deaem.pcgo@pc.goias.gov.br",
+      "observacao": "A página oficial informa plantão 24 horas no mesmo endereço.",
+      "lat": null, "lon": null, "precisao_coordenada": null
+    },
+    {
+      "id": "deam-goiania-noroeste",
+      "nome": "DEAM — Cartório da Região Noroeste",
+      "tipo": "delegacia_mulher",
+      "publico": "mulheres",
+      "endereco": "Av. do Povo com Rua E, Qd. 10, Lt. 101, Jardim Curitiba II – CEP 74480-110 – Goiânia/GO",
+      "consulta_geocodificacao": "Avenida do Povo, Jardim Curitiba, Goiânia, Goiás, 74480-110, Brasil",
+      "telefones": ["(62) 3201-6344", "(62) 3201-6332", "(62) 3201-6331"],
+      "email": null,
+      "observacao": null,
+      "lat": null, "lon": null, "precisao_coordenada": null
+    },
+    {
+      "id": "dpca-goiania",
+      "nome": "DPCA — Delegacia de Proteção à Criança e ao Adolescente",
+      "tipo": "delegacia_crianca",
+      "publico": "criancas_adolescentes",
+      "endereco": "Rua C-190, esquina com a C-107, Qd. 226, Lt. 13, Jardim América – CEP 74255-080 – Goiânia/GO",
+      "consulta_geocodificacao": "Rua C-190, Jardim América, Goiânia, Goiás, 74255-080, Brasil",
+      "telefones": ["(62) 3286-1540", "(62) 3286-1298", "(62) 3286-1552"],
+      "email": "dpca.goiania.pcgo@pc.goias.gov.br",
+      "observacao": null,
+      "lat": null, "lon": null, "precisao_coordenada": null
+    }
+  ]
+}

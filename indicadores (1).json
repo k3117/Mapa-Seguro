@@ -1,0 +1,367 @@
+{
+ "_comentario": "Gerado a partir dos PDFs oficiais da SSP-GO. Não editar manualmente sem fonte. A rotina scripts/atualizar_dados.py substitui 'transcricao_assistida' por 'pdfplumber' após conferir cada valor diretamente no PDF.",
+ "fonte_id": "ssp-go-estatisticas-criminais",
+ "territorio": {
+  "tipo": "estado",
+  "nome": "Goiás",
+  "uf": "GO",
+  "codigo_ibge": "52"
+ },
+ "gerado_em": "2026-10-03",
+ "indicadores": {
+  "feminicidio": {
+   "nome_oficial": "FEMINICÍDIO",
+   "rotulo": "Feminicídio",
+   "categoria_id": "feminicidio",
+   "publico_alvo": "mulheres",
+   "unidade": "ocorrências registradas",
+   "nota": "Natureza registrada como feminicídio no sistema RAI. A fonte não informa tentativas de feminicídio separadamente."
+  },
+  "estupro": {
+   "nome_oficial": "ESTUPRO",
+   "rotulo": "Estupro (todas as vítimas)",
+   "categoria_id": "estupro",
+   "publico_alvo": "todas_as_vitimas",
+   "unidade": "ocorrências registradas",
+   "nota": "A fonte oficial publica o total de estupros sem separar por sexo ou idade da vítima. Por isso este número NÃO pode ser apresentado como 'estupro contra mulheres' nem como 'estupro de vulnerável'."
+  }
+ },
+ "anos": {
+  "2018": {
+   "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2018.pdf",
+   "data_consulta_fonte": "2026-02-02",
+   "metodo_extracao": "transcricao_assistida",
+   "conferencia_automatica": "pendente",
+   "valores": {
+    "feminicidio": {
+     "mensal": [
+      1,
+      4,
+      2,
+      1,
+      4,
+      3,
+      1,
+      3,
+      5,
+      9,
+      0,
+      3
+     ],
+     "total_publicado": 36
+    },
+    "estupro": {
+     "mensal": [
+      76,
+      54,
+      84,
+      77,
+      56,
+      57,
+      42,
+      75,
+      66,
+      72,
+      68,
+      70
+     ],
+     "total_publicado": 797
+    }
+   }
+  },
+  "2019": {
+   "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2019.pdf",
+   "data_consulta_fonte": "2026-02-02",
+   "metodo_extracao": "transcricao_assistida",
+   "conferencia_automatica": "pendente",
+   "valores": {
+    "feminicidio": {
+     "mensal": [
+      2,
+      2,
+      3,
+      1,
+      3,
+      3,
+      5,
+      2,
+      3,
+      6,
+      3,
+      8
+     ],
+     "total_publicado": 41
+    },
+    "estupro": {
+     "mensal": [
+      74,
+      60,
+      92,
+      73,
+      76,
+      80,
+      53,
+      82,
+      86,
+      73,
+      85,
+      60
+     ],
+     "total_publicado": 894
+    }
+   }
+  },
+  "2020": {
+   "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2020.pdf",
+   "data_consulta_fonte": "2026-02-02",
+   "metodo_extracao": "transcricao_assistida",
+   "conferencia_automatica": "pendente",
+   "valores": {
+    "feminicidio": {
+     "mensal": [
+      1,
+      5,
+      4,
+      3,
+      4,
+      4,
+      3,
+      5,
+      3,
+      4,
+      5,
+      3
+     ],
+     "total_publicado": 44
+    },
+    "estupro": {
+     "mensal": [
+      78,
+      70,
+      56,
+      60,
+      56,
+      64,
+      55,
+      50,
+      48,
+      62,
+      52,
+      51
+     ],
+     "total_publicado": 702
+    }
+   }
+  },
+  "2021": {
+   "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2021.pdf",
+   "data_consulta_fonte": "2026-02-02",
+   "metodo_extracao": "transcricao_assistida",
+   "conferencia_automatica": "pendente",
+   "valores": {
+    "feminicidio": {
+     "mensal": [
+      6,
+      1,
+      10,
+      3,
+      1,
+      3,
+      3,
+      2,
+      6,
+      4,
+      9,
+      6
+     ],
+     "total_publicado": 54
+    },
+    "estupro": {
+     "mensal": [
+      61,
+      54,
+      60,
+      58,
+      71,
+      54,
+      52,
+      50,
+      78,
+      83,
+      47,
+      57
+     ],
+     "total_publicado": 725
+    }
+   }
+  },
+  "2022": {
+   "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2022.pdf",
+   "data_consulta_fonte": "2026-02-02",
+   "metodo_extracao": "transcricao_assistida",
+   "conferencia_automatica": "pendente",
+   "valores": {
+    "feminicidio": {
+     "mensal": [
+      7,
+      6,
+      3,
+      6,
+      5,
+      4,
+      6,
+      6,
+      4,
+      2,
+      6,
+      1
+     ],
+     "total_publicado": 56
+    },
+    "estupro": {
+     "mensal": [
+      63,
+      49,
+      63,
+      58,
+      70,
+      66,
+      78,
+      70,
+      72,
+      86,
+      63,
+      76
+     ],
+     "total_publicado": 814
+    }
+   }
+  },
+  "2023": {
+   "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2023.pdf",
+   "data_consulta_fonte": "2026-02-02",
+   "metodo_extracao": "transcricao_assistida",
+   "conferencia_automatica": "pendente",
+   "valores": {
+    "feminicidio": {
+     "mensal": [
+      6,
+      7,
+      0,
+      3,
+      8,
+      8,
+      1,
+      7,
+      6,
+      3,
+      6,
+      1
+     ],
+     "total_publicado": 56
+    },
+    "estupro": {
+     "mensal": [
+      60,
+      55,
+      70,
+      62,
+      69,
+      64,
+      55,
+      53,
+      62,
+      64,
+      78,
+      85
+     ],
+     "total_publicado": 777
+    }
+   }
+  },
+  "2024": {
+   "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2024.pdf",
+   "data_consulta_fonte": "2026-02-02",
+   "metodo_extracao": "transcricao_assistida",
+   "conferencia_automatica": "pendente",
+   "valores": {
+    "feminicidio": {
+     "mensal": [
+      6,
+      1,
+      1,
+      5,
+      5,
+      3,
+      6,
+      4,
+      7,
+      1,
+      9,
+      8
+     ],
+     "total_publicado": 56
+    },
+    "estupro": {
+     "mensal": [
+      53,
+      63,
+      54,
+      74,
+      54,
+      60,
+      65,
+      67,
+      78,
+      63,
+      79,
+      67
+     ],
+     "total_publicado": 777
+    }
+   }
+  },
+  "2025": {
+   "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/04/Estatisticas-de-2025.pdf",
+   "data_consulta_fonte": "2026-04-10",
+   "metodo_extracao": "transcricao_assistida",
+   "conferencia_automatica": "pendente",
+   "valores": {
+    "feminicidio": {
+     "mensal": [
+      1,
+      3,
+      7,
+      5,
+      4,
+      2,
+      8,
+      4,
+      7,
+      5,
+      5,
+      9
+     ],
+     "total_publicado": 60
+    },
+    "estupro": {
+     "mensal": [
+      54,
+      39,
+      71,
+      74,
+      68,
+      59,
+      53,
+      67,
+      61,
+      77,
+      75,
+      57
+     ],
+     "total_publicado": 755
+    }
+   }
+  }
+ }
+}

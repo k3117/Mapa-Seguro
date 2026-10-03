@@ -1,0 +1,32 @@
+name: Feedback do Assistente
+description: Avise quando uma resposta do Assistente MAPA SEGURO estiver errada.
+title: "[Feedback IA] "
+labels: ["feedback-ia"]
+body:
+  - type: markdown
+    attributes:
+      value: "**Não inclua dados pessoais.**"
+  - type: dropdown
+    id: motivo
+    attributes:
+      label: O que estava errado?
+      options:
+        - Informação incorreta
+        - Fonte incorreta
+        - Não respondeu
+        - Informação desatualizada
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: pergunta
+    attributes:
+      label: Pergunta feita
+  - type: textarea
+    id: resposta
+    attributes:
+      label: Resposta recebida
+  - type: textarea
+    id: detalhes
+    attributes:
+      label: Detalhes

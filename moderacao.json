@@ -1,0 +1,5 @@
+{
+ "_comentario": "Administração: 'ocultar' remove um registro do site; 'corrigir' altera campos permitidos. Sempre informe motivo e data (auditoria via histórico do Git).",
+ "ocultar": [],
+ "corrigir": []
+}

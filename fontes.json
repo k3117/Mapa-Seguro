@@ -1,0 +1,118 @@
+{
+  "_comentario": "Registro de fontes oficiais monitoradas. Somente fontes oficiais e públicas do Governo de Goiás. Para adicionar uma fonte nova, inclua um objeto aqui e um conector em scripts/conectores/. Nunca inclua fontes não oficiais.",
+  "fontes": [
+    {
+      "id": "notas-pcgo",
+      "titulo": "Notas oficiais — PCGO",
+      "orgao": "Polícia Civil do Estado de Goiás",
+      "tipo_fonte": "oficial",
+      "fonte_status": "oficial_confirmada",
+      "pagina_oficial": "https://goias.gov.br/policiacivil/",
+      "url_dados": "https://goias.gov.br/policiacivil/wp-json/wp/v2/posts",
+      "formato": "API REST pública do portal (WordPress)",
+      "abrangencia_geografica": "Estado de Goiás (município e, quando citado, bairro)",
+      "granularidade_temporal": "por nota (diária)",
+      "uso": "Registros do mapa: apenas categoria, município/bairro, datas, situação e link. Nenhum texto, nome ou endereço é armazenado.",
+      "conector": "coletar_ocorrencias"
+    },
+    {
+      "id": "notas-sspgo",
+      "titulo": "Notas oficiais — SSP-GO",
+      "orgao": "Secretaria de Estado da Segurança Pública de Goiás",
+      "tipo_fonte": "oficial",
+      "fonte_status": "oficial_confirmada",
+      "pagina_oficial": "https://goias.gov.br/seguranca/",
+      "url_dados": "https://goias.gov.br/seguranca/wp-json/wp/v2/posts",
+      "formato": "API REST pública do portal (WordPress)",
+      "abrangencia_geografica": "Estado de Goiás (município e, quando citado, bairro)",
+      "granularidade_temporal": "por nota (diária)",
+      "uso": "Registros do mapa: apenas categoria, município/bairro, datas, situação e link. Nenhum texto, nome ou endereço é armazenado.",
+      "conector": "coletar_ocorrencias"
+    },
+    {
+      "id": "notas-pmgo",
+      "titulo": "Notas oficiais — PMGO",
+      "orgao": "Polícia Militar do Estado de Goiás",
+      "tipo_fonte": "oficial",
+      "fonte_status": "oficial_confirmada",
+      "pagina_oficial": "https://goias.gov.br/policiamilitar/",
+      "url_dados": "https://goias.gov.br/policiamilitar/wp-json/wp/v2/posts",
+      "formato": "API REST pública do portal (WordPress)",
+      "abrangencia_geografica": "Estado de Goiás (município e, quando citado, bairro)",
+      "granularidade_temporal": "por nota (diária)",
+      "uso": "Registros do mapa: apenas categoria, município/bairro, datas, situação e link. Nenhum texto, nome ou endereço é armazenado.",
+      "conector": "coletar_ocorrencias"
+    },
+    {
+      "id": "ssp-go-estatisticas-criminais",
+      "titulo": "Estatísticas Criminais e de Produtividade — Estado de Goiás",
+      "orgao": "Secretaria de Estado da Segurança Pública de Goiás (SSP-GO) — Observatório de Segurança Pública",
+      "tipo_fonte": "oficial",
+      "fonte_status": "oficial_confirmada",
+      "pagina_oficial": "https://goias.gov.br/seguranca/estatisticas/",
+      "sistema_origem": "ODISSEU (RAI — Registro de Atendimento Integrado)",
+      "formato": "PDF (tabela anual com totais mensais)",
+      "abrangencia_geografica": "Estado de Goiás (sem desagregação por município, bairro ou local)",
+      "granularidade_temporal": "mensal",
+      "defasagem_informada": "A SSP-GO informa que os dados são publicados mensalmente com atraso de pelo menos 60 dias.",
+      "ressalva_oficial": "Os dados apresentados neste demonstrativo estão sujeitos às variações, conforme o andamento das investigações em procedimentos policiais instaurados para a apuração dos fatos.",
+      "contato": "observatorio.ssp@goias.gov.br",
+      "conector": "ssp_go_pdf_anual",
+      "arquivos": [
+        {
+          "ano": 2025,
+          "url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/04/Estatisticas-de-2025.pdf"
+        },
+        {
+          "ano": 2024,
+          "url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2024.pdf"
+        },
+        {
+          "ano": 2023,
+          "url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2023.pdf"
+        },
+        {
+          "ano": 2022,
+          "url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2022.pdf"
+        },
+        {
+          "ano": 2021,
+          "url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2021.pdf"
+        },
+        {
+          "ano": 2020,
+          "url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2020.pdf"
+        },
+        {
+          "ano": 2019,
+          "url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2019.pdf"
+        },
+        {
+          "ano": 2018,
+          "url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2018.pdf"
+        }
+      ]
+    },
+    {
+      "id": "pcgo-delegacias-especializadas",
+      "titulo": "Delegacias Especializadas — Polícia Civil do Estado de Goiás",
+      "orgao": "Polícia Civil do Estado de Goiás (PCGO)",
+      "tipo_fonte": "oficial",
+      "fonte_status": "oficial_confirmada",
+      "pagina_oficial": "https://goias.gov.br/policiacivil/delegacias-especializadas/",
+      "formato": "Página web (endereços e telefones de unidades públicas)",
+      "abrangencia_geografica": "Goiânia (unidades públicas de atendimento)",
+      "conector": "manual_revisado"
+    },
+    {
+      "id": "ibge-malha-goias",
+      "titulo": "Malha territorial do Estado de Goiás (código 52)",
+      "orgao": "IBGE — API de Malhas Territoriais (usada apenas para desenhar o contorno do estado)",
+      "tipo_fonte": "oficial",
+      "fonte_status": "oficial_confirmada",
+      "pagina_oficial": "https://servicodados.ibge.gov.br/api/docs/malhas",
+      "url_dados": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/52?formato=application/vnd.geo+json&qualidade=minima",
+      "conector": "geojson_estatico"
+    }
+  ]
+}

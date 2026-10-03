@@ -1,0 +1,74 @@
+{
+  "_comentario": "Textos institucionais usados pelas páginas e pelo Assistente. O Assistente só responde sobre a plataforma com base nestes textos.",
+  "topicos": {
+    "finalidade": {
+      "titulo": "Finalidade",
+      "texto": "O MAPA SEGURO é uma plataforma de informação pública destinada a organizar e apresentar dados disponíveis em fontes públicas sobre violência contra mulheres, crianças e adolescentes em Goiás, com foco em Goiânia. A presença de uma ocorrência na plataforma não significa, por si só, condenação criminal. A plataforma usa exclusivamente fontes oficiais e públicas do Governo de Goiás."
+    },
+    "fontes": {
+      "titulo": "De onde vêm os dados?",
+      "texto": "Duas bases oficiais: (1) Registros do mapa — notas oficiais publicadas nos portais da Polícia Civil (PCGO), da Secretaria de Segurança Pública (SSP-GO) e da Polícia Militar (PMGO), lidas pela API pública desses portais; (2) Estatística agregada — demonstrativo 'Estatísticas Criminais e de Produtividade' da SSP-GO (sistema RAI/Odisseu), com totais mensais do Estado de Goiás para feminicídio e estupro. Endereços de unidades de atendimento vêm da Polícia Civil; o contorno do estado, do IBGE. Nenhum dado vem de redes sociais, de imprensa ou de fontes não oficiais."
+    },
+    "classificacao": {
+      "titulo": "Como os dados são classificados?",
+      "texto": "Cada nota oficial é classificada por regras públicas e auditáveis (scripts/classificador.py): a categoria vem das palavras do título e do texto (por exemplo, 'tentativa de feminicídio', 'descumprimento de medida protetiva', 'estupro de vulnerável' com menção a criança). Notas institucionais (palestras, eventos, entregas) são descartadas. Quando a nota cita mais de um crime, vale o mais grave e os demais ficam como categorias secundárias. Notas sobre o mesmo fato em órgãos diferentes são unificadas; possíveis duplicidades na mesma fonte são sinalizadas para revisão."
+    },
+    "localizacao": {
+      "titulo": "Como a localização é definida?",
+      "texto": "A localização é sempre aproximada. Se a nota oficial cita o bairro ou setor, o ponto fica no centro aproximado desse bairro (OpenStreetMap). Se não cita, o ponto fica na sede do município. Casos que envolvem criança ou adolescente (ou vítima vulnerável) ficam SEMPRE na sede do município. Ruas, números, quadras, lotes, condomínios e endereços residenciais nunca são extraídos nem publicados. Não existe busca por endereço, pessoa, vítima ou tornozeleira."
+    },
+    "atualizacao": {
+      "titulo": "Como os dados são atualizados?",
+      "texto": "Uma rotina automática (GitHub Actions) roda todos os dias: consulta a API pública dos portais da PCGO, SSP-GO e PMGO, classifica as notas, aplica as regras de privacidade, unifica duplicidades, posiciona os registros e publica o site. As estatísticas agregadas da SSP-GO são conferidas mensalmente (soma dos meses = total publicado). Registros podem ser ocultados ou corrigidos pela administração, com motivo registrado."
+    },
+    "correcoes": {
+      "titulo": "Como corrigir um erro?",
+      "texto": "Use o botão 'Encontrou um erro?' para abrir uma solicitação pública de correção, informando a informação incorreta, a correção proposta e a fonte oficial que a comprova. Nenhuma alteração é feita automaticamente: toda correção passa por revisão humana e fica registrada no histórico do repositório (auditoria)."
+    },
+    "privacidade": {
+      "titulo": "Como a privacidade é protegida?",
+      "texto": "A plataforma não guarda o texto das notas, nomes, idades, profissões, endereços ou qualquer dado que identifique vítimas, investigados, crianças ou adolescentes — apenas categoria, município/bairro aproximado, datas, situação jurídica e o link da fonte oficial. Não há cadastro de usuários. As conversas com o Assistente não são gravadas pelo MAPA SEGURO; quando um provedor de IA externo é configurado, a pergunta é enviada a ele para gerar a resposta. Princípios (LGPD): necessidade, finalidade, proporcionalidade, verificação, segurança, privacidade e transparência."
+    },
+    "investigacao_condenacao": {
+      "titulo": "Investigação não é condenação",
+      "texto": "Um registro policial (ocorrência no RAI) indica que um fato foi comunicado e está sendo apurado. Ele não equivale a acusação formal, denúncia do Ministério Público, processo ou condenação. Os números exibidos são contagens de ocorrências registradas e não dizem nada sobre a culpa de qualquer pessoa. Ninguém deve ser chamado de criminoso sem condenação."
+    },
+    "limitacoes": {
+      "titulo": "Limitações",
+      "texto": "1) Os registros do mapa vêm de notas divulgadas pelos órgãos e não cobrem todas as ocorrências: a contagem não é taxa de criminalidade. 2) A localização é aproximada (bairro ou município). 3) A classificação é automática por regras e pode errar — use 'Informar correção'. 4) A situação jurídica reflete o momento da nota (em geral, investigação). 5) As estatísticas agregadas da SSP-GO cobrem só feminicídio e estupro (total), sem recorte por município. 6) Registro de ocorrência não significa condenação."
+    },
+    "mapa": {
+      "titulo": "Como funciona o mapa?",
+      "texto": "Cada marcador é um registro de ocorrência divulgado em nota oficial, com ícone e cor da categoria (veja a legenda). Números em círculos vermelhos agrupam vários registros próximos: aproxime o mapa para separá-los. Use os filtros à esquerda: O QUÊ (categorias), ONDE (município ou 'pesquisar nesta área'), QUANDO (período), além de RESUMO, RELATÓRIO, GRÁFICOS e IMPRIMIR. Clique num marcador para ver o resumo e o link da fonte oficial. Escudos roxos são unidades públicas de atendimento."
+    },
+    "ia": {
+      "titulo": "Como funciona a inteligência artificial?",
+      "texto": "O Assistente MAPA SEGURO não tem acesso livre a nada: ele só pode chamar funções controladas (consultar estatísticas, fontes, serviços e textos da plataforma), que leem os mesmos arquivos de dados exibidos no site. Números e fontes vêm sempre dessas funções, nunca do modelo. Perguntas que pedem endereço privado, localização em tempo real, identificação de vítimas ou dados de crianças são bloqueadas antes de chegar ao modelo. Sem provedor de IA configurado, o Assistente funciona em modo local, com respostas montadas diretamente a partir dos dados. O provedor padrão é o Google Gemini (nível gratuito) e pode ser trocado por configuração."
+    }
+  },
+  "emergencia": {
+    "aviso": "Em situação de emergência ou risco imediato, ligue 190. O MAPA SEGURO é uma plataforma de informação e não substitui os canais oficiais de atendimento.",
+    "contatos": [
+      {
+        "numero": "190",
+        "nome": "Polícia Militar",
+        "quando": "Emergência, violência acontecendo agora ou risco imediato."
+      },
+      {
+        "numero": "180",
+        "nome": "Central de Atendimento à Mulher",
+        "quando": "Orientação, denúncia e informações sobre a rede de proteção à mulher. Gratuito, 24 horas."
+      },
+      {
+        "numero": "100",
+        "nome": "Disque Direitos Humanos",
+        "quando": "Denúncias de violações contra crianças, adolescentes e outros grupos. Gratuito, 24 horas."
+      },
+      {
+        "numero": "192",
+        "nome": "SAMU",
+        "quando": "Atendimento médico de urgência."
+      }
+    ]
+  }
+}

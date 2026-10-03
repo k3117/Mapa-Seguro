@@ -1,0 +1,825 @@
+{
+ "gerado_em": "2026-10-03T19:00:00+00:00",
+ "registros": [
+  {
+   "id": "pcgo-173489",
+   "categoria": "tentativa_feminicidio",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Nova Iguaçu de Goiás",
+   "codigo_ibge": "5214879",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -14.2868,
+   "lon": -49.3872,
+   "data_publicacao": "2026-02-07",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-homem-que-atirou-contra-a-propria-esposa-e-tentou-simular-bala-perdida-em-nova-iguacu-de-goias-2/",
+     "data_publicacao": "2026-02-07",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-190983",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [
+    "violencia_sexual"
+   ],
+   "publico": "criancas_adolescentes",
+   "municipio": "Minaçu",
+   "codigo_ibge": "5213087",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -13.5304,
+   "lon": -48.2206,
+   "data_publicacao": "2026-04-15",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão em flagrante"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/policia-civil-prende-em-flagrante-pai-suspeito-de-estuprar-o-filho-em-minacu/",
+     "data_publicacao": "2026-04-15",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-191165",
+   "categoria": "violencia_sexual",
+   "categorias_secundarias": [],
+   "publico": "nao_informado",
+   "municipio": "Goiânia",
+   "codigo_ibge": "5208707",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.6864,
+   "lon": -49.2643,
+   "data_publicacao": "2026-04-16",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-investiga-medico-ginecologista-suspeito-de-estupro-contra-pacientes-em-goiania-e-senador-canedo/",
+     "data_publicacao": "2026-04-16",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-193142",
+   "categoria": "violencia_sexual",
+   "categorias_secundarias": [],
+   "publico": "nao_informado",
+   "municipio": "Goiânia",
+   "codigo_ibge": "5208707",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.6864,
+   "lon": -49.2643,
+   "data_publicacao": "2026-04-24",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-ginecologista-investigado-por-estupro-de-vulneravel-com-23-vitimas-em-goiania-e-senador-canedo/",
+     "data_publicacao": "2026-04-24",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-193148",
+   "categoria": "feminicidio",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Campinaçu",
+   "codigo_ibge": "5204656",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -13.787,
+   "lon": -48.5704,
+   "data_publicacao": "2026-04-24",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/operacao-integrada-prende-homem-que-matou-esposa-em-campinacu/",
+     "data_publicacao": "2026-04-24",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-195226",
+   "categoria": "feminicidio",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Orizona",
+   "codigo_ibge": "5215306",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -17.0334,
+   "lon": -48.2964,
+   "data_publicacao": "2026-04-30",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão em flagrante"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-autor-de-feminicidio-brutal-ocorrido-na-zona-rural-de-orizona/",
+     "data_publicacao": "2026-04-30",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-197914",
+   "categoria": "tentativa_feminicidio",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Luziânia",
+   "codigo_ibge": "5212501",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.253,
+   "lon": -47.95,
+   "data_publicacao": "2026-05-11",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-tentativa-de-feminicidio-contra-a-propria-tia-em-luziania/",
+     "data_publicacao": "2026-05-11",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-218042",
+   "categoria": "violencia_domestica",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Santa Terezinha de Goiás",
+   "codigo_ibge": "5219704",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -14.4326,
+   "lon": -49.7091,
+   "data_publicacao": "2026-05-19",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão em flagrante"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-investigado-por-violencia-domestica-em-santa-terezinha-de-goias/",
+     "data_publicacao": "2026-05-19",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-219894",
+   "categoria": "feminicidio",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Anápolis",
+   "codigo_ibge": "5201108",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.3281,
+   "lon": -48.953,
+   "data_publicacao": "2026-05-20",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/operacao-integrada-prende-homem-que-matou-companheira-em-anapolis-corpo-foi-localizado-em-silvania/",
+     "data_publicacao": "2026-05-20",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-221857",
+   "categoria": "violencia_domestica",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Valparaíso de Goiás",
+   "codigo_ibge": "5221858",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.0651,
+   "lon": -47.9757,
+   "data_publicacao": "2026-05-20",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "busca e apreensão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-cumpre-busca-e-apreensao-em-investigacao-de-violencia-domestica-em-valparaiso/",
+     "data_publicacao": "2026-05-20",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-226982",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [
+    "violencia_sexual"
+   ],
+   "publico": "criancas_adolescentes",
+   "municipio": "Anápolis",
+   "codigo_ibge": "5201108",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.3281,
+   "lon": -48.953,
+   "data_publicacao": "2026-05-26",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/operacao-integrada-prende-homem-por-crimes-sexuais-contra-as-proprias-filhas-praticado-em-anapolis/",
+     "data_publicacao": "2026-05-26",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-227522",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [
+    "violencia_sexual"
+   ],
+   "publico": "criancas_adolescentes",
+   "municipio": "Santa Terezinha de Goiás",
+   "codigo_ibge": "5219704",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -14.4326,
+   "lon": -49.7091,
+   "data_publicacao": "2026-05-27",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/policia-civil-cumpre-prisao-e-buscas-contra-investigado-por-estupro-de-crianca-em-st-terezinha-de-goias/",
+     "data_publicacao": "2026-05-27",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-229142",
+   "categoria": "descumprimento_mp",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Cachoeira Alta",
+   "codigo_ibge": "5204102",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -18.7618,
+   "lon": -50.9432,
+   "data_publicacao": "2026-05-29",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-homem-por-descumprimento-de-medida-protetiva-e-apreende-armas-de-fogo-em-cachoeira-alta/",
+     "data_publicacao": "2026-05-29",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-229366",
+   "categoria": "lesao_corporal",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Aparecida de Goiânia",
+   "codigo_ibge": "5201405",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.8198,
+   "lon": -49.2469,
+   "data_publicacao": "2026-05-29",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/policia-civil-prende-homem-apos-reiteradas-agressoes-a-mulher-em-aparecida-de-goiania/",
+     "data_publicacao": "2026-05-29",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-230245",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [],
+   "publico": "criancas_adolescentes",
+   "municipio": "Aparecida de Goiânia",
+   "codigo_ibge": "5201405",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.8198,
+   "lon": -49.2469,
+   "data_publicacao": "2026-06-02",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-e-prende-homem-por-posse-de-conteudo-sexual-infantil-em-aparecida-de-goiania/",
+     "data_publicacao": "2026-06-02",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-230254",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [
+    "violencia_sexual"
+   ],
+   "publico": "criancas_adolescentes",
+   "municipio": "Nova Crixás",
+   "codigo_ibge": "5214838",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -14.0957,
+   "lon": -50.33,
+   "data_publicacao": "2026-06-02",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "busca e apreensão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-cumpre-busca-e-apreensao-contra-familiares-suspeitos-de-vender-fotos-intimas-de-adolescente-em-nova-crixas/",
+     "data_publicacao": "2026-06-02",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-230515",
+   "categoria": "violencia_sexual",
+   "categorias_secundarias": [
+    "perseguicao"
+   ],
+   "publico": "mulheres",
+   "municipio": "Crixás",
+   "codigo_ibge": "5206404",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -14.5412,
+   "lon": -49.974,
+   "data_publicacao": "2026-06-02",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-suspeito-de-perseguir-mulher-e-gravar-imagens-intimas-para-divulgacao-em-crixas/",
+     "data_publicacao": "2026-06-02",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-230856",
+   "categoria": "descumprimento_mp",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Luziânia",
+   "codigo_ibge": "5212501",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.253,
+   "lon": -47.95,
+   "data_publicacao": "2026-06-02",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/policia-civil-prende-homem-que-descumpriu-medidas-protetivas-contra-ex-companheira-por-varias-vezes-em-luziania/",
+     "data_publicacao": "2026-06-02",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-237388",
+   "categoria": "violencia_domestica",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Rio Verde",
+   "codigo_ibge": "5218805",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -17.7923,
+   "lon": -50.9192,
+   "data_publicacao": "2026-06-10",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-incendio-criminoso-a-residencia-da-ex-namorada-em-em-rio-verde/",
+     "data_publicacao": "2026-06-10",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-238493",
+   "categoria": "perseguicao",
+   "categorias_secundarias": [
+    "ameaca"
+   ],
+   "publico": "mulheres",
+   "municipio": "Uruana",
+   "codigo_ibge": "5221700",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -15.4993,
+   "lon": -49.6861,
+   "data_publicacao": "2026-06-11",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-e-apreende-revolver-usado-para-praticar-perseguicao-e-ameaca-contra-mulher-em-uruana/",
+     "data_publicacao": "2026-06-11",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-239910",
+   "categoria": "lesao_corporal",
+   "categorias_secundarias": [
+    "ameaca"
+   ],
+   "publico": "mulheres",
+   "municipio": "Goianésia",
+   "codigo_ibge": "5208608",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -15.3118,
+   "lon": -49.1162,
+   "data_publicacao": "2026-06-15",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão em flagrante"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-homem-por-agredir-ex-companheira-e-ameacar-filho-em-goianesia/",
+     "data_publicacao": "2026-06-15",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-240228",
+   "categoria": "descumprimento_mp",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Luziânia",
+   "codigo_ibge": "5212501",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.253,
+   "lon": -47.95,
+   "data_publicacao": "2026-06-16",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-dois-homens-por-descumprimento-de-medidas-protetivas-e-outros-crimes-contra-as-mulheres-em-luziania/",
+     "data_publicacao": "2026-06-16",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-241379",
+   "categoria": "feminicidio",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Novo Gama",
+   "codigo_ibge": "5215231",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.0592,
+   "lon": -48.0417,
+   "data_publicacao": "2026-06-18",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/operacao-integrada-prende-investigado-por-feminicidio-contra-sua-companheira-em-novo-gama/",
+     "data_publicacao": "2026-06-18",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-243168",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [
+    "violencia_sexual"
+   ],
+   "publico": "criancas_adolescentes",
+   "municipio": "Anápolis",
+   "codigo_ibge": "5201108",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.3281,
+   "lon": -48.953,
+   "data_publicacao": "2026-06-22",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-mae-e-padrasto-investigados-por-estupro-contra-o-filho-da-mulher-em-anapolis/",
+     "data_publicacao": "2026-06-22",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-252259",
+   "categoria": "descumprimento_mp",
+   "categorias_secundarias": [
+    "violencia_domestica"
+   ],
+   "publico": "mulheres",
+   "municipio": "Luziânia",
+   "codigo_ibge": "5212501",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.253,
+   "lon": -47.95,
+   "data_publicacao": "2026-06-26",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão em flagrante"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-homem-que-descumpriu-medidas-protetivas-e-incendiou-casa-da-ex-companheira-em-luziania/",
+     "data_publicacao": "2026-06-26",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  },
+  {
+   "id": "pcgo-253241",
+   "categoria": "violencia_sexual",
+   "categorias_secundarias": [],
+   "publico": "nao_informado",
+   "municipio": "Santa Terezinha de Goiás",
+   "codigo_ibge": "5219704",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -14.4326,
+   "lon": -49.7091,
+   "data_publicacao": "2026-06-30",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-estupro-de-vulneravel-em-santa-terezinha-de-goias/",
+     "data_publicacao": "2026-06-30",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "titulo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": null
+  }
+ ]
+}

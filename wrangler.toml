@@ -1,0 +1,19 @@
+name = "mapa-seguro-ia"
+main = "index.js"
+compatibility_date = "2025-06-01"
+
+[vars]
+AI_PROVEDOR = "gemini"
+AI_MODELO = "gemini-2.5-flash"
+# Troque pelo endereço do seu GitHub Pages (sem barra no final). Várias origens: separe por vírgula.
+ORIGENS_PERMITIDAS = "https://SEU-USUARIO.github.io"
+
+# Opcional: registro anônimo de perguntas/feedback para o painel de IA.
+# Crie com:  npx wrangler kv namespace create LOGS   e cole o id abaixo.
+# [[kv_namespaces]]
+# binding = "LOGS"
+# id = "COLE_O_ID_AQUI"
+
+# Segredos (NUNCA no arquivo):
+#   npx wrangler secret put AI_API_KEY
+#   npx wrangler secret put ADMIN_TOKEN

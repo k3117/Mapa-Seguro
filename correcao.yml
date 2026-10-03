@@ -1,0 +1,40 @@
+name: Informar correção
+description: Encontrou um erro no MAPA SEGURO? Informe aqui. Toda correção passa por revisão humana.
+title: "[Correção] "
+labels: ["correcao", "pendente"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Não informe nomes, endereços residenciais ou qualquer dado que identifique vítimas, crianças ou adolescentes.**
+        Nenhuma alteração é feita automaticamente. Status: pendente → em análise → corrigida / rejeitada.
+  - type: input
+    id: pagina
+    attributes:
+      label: Página ou dado
+      description: Ex.: Estatísticas › Feminicídio › 2024 › março
+    validations:
+      required: true
+  - type: textarea
+    id: incorreto
+    attributes:
+      label: Qual informação está incorreta?
+    validations:
+      required: true
+  - type: textarea
+    id: correto
+    attributes:
+      label: Qual deveria ser a informação?
+    validations:
+      required: true
+  - type: input
+    id: fonte
+    attributes:
+      label: Fonte oficial que comprova a correção (link)
+      description: Somente fontes oficiais e públicas.
+    validations:
+      required: true
+  - type: textarea
+    id: obs
+    attributes:
+      label: Observações
