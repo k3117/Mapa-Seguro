@@ -1,6 +1,6 @@
 {
  "_comentario": "Gerado por scripts/coletar_ocorrencias.py a partir de notas oficiais. Nenhum texto, nome ou endereço é armazenado.",
- "gerado_em": "2026-10-03T20:24:40+00:00",
+ "gerado_em": "2026-10-03T20:39:02+00:00",
  "janela_dias": 730,
  "fontes_consultadas": [
   {
@@ -19,7 +19,7 @@
    "api": "https://goias.gov.br/policiamilitar/wp-json/wp/v2/posts"
   }
  ],
- "total": 763,
+ "total": 764,
  "ocorrencias": [
   {
    "id": "pcgo-253241",
@@ -13889,6 +13889,38 @@
    "extracao": "conteudo",
    "coletado_em": "2026-10-03",
    "modificado_fonte": "2025-06-12T14:51:36",
+   "possivel_duplicidade": []
+  },
+  {
+   "id": "pcgo-146032",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [],
+   "publico": "criancas_adolescentes",
+   "municipio": "Aparecida de Goiânia",
+   "codigo_ibge": "5201405",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.8198,
+   "lon": -49.2469,
+   "data_publicacao": "2025-06-11",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "busca e apreensão"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-e-apreensao-em-casa-de-investigado-por-armazenar-pornografia-infanto-juvenil/",
+     "data_publicacao": "2025-06-11",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "extracao": "conteudo",
+   "coletado_em": "2026-10-03",
+   "modificado_fonte": "2025-06-11T12:16:16",
    "possivel_duplicidade": []
   },
   {

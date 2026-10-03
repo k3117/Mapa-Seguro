@@ -1,14 +1,8 @@
 {
- "executado_em": "2026-10-03T20:24:40+00:00",
- "posts_analisados": 1440,
- "registros": 763,
+ "executado_em": "2026-10-03T20:39:02+00:00",
+ "posts_analisados": 1442,
+ "registros": 764,
  "eventos": [
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "exploração sexual",
-   "msg": "HTTP 500"
-  },
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-autor-de-feminicidio-qualificado-praticado-na-presenca-da-filha-da-vitima/"
@@ -439,6 +433,14 @@
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-vozes-invisiveis-2-pcgo-cumpre-buscas-contra-rede-de-exploracao-sexual-de-menores-na-internet/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-armazenar-material-de-exploracao-sexual-de-criancas-e-adolescentes/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-busca-e-apreensao-contra-suspeito-de-fazer-montagem-de-fotos-com-cunho-sexual-contra-adolescente/"
   },
   {
@@ -452,14 +454,6 @@
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-foragido-em-2a-fase-da-operacao-invasores-integrante-de-torcida-organizada-investigado-por-diversos-crimes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-vozes-invisiveis-2-pcgo-cumpre-buscas-contra-rede-de-exploracao-sexual-de-menores-na-internet/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-armazenar-material-de-exploracao-sexual-de-criancas-e-adolescentes/"
   },
   {
    "nivel": "info",
