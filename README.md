@@ -4,17 +4,17 @@ Mapa de ocorrências de violência contra **mulheres, crianças e adolescentes**
 
 ---
 
-## Publicar (3 passos)
+🌐 **Site:** https://k3117.github.io/Mapa-Seguro/
 
-1. Crie um repositório **público** no GitHub (ex.: `mapa-seguro`) e envie **todo o conteúdo desta pasta** para a branch `main` (pelo site: *Add file → Upload files*, arrastando as pastas).
-2. No repositório: **Settings → Pages → Source: GitHub Actions**.
-   Em **Settings → Actions → General → Workflow permissions**, marque **Read and write permissions**.
-3. Em **Actions → "Coletar dados oficiais e publicar" → Run workflow**.
+## Publicar / ativar o site
 
-Pronto: em ~5 minutos o site fica em `https://SEU-USUARIO.github.io/mapa-seguro/`.
-A partir daí, **todo dia às 06h10** o próprio GitHub coleta as notas oficiais novas, aplica as regras e republica. Você não precisa fazer mais nada.
+1. **Settings → Pages → Source: GitHub Actions**.
+2. **Settings → Actions → General → Workflow permissions → Read and write permissions** (salvar).
+3. **Actions → "Coletar dados oficiais e publicar" → Run workflow**.
 
-> Opcional: em `assets/js/config.js` troque `SEU-USUARIO/mapa-seguro` pelo seu repositório para ativar os botões "Informar correção" e "Resposta incorreta".
+Em ~5 minutos o site fica no ar. Depois, **todo dia às 06h10** o GitHub coleta as notas oficiais novas, aplica as regras e republica sozinho.
+
+> ⚠️ Ao enviar arquivos pelo site do GitHub, arraste as **pastas** (não os arquivos soltos): o site depende da estrutura abaixo.
 
 ---
 
@@ -84,8 +84,7 @@ Funciona **sem configurar nada** (modo local: respostas montadas direto dos dado
 2. Crie conta gratuita na Cloudflare e, na pasta `worker/`:
    ```bash
    npm i -g wrangler && wrangler login
-   # em wrangler.toml: ORIGENS_PERMITIDAS = "https://SEU-USUARIO.github.io"
-   wrangler secret put AI_API_KEY
+      wrangler secret put AI_API_KEY
    wrangler deploy
    ```
 3. Em `assets/js/config.js`: `modo: "proxy"` e `proxyUrl: "https://mapa-seguro-ia.SEU-SUBDOMINIO.workers.dev"`.
@@ -108,7 +107,10 @@ worker/           proxy de IA (Cloudflare Workers)
 tests/            testes (Python e Node) com dados fixos
 ```
 
+Licenças de terceiros: Leaflet (BSD-2) e Leaflet.markercluster (MIT), em `vendor/`.
+
 Testar no computador: `python3 -m http.server 8000` e abra `http://localhost:8000`.
 
 ### Expandir para outras cidades/estados
 Adicione o portal oficial em `SITES` (`scripts/coletar_ocorrencias.py`), a lista de municípios do estado em `data/municipios_*.json` e o domínio permitido em `validar_dados.py`. A arquitetura não muda.
+

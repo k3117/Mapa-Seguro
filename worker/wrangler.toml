@@ -6,7 +6,7 @@ compatibility_date = "2025-06-01"
 AI_PROVEDOR = "gemini"
 AI_MODELO = "gemini-2.5-flash"
 # Troque pelo endereço do seu GitHub Pages (sem barra no final). Várias origens: separe por vírgula.
-ORIGENS_PERMITIDAS = "https://SEU-USUARIO.github.io"
+ORIGENS_PERMITIDAS = "https://k3117.github.io"
 
 # Opcional: registro anônimo de perguntas/feedback para o painel de IA.
 # Crie com:  npx wrangler kv namespace create LOGS   e cole o id abaixo.

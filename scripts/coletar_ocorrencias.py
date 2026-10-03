@@ -236,7 +236,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dias", type=int, default=730)
     args = ap.parse_args()
-    site_url = os.environ.get("SITE_URL", "https://SEU-USUARIO.github.io/mapa-seguro/")
+    site_url = os.environ.get("SITE_URL", "https://k3117.github.io/Mapa-Seguro/")
 
     municipios = ler("municipios_go.json", {})["municipios"]
     loc = Localizador(municipios)

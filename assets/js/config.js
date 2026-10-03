@@ -8,7 +8,7 @@ export const CONFIG = {
 
   // Repositório GitHub (usuario/repositorio) — usado nos botões
   // "Encontrou um erro?" e "Resposta incorreta", que abrem uma Issue pré-preenchida.
-  repositorio: "SEU-USUARIO/mapa-seguro",
+  repositorio: "k3117/Mapa-Seguro",
 
   mapa: {
     // Camada base do OpenStreetMap (gratuita; respeite a política de uso de tiles)
