@@ -85,15 +85,15 @@ export function obterCaso(base, id) {
 /** Texto de local sempre generalizado (nunca endereço). */
 export function rotuloLocal(r) {
   return r.bairro && r.precisao_local === "bairro"
-    ? `${r.bairro} — ${r.municipio}/GO`
+    ? `${r.bairro}, ${r.municipio}/GO`
     : `${r.municipio}/GO`;
 }
 
 export function notaPrecisao(r) {
-  if (r.publico === "criancas_adolescentes") return "Localização generalizada para o município para proteger criança/adolescente.";
-  if (r.precisao_local === "bairro") return "Ponto no centro aproximado do bairro citado na nota oficial. Não é endereço.";
-  if (r.bairro) return "A nota cita o bairro, mas ele não pôde ser localizado com segurança; ponto na sede do município.";
-  return "A nota oficial não informa bairro; ponto na sede do município.";
+  if (r.publico === "criancas_adolescentes") return "o ponto fica na sede do município, para proteger a criança ou o adolescente.";
+  if (r.precisao_local === "bairro") return "o ponto fica no centro aproximado do bairro citado na nota, e não indica endereço.";
+  if (r.bairro) return "a nota cita o bairro, mas ele não pôde ser localizado com segurança, e o ponto fica na sede do município.";
+  return "a nota não informa o bairro, e o ponto fica na sede do município.";
 }
 
 /** Versão pública e mínima de um registro (para o Assistente e exportações). */
@@ -110,9 +110,8 @@ export function resumoPublico(base, r) {
     termo_pessoa: base.categorias.termo_pessoa[r.status_juridico] || "—",
     medidas: r.medidas || [],
     fonte_status: base.categorias.fonte_status[r.fonte_status] || r.fonte_status,
-    resumo_oficial: r.resumo_oficial || null,
     reportagens: r.reportagens || [],
-    fontes: r.fontes.map((f) => ({ titulo: `Nota oficial — ${f.orgao} (${f.data_publicacao.split("-").reverse().join("/")})`, orgao: f.orgao, url: f.url, data_consulta_fonte: f.data_publicacao })),
+    fontes: r.fontes.map((f) => ({ titulo: `Nota oficial da ${f.orgao} (${f.data_publicacao.split("-").reverse().join("/")})`, orgao: f.orgao, url: f.url, data_consulta_fonte: f.data_publicacao })),
   };
 }
 
@@ -156,6 +155,6 @@ export function avisoDefasagem(base, hoje = new Date()) {
   const br = ult.split("-").reverse().join("/");
   const eleitoral = ult >= "2026-06-25" && ult <= "2026-07-10" && iso(hoje) <= "2026-11-30";
   return `A nota oficial mais recente é de ${br}. ${eleitoral
-    ? "Desde julho de 2026 os sites do Governo de Goiás suspenderam a publicação de notícias por causa do período eleitoral, por isso não há registros novos."
-    : "Desde então os órgãos oficiais não publicaram novas notas sobre esses crimes."} O mapa verifica as fontes automaticamente todos os dias.`;
+    ? "A partir de julho de 2026, os sites do Governo de Goiás deixaram de publicar notícias por causa do período eleitoral. Por isso, não há registros novos."
+    : "Desde então, os órgãos oficiais não publicaram novas notas sobre esses crimes."} A ausência de registros não significa ausência de crimes. O mapa consulta as fontes todos os dias.`;
 }

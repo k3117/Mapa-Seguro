@@ -6,7 +6,7 @@
   "servicos": [
     {
       "id": "deam-goiania-sede",
-      "nome": "DEAM — Delegacia Estadual de Atendimento Especializado à Mulher (sede)",
+      "nome": "DEAM, Delegacia Estadual de Atendimento Especializado à Mulher (sede)",
       "tipo": "delegacia_mulher",
       "publico": "mulheres",
       "endereco": "Rua 24, nº 203, Qd. 49, Lt. 27, Centro – CEP 74030-060 – Goiânia/GO",
@@ -23,7 +23,7 @@
     },
     {
       "id": "deam-goiania-noroeste",
-      "nome": "DEAM — Cartório da Região Noroeste",
+      "nome": "DEAM, Cartório da Região Noroeste",
       "tipo": "delegacia_mulher",
       "publico": "mulheres",
       "endereco": "Av. do Povo com Rua E, Qd. 10, Lt. 101, Jardim Curitiba II – CEP 74480-110 – Goiânia/GO",
@@ -41,7 +41,7 @@
     },
     {
       "id": "dpca-goiania",
-      "nome": "DPCA — Delegacia de Proteção à Criança e ao Adolescente",
+      "nome": "DPCA, Delegacia de Proteção à Criança e ao Adolescente",
       "tipo": "delegacia_crianca",
       "publico": "criancas_adolescentes",
       "endereco": "Rua C-190, esquina com a C-107, Qd. 226, Lt. 13, Jardim América – CEP 74255-080 – Goiânia/GO",

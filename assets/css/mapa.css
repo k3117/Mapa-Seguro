@@ -159,3 +159,9 @@ body.painel-aberto .chat-fab { display: none; }
 }
 .pop-lista ul { list-style: none; padding: 0; margin: 8px 0 4px; }
 .pop-lista li { padding: 4px 0; border-top: 1px solid #eee; display: flex; justify-content: space-between; gap: 8px; }
+.pop-fonte { margin: 8px 0 4px; }
+.btn-fonte { display: inline-block; background: #4b2a7b; color: #fff !important; text-decoration: none; font-weight: 700; font-size: 13px; padding: 6px 10px; border-radius: 6px; }
+.cm-aviso-mapa a { color: inherit; text-decoration: underline; }
+.cm-aviso-mapa { white-space: normal; text-align: center; border-radius: 12px; width: max-content; max-width: min(620px, calc(100% - 140px)); }
+.cm-aviso-mapa a { pointer-events: auto; }
+body.popup-aberto .cm-aviso-mapa { display: none; }

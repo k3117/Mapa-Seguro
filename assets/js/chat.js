@@ -160,7 +160,7 @@ export function iniciarChat() {
       let html = formatar(r.texto);
       if (r.fontes?.length) {
         html += `<div class="fontes"><strong>Fontes utilizadas</strong><ul>${r.fontes.map((f) =>
-          `<li><a href="${esc(urlSegura(f.url))}" target="_blank" rel="noopener">${esc(f.title)}</a>${f.orgao ? ` — ${esc(f.orgao.split(" — ")[0])}` : ""}</li>`).join("")}</ul></div>`;
+          `<li><a href="${esc(urlSegura(f.url))}" target="_blank" rel="noopener">${esc(f.title)}</a>${f.orgao ? `, ${esc(f.orgao.split(" — ")[0])}` : ""}</li>`).join("")}</ul></div>`;
       }
       if (r.aviso) html += `<div class="meta">${esc(r.aviso)}</div>`;
       esp.innerHTML = html;

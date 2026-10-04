@@ -7,7 +7,7 @@ import { executarFerramenta, fontesDoResultado } from "./ferramentas.js";
 import { formatarNumero as n, MESES_LONGOS } from "../consultas.js";
 import { bairrosConhecidos, avisoDefasagem } from "../ocorrencias.js";
 
-export const NAO_ENCONTRADO = "Não encontrei essa informação nos dados e fontes disponíveis no MAPA SEGURO.";
+export const NAO_ENCONTRADO = "Não encontrei essa informação nas fontes utilizadas pelo Mapa Seguro.";
 
 const norm = (s) => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const MESES_N = MESES_LONGOS.map((m) => norm(m));
@@ -27,6 +27,8 @@ const CAT_RE = [
 ];
 
 const TOPICOS = [
+  { re: /(nao|so) permite concluir|o que (o mapa|o site)? ?nao (mostra|permite|diz)|ausencia de registro|nao (significa|representa) todas/, topico: "nao_permite" },
+  { re: /(site|mapa|projeto|plataforma) (e )?oficial|e do governo|do governo de goias\?|independente|quem (faz|mantem|criou)/, topico: "finalidade" },
   { re: /finalidade|objetivo|para que serve|o que e (o )?(mapa seguro|site|plataforma)|sobre o site/, topico: "finalidade" },
   { re: /privacidade|lgpd|dados pessoais|meus dados|anonim/, topico: "privacidade" },
   { re: /metodolog|como (os dados )?(sao|e) classific|classificac/, topico: "classificacao" },
@@ -134,16 +136,16 @@ const dataBR = (d) => (d ? d.split("-").reverse().join("/") : "não informada");
 
 function textoCaso(c) {
   return [
-    `Informação encontrada: com base nas informações cadastradas para o Caso #${c.id.toUpperCase()}, trata-se de registro de ${c.categoria.toLowerCase()} em ${c.local}, divulgado em nota oficial em ${dataBR(c.data_publicacao)}.`,
-    c.data_fato ? `- Data do fato: ${dataBR(c.data_fato)}` : `- A nota não cita o dia exato do fato; foi publicada em ${dataBR(c.data_publicacao)}.`,
+    `Registro ${c.id.toUpperCase()}: ${c.categoria.toLowerCase()} em ${c.local}, divulgado em nota oficial publicada em ${dataBR(c.data_publicacao)}.`,
+    c.data_fato ? `- Data do fato: ${dataBR(c.data_fato)}` : "- Data do fato: não informada na nota.",
     `- Situação jurídica: ${c.situacao}${c.medidas.length ? ` (${c.medidas.join(", ")})` : ""}`,
-    `- Situação da fonte: ${c.fonte_status}`,
     `- Localização: ${c.precisao}`,
-    c.resumo_oficial ? `- Trecho da nota oficial: "${c.resumo_oficial}"` : "",
-    c.reportagens.length ? `- Reportagens verificadas: ${c.reportagens.length} (links abaixo da página do caso)` : "",
+    c.reportagens.length ? `- Reportagens cadastradas: ${c.reportagens.length}` : "",
     "",
-    `Interpretação: é um registro policial; a pessoa apontada deve ser chamada de "${c.termo_pessoa}", não de criminosa.`,
-    "Limitação: a nota oficial trata da fase policial; denúncia, processo e sentença não são divulgados nessas notas (consulte o TJGO). A plataforma não guarda nomes, idades nem endereços; os detalhes estão na nota oficial, cujo link aparece abaixo.",
+    c.termo_pessoa === "condenado"
+      ? "Contexto: a nota informa que a pessoa foi condenada. O Mapa Seguro não verifica se a condenação é definitiva."
+      : `Contexto: é um registro policial. A pessoa citada é tratada como "${c.termo_pessoa}", de acordo com a fase informada na nota, e não como criminosa.`,
+    "Atenção: o Mapa Seguro não guarda nomes, idades nem endereços. Os detalhes divulgados pelo órgão estão na nota oficial, com link abaixo.",
   ].filter((x) => x !== "").join("\n");
 }
 
@@ -161,7 +163,7 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
   if (/emergenc|socorro|estou em perigo|corro risco|me ajud|preciso de ajuda|onde (posso )?(denunciar|registrar|pedir ajuda)|como denunciar|delegacia da mulher|deam\b|dpca\b/.test(t)) {
     const c = usar("contatos_emergencia", {});
     const s = usar("listar_servicos", {});
-    return fim([c.aviso, "", ...c.contatos.map((x) => `- ${x.numero} — ${x.nome}: ${x.quando}`), "",
+    return fim([c.aviso, "", ...c.contatos.map((x) => `- ${x.numero}, ${x.nome}: ${x.quando}`), "",
       "Unidades públicas de atendimento em Goiânia (endereços oficiais da Polícia Civil):",
       ...s.servicos.map((x) => `- ${x.nome}: ${x.endereco}. Tel.: ${x.telefones.join(", ")}`)].join("\n"), fontesDoResultado(s));
   }
@@ -225,7 +227,12 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
   if (/fonte|de onde vem|origem dos dados/.test(t) && !cats.length) {
     const r = usar("listar_fontes", {});
     const p = usar("info_plataforma", { topico: "fontes" });
-    return fim(`${p.texto}\n\n${r.fontes.map((f) => `- ${f.titulo} — ${f.orgao}`).join("\n")}`, fontesDoResultado(r));
+    return fim(`${p.texto}\n\n${r.fontes.map((f) => `- ${f.titulo}, ${f.orgao}`).join("\n")}`, fontesDoResultado(r));
+  }
+
+  // 5b. diferença entre o mapa e a estatística oficial
+  if (/diferen|nao bate|maior|menor|compar/.test(t) && /estatistic|ssp|oficial|numero/.test(t) && /mapa|registro/.test(t)) {
+    return fim("A estatística da SSP-GO conta todas as ocorrências registradas no sistema da polícia. O mapa conta apenas os casos que os órgãos divulgaram em notas no site oficial. A maior parte das ocorrências não vira nota, por isso o número do mapa é menor e não serve para medir a quantidade de crimes. As duas bases não devem ser comparadas como se fossem equivalentes.\n\nAtenção: a SSP-GO informa que seus dados podem mudar conforme o andamento das investigações.");
   }
 
   // 6. tópicos institucionais (sem pedido de números)
@@ -240,7 +247,7 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
     const per = periodoMapa(t, agora) || { periodo: "tudo" };
     const r = usar("municipios_com_mais_registros", { categorias: cats, ...per });
     if (!r.total) return fim(`${NAO_ENCONTRADO}\n\nNão há registros no mapa para esses filtros (${r.periodo}).`);
-    return fim(`Informação encontrada: municípios com mais registros no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""} — ${r.periodo}:\n${r.municipios.slice(0, 10).map((m) => `- ${m.chave}: ${m.total}`).join("\n")}\n\nInterpretação: é a contagem de notas oficiais divulgadas, não uma taxa de criminalidade; municípios maiores e com delegacias especializadas tendem a divulgar mais.\nLimitação: as notas não cobrem todas as ocorrências e não indicam que um lugar é mais ou menos seguro.${/bairro/.test(t) ? " Não há ranking por bairro: a maioria das notas não informa bairro." : ""}`, fontesDoResultado(r));
+    return fim(`Municípios com mais registros no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""}, de ${r.periodo}:\n${r.municipios.slice(0, 10).map((m) => `- ${m.chave}: ${m.total}`).join("\n")}\n\nContexto: é a contagem de notas oficiais divulgadas, não uma taxa de criminalidade; municípios maiores e com delegacias especializadas tendem a divulgar mais.\nAtenção: as notas não cobrem todas as ocorrências e não indicam que um lugar é mais ou menos seguro.${/bairro/.test(t) ? " Não há ranking por bairro: a maioria das notas não informa bairro." : ""}`, fontesDoResultado(r));
   }
 
   // 8. estatística oficial agregada SSP-GO
@@ -253,10 +260,10 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
       res = usar("comparar_anos", { indicador: ind, anos });
       if (!res.ok) return fim(NAO_ENCONTRADO);
       const v = res.variacao ? `\nEntre ${res.variacao.de} e ${res.variacao.para}: ${res.variacao.diferenca > 0 ? "+" : ""}${n(res.variacao.diferenca)}${res.variacao.percentual !== null ? ` (${res.variacao.percentual > 0 ? "+" : ""}${String(res.variacao.percentual).replace(".", ",")}%)` : ""}.` : "";
-      corpo = `Informação encontrada (estatística oficial da SSP-GO, Estado de Goiás): ${res.rotulo.toLowerCase()}\n${res.anos.map((a) => `- ${a.ano}: ${a.total === null ? "sem dado publicado" : n(a.total)}`).join("\n")}${v}\n\nInterpretação: ocorrências registradas, não condenações.\nLimitação: sem recorte por município; números sujeitos a revisão pela SSP-GO.`;
+      corpo = `Estatística oficial da SSP-GO para o Estado de Goiás, ${res.rotulo.toLowerCase()}:\n${res.anos.map((a) => `- ${a.ano}: ${a.total === null ? "sem dado publicado" : n(a.total)}`).join("\n")}${v}\n\nContexto: ocorrências registradas, não condenações.\nAtenção: sem recorte por município; números sujeitos a revisão pela SSP-GO.`;
     } else if (/por ano|cada ano|ano a ano|historic|todos os anos|serie/.test(t)) {
       res = usar("totais_anuais", { indicador: ind });
-      corpo = `Informação encontrada (estatística oficial da SSP-GO, Estado de Goiás): ${res.rotulo.toLowerCase()} por ano\n${res.anos.map((a) => `- ${a.ano}: ${n(a.total)}`).join("\n")}\n\nInterpretação: ocorrências registradas, não condenações.\nLimitação: sem recorte por município.`;
+      corpo = `Estatística oficial da SSP-GO para o Estado de Goiás, ${res.rotulo.toLowerCase()} por ano:\n${res.anos.map((a) => `- ${a.ano}: ${n(a.total)}`).join("\n")}\n\nContexto: ocorrências registradas, não condenações.\nAtenção: sem recorte por município.`;
     } else {
       res = usar("obter_estatisticas", { indicador: ind, periodo: periodoSSP(t, agora) });
       if (!res.ok) {
@@ -264,7 +271,7 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
           ? `${NAO_ENCONTRADO}\n\nA estatística oficial da SSP-GO está publicada de ${res.primeiro.replace("-", "/")} a ${res.ultimo.replace("-", "/")} (a SSP-GO publica com atraso de pelo menos 60 dias).`
           : NAO_ENCONTRADO;
       } else {
-        corpo = `Informação encontrada (estatística oficial da SSP-GO): ${n(res.total)} ocorrências de ${res.rotulo.toLowerCase()} registradas no Estado de Goiás — ${res.periodo.descricao}.${res.meses > 1 ? `\n- Média mensal: ${String(res.media_mensal).replace(".", ",")}\n- Mês com mais registros: ${res.maior_mes.mes} (${n(res.maior_mes.valor)})` : ""}\n\nInterpretação: ocorrências registradas no sistema RAI, não condenações.${ind === "estupro" ? " O indicador reúne todas as vítimas, sem separar sexo ou idade." : ""}\nLimitação: a estatística agregada não informa município nem bairro.`;
+        corpo = `Segundo a estatística oficial da SSP-GO, foram registradas ${n(res.total)} ocorrências de ${res.rotulo.toLowerCase()} no Estado de Goiás (${res.periodo.descricao}).${res.meses > 1 ? `\n- Média mensal: ${String(res.media_mensal).replace(".", ",")}\n- Mês com mais registros: ${res.maior_mes.mes} (${n(res.maior_mes.valor)})` : ""}\n\nContexto: ocorrências registradas no sistema RAI, não condenações.${ind === "estupro" ? " O indicador reúne todas as vítimas, sem separar sexo ou idade." : ""}\nAtenção: a estatística agregada não informa município nem bairro.`;
       }
     }
     return fim(corpo, fontesDoResultado(res));
@@ -278,18 +285,18 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
     if (/lista|liste|mostre|quais (foram|sao) os casos|quais casos|ultimos casos|recentes/.test(t)) {
       const r = usar("buscar_ocorrencias", filtro);
       if (!r.total) return fim(`${NAO_ENCONTRADO}\n\nNão há registros no mapa com esses filtros (${r.periodo}).`);
-      return fim(`Informação encontrada: ${r.total} registro(s) no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""}${municipio ? ` em ${municipio}` : ""}${bairro ? ` (${bairro})` : ""} — ${r.periodo}. Mais recentes:\n${r.registros.map((x) => `- ${dataBR(x.data_publicacao)} · ${x.categoria} · ${x.local} · ${x.situacao} (#${x.id.toUpperCase()})`).join("\n")}\n\nInterpretação: cada item é uma nota oficial; abra o caso no mapa para ver a fonte.\nLimitação: as notas não cobrem todas as ocorrências; registro não é condenação.`, fontesDoResultado(r));
+      return fim(`${r.total} ${r.total === 1 ? "registro" : "registros"} no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""}${municipio ? ` em ${municipio}` : ""}${bairro ? ` (${bairro})` : ""}, de ${r.periodo}. Os mais recentes:\n${r.registros.map((x) => `- ${dataBR(x.data_publicacao)} · ${x.categoria} · ${x.local} · ${x.situacao} (#${x.id.toUpperCase()})`).join("\n")}\n\nContexto: cada item é uma nota oficial; abra o caso no mapa para ver a fonte.\nAtenção: as notas não cobrem todas as ocorrências; registro não é condenação.`, fontesDoResultado(r));
     }
     const r = usar("contar_ocorrencias", filtro);
     let txt;
     if (!r.total) {
       txt = `${NAO_ENCONTRADO}\n\nNão há registros no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""}${municipio ? ` em ${municipio}` : ""}${bairro ? ` no bairro ${bairro}` : ""} no período ${r.periodo}. Isso não significa que não houve ocorrências: o mapa reúne apenas casos divulgados em notas oficiais.${r.periodo && avisoDefasagem(base, agora) ? "\n\n" + avisoDefasagem(base, agora) : ""}`;
     } else {
-      txt = `Informação encontrada: ${r.total} registro(s) no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""}${municipio ? ` em ${municipio}` : " no Estado de Goiás"}${bairro ? ` (bairro ${bairro})` : ""} — ${r.periodo}.`;
+      txt = `${r.total} ${r.total === 1 ? "registro" : "registros"} no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""}${municipio ? ` em ${municipio}` : " no Estado de Goiás"}${bairro ? ` (bairro ${bairro})` : ""}, de ${r.periodo}.`;
       if (r.por_categoria.length > 1) txt += `\n${r.por_categoria.map((x) => `- ${x.categoria}: ${x.total}`).join("\n")}`;
       if (!municipio && r.por_municipio.length > 1) txt += `\nMunicípios com mais registros: ${r.por_municipio.slice(0, 5).map((x) => `${x.chave} (${x.total})`).join(", ")}.`;
       txt += `\nSituação: ${r.por_situacao.map((x) => `${x.situacao} (${x.total})`).join(", ")}.`;
-      txt += `\n\nInterpretação: são notas oficiais da Polícia Civil, SSP-GO ou PM sobre ocorrências; registro não é condenação.\nLimitação: as notas não cobrem todas as ocorrências; a contagem não é taxa de criminalidade.`;
+      txt += `\n\nContexto: são notas oficiais da Polícia Civil, SSP-GO ou PM sobre ocorrências; registro não é condenação.\nAtenção: as notas não cobrem todas as ocorrências; a contagem não é taxa de criminalidade.`;
       if (ind && !municipio) txt += " Para o total oficial do Estado, pergunte pela estatística da SSP-GO (ex.: \"total oficial de feminicídios em 2025\").";
     }
     return fim(txt, fontesDoResultado(r));

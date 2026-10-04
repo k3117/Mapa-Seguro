@@ -112,6 +112,9 @@ def classificar(titulo: str, texto: str = "") -> dict | None:
         return None
     no_titulo = [c for c, o in achadas if o == "titulo"]
     principal = no_titulo[0] if no_titulo else achadas[0][0]
+    # "estupro de vulnerável" no título com criança citada no texto: é violência sexual contra criança/adolescente
+    if principal == "violencia_sexual" and crianca and "violencia_sexual_crianca" in [c for c, _ in achadas]:
+        principal = "violencia_sexual_crianca"
     secundarias = sorted({c for c, _ in achadas if c != principal}, key=[r[0] for r in REGRAS].index)
     if principal in ("violencia_sexual_crianca", "outros_crianca"):
         publico = "criancas_adolescentes"
@@ -266,7 +269,7 @@ def bairro(texto: str, municipio_nome: str) -> str | None:
 
 
 # --------------------------------------------------------------------------- resumo oficial (sem dados pessoais)
-CLASSIFICADOR_VERSAO = 4
+CLASSIFICADOR_VERSAO = 5
 RE_ENDERECO = re.compile(r"\b(rua|avenida|av\.|alameda|travessa|quadra|qd\.?|lote|lt\.?|n[º°o]\.?\s*\d|apartamento|apto|bloco|condom[ií]nio|cep)\b", re.I)
 RE_NOME_EXPLICITO = re.compile(r"identificad[oa] como|conhecid[oa] (como|por)|de nome|chamad[oa] de|vulgo|apelidad[oa]", re.I)
 RE_NOME_PROPRIO = re.compile(r"\b[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]+(?:\s+(?:d[aoe]s?|e)\s+|\s+)[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]+")

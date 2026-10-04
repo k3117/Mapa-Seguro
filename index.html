@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>MAPA SEGURO — Goiás</title>
-  <meta name="description" content="Mapa de ocorrências de violência contra mulheres, crianças e adolescentes em Goiás, com base exclusivamente em notas e dados oficiais do Governo de Goiás.">
+  <title>Mapa Seguro | Mapa de registros divulgados em Goiás</title>
+  <meta name="description" content="Projeto independente que reúne em um mapa os casos de violência contra mulheres, crianças e adolescentes divulgados por órgãos oficiais de Goiás.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://tile.openstreetmap.org https://server.arcgisonline.com; connect-src 'self' https:; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z' fill='%234b2a7b'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="vendor/leaflet.markercluster/MarkerCluster.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261007">
-  <link rel="stylesheet" href="assets/css/mapa.css?v=20261007">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261008">
+  <link rel="stylesheet" href="assets/css/mapa.css?v=20261008">
   <script src="vendor/leaflet/leaflet.js" defer></script>
   <script src="vendor/leaflet.markercluster/leaflet.markercluster.js" defer></script>
-  <script type="module" src="assets/js/pagina-mapa.js?v=20261007"></script>
+  <script type="module" src="assets/js/pagina-mapa.js?v=20261008"></script>
 </head>
 <body class="pagina-mapa">
   <a class="pular" href="#mapa">Pular para o mapa</a>
   <header class="cm-topo">
-    <a class="cm-marca" href="index.html" aria-label="MAPA SEGURO — início">
+    <a class="cm-marca" href="index.html" aria-label="Mapa Seguro, página inicial">
       <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z" fill="#a98be0"/><path d="M16 9a5 5 0 0 0-5 5c0 3.6 5 8.5 5 8.5s5-4.9 5-8.5a5 5 0 0 0-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" fill="#15131a"/></svg>
-      <span>MAPA<b>SEGURO</b><small>Goiás · dados oficiais</small></span>
+      <span>MAPA<b>SEGURO</b><small>Projeto independente · fontes oficiais</small></span>
     </a>
     <form class="cm-busca" id="form-busca" role="search" autocomplete="off">
       <label class="sr-only" for="busca">Município ou bairro de Goiás</label>
@@ -36,11 +36,11 @@
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
     <nav id="menu-paginas" class="cm-menu-lista" hidden aria-label="Páginas">
-      <a href="estatisticas.html">Estatísticas oficiais</a>
+      <a href="estatisticas.html">Estatísticas</a>
       <a href="sobre.html">Sobre</a>
       <a href="metodologia.html">Metodologia</a>
       <a href="sobre.html#privacidade">Privacidade</a>
-      <a href="emergencia.html" class="ajuda">Precisa de ajuda?</a>
+      <a href="emergencia.html" class="ajuda">Onde buscar ajuda</a>
     </nav>
   </header>
   <div class="faixa-emergencia" role="note">Em perigo agora? Ligue <a href="tel:190">190</a> · Mulher <a href="tel:180">180</a><span class="extra"> · Direitos Humanos <a href="tel:100">100</a></span> · <a href="emergencia.html">Onde buscar ajuda</a></div>
@@ -72,7 +72,7 @@
           <div class="campo"><label for="f-municipio">Município</label><select id="f-municipio"><option value="">Todo o Estado de Goiás</option></select></div>
           <button type="button" class="btn" id="btn-area">Pesquisar nesta área do mapa</button>
           <p class="rotulo-peq" id="txt-area"></p>
-          <div class="aviso info">A busca é por <strong>município ou bairro</strong>. Não existe busca por endereço, pessoa, vítima ou localização de tornozeleira — esses dados não são publicados.</div>
+          <div class="aviso info">A busca é por <strong>município ou bairro</strong>. Não há busca por endereço, pessoa, vítima ou tornozeleira, porque esses dados não são publicados.</div>
         </div>
         <div data-conteudo="quando">
           <div class="cm-periodos" id="lista-periodos" role="radiogroup" aria-label="Período"></div>
@@ -81,7 +81,7 @@
             <button type="button" class="btn btn-pri" id="btn-aplicar-datas">Aplicar período</button>
             <p class="rotulo-peq" id="msg-periodo" aria-live="polite"></p>
             <p class="rotulo-peq" id="aviso-defasagem" hidden></p></fieldset>
-          <p class="rotulo-peq">Data considerada: publicação da nota oficial. Quando a nota informa a data do fato, ela aparece no detalhe do caso.</p>
+          <p class="rotulo-peq">O filtro usa a data de publicação da nota oficial. Quando a nota informa a data do fato, ela aparece na página do registro.</p>
         </div>
         <div data-conteudo="relatorio"></div>
         <div data-conteudo="graficos"></div>
@@ -90,9 +90,9 @@
 
     <div class="cm-mapa-wrap">
       <div id="mapa" role="region" aria-label="Mapa de ocorrências em Goiás"></div>
-      <div class="cm-aviso-mapa" role="note">Pontos = local <strong>aproximado</strong> (bairro ou sede do município). Registro não é condenação.</div>
+      <div class="cm-aviso-mapa" role="note"><strong>Mapa de registros divulgados</strong> por órgãos oficiais, não de todas as ocorrências. Local aproximado. Registro não é condenação. <a href="sobre.html">Saiba mais</a></div>
       <button type="button" class="cm-btn-area" id="btn-area-mapa">Pesquisar nesta área</button>
-      <div class="cm-aviso-area" id="aviso-area" hidden role="status">Filtro de área ativo: só aparecem registros desta parte do mapa.</div>
+      <div class="cm-aviso-area" id="aviso-area" hidden role="status">Filtro de área ativo: aparecem apenas os registros desta parte do mapa.</div>
       <div class="cm-aviso-area cm-aviso-vazio" id="aviso-vazio" hidden role="status"></div>
       <label class="cm-camada"><span class="sr-only">Mapa base</span>
         <select id="f-camada"><option value="claro">Mapa detalhado</option><option value="ruas">Mapa simplificado</option></select></label>

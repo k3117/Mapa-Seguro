@@ -53,7 +53,7 @@ oc = carregar("ocorrencias.json")
 CAMPOS_OK = {"id", "categoria", "categorias_secundarias", "publico", "municipio", "codigo_ibge", "bairro", "precisao_local",
              "lat", "lon", "data_publicacao", "data_fato", "status_juridico", "medidas", "fonte_status", "fontes", "extracao",
              "coletado_em", "modificado_fonte", "possivel_duplicidade", "mesclado_de", "correcao",
-             "resumo_oficial", "classificador", "reportagens", "destaque"}
+             "classificador", "reportagens", "destaque"}  # nenhum campo de texto da nota (regra de privacidade)
 for r in oc["ocorrencias"]:
     extra = set(r) - CAMPOS_OK
     if extra:
@@ -69,10 +69,8 @@ for r in oc["ocorrencias"]:
     for f in r["fontes"]:
         if not re.match(r"https://goias\.gov\.br/(policiacivil|seguranca|policiamilitar)/", f["url"]):
             erros.append(f"{r['id']}: fonte fora dos portais oficiais")
-    if r["publico"] == "criancas_adolescentes" and r.get("resumo_oficial"):
-        erros.append(f"{r['id']}: caso com criança/adolescente não pode ter resumo")
-    if r.get("resumo_oficial") and re.search(r"\b(rua|avenida|quadra|lote|apto|identificad[oa] como)\b", r["resumo_oficial"], re.I):
-        erros.append(f"{r['id']}: resumo contém endereço ou identificação")
+    if r.get("data_fato") and r["data_fato"] > r["data_publicacao"]:
+        erros.append(f"{r['id']}: data do fato posterior à publicação")
     for x in r.get("reportagens", []):
         if not x["url"].startswith("https://"):
             erros.append(f"{r['id']}: link de reportagem inválido")

@@ -8,7 +8,7 @@ import * as O from "../ocorrencias.js";
 
 const INDICADORES = ["feminicidio", "estupro"];
 const TOPICOS = ["finalidade", "fontes", "classificacao", "localizacao", "atualizacao", "correcoes",
-  "privacidade", "investigacao_condenacao", "limitacoes", "mapa", "ia"];
+  "privacidade", "investigacao_condenacao", "limitacoes", "mapa", "ia", "nao_permite"];
 const CORES = ["vermelho", "roxo", "rosa", "laranja", "amarelo", "azul", "marrom", "verde", "branco"];
 const CATEGORIAS = ["feminicidio", "tentativa_feminicidio", "violencia_sexual", "violencia_sexual_crianca", "outros_crianca"];
 const PERIODOS_OC = ["7d", "30d", "90d", "6m", "12m", "24m", "5a", "ano", "tudo"];
@@ -169,7 +169,7 @@ export function executarFerramenta(base, nome, args = {}) {
           observacao: "Registros = notas oficiais divulgadas (PCGO, SSP-GO, PMGO). Não representam todas as ocorrências nem condenações.",
         };
         const fontes = [...new Map(lista.flatMap((r) => r.fontes).map((x) => [x.url, x])).values()].slice(0, 8)
-          .map((x) => ({ titulo: `Nota oficial — ${x.orgao} (${x.data_publicacao.split("-").reverse().join("/")})`, orgao: x.orgao, url: x.url, data_consulta_fonte: x.data_publicacao }));
+          .map((x) => ({ titulo: `Nota oficial da ${x.orgao} (${x.data_publicacao.split("-").reverse().join("/")})`, orgao: x.orgao, url: x.url, data_consulta_fonte: x.data_publicacao }));
         if (nome === "contar_ocorrencias") {
           return { ...comum, por_categoria: O.contarPor(lista, "categoria").map((x) => ({ categoria: Q.categoria(base, x.chave)?.rotulo, total: x.total })),
             por_municipio: O.contarPor(lista, "municipio").slice(0, 10), por_situacao: O.contarPor(lista, "status_juridico").map((x) => ({ situacao: base.categorias.status_juridico[x.chave], total: x.total })), fontes };
@@ -182,7 +182,7 @@ export function executarFerramenta(base, nome, args = {}) {
         const r = O.obterCaso(base, String(args.caso_id || "").toLowerCase().trim());
         if (!r) return { ok: false, erro: "caso_nao_encontrado" };
         const pub = O.resumoPublico(base, r);
-        return { ok: true, caso: pub, fontes: [...pub.fontes, ...pub.reportagens.map((x) => ({ titulo: `Reportagem — ${x.veiculo} (${x.data.split("-").reverse().join("/")})`, url: x.url, orgao: x.veiculo }))],
+        return { ok: true, caso: pub, fontes: [...pub.fontes, ...pub.reportagens.map((x) => ({ titulo: `Reportagem de ${x.veiculo} (${x.data.split("-").reverse().join("/")})`, url: x.url, orgao: x.veiculo }))],
           observacao: "A plataforma não armazena nomes, idades, endereços nem texto da nota. Para detalhes, a pessoa deve abrir a fonte oficial." };
       }
       case "listar_indicadores":

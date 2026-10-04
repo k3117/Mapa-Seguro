@@ -42,7 +42,7 @@ function render() {
     const r = Q.obterEstatisticas(base, ind, p);
     if (!r.ok) return `<div class="kpi sem"><div class="rotulo-peq">${esc(base.indicadores.indicadores[ind].rotulo)}</div><div class="v">Sem dados no período</div></div>`;
     r.fontes.forEach((f) => fontes.set(f.url, f));
-    return `<div class="kpi"><div class="rotulo-peq">${esc(r.rotulo)} — Estado de Goiás</div><div class="v">${Q.formatarNumero(r.total)}</div><div class="rotulo-peq">${esc(r.periodo.descricao)}</div><span class="selo oficial">● oficial · SSP-GO</span></div>`;
+    return `<div class="kpi"><div class="rotulo-peq">${esc(r.rotulo)} no Estado de Goiás</div><div class="v">${Q.formatarNumero(r.total)}</div><div class="rotulo-peq">${esc(r.periodo.descricao)}</div><span class="selo oficial">● oficial · SSP-GO</span></div>`;
   }).join("");
   // registros do mapa (notas oficiais) no mesmo período, por categoria
   const ini = `${(p.tipo === "ano" ? `${p.ano}-01` : p.tipo === "intervalo" ? p.inicio : Q.resolverPeriodo(base, "feminicidio", p).inicio)}-01`;
@@ -50,14 +50,14 @@ function render() {
   const fimD = `${fimM}-${new Date(Number(fimM.slice(0, 4)), Number(fimM.slice(5, 7)), 0).getDate()}`;
   const regs = O.filtrar(base, { periodo: { inicio: ini, fim: fimD } });
   const porCat = O.contarPor(regs, "categoria");
-  el("registros-mapa").innerHTML = `<p class="rotulo-peq">Notas oficiais (PCGO, SSP-GO, PMGO) publicadas entre ${ini.split("-").reverse().join("/")} e ${fimD.split("-").reverse().join("/")} — ${regs.length} registros. Não é estatística completa: só casos divulgados.</p>
+  el("registros-mapa").innerHTML = `<p class="rotulo-peq">Notas oficiais publicadas entre ${ini.split("-").reverse().join("/")} e ${fimD.split("-").reverse().join("/")}: ${regs.length} registros. Não é estatística completa: só casos divulgados.</p>
     <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Categoria</th><th>Registros no mapa</th></tr></thead><tbody>${base.categorias.categorias.map((c) => `<tr><td>${esc(c.rotulo)}</td><td>${porCat.find((x) => x.chave === c.id)?.total || 0}</td></tr>`).join("")}</tbody></table></div>`;
   for (const ind of ["feminicidio", "estupro"]) {
     const r = Q.obterEstatisticas(base, ind, p);
     const box = el(`g-${ind}`);
     if (!r.ok) { box.innerHTML = `<h3>${esc(base.indicadores.indicadores[ind].rotulo)}</h3><p>Sem dados no período selecionado.</p>`; continue; }
     graficoBarras(box, r.serie.map((s) => ({ rotulo: s.mes, valor: s.valor })), {
-      titulo: `${r.rotulo} — registros por mês, Estado de Goiás`,
+      titulo: `${r.rotulo}: registros por mês no Estado de Goiás`,
       descricao: `${r.periodo.descricao} · total ${Q.formatarNumero(r.total)} · média mensal ${String(r.media_mensal).replace(".", ",")}. ${r.nota}`,
       rotuloValor: "registros",
     });
@@ -65,11 +65,11 @@ function render() {
   for (const ind of ["feminicidio", "estupro"]) {
     const t = Q.totaisAnuais(base, ind);
     graficoBarras(el(`a-${ind}`), t.anos.map((a) => ({ rotulo: String(a.ano), valor: a.total })), {
-      titulo: `${t.rotulo} — total por ano`, rotuloValor: "registros", altura: 220,
+      titulo: `${t.rotulo}: total por ano`, rotuloValor: "registros", altura: 220,
     });
   }
 
-  el("fontes").innerHTML = [...fontes.values()].map((f) => `<li><a href="${esc(urlSegura(f.url))}" target="_blank" rel="noopener">${esc(f.titulo)}</a> — ${esc(f.orgao)}. Consulta da fonte: ${Q.formatarDataBR(f.data_consulta_fonte)}. Extração: ${f.metodo_extracao === "pdfplumber" ? "automática e conferida" : "transcrição assistida, conferência automática pendente"}.</li>`).join("");
+  el("fontes").innerHTML = [...fontes.values()].map((f) => `<li><a href="${esc(urlSegura(f.url))}" target="_blank" rel="noopener">${esc(f.titulo)}</a>, ${esc(f.orgao)}. Consulta da fonte: ${Q.formatarDataBR(f.data_consulta_fonte)}. Extração: ${f.metodo_extracao === "pdfplumber" ? "automática e conferida" : "transcrição assistida, conferência automática pendente"}.</li>`).join("");
   definirContextoChat({ pagina: "estatisticas", indicador: "feminicidio", periodo: p });
 }
 

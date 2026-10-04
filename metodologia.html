@@ -3,43 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Metodologia — MAPA SEGURO</title>
-  <meta name="description" content="Como os dados do MAPA SEGURO são coletados, classificados, atualizados e corrigidos.">
+  <title>Metodologia | Mapa Seguro</title>
+  <meta name="description" content="Como o Mapa Seguro reúne, confere e apresenta registros divulgados por órgãos oficiais de Goiás.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://generativelanguage.googleapis.com https:; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z' fill='%234b2a7b'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script type="module" src="assets/js/pagina-conteudo.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20261008">
+  <script type="module" src="assets/js/pagina-conteudo.js?v=20261008"></script>
 </head>
 <body data-pagina="metodologia">
   <header id="topo"></header>
   <main id="principal" class="conteudo estreito">
     <h1>Metodologia</h1>
-    <p class="lead">Como o MAPA SEGURO obtém, confere e apresenta os dados — e o que não é possível afirmar com eles.</p>
+    <p class="lead">Como o Mapa Seguro reúne, confere e apresenta as informações, e o que não é possível afirmar a partir delas.</p>
+    <div data-topico="nao_permite" class="aviso"></div>
     <div data-topico="fontes"></div>
-    <h2>Fontes oficiais cadastradas</h2>
+    <h2>Fontes oficiais consultadas</h2>
     <div id="lista-fontes" class="grade"></div>
+    <h2>Do site oficial ao mapa</h2>
+    <ol>
+      <li><strong>Coleta.</strong> Todos os dias, uma rotina automática consulta os sites da PCGO, da SSP-GO e da PMGO em busca de notas com termos como feminicídio, estupro, violência doméstica, criança e adolescente.</li>
+      <li><strong>Classificação.</strong> Regras públicas, disponíveis no código do projeto, definem o tipo de crime e a situação informada. Só entram crimes graves: feminicídio, tentativa de feminicídio, violência sexual e homicídio, tortura ou maus-tratos contra criança ou adolescente. Notas sobre palestras, eventos e entregas são descartadas.</li>
+      <li><strong>Validação.</strong> Antes da publicação, um verificador confere se cada registro tem link para um site oficial, se não há texto da nota guardado, se as datas são coerentes e se casos com criança estão restritos ao município. Se alguma regra falhar, o site mantém a versão anterior.</li>
+      <li><strong>Localização aproximada.</strong> Quando a nota cita o bairro, o ponto fica no centro do bairro. Quando não cita, fica na sede do município. Casos com criança ou adolescente ficam sempre na sede do município.</li>
+      <li><strong>Publicação.</strong> O registro entra no mapa com a categoria, as datas, a situação informada e o link para a nota original. Se o mesmo fato foi divulgado por dois órgãos, as notas viram um único registro.</li>
+      <li><strong>Revisão.</strong> A administração pode ocultar ou corrigir um registro, sempre com o motivo registrado no histórico do projeto.</li>
+    </ol>
     <div data-topico="classificacao"></div>
-    <h2>Cobertura por categoria</h2>
+    <h2>Quantidade de registros por categoria</h2>
     <div class="tabela-wrap" id="cobertura-categorias"></div>
     <div data-topico="localizacao"></div>
     <div data-topico="atualizacao"></div>
-    <h2>Fluxo de atualização (diário, automático)</h2>
-    <ol>
-      <li><strong>Coleta:</strong> a rotina consulta a API pública dos portais da PCGO, SSP-GO e PMGO com termos como feminicídio, estupro, violência doméstica, medida protetiva, criança e adolescente, e mantém só os crimes graves: feminicídio, tentativa de feminicídio, violência sexual e homicídio, tortura ou maus-tratos contra criança/adolescente.</li>
-      <li><strong>Classificação:</strong> regras públicas (<code>scripts/classificador.py</code>) definem a categoria e descartam notas institucionais (palestras, eventos, entregas).</li>
-      <li><strong>Privacidade:</strong> no máximo um trecho curto da nota é guardado (nunca em casos com criança/adolescente), sem frases com nomes ou endereços; nomes, idades, ruas, números e condomínios nunca são extraídos. Casos com criança/adolescente ficam só no município.</li>
-      <li><strong>Localização:</strong> bairro citado → centro aproximado do bairro (OpenStreetMap); sem bairro → sede do município (IBGE).</li>
-      <li><strong>Deduplicação:</strong> o mesmo fato divulgado por órgãos diferentes vira um registro com várias fontes; notas diferentes sobre fatos parecidos são mantidas separadas e revisadas internamente, sem aviso público até haver confirmação.</li>
-      <li><strong>Revisão:</strong> a administração pode ocultar ou corrigir registros em <code>data/moderacao.json</code>, sempre com motivo (auditoria no histórico do repositório).</li>
-      <li><strong>Publicação:</strong> o site e a base do Assistente são atualizados juntos.</li>
-    </ol>
+    <div data-topico="privacidade" id="privacidade"></div>
+    <div data-topico="investigacao_condenacao"></div>
+    <div data-topico="limitacoes"></div>
+    <div data-topico="ia"></div>
     <div data-topico="correcoes" id="correcoes"></div>
     <div id="acao-correcao"></div>
-    <div data-topico="privacidade"></div>
-    <div data-topico="investigacao_condenacao"></div>
-    <div data-topico="ia"></div>
-    <div data-topico="limitacoes"></div>
   </main>
   <footer id="rodape"></footer>
 </body>

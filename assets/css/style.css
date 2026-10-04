@@ -210,3 +210,8 @@ details summary { cursor: pointer; font-weight: 600; }
 body.pagina-mapa { display: flex; flex-direction: column; height: 100dvh; overflow: hidden; }
 body.pagina-mapa .app-mapa { flex: 1; min-height: 0; height: auto; }
 .selo-cat { display: inline-grid; place-items: center; border-radius: 50%; border: 1.5px solid transparent; flex: none; vertical-align: middle; }
+.marca span { min-width: 0; }
+.marca small { white-space: normal; line-height: 1.25; }
+@media (max-width: 560px) { .marca small { font-size: 11px; max-width: 190px; } .topo-in { gap: 8px; } }
+.rodape p { margin: 0 0 6px; }
+.passos li { margin-bottom: 6px; }

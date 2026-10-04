@@ -31,7 +31,7 @@ const serv = document.getElementById("servicos");
 if (serv) {
   const s = Q.listarServicos(base);
   serv.innerHTML = s.servicos.map((x) => `<div class="cartao"><h3>${esc(x.nome)}</h3><p>${esc(x.endereco)}</p><p>${x.telefones.map((t) => `<a href="tel:${esc(t.replace(/\D/g, ""))}">${esc(t)}</a>`).join(" · ")}${x.email ? `<br><a href="mailto:${esc(x.email)}">${esc(x.email)}</a>` : ""}</p>${x.observacao ? `<p class="rotulo-peq">${esc(x.observacao)}</p>` : ""}</div>`).join("");
-  document.getElementById("fonte-servicos").innerHTML = `Fonte: <a href="${esc(urlSegura(base.servicos.fonte_url))}" target="_blank" rel="noopener">Polícia Civil do Estado de Goiás — Delegacias Especializadas</a>, consultada em ${Q.formatarDataBR(base.servicos.data_consulta)}. Confirme horários pelo telefone antes de ir.`;
+  document.getElementById("fonte-servicos").innerHTML = `Fonte: <a href="${esc(urlSegura(base.servicos.fonte_url))}" target="_blank" rel="noopener">Polícia Civil do Estado de Goiás, Delegacias Especializadas</a>, consultada em ${Q.formatarDataBR(base.servicos.data_consulta)}. Confirme horários pelo telefone antes de ir.`;
 }
 
 const lf = document.getElementById("lista-fontes");
@@ -39,7 +39,7 @@ if (lf) {
   lf.innerHTML = base.fontes.fontes.map((f) => `<div class="cartao"><h3>${esc(f.titulo)}</h3>
     <p class="rotulo-peq">${esc(f.orgao)}</p>
     <p><span class="selo oficial">● ${esc(f.fonte_status.replace("_", " "))}</span></p>
-    <p><strong>Abrangência:</strong> ${esc(f.abrangencia_geografica || "—")}${f.granularidade_temporal ? `<br><strong>Periodicidade:</strong> ${esc(f.granularidade_temporal)}` : ""}${f.sistema_origem ? `<br><strong>Sistema de origem:</strong> ${esc(f.sistema_origem)}` : ""}</p>
+    <p><strong>Abrangência:</strong> ${esc(f.abrangencia_geografica || "não informada")}${f.granularidade_temporal ? `<br><strong>Periodicidade:</strong> ${esc(f.granularidade_temporal)}` : ""}${f.sistema_origem ? `<br><strong>Sistema de origem:</strong> ${esc(f.sistema_origem)}` : ""}</p>
     ${f.ressalva_oficial ? `<p class="rotulo-peq">Ressalva oficial: “${esc(f.ressalva_oficial)}”</p>` : ""}
     <p><a href="${esc(urlSegura(f.pagina_oficial))}" target="_blank" rel="noopener">Página oficial</a></p></div>`).join("");
 }

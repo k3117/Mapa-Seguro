@@ -45,7 +45,8 @@ O projeto adota medidas para evitar a exposição desnecessária de informaçõe
 
 Entre elas:
 
-- não são exibidos endereços residenciais exatos;
+- nenhum texto das notas oficiais é armazenado ou reproduzido: cada registro guarda apenas categoria, município, bairro (quando permitido), datas, situação informada e o link da nota;
+- não são exibidos nomes nem endereços;
 - a localização apresentada é aproximada;
 - informações envolvendo crianças e adolescentes recebem tratamento mais restritivo;
 - não são criados rankings de pessoas;
@@ -67,7 +68,7 @@ As respostas são baseadas nos dados e fontes utilizados pelo próprio Mapa Segu
 
 ## ⚠️ Importante
 
-O Mapa Seguro é uma ferramenta de consulta e visualização de informações públicas.
+O Mapa Seguro é um projeto independente de consulta e visualização de informações públicas. Não é um site oficial do Governo de Goiás.
 
 A ausência de um registro no mapa **não significa que uma ocorrência não aconteceu**. O projeto depende das informações que são oficialmente divulgadas pelas fontes utilizadas.
 

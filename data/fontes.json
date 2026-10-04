@@ -3,7 +3,7 @@
   "fontes": [
     {
       "id": "notas-pcgo",
-      "titulo": "Notas oficiais — PCGO",
+      "titulo": "Notas oficiais da PCGO",
       "orgao": "Polícia Civil do Estado de Goiás",
       "tipo_fonte": "oficial",
       "fonte_status": "oficial_confirmada",
@@ -17,7 +17,7 @@
     },
     {
       "id": "notas-sspgo",
-      "titulo": "Notas oficiais — SSP-GO",
+      "titulo": "Notas oficiais da SSP-GO",
       "orgao": "Secretaria de Estado da Segurança Pública de Goiás",
       "tipo_fonte": "oficial",
       "fonte_status": "oficial_confirmada",
@@ -31,7 +31,7 @@
     },
     {
       "id": "notas-pmgo",
-      "titulo": "Notas oficiais — PMGO",
+      "titulo": "Notas oficiais da PMGO",
       "orgao": "Polícia Militar do Estado de Goiás",
       "tipo_fonte": "oficial",
       "fonte_status": "oficial_confirmada",
@@ -45,12 +45,12 @@
     },
     {
       "id": "ssp-go-estatisticas-criminais",
-      "titulo": "Estatísticas Criminais e de Produtividade — Estado de Goiás",
-      "orgao": "Secretaria de Estado da Segurança Pública de Goiás (SSP-GO) — Observatório de Segurança Pública",
+      "titulo": "Estatísticas Criminais e de Produtividade do Estado de Goiás",
+      "orgao": "Secretaria de Estado da Segurança Pública de Goiás (SSP-GO), Observatório de Segurança Pública",
       "tipo_fonte": "oficial",
       "fonte_status": "oficial_confirmada",
       "pagina_oficial": "https://goias.gov.br/seguranca/estatisticas/",
-      "sistema_origem": "ODISSEU (RAI — Registro de Atendimento Integrado)",
+      "sistema_origem": "ODISSEU (RAI, Registro de Atendimento Integrado)",
       "formato": "PDF (tabela anual com totais mensais)",
       "abrangencia_geografica": "Estado de Goiás (sem desagregação por município, bairro ou local)",
       "granularidade_temporal": "mensal",
@@ -95,7 +95,7 @@
     },
     {
       "id": "pcgo-delegacias-especializadas",
-      "titulo": "Delegacias Especializadas — Polícia Civil do Estado de Goiás",
+      "titulo": "Delegacias Especializadas da Polícia Civil do Estado de Goiás",
       "orgao": "Polícia Civil do Estado de Goiás (PCGO)",
       "tipo_fonte": "oficial",
       "fonte_status": "oficial_confirmada",
@@ -107,7 +107,7 @@
     {
       "id": "ibge-malha-goias",
       "titulo": "Malha territorial do Estado de Goiás (código 52)",
-      "orgao": "IBGE — API de Malhas Territoriais (usada apenas para desenhar o contorno do estado)",
+      "orgao": "IBGE, API de Malhas Territoriais (usada apenas para desenhar o contorno do estado)",
       "tipo_fonte": "oficial",
       "fonte_status": "oficial_confirmada",
       "pagina_oficial": "https://servicodados.ibge.gov.br/api/docs/malhas",

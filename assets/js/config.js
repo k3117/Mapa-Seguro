@@ -3,7 +3,7 @@
  * NUNCA coloque chaves de API aqui: este arquivo é público no GitHub Pages.
  */
 export const CONFIG = {
-  nome: "MAPA SEGURO",
+  nome: "Mapa Seguro",
   cidadeFoco: { nome: "Goiânia", uf: "GO", lat: -16.6869, lon: -49.2648 },
 
   // Repositório GitHub (usuario/repositorio) — usado nos botões

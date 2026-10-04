@@ -85,9 +85,9 @@ grupo.on("clusterclick", (e) => {
   const MAX = 40;
   const local = regs[0] ? O.rotuloLocal(regs[0]) : "";
   const html = `<div class="pop pop-lista"><strong>${regs.length.toLocaleString("pt-BR")} registros em ${esc(local)}</strong>
-    <div class="rotulo-peq">Localização aproximada: todos ficam no mesmo ponto${regs[0]?.precisao_local === "bairro" ? " do bairro" : " (sede do município)"}. Mais recentes primeiro.</div>
+    <div class="rotulo-peq">Todos aparecem no mesmo ponto${regs[0]?.precisao_local === "bairro" ? ", no centro do bairro" : ", na sede do município"}, porque a localização é aproximada. Os mais recentes vêm primeiro.</div>
     <ul>${regs.slice(0, MAX).map((r) => `<li><a href="caso.html?id=${encodeURIComponent(r.id)}">${esc(catPorId[r.categoria].rotulo)}</a> <span class="rotulo-peq">${dataBR(r.data_publicacao)}</span></li>`).join("")}</ul>
-    ${regs.length > MAX ? `<div class="rotulo-peq">Mostrando ${MAX}. Veja todos em RELATÓRIO ou refine o período.</div>` : ""}</div>`;
+    ${regs.length > MAX ? `<div class="rotulo-peq">A lista mostra ${MAX}. Para ver todos, use RELATÓRIO ou escolha um período menor.</div>` : ""}</div>`;
   L.popup({ maxWidth: 340, maxHeight: 320 }).setLatLng(cl.getLatLng()).setContent(html).openOn(mapa);
 });
 const icones = Object.fromEntries(CATS.map((c) => [c.id, L.divIcon({ html: pinoHTML(c, 32), className: "", iconSize: [32, 32], iconAnchor: [16, 38], popupAnchor: [0, -34] })]));
@@ -99,15 +99,14 @@ function popupHTML(r) {
     <div class="pop-cab">${selo(c, 30)}<strong>${esc(c.rotulo)}</strong></div>
     <dl>
       <dt>Local</dt><dd>${esc(O.rotuloLocal(r))}</dd>
-      <dt>Publicado</dt><dd>${dataBR(r.data_publicacao)}</dd>
+      <dt>Nota oficial</dt><dd>${r.fontes.map((f) => esc(f.sigla)).join(" e ")}, publicada em ${dataBR(r.data_publicacao)}</dd>
       ${r.data_fato ? `<dt>Data do fato</dt><dd>${dataBR(r.data_fato)}</dd>` : ""}
       <dt>Situação</dt><dd>${esc(STATUS[r.status_juridico] || "Não informado")}${r.medidas?.length ? ` · ${esc(r.medidas.join(", "))}` : ""}</dd>
-      <dt>Fonte</dt><dd>${r.fontes.map((f) => `<a href="${esc(urlSegura(f.url))}" target="_blank" rel="noopener">Nota oficial ${esc(f.sigla)} ↗</a>`).join(", ")}</dd>
     </dl>
-    ${r.resumo_oficial ? `<p class="pop-resumo">${esc(r.resumo_oficial)}</p>` : ""}
-    <div class="rotulo-peq">${esc(O.notaPrecisao(r))}</div>
+    <div class="rotulo-peq">Local aproximado: ${esc(O.notaPrecisao(r))}</div>
     ${(r.reportagens || []).length ? `<div class="pop-rep"><strong>Reportagens:</strong> ${r.reportagens.map((x) => `<a href="${esc(urlSegura(x.url))}" target="_blank" rel="noopener">${esc(x.veiculo || "matéria")}</a>`).join(" · ")}</div>` : ""}
-    <div class="acoes"><a href="caso.html?id=${encodeURIComponent(r.id)}">Ver detalhes do caso</a><a href="${esc(O.linkBuscaImprensa(base, r))}" target="_blank" rel="noopener">Buscar na imprensa ↗</a>${issue ? `<a href="${esc(issue)}" target="_blank" rel="noopener">⚠ Informar correção</a>` : ""}</div>
+    <p class="pop-fonte">${r.fontes.map((f) => `<a class="btn-fonte" href="${esc(urlSegura(f.url))}" target="_blank" rel="noopener">Ver fonte oficial (${esc(f.sigla)}) ↗</a>`).join(" ")}</p>
+    <div class="acoes"><a href="caso.html?id=${encodeURIComponent(r.id)}">Ver registro completo</a>${issue ? `<a href="${esc(issue)}" target="_blank" rel="noopener">Informar correção</a>` : ""}</div>
   </div>`;
 }
 
@@ -117,7 +116,7 @@ const camadaServ = L.layerGroup();
 for (const s of base.servicos.servicos) {
   if (s.lat == null) continue;
   L.marker([s.lat, s.lon], { icon: iconeServ, title: s.nome })
-    .bindPopup(`<strong>${esc(s.nome)}</strong><br>${esc(s.endereco)}<br>${s.telefones.map((t) => `<a href="tel:${esc(t.replace(/\D/g, ""))}">${esc(t)}</a>`).join(", ")}<br><span class="rotulo-peq">Unidade pública · fonte: Polícia Civil de Goiás</span>`)
+    .bindPopup(`<strong>${esc(s.nome)}</strong><br>${esc(s.endereco)}<br>${s.telefones.map((t) => `<a href="tel:${esc(t.replace(/\D/g, ""))}">${esc(t)}</a>`).join(", ")}<br><span class="rotulo-peq">Delegacia especializada. Fonte: Polícia Civil de Goiás</span>`)
     .addTo(camadaServ);
 }
 camadaServ.addTo(mapa);
@@ -304,9 +303,9 @@ function renderPainel(qual) {
       <div><div class="cm-total">${atuais.length.toLocaleString("pt-BR")}</div><div class="rotulo-peq">registros · ${esc(O.descreverIntervalo(O.intervaloDoPeriodo(estado.periodo)))}${estado.municipio ? ` · ${esc(estado.municipio)}` : " · Estado de Goiás"}</div></div>
       <div>${porCat.map((x) => `<div class="cm-linha-cat">${selo(catPorId[x.chave], 22)}<span>${esc(catPorId[x.chave].rotulo)}</span><span class="n">${x.total}</span></div>`).join("") || "<p>Nenhum registro com os filtros atuais.</p>"}</div>
       <div><strong>Situação jurídica</strong>${hbars(porStatus, (x) => STATUS[x.chave] || x.chave)}</div>
-      <p class="rotulo-peq">${comBairro} de ${atuais.length} registros posicionados no bairro; os demais na sede do município.</p>
-      <div class="aviso">Cada registro é uma <strong>nota oficial</strong> da PCGO, SSP-GO ou PMGO. As notas não cobrem todas as ocorrências: para totais oficiais, veja <a href="estatisticas.html">Estatísticas oficiais (SSP-GO)</a>. Registro de ocorrência não significa condenação.</div>
-      <p class="rotulo-peq">Dados coletados em ${dataBR((base.ocorrencias.gerado_em || "").slice(0, 10))}.</p>`;
+      <p class="rotulo-peq">${comBairro} de ${atuais.length} registros aparecem no bairro citado na nota. Os demais ficam na sede do município.</p>
+      <div class="aviso">Cada registro corresponde a uma <strong>nota oficial</strong> da PCGO, da SSP-GO ou da PMGO. O mapa mostra os casos divulgados, e não todas as ocorrências. A ausência de registro não significa ausência de crime, e um registro não significa condenação. Os totais oficiais estão em <a href="estatisticas.html">Estatísticas</a>.</div>
+      <p class="rotulo-peq">Última coleta: ${dataBR((base.ocorrencias.gerado_em || "").slice(0, 10))}.</p>`;
   } else if (qual === "relatorio") {
     const linhas = [...atuais].sort((a, b) => b.data_publicacao.localeCompare(a.data_publicacao));
     alvo.innerHTML = `<div class="linha"><button type="button" class="btn" id="btn-csv">Baixar CSV</button></div>
@@ -333,7 +332,7 @@ function renderPainel(qual) {
       <div><strong>Por categoria</strong>${hbars(O.contarPor(atuais, "categoria"), (x) => catPorId[x.chave].rotulo) || "<p class='rotulo-peq'>Sem dados.</p>"}</div>
       <div><strong>${porAno ? "Por ano de publicação" : "Por mês de publicação"}</strong>${hbars(meses) || "<p class='rotulo-peq'>Sem dados.</p>"}</div>
       <div><strong>Municípios com mais registros</strong>${hbars(O.contarPor(atuais, "municipio").slice(0, 10)) || "<p class='rotulo-peq'>Sem dados.</p>"}</div>
-      <p class="rotulo-peq">Contagem de notas oficiais divulgadas — não é taxa de criminalidade. <a href="estatisticas.html">Ver estatísticas oficiais da SSP-GO</a>.</p>`;
+      <p class="rotulo-peq">A contagem reúne notas oficiais divulgadas e não é taxa de criminalidade. <a href="estatisticas.html">Ver estatísticas oficiais da SSP-GO</a>.</p>`;
   }
 }
 
@@ -355,7 +354,7 @@ $("form-busca").addEventListener("submit", (e) => {
   const q = $("busca").value.trim();
   if (!q) return;
   if (moderar(q).bloqueado || /\b(rua|r\.|avenida|av\.|quadra|qd|lote|lt|n[º°]|numero|casa|apto|apartamento|cpf|tornozeleira)\b|\d{2,}/i.test(q)) {
-    avisar("A busca aceita apenas município ou bairro. Endereços, pessoas e localização de tornozeleiras não são pesquisáveis.");
+    avisar("A busca aceita apenas município ou bairro. Não é possível buscar endereços, pessoas ou tornozeleiras.");
     return;
   }
   const nq = O.norm(q.split(",")[0]);
@@ -364,10 +363,10 @@ $("form-busca").addEventListener("submit", (e) => {
   const m = muns.find((x) => O.norm(x.nome) === nq) || muns.find((x) => O.norm(x.nome).startsWith(nq));
   if (m) {
     escolherMunicipio(m.nome);
-    if (!nPorMun[m.nome]) avisar(`${m.nome}: não há registros de crimes graves em notas oficiais desde 2015.`);
+    if (!nPorMun[m.nome]) avisar(`Não há registros de crimes graves divulgados em notas oficiais sobre ${m.nome} desde 2015. Isso não significa que não houve crimes na cidade.`);
     return;
   }
-  avisar("Local não encontrado. Digite o nome de um município de Goiás ou de um bairro que tenha registros.");
+  avisar("Local não encontrado. Digite o nome de um município de Goiás ou de um bairro com registros.");
 });
 function avisar(msg) {
   const p = L.popup({ closeButton: true }).setLatLng(mapa.getCenter()).setContent(`<p style="margin:0">${esc(msg)}</p>`);
@@ -393,3 +392,7 @@ if (!estado.municipio) {
   else if (!atuais.length) mapa.setView([-15.98, -49.86], 7);
 }
 window.__mapaSeguro = { chat };
+
+// o aviso do topo do mapa não deve cobrir a janela de um registro
+mapa.on("popupopen", () => document.body.classList.add("popup-aberto"));
+mapa.on("popupclose", () => document.body.classList.remove("popup-aberto"));

@@ -43,7 +43,7 @@ class FakeSess:
 
 def b_ok(regs):
     b = regs["pcgo-2"]
-    return b["resumo_oficial"] is None  # criança: sem resumo
+    return "resumo_oficial" not in b  # nenhum texto da nota é guardado
 
 
 @pytest.fixture
@@ -65,7 +65,7 @@ def test_coleta(ambiente):
     a = regs["pcgo-1"]
     assert a["categoria"] == "tentativa_feminicidio" and a["bairro"] == "Setor Bueno" and a["precisao_local"] == "bairro"
     assert a["data_fato"] == "2026-09-08"
-    assert a["resumo_oficial"] and "Setor Bueno" in a["resumo_oficial"]
+    assert not any(k.startswith("resumo") for k in a)  # regra: nenhum texto da nota é guardado
     assert b_ok(regs)
     assert "sspgo-9" not in regs and len(a["fontes"]) == 2  # mesma ocorrência em outra fonte oficial -> fundida
     b = regs["pcgo-2"]

@@ -1,53 +1,57 @@
 {
-  "_comentario": "Textos institucionais usados pelas páginas e pelo Assistente. O Assistente só responde sobre a plataforma com base nestes textos.",
+  "_comentario": "Textos institucionais usados pelas páginas e pelo Assistente. O Assistente só responde sobre o projeto com base nestes textos.",
   "topicos": {
     "finalidade": {
-      "titulo": "Finalidade",
-      "texto": "O MAPA SEGURO é uma plataforma de informação pública destinada a organizar e apresentar dados disponíveis em fontes públicas sobre violência contra mulheres, crianças e adolescentes em Goiás, com foco em Goiânia. A presença de uma ocorrência na plataforma não significa, por si só, condenação criminal. A plataforma usa exclusivamente fontes oficiais e públicas do Governo de Goiás."
+      "titulo": "O que é o Mapa Seguro",
+      "texto": "O Mapa Seguro é um projeto independente que reúne, em um mapa, casos de violência contra mulheres, crianças e adolescentes em Goiás divulgados por órgãos oficiais do Estado. O foco é Goiânia. O site não é oficial e não tem vínculo com o Governo de Goiás. Ele mostra registros publicados pelas fontes consultadas, não todas as ocorrências policiais. A presença de um caso no mapa não significa que alguém foi condenado."
     },
     "fontes": {
-      "titulo": "De onde vêm os dados?",
-      "texto": "Duas bases oficiais: (1) Registros do mapa — notas oficiais publicadas nos portais da Polícia Civil (PCGO), da Secretaria de Segurança Pública (SSP-GO) e da Polícia Militar (PMGO), lidas pela API pública desses portais; (2) Estatística agregada — demonstrativo 'Estatísticas Criminais e de Produtividade' da SSP-GO (sistema RAI/Odisseu), com totais mensais do Estado de Goiás para feminicídio e estupro. Endereços de unidades de atendimento vêm da Polícia Civil; o contorno do estado, do IBGE. Nenhum dado vem de redes sociais, de imprensa ou de fontes não oficiais."
+      "titulo": "De onde vêm os dados",
+      "texto": "O projeto usa duas bases diferentes. A primeira são as notas publicadas nos sites da Polícia Civil (PCGO), da Secretaria de Segurança Pública (SSP-GO) e da Polícia Militar (PMGO), lidas de forma automática pela interface pública desses portais. Cada nota vira um registro no mapa, com link para a publicação original. A segunda é a estatística mensal da SSP-GO (Estatísticas Criminais e de Produtividade, sistema RAI/Odisseu), com os totais de feminicídio e estupro no Estado. Os endereços das delegacias especializadas vêm da Polícia Civil. Redes sociais, imprensa e fontes não oficiais não são usadas como base."
     },
     "classificacao": {
-      "titulo": "Como os dados são classificados?",
-      "texto": "Cada nota oficial é classificada por regras públicas e auditáveis (scripts/classificador.py): a categoria vem das palavras do título e do texto (por exemplo, 'tentativa de feminicídio', 'estupro de vulnerável' com menção a criança). Notas institucionais (palestras, eventos, entregas) são descartadas. Quando a nota cita mais de um crime, vale o mais grave. Notas sobre o mesmo fato em órgãos diferentes são unificadas num só registro com várias fontes. Por decisão editorial, a plataforma reúne apenas crimes graves: feminicídio, tentativa de feminicídio, violência sexual, violência sexual contra criança/adolescente e homicídio, tortura ou maus-tratos contra criança/adolescente."
+      "titulo": "Como os casos são classificados",
+      "texto": "Cada nota passa por regras automáticas e públicas, disponíveis no código do projeto (scripts/classificador.py). A categoria é definida pelas palavras do título e do texto, como \"tentativa de feminicídio\" ou \"estupro de vulnerável\" com menção a criança. Notas sobre palestras, eventos e entregas são descartadas. Quando a nota cita mais de um crime, vale o mais grave. Se o mesmo fato foi divulgado por dois órgãos, as notas viram um único registro com as duas fontes. O mapa reúne apenas crimes graves: feminicídio, tentativa de feminicídio, violência sexual, violência sexual contra criança ou adolescente e homicídio, tortura ou maus-tratos contra criança ou adolescente."
     },
     "localizacao": {
-      "titulo": "Como a localização é definida?",
-      "texto": "A localização é sempre aproximada. Se a nota oficial cita o bairro ou setor, o ponto fica no centro aproximado desse bairro (OpenStreetMap). Se não cita, o ponto fica na sede do município. Casos que envolvem criança ou adolescente (ou vítima vulnerável) ficam SEMPRE na sede do município. Ruas, números, quadras, lotes, condomínios e endereços residenciais nunca são extraídos nem publicados. Não existe busca por endereço, pessoa, vítima ou tornozeleira."
+      "titulo": "Como o local é definido",
+      "texto": "A localização é sempre aproximada. Quando a nota cita o bairro, o ponto fica no centro do bairro, calculado com o OpenStreetMap. Quando não cita, o ponto fica na sede do município. Casos com criança, adolescente ou vítima vulnerável aparecem sempre na sede do município. O projeto não registra ruas, números, quadras, lotes, condomínios nem endereços. Não é possível buscar por endereço, pessoa, vítima ou tornozeleira eletrônica."
     },
     "atualizacao": {
-      "titulo": "Como os dados são atualizados?",
-      "texto": "Uma rotina automática (GitHub Actions) roda todos os dias: consulta a API pública dos portais da PCGO, SSP-GO e PMGO, classifica as notas, aplica as regras de privacidade, unifica duplicidades, posiciona os registros e publica o site. As estatísticas agregadas da SSP-GO são conferidas mensalmente (soma dos meses = total publicado). Registros podem ser ocultados ou corrigidos pela administração, com motivo registrado."
+      "titulo": "Como os dados são atualizados",
+      "texto": "Uma rotina automática roda todos os dias no GitHub. Ela consulta os portais da PCGO, da SSP-GO e da PMGO, classifica as notas novas, aplica as regras de privacidade, junta notas repetidas, posiciona os registros no mapa e publica o site. A estatística da SSP-GO é conferida a cada atualização: a soma dos meses precisa bater com o total publicado pelo órgão. A administração pode ocultar ou corrigir um registro, sempre com o motivo registrado."
     },
     "correcoes": {
-      "titulo": "Como corrigir um erro?",
-      "texto": "Use o botão 'Encontrou um erro?' para abrir uma solicitação pública de correção, informando a informação incorreta, a correção proposta e a fonte oficial que a comprova. Nenhuma alteração é feita automaticamente: toda correção passa por revisão humana e fica registrada no histórico do repositório (auditoria)."
+      "titulo": "Como pedir uma correção",
+      "texto": "Na página de cada registro há o botão \"Informar correção\". O pedido é público e deve indicar o que está errado, qual seria a informação correta e a fonte oficial que comprova. Nada é alterado de forma automática: toda correção passa por revisão humana e fica registrada no histórico do projeto."
     },
     "privacidade": {
-      "titulo": "Como a privacidade é protegida?",
-      "texto": "A plataforma não guarda nomes, idades, profissões, endereços ou qualquer dado que identifique vítimas, investigados, crianças ou adolescentes. Cada registro tem categoria, município/bairro aproximado, datas, situação jurídica e o link da nota oficial; em parte dos casos com vítima adulta, também um trecho curto da nota, do qual um filtro automático remove frases com nomes ou endereços. Em casos com criança ou adolescente, nenhum trecho é reproduzido. Não há cadastro de usuários. As conversas com o Assistente não são gravadas pelo MAPA SEGURO; quando um provedor de IA externo é configurado, a pergunta é enviada a ele para gerar a resposta. Princípios (LGPD): necessidade, finalidade, proporcionalidade, verificação, segurança, privacidade e transparência. Nomes de vítimas e de investigados não são reproduzidos: quando há reportagens, o site leva o leitor à matéria original."
+      "titulo": "Privacidade",
+      "texto": "Medidas de privacidade e proteção de dados aplicadas ao projeto: nenhum texto das notas oficiais é guardado ou reproduzido no site. Cada registro tem apenas a categoria do crime, o município, o bairro (quando permitido), as datas, a situação informada pela polícia e o link da nota original. Nomes, idades, profissões, endereços e qualquer dado que permita identificar vítimas ou investigados não são extraídos. Casos com criança ou adolescente nunca aparecem abaixo do nível do município. O site não tem cadastro de usuários. As perguntas feitas ao Assistente não são guardadas pelo projeto; se um serviço externo de inteligência artificial estiver configurado, a pergunta é enviada a ele apenas para gerar a resposta."
     },
     "investigacao_condenacao": {
       "titulo": "Investigação não é condenação",
-      "texto": "Um registro policial (ocorrência no RAI) indica que um fato foi comunicado e está sendo apurado. Ele não equivale a acusação formal, denúncia do Ministério Público, processo ou condenação. Os números exibidos são contagens de ocorrências registradas e não dizem nada sobre a culpa de qualquer pessoa. Ninguém deve ser chamado de criminoso sem condenação."
+      "texto": "Uma nota policial informa que um fato foi comunicado e está sendo apurado. Isso não equivale a denúncia do Ministério Público, processo ou condenação. O Mapa Seguro usa o termo que corresponde à fase informada na fonte: investigado, indiciado, denunciado, réu ou condenado. Ninguém é chamado de criminoso."
     },
     "limitacoes": {
       "titulo": "Limitações",
-      "texto": "1) Os registros do mapa vêm de notas divulgadas pelos órgãos e não cobrem todas as ocorrências: a contagem não é taxa de criminalidade. 2) A localização é aproximada (bairro ou município). 3) A classificação é automática por regras e pode errar — use 'Informar correção'. 4) A situação jurídica reflete o momento da nota (em geral, investigação). 5) As estatísticas agregadas da SSP-GO cobrem só feminicídio e estupro (total), sem recorte por município. 6) Durante o período eleitoral a lei restringe a publicidade dos órgãos estaduais, e os portais podem deixar de publicar notas — por isso podem faltar casos recentes. 7) Ameaça, lesão corporal, perseguição e violência doméstica sem crime grave não estão na base. 8) Registro de ocorrência não significa condenação."
+      "texto": "Os registros vêm de notas divulgadas pelos órgãos e não cobrem todas as ocorrências. Por isso, a contagem não é taxa de criminalidade. A localização é aproximada. A classificação é automática e pode errar; nesse caso, use \"Informar correção\". A situação jurídica é a do dia da nota, em geral a fase de investigação. A estatística da SSP-GO cobre só feminicídio e estupro, sem recorte por município, e pode ser revista pelo órgão. Em 2026, os sites do Governo de Goiás suspenderam a publicação de notícias durante o período eleitoral, e por isso não há registros novos depois de 30 de junho. Ameaça, lesão corporal, perseguição e violência doméstica sem crime grave não fazem parte da base."
     },
     "mapa": {
-      "titulo": "Como funciona o mapa?",
-      "texto": "Cada marcador é um registro de ocorrência divulgado em nota oficial, com ícone e cor da categoria (veja a legenda). Números em círculos vermelhos agrupam vários registros próximos: aproxime o mapa para separá-los. Use os filtros à esquerda: O QUÊ (categorias), ONDE (município ou 'pesquisar nesta área'), QUANDO (período), além de RESUMO, RELATÓRIO, GRÁFICOS e IMPRIMIR. Clique num marcador para ver o resumo e o link da fonte oficial. Escudos roxos são unidades públicas de atendimento."
+      "titulo": "Como usar o mapa",
+      "texto": "Cada marcador é um registro divulgado em nota oficial, com cor e ícone da categoria. Os círculos com números juntam vários registros próximos; aproxime o mapa ou clique no círculo para ver a lista. Os filtros à esquerda permitem escolher o tipo de crime (O QUÊ), o município ou uma área (ONDE) e o período (QUANDO). Também há resumo, tabela para download, gráficos e impressão. Ao clicar em um marcador, aparece o botão para ver a fonte oficial. Os escudos roxos são delegacias especializadas."
     },
     "ia": {
-      "titulo": "Como funciona a inteligência artificial?",
-      "texto": "O Assistente MAPA SEGURO não tem acesso livre a nada: ele só pode chamar funções controladas (consultar estatísticas, fontes, serviços e textos da plataforma), que leem os mesmos arquivos de dados exibidos no site. Números e fontes vêm sempre dessas funções, nunca do modelo. Perguntas que pedem endereço privado, localização em tempo real, identificação de vítimas ou dados de crianças são bloqueadas antes de chegar ao modelo. Sem provedor de IA configurado, o Assistente funciona em modo local, com respostas montadas diretamente a partir dos dados. O provedor padrão é o Google Gemini (nível gratuito) e pode ser trocado por configuração."
+      "titulo": "Como funciona o Assistente",
+      "texto": "O Assistente responde apenas com informações da base do Mapa Seguro e das fontes oficiais vinculadas a ela. Ele não navega na internet e não tem acesso livre aos dados: só consulta funções controladas, que leem os mesmos arquivos exibidos no site. Números e fontes vêm sempre dessas consultas. Perguntas sobre endereço, localização de pessoas, identificação de vítimas ou dados de crianças são bloqueadas. Quando não encontra a resposta, o Assistente informa isso. Sem serviço externo configurado, ele funciona em modo local, com respostas montadas diretamente a partir dos dados."
+    },
+    "nao_permite": {
+      "titulo": "O que o Mapa Seguro não permite concluir",
+      "texto": "O mapa não representa todas as ocorrências. A ausência de registro em um lugar ou período não significa ausência de crime. A quantidade de registros não indica, por si só, taxa de criminalidade nem que um lugar é mais perigoso. Um registro não significa condenação. O mapa não permite prever risco nem reincidência. A localização dos pontos é aproximada."
     }
   },
   "emergencia": {
-    "aviso": "Em situação de emergência ou risco imediato, ligue 190. O MAPA SEGURO é uma plataforma de informação e não substitui os canais oficiais de atendimento.",
+    "aviso": "Em emergência ou risco imediato, ligue 190. O Mapa Seguro é um projeto de informação e não substitui os canais oficiais de atendimento.",
     "contatos": [
       {
         "numero": "190",

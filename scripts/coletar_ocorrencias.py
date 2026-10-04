@@ -29,7 +29,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from classificador import (CLASSIFICADOR_VERSAO, ROTULOS, Localizador, bairro, classificar,  # noqa: E402
-                           data_do_fato, html_para_texto, resumo_oficial, situacao)
+                           data_do_fato, html_para_texto, situacao)
 
 RAIZ = Path(__file__).resolve().parent.parent
 D = RAIZ / "data"
@@ -156,7 +156,6 @@ def montar_registro(site, post, loc: Localizador, sess, geocache, log, extracao=
         "medidas": sit["medidas"],
         "fonte_status": "oficial_confirmada",
         "fontes": [{"orgao": site["orgao"], "sigla": site["sigla"], "url": post["link"], "data_publicacao": data_pub, "tipo": "nota_oficial"}],
-        "resumo_oficial": None,
         "classificador": CLASSIFICADOR_VERSAO,
         "extracao": extracao,
         "coletado_em": dt.date.today().isoformat(),
@@ -170,9 +169,10 @@ def montar_registro(site, post, loc: Localizador, sess, geocache, log, extracao=
             reg["bairro"] = b
             if g:
                 reg.update({"lat": g["lat"], "lon": g["lon"], "precisao_local": "bairro"})
-    # Resumo da própria nota oficial, sem nomes nem endereços; nunca em casos com criança/adolescente
-    if not cls["envolve_crianca"] and texto:
-        reg["resumo_oficial"] = resumo_oficial(texto, mun["nome"], reg["bairro"])
+    # Regra de privacidade: nenhum texto da nota é guardado (só dados estruturados e o link oficial).
+    # Data do fato posterior à publicação é impossível: descarta.
+    if reg["data_fato"] and reg["data_fato"] > data_pub:
+        reg["data_fato"] = None
     return reg
 
 
@@ -251,7 +251,7 @@ def gerar_feed(regs: list[dict], site_url: str) -> None:
     base = site_url.rstrip("/")
     itens = []
     for r in sorted(regs, key=lambda x: x["data_publicacao"], reverse=True)[:60]:
-        titulo = f"{ROTULOS[r['categoria']]} — {r['municipio']}/GO"
+        titulo = f"{ROTULOS[r['categoria']]} em {r['municipio']}/GO"
         link = f"{base}/caso.html?id={r['id']}"
         pub = dt.datetime.fromisoformat(r["data_publicacao"]).strftime("%a, %d %b %Y 12:00:00 -0300")
         data_br = "/".join(reversed(r["data_publicacao"].split("-")))
@@ -262,7 +262,7 @@ def gerar_feed(regs: list[dict], site_url: str) -> None:
         itens.append(f"<item><title>{escape(titulo)}</title><link>{escape(link)}</link><guid isPermaLink=\"false\">{escape(r['id'])}</guid>"
                      f"<pubDate>{pub}</pubDate><category>{escape(ROTULOS[r['categoria']])}</category><description>{escape(desc)}</description></item>")
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>'
-           "<title>MAPA SEGURO — novos registros oficiais (Goiás)</title>"
+           "<title>Mapa Seguro: novos registros divulgados em Goiás</title>"
            f"<link>{escape(base + '/')}</link><description>Crimes graves contra mulheres, crianças e adolescentes divulgados em notas oficiais do Governo de Goiás (PCGO, SSP-GO e PMGO).</description>"
            "<language>pt-br</language>" + "".join(itens) + "</channel></rss>\n")
     (RAIZ / "feed.xml").write_text(xml, encoding="utf-8")
@@ -308,6 +308,10 @@ def main() -> int:
                 por_id.pop(rid)  # não é (mais) crime grave pelas regras atuais
 
     brutos = [r for r in por_id.values() if r["data_publicacao"] >= apos[:10] and r["categoria"] in GRAVES]
+    for r in brutos:  # aplica as regras atuais também a registros antigos guardados
+        r.pop("resumo_oficial", None)
+        if r.get("data_fato") and r["data_fato"] > r["data_publicacao"]:
+            r["data_fato"] = None
     gravar("coleta_bruta.json", {"gerado_em": agora_iso(), "registros": sorted(brutos, key=lambda r: r["id"])})
     regs = json.loads(json.dumps(brutos))  # cópia: fusões não alteram a base bruta
     marcar_duplicidades(regs)

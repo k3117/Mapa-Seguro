@@ -87,7 +87,7 @@ test("motor local: perguntas típicas", () => {
   const caso = base.ocorrencias.ocorrencias[0];
   const r6 = responderLocal(base, "Me conte mais sobre esse caso.", { caso_id: caso.id }, AGORA);
   assert.match(r6.texto, new RegExp(caso.id.toUpperCase()));
-  assert.match(r6.texto, /não de criminosa/);
+  assert.match(r6.texto, /não como criminosa/);
 
   const r7 = responderLocal(base, "Preciso de ajuda", {}, AGORA);
   assert.match(r7.texto, /190/);

@@ -68,3 +68,10 @@ def test_municipio_palavras_comuns_e_apelidos():
 def test_goias_estado_nao_e_municipio():
     assert LOC.municipio("prisão preventiva contra mulheres, em Goiás e Mato Grosso, investigadas") is None
     assert LOC.municipio("PCGO prende homem na cidade de Goiás")["nome"] == "Goiás"
+
+
+def test_vulneravel_com_crianca_no_texto():
+    c = classificar("Homem é preso em Porangatu por estupro de vulnerável", "O suspeito ofereceu chocolate a uma criança de 11 anos.")
+    assert c["categoria"] == "violencia_sexual_crianca" and c["publico"] == "criancas_adolescentes"
+    c = classificar("PCGO prende investigado por estupro de vulnerável em Itumbiara", "A vítima, uma mulher de 30 anos, estava desacordada.")
+    assert c["categoria"] == "violencia_sexual" and c["envolve_crianca"]  # vulnerável adulta: local protegido

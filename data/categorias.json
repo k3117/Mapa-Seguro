@@ -64,27 +64,27 @@
   ],
   "status_juridico": {
     "investigacao": "Investigação policial",
-    "inquerito": "Inquérito / indiciamento",
-    "acusacao": "Acusação",
+    "inquerito": "Inquérito concluído com indiciamento",
+    "acusacao": "Denúncia oferecida",
     "denuncia_recebida": "Denúncia recebida pela Justiça",
     "processo_em_andamento": "Processo em andamento",
     "condenacao": "Condenação",
     "absolvicao": "Absolvição",
     "arquivado": "Arquivado",
-    "extinto": "Extinto",
+    "extinto": "Punibilidade extinta",
     "nao_informado": "Não informado"
   },
   "termo_pessoa": {
     "investigacao": "investigado",
     "inquerito": "indiciado",
-    "acusacao": "acusado",
+    "acusacao": "denunciado",
     "denuncia_recebida": "réu",
     "processo_em_andamento": "réu",
     "condenacao": "condenado",
     "absolvicao": "absolvido",
     "arquivado": "investigado (caso arquivado)",
-    "extinto": "—",
-    "nao_informado": "—"
+    "extinto": "investigado (punibilidade extinta)",
+    "nao_informado": "investigado"
   },
   "fonte_status": {
     "oficial_confirmada": "Fonte oficial confirmada",

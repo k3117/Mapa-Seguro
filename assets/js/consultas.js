@@ -105,7 +105,7 @@ export function fonteDoAno(base, ano) {
   const f = base.fontes.fontes.find((x) => x.id === base.indicadores.fonte_id);
   if (!a || !f) return null;
   return {
-    titulo: `${f.titulo} — ${ano}`,
+    titulo: `${f.titulo}, ${ano}`,
     orgao: f.orgao,
     url: a.pdf_url,
     pagina: f.pagina_oficial,
@@ -228,7 +228,7 @@ export function listarServicos(base, publico) {
     .map(({ consulta_geocodificacao, ...resto }) => resto);
   return {
     ok: true, servicos: s,
-    fontes: [{ titulo: "Delegacias Especializadas — Polícia Civil de Goiás", url: base.servicos.fonte_url, orgao: "Polícia Civil do Estado de Goiás", data_consulta_fonte: base.servicos.data_consulta }],
+    fontes: [{ titulo: "Delegacias Especializadas da Polícia Civil de Goiás", url: base.servicos.fonte_url, orgao: "Polícia Civil do Estado de Goiás", data_consulta_fonte: base.servicos.data_consulta }],
   };
 }
 

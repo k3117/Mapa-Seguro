@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Estatísticas — MAPA SEGURO</title>
-  <meta name="description" content="Estatísticas oficiais da SSP-GO sobre feminicídio e estupro no Estado de Goiás.">
+  <title>Estatísticas | Mapa Seguro</title>
+  <meta name="description" content="Estatística oficial da SSP-GO e registros reunidos pelo Mapa Seguro: duas bases diferentes.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://generativelanguage.googleapis.com https:; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z' fill='%234b2a7b'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script type="module" src="assets/js/pagina-estatisticas.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20261008">
+  <script type="module" src="assets/js/pagina-estatisticas.js?v=20261008"></script>
 </head>
 <body data-pagina="estatisticas">
   <header id="topo"></header>
   <main id="principal" class="conteudo">
-    <h1>Estatísticas oficiais</h1>
-    <p class="lead">Estatística agregada publicada pela Secretaria de Segurança Pública de Goiás (SSP-GO) para o <strong>Estado de Goiás</strong> (sem recorte por município), e a contagem dos registros do mapa no mesmo período.</p>
+    <h1>Estatísticas</h1>
+    <p class="lead">Esta página reúne duas bases diferentes. A primeira é a estatística oficial consolidada da Secretaria de Segurança Pública de Goiás (SSP-GO), com os totais do Estado. A segunda é a contagem dos registros reunidos pelo Mapa Seguro a partir de notas oficiais. Os números das duas bases não devem ser comparados como se fossem equivalentes.</p>
+    <h2>Dados oficiais consolidados da SSP-GO</h2>
     <form class="barra-filtros" aria-label="Período">
       <div class="campo"><label for="p-tipo">Período</label><select id="p-tipo"></select></div>
       <div class="campo" id="c-ano" hidden><label for="p-ano">Ano</label><select id="p-ano"></select></div>
@@ -23,15 +24,20 @@
     </form>
     <p id="cobertura" class="rotulo-peq"></p>
     <div id="kpis" class="kpis" aria-live="polite"></div>
-    <div class="aviso">Os números são <strong>ocorrências registradas</strong>, não condenações. O indicador “Estupro” reúne todas as vítimas — a fonte não separa sexo nem idade. A SSP-GO publica estatística agregada apenas desses dois indicadores.</div>
+    <div class="aviso">Os números são <strong>ocorrências registradas</strong> pela polícia, e não condenações. O indicador “Estupro” reúne todas as vítimas, sem separar sexo ou idade. A SSP-GO informa que seus dados podem sofrer alterações conforme o andamento das investigações e publica com atraso de pelo menos 60 dias.</div>
     <section class="grafico" id="g-feminicidio"></section>
     <section class="grafico" id="g-estupro"></section>
     <div class="grade">
       <section class="grafico" id="a-feminicidio"></section>
       <section class="grafico" id="a-estupro"></section>
     </div>
-    <h2>Registros do mapa no período</h2>
+    <h2>Registros reunidos pelo Mapa Seguro no período</h2>
+    <p class="rotulo-peq">Base diferente: notas oficiais divulgadas pela PCGO, SSP-GO e PMGO e coletadas pelo projeto.</p>
     <div id="registros-mapa"></div>
+    <div class="aviso info">
+      <h3 style="margin-top:0">Por que o número do mapa é diferente da estatística oficial?</h3>
+      <p>A estatística da SSP-GO conta todas as ocorrências registradas no sistema da polícia. O mapa conta apenas os casos que os órgãos decidiram divulgar em notas no site oficial. A maior parte das ocorrências não vira nota. Por isso, o número do mapa é menor e não serve para medir a quantidade de crimes.</p>
+    </div>
     <h2>Fontes utilizadas</h2>
     <ul id="fontes" class="fontes-lista"></ul>
     <p id="correcao" class="rotulo-peq"></p>
