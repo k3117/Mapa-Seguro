@@ -65,20 +65,29 @@ jobs:
           node --test tests/*.test.mjs
 
       - name: Salvar dados atualizados no repositório
+        # Se alguém enviar algo ao GitHub durante a coleta, integra as mudanças e tenta de novo.
+        # Uma falha aqui não impede a publicação do site.
+        continue-on-error: true
         run: |
           git config user.name "mapa-seguro-bot"
           git config user.email "mapa-seguro-bot@users.noreply.github.com"
           git add data feed.xml
           if ! git diff --cached --quiet; then
             git commit -m "dados: coleta automática $(date -u +%Y-%m-%d)"
-            git push
+            for tentativa in 1 2 3; do
+              if git pull --rebase -X theirs origin main && git push; then break; fi
+              git rebase --abort 2>/dev/null || true
+              echo "::warning::Envio recusado (tentativa $tentativa); tentando de novo."
+              sleep 10
+            done
           fi
 
       - name: Montar o site
         run: |
           mkdir _site
           cp -r *.html feed.xml assets vendor data _site/
-          rm -f _site/data/coleta_bruta.json _site/data/geocache.json
+          # arquivos internos da coleta não são publicados
+          rm -f _site/data/coleta_bruta.json _site/data/geocache.json _site/data/coleta_log.json _site/data/ingestao_log.json _site/data/reportagens.json _site/data/moderacao.json
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
