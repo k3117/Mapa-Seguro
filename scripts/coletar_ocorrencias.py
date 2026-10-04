@@ -245,16 +245,25 @@ def aplicar_moderacao(regs: list[dict]) -> list[dict]:
 
 
 def gerar_feed(regs: list[dict], site_url: str) -> None:
+    """Feed RSS dos 60 registros mais recentes. Abre formatado no navegador (feed.xsl) e funciona em leitores de RSS."""
+    arq = next((a for a in (RAIZ / "data" / "categorias.json", Path(__file__).resolve().parent.parent / "data" / "categorias.json") if a.exists()), None)
+    status = json.loads(arq.read_text(encoding="utf-8")).get("status_juridico", {}) if arq else {}
+    base = site_url.rstrip("/")
     itens = []
     for r in sorted(regs, key=lambda x: x["data_publicacao"], reverse=True)[:60]:
         titulo = f"{ROTULOS[r['categoria']]} — {r['municipio']}/GO"
-        link = f"{site_url.rstrip('/')}/caso.html?id={r['id']}"
+        link = f"{base}/caso.html?id={r['id']}"
         pub = dt.datetime.fromisoformat(r["data_publicacao"]).strftime("%a, %d %b %Y 12:00:00 -0300")
-        desc = f"Registro divulgado por {r['fontes'][0]['sigla']} em {r['data_publicacao']}. Situação: {r['status_juridico'].replace('_', ' ')}. Registro não significa condenação."
-        itens.append(f"<item><title>{escape(titulo)}</title><link>{escape(link)}</link><guid isPermaLink=\"false\">{escape(r['id'])}</guid><pubDate>{pub}</pubDate><description>{escape(desc)}</description></item>")
-    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>'
+        data_br = "/".join(reversed(r["data_publicacao"].split("-")))
+        sit = status.get(r["status_juridico"], r["status_juridico"].replace("_", " "))
+        medidas = f" ({', '.join(r['medidas'])})" if r.get("medidas") else ""
+        aviso = "" if r["status_juridico"] == "condenacao" else " Investigação ou prisão não significa condenação."
+        desc = f"Nota oficial da {r['fontes'][0]['sigla']} publicada em {data_br}. Situação informada: {sit}{medidas}.{aviso}"
+        itens.append(f"<item><title>{escape(titulo)}</title><link>{escape(link)}</link><guid isPermaLink=\"false\">{escape(r['id'])}</guid>"
+                     f"<pubDate>{pub}</pubDate><category>{escape(ROTULOS[r['categoria']])}</category><description>{escape(desc)}</description></item>")
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="assets/feed.xsl"?>\n<rss version="2.0"><channel>'
            "<title>MAPA SEGURO — novos registros oficiais (Goiás)</title>"
-           f"<link>{escape(site_url)}</link><description>Ocorrências de violência contra mulheres, crianças e adolescentes divulgadas em fontes oficiais do Governo de Goiás.</description>"
+           f"<link>{escape(base + '/')}</link><description>Crimes graves contra mulheres, crianças e adolescentes divulgados em notas oficiais do Governo de Goiás (PCGO, SSP-GO e PMGO).</description>"
            "<language>pt-br</language>" + "".join(itens) + "</channel></rss>\n")
     (RAIZ / "feed.xml").write_text(xml, encoding="utf-8")
 

@@ -26,9 +26,9 @@
     <div data-topico="atualizacao"></div>
     <h2>Fluxo de atualização (diário, automático)</h2>
     <ol>
-      <li><strong>Coleta:</strong> a rotina consulta a API pública dos portais da PCGO, SSP-GO e PMGO com termos como feminicídio, estupro, violência doméstica, medida protetiva, criança e adolescente.</li>
+      <li><strong>Coleta:</strong> a rotina consulta a API pública dos portais da PCGO, SSP-GO e PMGO com termos como feminicídio, estupro, violência doméstica, medida protetiva, criança e adolescente, e mantém só os crimes graves: feminicídio, tentativa de feminicídio, violência sexual e homicídio, tortura ou maus-tratos contra criança/adolescente.</li>
       <li><strong>Classificação:</strong> regras públicas (<code>scripts/classificador.py</code>) definem a categoria e descartam notas institucionais (palestras, eventos, entregas).</li>
-      <li><strong>Privacidade:</strong> nenhum texto da nota é guardado; nomes, idades, ruas, números e condomínios nunca são extraídos. Casos com criança/adolescente ficam só no município.</li>
+      <li><strong>Privacidade:</strong> no máximo um trecho curto da nota é guardado (nunca em casos com criança/adolescente), sem frases com nomes ou endereços; nomes, idades, ruas, números e condomínios nunca são extraídos. Casos com criança/adolescente ficam só no município.</li>
       <li><strong>Localização:</strong> bairro citado → centro aproximado do bairro (OpenStreetMap); sem bairro → sede do município (IBGE).</li>
       <li><strong>Deduplicação:</strong> o mesmo fato divulgado por órgãos diferentes vira um registro com várias fontes; notas diferentes sobre fatos parecidos são mantidas separadas e revisadas internamente, sem aviso público até haver confirmação.</li>
       <li><strong>Revisão:</strong> a administração pode ocultar ou corrigir registros em <code>data/moderacao.json</code>, sempre com motivo (auditoria no histórico do repositório).</li>

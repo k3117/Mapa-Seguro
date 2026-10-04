@@ -11,7 +11,7 @@
     },
     "classificacao": {
       "titulo": "Como os dados são classificados?",
-      "texto": "Cada nota oficial é classificada por regras públicas e auditáveis (scripts/classificador.py): a categoria vem das palavras do título e do texto (por exemplo, 'tentativa de feminicídio', 'descumprimento de medida protetiva', 'estupro de vulnerável' com menção a criança). Notas institucionais (palestras, eventos, entregas) são descartadas. Quando a nota cita mais de um crime, vale o mais grave e os demais ficam como categorias secundárias. Notas sobre o mesmo fato em órgãos diferentes são unificadas; possíveis duplicidades na mesma fonte são sinalizadas para revisão. Por decisão editorial, a plataforma reúne apenas crimes graves: feminicídio, tentativa de feminicídio, violência sexual, violência sexual contra criança/adolescente e homicídio, tortura ou maus-tratos contra criança/adolescente."
+      "texto": "Cada nota oficial é classificada por regras públicas e auditáveis (scripts/classificador.py): a categoria vem das palavras do título e do texto (por exemplo, 'tentativa de feminicídio', 'estupro de vulnerável' com menção a criança). Notas institucionais (palestras, eventos, entregas) são descartadas. Quando a nota cita mais de um crime, vale o mais grave. Notas sobre o mesmo fato em órgãos diferentes são unificadas num só registro com várias fontes. Por decisão editorial, a plataforma reúne apenas crimes graves: feminicídio, tentativa de feminicídio, violência sexual, violência sexual contra criança/adolescente e homicídio, tortura ou maus-tratos contra criança/adolescente."
     },
     "localizacao": {
       "titulo": "Como a localização é definida?",
@@ -27,7 +27,7 @@
     },
     "privacidade": {
       "titulo": "Como a privacidade é protegida?",
-      "texto": "A plataforma não guarda o texto das notas, nomes, idades, profissões, endereços ou qualquer dado que identifique vítimas, investigados, crianças ou adolescentes — apenas categoria, município/bairro aproximado, datas, situação jurídica e o link da fonte oficial. Não há cadastro de usuários. As conversas com o Assistente não são gravadas pelo MAPA SEGURO; quando um provedor de IA externo é configurado, a pergunta é enviada a ele para gerar a resposta. Princípios (LGPD): necessidade, finalidade, proporcionalidade, verificação, segurança, privacidade e transparência. Nomes de vítimas e de investigados não são reproduzidos: quando há reportagens, o site leva o leitor à matéria original."
+      "texto": "A plataforma não guarda nomes, idades, profissões, endereços ou qualquer dado que identifique vítimas, investigados, crianças ou adolescentes. Cada registro tem categoria, município/bairro aproximado, datas, situação jurídica e o link da nota oficial; em parte dos casos com vítima adulta, também um trecho curto da nota, do qual um filtro automático remove frases com nomes ou endereços. Em casos com criança ou adolescente, nenhum trecho é reproduzido. Não há cadastro de usuários. As conversas com o Assistente não são gravadas pelo MAPA SEGURO; quando um provedor de IA externo é configurado, a pergunta é enviada a ele para gerar a resposta. Princípios (LGPD): necessidade, finalidade, proporcionalidade, verificação, segurança, privacidade e transparência. Nomes de vítimas e de investigados não são reproduzidos: quando há reportagens, o site leva o leitor à matéria original."
     },
     "investigacao_condenacao": {
       "titulo": "Investigação não é condenação",

@@ -22,7 +22,16 @@ def sem_acento(t: str) -> str:
 
 
 def norm(t: str) -> str:
+    t = (t or "").replace("\u2019", "'").replace("\u2018", "'").replace("\u00b4", "'")
     return re.sub(r"\s+", " ", sem_acento(t).lower()).strip()
+
+
+def _prep_local(t: str) -> str:
+    """Abreviações e sufixos comuns em títulos: 'Sto.' = Santo, 'Sta.' = Santa, 'Goiânia-GO' = Goiânia."""
+    t = re.sub(r"\bsto\.? ", "santo ", t)
+    t = re.sub(r"\bsta\.? ", "santa ", t)
+    t = re.sub(r"\bst\.? ", "santa ", t)
+    return re.sub(r"[-/](go|goias)\b", " ", t)
 
 
 def html_para_texto(h: str) -> str:
@@ -181,7 +190,7 @@ class Localizador:
         return self.por_chave[prox[0]] if prox else None
 
     def municipios_no_texto(self, texto: str) -> list[dict]:
-        t = " " + re.sub(r"\bst\.? ", "santa ", norm(texto)) + " "
+        t = " " + _prep_local(norm(texto)) + " "
         achados, usados = [], []
         for k in self.ordem:
             for m in re.finditer(r"(?<![\w-])" + re.escape(k) + r"(?![\w-])", t):
@@ -198,7 +207,7 @@ class Localizador:
 
     def _apos_em(self, texto_norm: str) -> dict | None:
         """Primeiro município que aparece logo depois de 'em' / 'no município de' / 'cidade de'."""
-        t = re.sub(r"\bst\.? ", "santa ", texto_norm)
+        t = _prep_local(texto_norm)
         if re.search(r"\b(cidade|municipio) de goias\b|goias velho", t) and "goias" in self.por_chave:
             return self.por_chave["goias"]
         for m in re.finditer(r"\b(?:em|no municipio de|na cidade de|municipio de|cidade de)\s+(?:em\s+)?", t):
@@ -206,6 +215,9 @@ class Localizador:
             for k in self.ordem:
                 if resto == k or re.match(re.escape(k) + r"(?![\w-])", resto):
                     return self.por_chave[k]
+            # "em Aparecida" (sem "de Goiânia") é como a imprensa oficial costuma citar Aparecida de Goiânia
+            if re.match(r"aparecida(?![\w-])(?! do rio)", resto) and "aparecida de goiania" in self.por_chave:
+                return self.por_chave["aparecida de goiania"]
         return None
 
     def municipio(self, titulo: str, texto: str = "") -> dict | None:
@@ -254,7 +266,7 @@ def bairro(texto: str, municipio_nome: str) -> str | None:
 
 
 # --------------------------------------------------------------------------- resumo oficial (sem dados pessoais)
-CLASSIFICADOR_VERSAO = 3
+CLASSIFICADOR_VERSAO = 4
 RE_ENDERECO = re.compile(r"\b(rua|avenida|av\.|alameda|travessa|quadra|qd\.?|lote|lt\.?|n[º°o]\.?\s*\d|apartamento|apto|bloco|condom[ií]nio|cep)\b", re.I)
 RE_NOME_EXPLICITO = re.compile(r"identificad[oa] como|conhecid[oa] (como|por)|de nome|chamad[oa] de|vulgo|apelidad[oa]", re.I)
 RE_NOME_PROPRIO = re.compile(r"\b[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]+(?:\s+(?:d[aoe]s?|e)\s+|\s+)[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]+")

@@ -152,3 +152,12 @@ body.painel-aberto .chat-fab { display: none; }
 
 .cm-aviso-area { position: absolute; left: 50%; transform: translateX(-50%); bottom: 84px; z-index: 800; background: #fff3cd; color: #5c4400; border: 1px solid #e0c060; font-size: 13px; padding: 6px 12px; border-radius: 999px; box-shadow: var(--shadow); white-space: nowrap; }
 @media (max-width: 860px) { .cm-aviso-area { bottom: 120px; font-size: 11px; white-space: normal; max-width: 90%; text-align: center; } }
+.cm-aviso-vazio { top: 16px; bottom: auto; white-space: normal; width: min(520px, 90%); border-radius: 12px; text-align: center; }
+@media (max-width: 860px) { .cm-aviso-vazio { top: 12px; bottom: auto; } }
+.cm-limpar { border: 1px solid var(--borda, #d9d3cb); background: #fff; border-radius: 999px; font-size: 12px; padding: 1px 8px; cursor: pointer; margin-left: 4px; }
+@media (max-width: 860px) {
+  .cm-btn-area { left: auto; right: 10px; transform: none; }
+  .cm-camada select { max-width: 150px; }
+}
+.pop-lista ul { list-style: none; padding: 0; margin: 8px 0 4px; }
+.pop-lista li { padding: 4px 0; border-top: 1px solid #eee; display: flex; justify-content: space-between; gap: 8px; }

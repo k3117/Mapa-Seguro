@@ -38,7 +38,7 @@ export function intervaloDoPeriodo(periodo, hoje = new Date()) {
 export function descreverIntervalo({ inicio, fim }) {
   const br = (x) => x.split("-").reverse().join("/");
   const dias = Math.round((new Date(fim) - new Date(inicio)) / DIA) + 1;
-  return `${br(inicio)} a ${br(fim)} (${dias} dias)`;
+  return dias <= 92 ? `${br(inicio)} a ${br(fim)} (${dias} dias)` : `${br(inicio)} a ${br(fim)}`;
 }
 
 /**
@@ -138,4 +138,24 @@ export function linkBuscaImprensa(base, r) {
   const fim = new Date(d.getTime() + 20 * 86400000).toISOString().slice(0, 10);
   const q = `"${termo}" "${r.municipio}" after:${ini} before:${fim}`;
   return `https://www.google.com/search?tbm=nws&hl=pt-BR&q=${encodeURIComponent(q)}`;
+}
+
+/** Data da nota oficial mais recente da base (AAAA-MM-DD). */
+export function ultimaPublicacao(base) {
+  let m = "";
+  for (const r of base.ocorrencias.ocorrencias) if (r.data_publicacao > m) m = r.data_publicacao;
+  return m;
+}
+
+/** Aviso quando a fonte oficial está há muito tempo sem notas novas (ex.: período eleitoral). null se estiver em dia. */
+export function avisoDefasagem(base, hoje = new Date()) {
+  const ult = ultimaPublicacao(base);
+  if (!ult) return null;
+  const dias = Math.floor((hoje - new Date(ult + "T12:00:00")) / DIA);
+  if (dias < 21) return null;
+  const br = ult.split("-").reverse().join("/");
+  const eleitoral = ult >= "2026-06-25" && ult <= "2026-07-10" && iso(hoje) <= "2026-11-30";
+  return `A nota oficial mais recente é de ${br}. ${eleitoral
+    ? "Desde julho de 2026 os sites do Governo de Goiás suspenderam a publicação de notícias por causa do período eleitoral, por isso não há registros novos."
+    : "Desde então os órgãos oficiais não publicaram novas notas sobre esses crimes."} O mapa verifica as fontes automaticamente todos os dias.`;
 }

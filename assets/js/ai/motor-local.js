@@ -5,7 +5,7 @@
  */
 import { executarFerramenta, fontesDoResultado } from "./ferramentas.js";
 import { formatarNumero as n, MESES_LONGOS } from "../consultas.js";
-import { bairrosConhecidos } from "../ocorrencias.js";
+import { bairrosConhecidos, avisoDefasagem } from "../ocorrencias.js";
 
 export const NAO_ENCONTRADO = "Não encontrei essa informação nos dados e fontes disponíveis no MAPA SEGURO.";
 
@@ -68,6 +68,8 @@ function detectarMunicipio(base, t) {
       return m.nome;
     }
   }
+  // "Aparecida" sozinha = Aparecida de Goiânia (forma usual nas notas e na fala)
+  if (/(em|de|no|na|para) aparecida\b(?! do rio)/.test(t)) return "Aparecida de Goiânia";
   return null;
 }
 
@@ -166,12 +168,37 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
 
   // 2. saudação
   if (/^(oi|ola|bom dia|boa tarde|boa noite|ajuda|help|o que (voce|vc) (faz|pode)|como (te )?usar)\b/.test(t.trim())) {
-    return fim("Olá! Posso consultar os registros do mapa (notas oficiais da Polícia Civil, SSP-GO e PM de Goiás) e as estatísticas oficiais da SSP-GO, explicar a legenda, as fontes, a metodologia e os canais de ajuda.\n\nExemplos: \"Quantos casos de violência doméstica em Goiânia nos últimos 12 meses?\", \"Quais municípios têm mais registros de feminicídio?\", \"Quantos feminicídios houve em Goiás em 2025?\", \"O que significa o marcador marrom?\".");
+    return fim("Olá! Posso consultar os registros do mapa (notas oficiais da Polícia Civil, SSP-GO e PM de Goiás) e as estatísticas oficiais da SSP-GO, explicar a legenda, as fontes, a metodologia e os canais de ajuda.\n\nExemplos: \"Quantos casos de feminicídio em Goiânia nos últimos 12 meses?\", \"Quais municípios têm mais registros de feminicídio?\", \"Quantos feminicídios houve em Goiás em 2025?\", \"O que significa o marcador marrom?\".");
   }
 
   // 2b. categorias fora do escopo (só crimes graves)
   if (/\b(ameac|lesao corporal|agress|perseguic|stalking|violencia domestica|medidas? protetiv|descumprimento)/.test(t) && !/feminic|estupr|sexual|crianc/.test(t)) {
     return fim("O MAPA SEGURO reúne apenas crimes graves: feminicídio, tentativa de feminicídio, violência sexual, violência sexual contra criança/adolescente e homicídio, tortura ou maus-tratos contra criança/adolescente. Ameaça, lesão corporal, perseguição, violência doméstica sem esses crimes e descumprimento de medida protetiva não estão na base.\n\nSe você precisa de ajuda, ligue 180 (Central de Atendimento à Mulher) ou 190 em emergência.");
+  }
+
+  // 2c. por que não há registros recentes
+  if (/por ?que (nao|so) (tem|ha|aparece)|sem (casos|registros|notas) (novos|recentes)|(nao|nada) (foi )?atualiz|ultim[oa] (atualizacao|nota|registro)|depois de (junho|julho)|desde (junho|julho)/.test(t)) {
+    const av = avisoDefasagem(base, agora);
+    return fim(av || "Os registros são atualizados automaticamente todos os dias com as notas oficiais publicadas pela PCGO, SSP-GO e PMGO. Nem toda ocorrência vira nota oficial, por isso alguns períodos têm poucos registros.");
+  }
+
+  // 2d. termos jurídicos
+  const GLOSSARIO = [
+    [/investigad/, "Investigado: pessoa apontada pela polícia como possível autora durante a investigação. Ainda não há acusação formal nem condenação."],
+    [/indiciad|inquerito/, "Indiciado: ao concluir o inquérito, a polícia indica formalmente quem considera autor. O inquérito vai ao Ministério Público, que decide se denuncia. Ainda não é condenação."],
+    [/\breu\b|denuncia/, "Réu: pessoa que responde a processo depois que a Justiça recebe a denúncia do Ministério Público. Ainda não é condenação."],
+    [/condenad|condenacao|sentenca/, "Condenado: pessoa com sentença judicial de condenação. Só nessa etapa alguém pode ser tratado como autor do crime; antes disso vale a presunção de inocência."],
+    [/flagrante/, "Prisão em flagrante: prisão no momento do crime ou logo depois. É uma medida da fase policial e não significa condenação."],
+    [/preventiva|temporaria/, "Prisão preventiva ou temporária: prisão decidida por um juiz durante a investigação ou o processo, para proteger a vítima ou a investigação. Não é condenação."],
+  ];
+  if (/(o que (e|significa|quer dizer)|diferenca entre|significado)/.test(t)) {
+    const itens = GLOSSARIO.filter(([re]) => re.test(t)).map(([, txt]) => txt);
+    if (itens.length) return fim(itens.join("\n\n") + "\n\nO MAPA SEGURO usa sempre o termo da fase informada na nota oficial e nunca chama ninguém de criminoso sem condenação.");
+  }
+
+  // 2e. "lugar perigoso" / segurança de bairro: não fazemos avaliação de risco
+  if (/perigos|insegur|(mais|menos) segur|evitar|risco de (andar|morar)|devo (morar|ir)/.test(t)) {
+    return fim("O MAPA SEGURO não classifica bairros ou cidades como perigosos ou seguros. Os registros são notas oficiais divulgadas pela polícia, que não cobrem todas as ocorrências: mais registros num lugar pode refletir mais divulgação ou mais delegacias, não mais risco.\n\nPosso informar quantos registros há num município ou período (ex.: \"Quantos casos em Goiânia em 2025?\"). Em emergência, ligue 190; para orientação, 180.");
   }
 
   // 3. caso aberto na página / id citado
@@ -256,7 +283,7 @@ export function responderLocal(base, pergunta, contexto = {}, agora = new Date()
     const r = usar("contar_ocorrencias", filtro);
     let txt;
     if (!r.total) {
-      txt = `${NAO_ENCONTRADO}\n\nNão há registros no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""}${municipio ? ` em ${municipio}` : ""}${bairro ? ` no bairro ${bairro}` : ""} no período ${r.periodo}. Isso não significa que não houve ocorrências: o mapa reúne apenas casos divulgados em notas oficiais.`;
+      txt = `${NAO_ENCONTRADO}\n\nNão há registros no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""}${municipio ? ` em ${municipio}` : ""}${bairro ? ` no bairro ${bairro}` : ""} no período ${r.periodo}. Isso não significa que não houve ocorrências: o mapa reúne apenas casos divulgados em notas oficiais.${r.periodo && avisoDefasagem(base, agora) ? "\n\n" + avisoDefasagem(base, agora) : ""}`;
     } else {
       txt = `Informação encontrada: ${r.total} registro(s) no mapa${cats.length ? ` de ${cats.map((c) => ROT[c]).join(", ")}` : ""}${municipio ? ` em ${municipio}` : " no Estado de Goiás"}${bairro ? ` (bairro ${bairro})` : ""} — ${r.periodo}.`;
       if (r.por_categoria.length > 1) txt += `\n${r.por_categoria.map((x) => `- ${x.categoria}: ${x.total}`).join("\n")}`;

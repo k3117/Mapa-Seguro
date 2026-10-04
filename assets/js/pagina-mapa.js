@@ -58,13 +58,29 @@ $("f-camada").addEventListener("change", (e) => {
 });
 
 const grupo = L.markerClusterGroup({
-  showCoverageOnHover: false, spiderfyOnMaxZoom: true, maxClusterRadius: 48,
+  showCoverageOnHover: false, spiderfyOnMaxZoom: false, zoomToBoundsOnClick: false, maxClusterRadius: 48,
   iconCreateFunction(cl) {
     const n = cl.getChildCount();
     const tam = n < 10 ? 30 : n < 50 ? 36 : 44;
     return L.divIcon({ html: `<div class="cm-cluster ${n < 10 ? "" : n < 50 ? "medio" : "grande"}" style="width:${tam}px;height:${tam}px">${n}</div>`, className: "", iconSize: [tam, tam] });
   },
 }).addTo(mapa);
+// Clique num agrupamento: aproxima; se os registros estão no mesmo ponto (sede do município/bairro), lista os casos.
+grupo.on("clusterclick", (e) => {
+  const cl = e.layer;
+  const b = cl.getBounds();
+  const mesmoPonto = b.getNorthEast().distanceTo(b.getSouthWest()) < 50;
+  if (!mesmoPonto && mapa.getZoom() < mapa.getMaxZoom()) { cl.zoomToBounds({ padding: [40, 40] }); return; }
+  const regs = cl.getAllChildMarkers().map((m) => m.options.registro).filter(Boolean)
+    .sort((a, b2) => b2.data_publicacao.localeCompare(a.data_publicacao));
+  const MAX = 40;
+  const local = regs[0] ? O.rotuloLocal(regs[0]) : "";
+  const html = `<div class="pop pop-lista"><strong>${regs.length.toLocaleString("pt-BR")} registros em ${esc(local)}</strong>
+    <div class="rotulo-peq">Localização aproximada: todos ficam no mesmo ponto${regs[0]?.precisao_local === "bairro" ? " do bairro" : " (sede do município)"}. Mais recentes primeiro.</div>
+    <ul>${regs.slice(0, MAX).map((r) => `<li><a href="caso.html?id=${encodeURIComponent(r.id)}">${esc(catPorId[r.categoria].rotulo)}</a> <span class="rotulo-peq">${dataBR(r.data_publicacao)}</span></li>`).join("")}</ul>
+    ${regs.length > MAX ? `<div class="rotulo-peq">Mostrando ${MAX}. Veja todos em RELATÓRIO ou refine o período.</div>` : ""}</div>`;
+  L.popup({ maxWidth: 340, maxHeight: 320 }).setLatLng(cl.getLatLng()).setContent(html).openOn(mapa);
+});
 const icones = Object.fromEntries(CATS.map((c) => [c.id, L.divIcon({ html: pinoHTML(c, 32), className: "", iconSize: [32, 32], iconAnchor: [16, 38], popupAnchor: [0, -34] })]));
 
 function popupHTML(r) {
@@ -120,13 +136,27 @@ function filtros() {
   return { categorias: [...estado.categorias], publico: estado.publico, periodo: estado.periodo, municipio: estado.municipio, limites: estado.limites };
 }
 
+const ULTIMA = O.ultimaPublicacao(base);
+const DEFASAGEM = O.avisoDefasagem(base);
+if (DEFASAGEM) { $("aviso-defasagem").textContent = DEFASAGEM; $("aviso-defasagem").hidden = false; }
+
 function render() {
   atuais = O.filtrar(base, filtros());
   grupo.clearLayers();
-  grupo.addLayers(atuais.map((r) => L.marker([r.lat, r.lon], { icon: icones[r.categoria], title: catPorId[r.categoria].rotulo, keyboard: true }).bindPopup(() => popupHTML(r), { maxWidth: 320 })));
+  grupo.addLayers(atuais.map((r) => L.marker([r.lat, r.lon], { icon: icones[r.categoria], title: catPorId[r.categoria].rotulo, keyboard: true, registro: r }).bindPopup(() => popupHTML(r), { maxWidth: 320 })));
   $("n-registros").textContent = atuais.length.toLocaleString("pt-BR");
   $("aviso-area").hidden = !estado.limites;
+  const vazio = atuais.length === 0;
+  $("aviso-vazio").hidden = !vazio;
+  if (vazio) {
+    const iv = O.intervaloDoPeriodo(estado.periodo);
+    $("aviso-vazio").textContent = iv.inicio > ULTIMA && DEFASAGEM ? "Nenhum registro neste período. " + DEFASAGEM
+      : estado.categorias.size === 0 ? "Nenhum tipo de crime selecionado. Marque ao menos um em \"O quê\"."
+      : "Nenhum registro com estes filtros. Tente um período maior ou outra área.";
+  }
   $("txt-periodo").textContent = O.descreverIntervalo(O.intervaloDoPeriodo(estado.periodo));
+  $("txt-local").textContent = estado.municipio || "Estado de Goiás";
+  $("limpar-local").hidden = !estado.municipio;
   renderCategorias();
   renderPeriodos();
   const ativo = document.querySelector(".cm-trilho button[aria-pressed='true']")?.dataset.painel;
@@ -188,14 +218,20 @@ for (const id of ["f-ini", "f-fim"]) $(id).addEventListener("keydown", (e) => { 
 
 // município
 const muns = base.municipios.municipios;
-$("f-municipio").innerHTML += muns.map((m) => `<option>${esc(m.nome)}</option>`).join("");
+const nPorMun = Object.fromEntries(O.contarPor(base.ocorrencias.ocorrencias, "municipio").map((x) => [x.chave, x.total]));
+const comRegistro = muns.filter((m) => nPorMun[m.nome]).sort((a, b) => (a.nome === "Goiânia" ? -1 : b.nome === "Goiânia" ? 1 : a.nome.localeCompare(b.nome, "pt-BR")));
+$("f-municipio").innerHTML += comRegistro.map((m) => `<option value="${esc(m.nome)}">${esc(m.nome)} (${nPorMun[m.nome]})</option>`).join("");
 $("f-municipio").value = estado.municipio;
-$("f-municipio").addEventListener("change", (e) => {
-  estado.municipio = e.target.value;
-  const m = muns.find((x) => x.nome === estado.municipio);
-  if (m) mapa.flyTo([m.lat, m.lon], 12); else mapa.setView([-15.98, -49.86], 7);
+function escolherMunicipio(nome, centro = true) {
+  estado.municipio = nome;
+  $("f-municipio").value = nome;
+  if (estado.limites) alternarArea(true);
+  const m = muns.find((x) => x.nome === nome);
+  if (centro) { if (m) mapa.flyTo([m.lat, m.lon], 12); else mapa.setView([-15.98, -49.86], 7); }
   render();
-});
+}
+$("f-municipio").addEventListener("change", (e) => escolherMunicipio(e.target.value));
+$("limpar-local").addEventListener("click", () => escolherMunicipio(""));
 
 // pesquisar nesta área
 function alternarArea(semRender = false) {
@@ -279,10 +315,14 @@ function renderPainel(qual) {
       tr.addEventListener("keydown", (e) => { if (e.key === "Enter") abrir(); });
     });
   } else if (qual === "graficos") {
-    const meses = O.porMes(atuais).map((x) => ({ chave: x.mes.split("-").reverse().join("/"), total: x.total }));
+    const pm = O.porMes(atuais);
+    const porAno = pm.length > 24;
+    const meses = porAno
+      ? Object.entries(pm.reduce((a, x) => { const y = x.mes.slice(0, 4); a[y] = (a[y] || 0) + x.total; return a; }, {})).map(([chave, total]) => ({ chave, total }))
+      : pm.map((x) => ({ chave: x.mes.split("-").reverse().join("/"), total: x.total }));
     alvo.innerHTML = `
       <div><strong>Por categoria</strong>${hbars(O.contarPor(atuais, "categoria"), (x) => catPorId[x.chave].rotulo) || "<p class='rotulo-peq'>Sem dados.</p>"}</div>
-      <div><strong>Por mês de publicação</strong>${hbars(meses) || "<p class='rotulo-peq'>Sem dados.</p>"}</div>
+      <div><strong>${porAno ? "Por ano de publicação" : "Por mês de publicação"}</strong>${hbars(meses) || "<p class='rotulo-peq'>Sem dados.</p>"}</div>
       <div><strong>Municípios com mais registros</strong>${hbars(O.contarPor(atuais, "municipio").slice(0, 10)) || "<p class='rotulo-peq'>Sem dados.</p>"}</div>
       <p class="rotulo-peq">Contagem de notas oficiais divulgadas — não é taxa de criminalidade. <a href="estatisticas.html">Ver estatísticas oficiais da SSP-GO</a>.</p>`;
   }
@@ -309,12 +349,15 @@ $("form-busca").addEventListener("submit", (e) => {
     avisar("A busca aceita apenas município ou bairro. Endereços, pessoas e localização de tornozeleiras não são pesquisáveis.");
     return;
   }
-  if (estado.limites) alternarArea(); // nova busca começa sem filtro de área
   const nq = O.norm(q.split(",")[0]);
   const b = bairros.find((x) => O.norm(x.bairro) === nq || O.norm(`${x.bairro}, ${x.municipio}`) === O.norm(q));
-  if (b) { mapa.flyTo([b.lat, b.lon], 14); return; }
+  if (b) { escolherMunicipio(b.municipio, false); mapa.flyTo([b.lat, b.lon], 14); return; }
   const m = muns.find((x) => O.norm(x.nome) === nq) || muns.find((x) => O.norm(x.nome).startsWith(nq));
-  if (m) { mapa.flyTo([m.lat, m.lon], 12); return; }
+  if (m) {
+    escolherMunicipio(m.nome);
+    if (!nPorMun[m.nome]) avisar(`${m.nome}: não há registros de crimes graves em notas oficiais desde 2015.`);
+    return;
+  }
   avisar("Local não encontrado. Digite o nome de um município de Goiás ou de um bairro que tenha registros.");
 });
 function avisar(msg) {
