@@ -133,16 +133,15 @@ const dataBR = (d) => (d ? d.split("-").reverse().join("/") : "não informada");
 function textoCaso(c) {
   return [
     `Informação encontrada: com base nas informações cadastradas para o Caso #${c.id.toUpperCase()}, trata-se de registro de ${c.categoria.toLowerCase()} em ${c.local}, divulgado em nota oficial em ${dataBR(c.data_publicacao)}.`,
-    `- Data do fato: ${c.data_fato ? dataBR(c.data_fato) : "não informada na fonte"}`,
+    c.data_fato ? `- Data do fato: ${dataBR(c.data_fato)}` : `- A nota não cita o dia exato do fato; foi publicada em ${dataBR(c.data_publicacao)}.`,
     `- Situação jurídica: ${c.situacao}${c.medidas.length ? ` (${c.medidas.join(", ")})` : ""}`,
     `- Situação da fonte: ${c.fonte_status}`,
     `- Localização: ${c.precisao}`,
     c.resumo_oficial ? `- Trecho da nota oficial: "${c.resumo_oficial}"` : "",
     c.reportagens.length ? `- Reportagens verificadas: ${c.reportagens.length} (links abaixo da página do caso)` : "",
-    c.possivel_duplicidade.length ? `- Possível duplicidade com: ${c.possivel_duplicidade.map((x) => "#" + x.toUpperCase()).join(", ")} (em revisão)` : "",
     "",
     `Interpretação: é um registro policial; a pessoa apontada deve ser chamada de "${c.termo_pessoa}", não de criminosa.`,
-    "Limitação: não encontrei nas fontes cadastradas informação pública sobre denúncia, processo ou condenação. A plataforma não guarda nomes, idades nem endereços; os detalhes estão na nota oficial.",
+    "Limitação: a nota oficial trata da fase policial; denúncia, processo e sentença não são divulgados nessas notas (consulte o TJGO). A plataforma não guarda nomes, idades nem endereços; os detalhes estão na nota oficial, cujo link aparece abaixo.",
   ].filter((x) => x !== "").join("\n");
 }
 

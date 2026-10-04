@@ -110,7 +110,6 @@ export function resumoPublico(base, r) {
     termo_pessoa: base.categorias.termo_pessoa[r.status_juridico] || "—",
     medidas: r.medidas || [],
     fonte_status: base.categorias.fonte_status[r.fonte_status] || r.fonte_status,
-    possivel_duplicidade: r.possivel_duplicidade || [],
     resumo_oficial: r.resumo_oficial || null,
     reportagens: r.reportagens || [],
     fontes: r.fontes.map((f) => ({ titulo: `Nota oficial — ${f.orgao} (${f.data_publicacao.split("-").reverse().join("/")})`, orgao: f.orgao, url: f.url, data_consulta_fonte: f.data_publicacao })),

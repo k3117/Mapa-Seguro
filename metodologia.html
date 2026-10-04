@@ -30,7 +30,7 @@
       <li><strong>Classificação:</strong> regras públicas (<code>scripts/classificador.py</code>) definem a categoria e descartam notas institucionais (palestras, eventos, entregas).</li>
       <li><strong>Privacidade:</strong> nenhum texto da nota é guardado; nomes, idades, ruas, números e condomínios nunca são extraídos. Casos com criança/adolescente ficam só no município.</li>
       <li><strong>Localização:</strong> bairro citado → centro aproximado do bairro (OpenStreetMap); sem bairro → sede do município (IBGE).</li>
-      <li><strong>Deduplicação:</strong> o mesmo fato divulgado por órgãos diferentes vira um registro com várias fontes; possíveis duplicidades na mesma fonte são sinalizadas.</li>
+      <li><strong>Deduplicação:</strong> o mesmo fato divulgado por órgãos diferentes vira um registro com várias fontes; notas diferentes sobre fatos parecidos são mantidas separadas e revisadas internamente, sem aviso público até haver confirmação.</li>
       <li><strong>Revisão:</strong> a administração pode ocultar ou corrigir registros em <code>data/moderacao.json</code>, sempre com motivo (auditoria no histórico do repositório).</li>
       <li><strong>Publicação:</strong> o site, o feed de alertas e a base do Assistente são atualizados juntos.</li>
     </ol>
