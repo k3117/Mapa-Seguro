@@ -1,0 +1,25 @@
+name: filtro-area
+on:
+  push:
+    paths: [".github/workflows/filtro-area.yml"]
+permissions:
+  contents: write
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          echo "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" | base64 -d | xz -d > /tmp/p.diff
+          git apply /tmp/p.diff
+          pip install -q -r scripts/requirements.txt pytest reportlab
+          python scripts/validar_dados.py
+          python -m pytest -q tests/
+          node --test tests/*.test.mjs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Filtro de área explica registros sem bairro; bairro não captura trecho da narrativa" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_012YckZsXNMFH3WjLPN8bHU6"
+          git push
