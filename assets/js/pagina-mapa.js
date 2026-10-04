@@ -46,15 +46,24 @@ function gravarHash() {
 const mapa = L.map("mapa", { zoomControl: false, preferCanvas: false, minZoom: 6 })
   .setView([CONFIG.cidadeFoco.lat, CONFIG.cidadeFoco.lon], 11);
 L.control.zoom({ position: "bottomright" }).addTo(mapa);
-// Mapas base gratuitos e sem chave: OpenStreetMap (padrão) e OpenStreetMap Humanitário (alternativo)
+// Mapas base gratuitos e sem chave:
+// - detalhado: OpenStreetMap padrão (ruas, comércios, pontos de ônibus, prédios públicos);
+// - simplificado: Esri "Light Gray Canvas" (fundo cinza claro, sem comércios), com camada de nomes de ruas e bairros por cima.
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/";
+const ATR_ESRI = 'Mapa base © <a href="https://www.esri.com/">Esri</a>, HERE, Garmin, © colaboradores do OpenStreetMap';
 const camadas = {
   claro: L.tileLayer(CONFIG.mapa.tiles, { maxZoom: 19, attribution: CONFIG.mapa.atribuicao }),
-  ruas: L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", { maxZoom: 19, subdomains: "abc", attribution: CONFIG.mapa.atribuicao + ' · estilo <a href="https://www.hotosm.org/">HOT</a>' }),
+  ruas: L.layerGroup([
+    L.tileLayer(ESRI + "World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", { maxZoom: 16, maxNativeZoom: 16, attribution: ATR_ESRI }),
+    L.tileLayer(ESRI + "World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", { maxZoom: 16, maxNativeZoom: 16, pane: "overlayPane" }),
+  ]),
 };
 camadas.claro.addTo(mapa);
 $("f-camada").addEventListener("change", (e) => {
   Object.values(camadas).forEach((c) => mapa.removeLayer(c));
   camadas[e.target.value].addTo(mapa);
+  // o mapa simplificado vai até o nível 16 de aproximação
+  mapa.setMaxZoom(e.target.value === "ruas" ? 16 : 19);
 });
 
 const grupo = L.markerClusterGroup({
