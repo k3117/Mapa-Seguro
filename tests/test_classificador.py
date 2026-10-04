@@ -75,3 +75,8 @@ def test_vulneravel_com_crianca_no_texto():
     assert c["categoria"] == "violencia_sexual_crianca" and c["publico"] == "criancas_adolescentes"
     c = classificar("PCGO prende investigado por estupro de vulnerável em Itumbiara", "A vítima, uma mulher de 30 anos, estava desacordada.")
     assert c["categoria"] == "violencia_sexual" and c["envolve_crianca"]  # vulnerável adulta: local protegido
+
+
+def test_bairro_nao_captura_narrativa():
+    assert bairro("O crime ocorreu no Setor Santa Helena e discutiu com a vítima, em Goiânia.", "Goiânia") == "Setor Santa Helena"
+    assert bairro("Foi preso no bairro Parque Tremendão, em Goiânia.", "Goiânia") == "Parque Tremendão"

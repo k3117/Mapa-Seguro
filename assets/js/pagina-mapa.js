@@ -148,12 +148,31 @@ const ULTIMA = O.ultimaPublicacao(base);
 const DEFASAGEM = O.avisoDefasagem(base);
 if (DEFASAGEM) { $("aviso-defasagem").textContent = DEFASAGEM; $("aviso-defasagem").hidden = false; }
 
+/** Texto do aviso do filtro de área. Explica quando registros sem bairro (no centro da cidade) ficam de fora. */
+function textoAvisoArea() {
+  const L = estado.limites;
+  const dentro = atuais.length;
+  const cLat = (L.sul + L.norte) / 2, cLon = (L.oeste + L.leste) / 2;
+  const perto = (m) => Math.hypot((m.lat - cLat) * 111, (m.lon - cLon) * 106) < 25;
+  const foraDaArea = O.filtrar(base, { ...filtros(), limites: null }).filter((r) =>
+    r.precisao_local === "municipio" && !(r.lat >= L.sul && r.lat <= L.norte && r.lon >= L.oeste && r.lon <= L.leste) && perto(r));
+  const n = (x) => x.toLocaleString("pt-BR");
+  let txt = `Filtro de área ativo: ${n(dentro)} ${dentro === 1 ? "registro" : "registros"} nesta parte do mapa.`;
+  if (foraDaArea.length) {
+    const cidades = [...new Set(foraDaArea.map((r) => r.municipio))];
+    txt += ` Outros ${n(foraDaArea.length)} registros de ${cidades.length === 1 ? cidades[0] : "cidades próximas"} não informam o bairro e ficam no centro da cidade, por isso não entram nesta busca.`;
+  }
+  return txt;
+}
+
 function render() {
   atuais = O.filtrar(base, filtros());
   grupo.clearLayers();
   grupo.addLayers(atuais.map((r) => L.marker([r.lat, r.lon], { icon: icones[r.categoria], title: catPorId[r.categoria].rotulo, keyboard: true, registro: r }).bindPopup(() => popupHTML(r), { maxWidth: 320 })));
   $("n-registros").textContent = atuais.length.toLocaleString("pt-BR");
   $("aviso-area").hidden = !estado.limites;
+  if (estado.limites) $("aviso-area").textContent = textoAvisoArea();
+  document.body.classList.toggle("area-ativa", !!estado.limites);
   const vazio = atuais.length === 0;
   $("aviso-vazio").hidden = !vazio;
   if (vazio) {

@@ -165,3 +165,13 @@ body.painel-aberto .chat-fab { display: none; }
 .cm-aviso-mapa { white-space: normal; text-align: center; border-radius: 12px; width: max-content; max-width: min(620px, calc(100% - 140px)); }
 .cm-aviso-mapa a { pointer-events: auto; }
 body.popup-aberto .cm-aviso-mapa { display: none; }
+.cm-aviso-area { white-space: normal; text-align: center; width: max-content; max-width: min(560px, calc(100% - 40px)); border-radius: 12px; }
+@media (max-width: 860px) {
+  body.area-ativa .cm-aviso-mapa { display: none; }
+  .cm-aviso-area { top: 10px; bottom: auto; }
+  .cm-aviso-vazio { top: 10px; }
+  body.area-ativa .cm-aviso-vazio { top: 92px; }
+}
+@media (max-width: 860px) {
+  .cm-aviso-area { left: 8px; transform: none; max-width: calc(100% - 124px); text-align: left; }
+}

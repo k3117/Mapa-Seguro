@@ -244,9 +244,10 @@ def bairro(texto: str, municipio_nome: str) -> str | None:
     """Extrai o nome do bairro/setor citado junto ao município. Nunca rua/número/condomínio."""
     if not texto:
         return None
+    # o prefixo aceita maiúsculas ou minúsculas, mas as palavras seguintes precisam começar com maiúscula
+    # (evita capturar trechos da narrativa, como "Santa Helena e discutiu")
     padrao = re.compile(
-        r"\b(?:no|na|do|da|ao)\s+(" + PREFIXOS_BAIRRO + r"\s+[A-ZÁ-Úa-zá-ú0-9][\wÀ-ú'-]*(?:\s+(?:[A-ZÁ-Ú0-9IVX][\wÀ-ú'-]*|d[aoe]s?|e))*)",
-        re.IGNORECASE,
+        r"\b(?i:no|na|do|da|ao)\s+((?i:" + PREFIXOS_BAIRRO + r")\s+[A-ZÁ-Ú0-9][\wÀ-ú'-]*(?:\s+(?:[A-ZÁ-Ú0-9IVX][\wÀ-ú'-]*|d[aoe]s?(?=\s+[A-ZÁ-Ú0-9])|e(?=\s+[A-ZÁ-Ú0-9])))*)"
     )
     mun_n = norm(municipio_nome)
     for m in padrao.finditer(texto):
@@ -269,7 +270,7 @@ def bairro(texto: str, municipio_nome: str) -> str | None:
 
 
 # --------------------------------------------------------------------------- resumo oficial (sem dados pessoais)
-CLASSIFICADOR_VERSAO = 5
+CLASSIFICADOR_VERSAO = 6
 RE_ENDERECO = re.compile(r"\b(rua|avenida|av\.|alameda|travessa|quadra|qd\.?|lote|lt\.?|n[º°o]\.?\s*\d|apartamento|apto|bloco|condom[ií]nio|cep)\b", re.I)
 RE_NOME_EXPLICITO = re.compile(r"identificad[oa] como|conhecid[oa] (como|por)|de nome|chamad[oa] de|vulgo|apelidad[oa]", re.I)
 RE_NOME_PROPRIO = re.compile(r"\b[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]+(?:\s+(?:d[aoe]s?|e)\s+|\s+)[A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]+")
