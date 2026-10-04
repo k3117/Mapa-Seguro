@@ -11,11 +11,11 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z' fill='%234b2a7b'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="vendor/leaflet.markercluster/MarkerCluster.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/mapa.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261004">
+  <link rel="stylesheet" href="assets/css/mapa.css?v=20261004">
   <script src="vendor/leaflet/leaflet.js" defer></script>
   <script src="vendor/leaflet.markercluster/leaflet.markercluster.js" defer></script>
-  <script type="module" src="assets/js/pagina-mapa.js"></script>
+  <script type="module" src="assets/js/pagina-mapa.js?v=20261004"></script>
 </head>
 <body class="pagina-mapa">
   <a class="pular" href="#mapa">Pular para o mapa</a>
@@ -80,7 +80,8 @@
           <div class="cm-periodos" id="lista-periodos" role="radiogroup" aria-label="Período"></div>
           <fieldset class="campo"><legend>Período personalizado</legend>
             <div class="linha"><input type="date" id="f-ini" aria-label="Data inicial"><input type="date" id="f-fim" aria-label="Data final"></div>
-            <button type="button" class="btn" id="btn-aplicar-datas">Aplicar</button></fieldset>
+            <button type="button" class="btn btn-pri" id="btn-aplicar-datas">Aplicar período</button>
+            <p class="rotulo-peq" id="msg-periodo" aria-live="polite"></p></fieldset>
           <p class="rotulo-peq">Data considerada: publicação da nota oficial. Quando a nota informa a data do fato, ela aparece no detalhe do caso.</p>
         </div>
         <div data-conteudo="relatorio"></div>
@@ -92,6 +93,7 @@
       <div id="mapa" role="region" aria-label="Mapa de ocorrências em Goiás"></div>
       <div class="cm-aviso-mapa" role="note">Pontos = local <strong>aproximado</strong> (bairro ou sede do município). Registro não é condenação.</div>
       <button type="button" class="cm-btn-area" id="btn-area-mapa">Pesquisar nesta área</button>
+      <div class="cm-aviso-area" id="aviso-area" hidden role="status">Filtro de área ativo: só aparecem registros desta parte do mapa.</div>
       <label class="cm-camada"><span class="sr-only">Mapa base</span>
         <select id="f-camada"><option value="claro">Padrão</option><option value="ruas">Humanitário</option></select></label>
     </div>

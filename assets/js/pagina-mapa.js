@@ -125,6 +125,7 @@ function render() {
   grupo.clearLayers();
   grupo.addLayers(atuais.map((r) => L.marker([r.lat, r.lon], { icon: icones[r.categoria], title: catPorId[r.categoria].rotulo, keyboard: true }).bindPopup(() => popupHTML(r), { maxWidth: 320 })));
   $("n-registros").textContent = atuais.length.toLocaleString("pt-BR");
+  $("aviso-area").hidden = !estado.limites;
   $("txt-periodo").textContent = O.descreverIntervalo(O.intervaloDoPeriodo(estado.periodo));
   renderCategorias();
   renderPeriodos();
@@ -164,13 +165,26 @@ function renderPeriodos() {
 $("lista-periodos").addEventListener("click", (e) => {
   const b = e.target.closest("button[data-p]");
   if (!b || b.dataset.p === "custom") return;
+  if (estado.limites) alternarArea(true);
   estado.periodo = b.dataset.p; render();
+  $("msg-periodo").textContent = `Período aplicado: ${atuais.length.toLocaleString("pt-BR")} registros.`;
 });
 const iv = O.intervaloDoPeriodo(estado.periodo);
 $("f-ini").value = iv.inicio; $("f-fim").value = iv.fim;
-$("btn-aplicar-datas").addEventListener("click", () => {
-  if ($("f-ini").value && $("f-fim").value) { estado.periodo = { inicio: $("f-ini").value, fim: $("f-fim").value }; render(); }
-});
+for (const id of ["f-ini", "f-fim"]) { $(id).min = "2015-01-01"; $(id).max = new Date().toISOString().slice(0, 10); }
+function aplicarDatas() {
+  let ini = $("f-ini").value, fim = $("f-fim").value;
+  if (!ini || !fim) { $("msg-periodo").textContent = "Preencha as duas datas (dia/mês/ano)."; return; }
+  if (ini > fim) [ini, fim] = [fim, ini];
+  $("f-ini").value = ini; $("f-fim").value = fim;
+  // nova pesquisa por período começa sem o filtro de área, para não esconder registros
+  if (estado.limites) alternarArea(true);
+  estado.periodo = { inicio: ini, fim };
+  render();
+  $("msg-periodo").textContent = `Período aplicado: ${atuais.length.toLocaleString("pt-BR")} registros.${ini < "2015-01-01" ? " O histórico começa em 2015." : ""}`;
+}
+$("btn-aplicar-datas").addEventListener("click", aplicarDatas);
+for (const id of ["f-ini", "f-fim"]) $(id).addEventListener("keydown", (e) => { if (e.key === "Enter") aplicarDatas(); });
 
 // município
 const muns = base.municipios.municipios;
@@ -184,7 +198,7 @@ $("f-municipio").addEventListener("change", (e) => {
 });
 
 // pesquisar nesta área
-function alternarArea() {
+function alternarArea(semRender = false) {
   if (estado.limites) {
     estado.limites = null;
   } else {
@@ -196,9 +210,9 @@ function alternarArea() {
   $("btn-area-mapa").classList.toggle("ativo", on);
   $("btn-area").textContent = on ? "Remover filtro de área" : "Pesquisar nesta área do mapa";
   $("txt-area").textContent = on ? "Mostrando apenas registros dentro da área visível quando o filtro foi aplicado." : "";
-  render();
+  if (!semRender) render();
 }
-$("btn-area-mapa").addEventListener("click", alternarArea);
+$("btn-area-mapa").addEventListener("click", () => alternarArea());
 // com o filtro de área ativo, ele acompanha o mapa ao arrastar/aproximar
 mapa.on("moveend", () => {
   if (!estado.limites) return;
@@ -206,7 +220,7 @@ mapa.on("moveend", () => {
   estado.limites = { sul: b.getSouth(), norte: b.getNorth(), oeste: b.getWest(), leste: b.getEast() };
   render();
 });
-$("btn-area").addEventListener("click", alternarArea);
+$("btn-area").addEventListener("click", () => alternarArea());
 
 /* ------------------------------------------------------------------ painéis (trilho) */
 const TITULOS = { resumo: "Resumo", oque: "O quê", onde: "Onde", quando: "Quando", relatorio: "Relatório", graficos: "Gráficos" };

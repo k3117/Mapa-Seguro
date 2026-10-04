@@ -149,3 +149,6 @@ body.painel-aberto .chat-fab { display: none; }
 .pop-resumo { font-size: 13px; line-height: 1.45; margin: 6px 0; padding: 8px; background: var(--surface-2); border-radius: 6px; }
 .pop-rep { font-size: 13px; margin-top: 6px; }
 .pop .acoes a { white-space: nowrap; }
+
+.cm-aviso-area { position: absolute; left: 50%; transform: translateX(-50%); bottom: 84px; z-index: 800; background: #fff3cd; color: #5c4400; border: 1px solid #e0c060; font-size: 13px; padding: 6px 12px; border-radius: 999px; box-shadow: var(--shadow); white-space: nowrap; }
+@media (max-width: 860px) { .cm-aviso-area { bottom: 120px; font-size: 11px; white-space: normal; max-width: 90%; text-align: center; } }
