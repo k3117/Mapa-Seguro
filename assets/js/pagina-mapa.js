@@ -371,11 +371,6 @@ $("btn-menu").addEventListener("click", () => {
   m.hidden = !m.hidden;
   $("btn-menu").setAttribute("aria-expanded", String(!m.hidden));
 });
-$("url-feed").value = new URL("feed.xml", location.href).href;
-$("btn-alertas").addEventListener("click", () => $("dlg-alertas").showModal());
-$("btn-copiar-feed").addEventListener("click", async () => {
-  try { await navigator.clipboard.writeText($("url-feed").value); $("btn-copiar-feed").textContent = "Copiado!"; } catch { $("url-feed").select(); }
-});
 
 if (estado.municipio) {
   const m = muns.find((x) => x.nome === estado.municipio);

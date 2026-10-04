@@ -37,7 +37,7 @@ export function montarLayout() {
   if (rod) {
     rod.className = "rodape";
     rod.innerHTML = `${CONFIG.nome} — plataforma de informação pública baseada exclusivamente em dados oficiais do Governo de Goiás.
-      A presença de um registro não significa condenação criminal. · <a href="alertas.html">Alertas</a> · <a href="metodologia.html">Metodologia</a> · <a href="sobre.html#privacidade">Privacidade</a>`;
+      A presença de um registro não significa condenação criminal. · <a href="metodologia.html">Metodologia</a> · <a href="sobre.html#privacidade">Privacidade</a>`;
   }
 }
 

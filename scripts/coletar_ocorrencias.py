@@ -245,7 +245,7 @@ def aplicar_moderacao(regs: list[dict]) -> list[dict]:
 
 
 def gerar_feed(regs: list[dict], site_url: str) -> None:
-    """Feed RSS dos 60 registros mais recentes. Abre formatado no navegador (feed.xsl) e funciona em leitores de RSS."""
+    """Feed RSS dos 60 registros mais recentes. (arquivo técnico, sem link no site)."""
     arq = next((a for a in (RAIZ / "data" / "categorias.json", Path(__file__).resolve().parent.parent / "data" / "categorias.json") if a.exists()), None)
     status = json.loads(arq.read_text(encoding="utf-8")).get("status_juridico", {}) if arq else {}
     base = site_url.rstrip("/")
@@ -261,7 +261,7 @@ def gerar_feed(regs: list[dict], site_url: str) -> None:
         desc = f"Nota oficial da {r['fontes'][0]['sigla']} publicada em {data_br}. Situação informada: {sit}{medidas}.{aviso}"
         itens.append(f"<item><title>{escape(titulo)}</title><link>{escape(link)}</link><guid isPermaLink=\"false\">{escape(r['id'])}</guid>"
                      f"<pubDate>{pub}</pubDate><category>{escape(ROTULOS[r['categoria']])}</category><description>{escape(desc)}</description></item>")
-    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="assets/feed.xsl"?>\n<rss version="2.0"><channel>'
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>'
            "<title>MAPA SEGURO — novos registros oficiais (Goiás)</title>"
            f"<link>{escape(base + '/')}</link><description>Crimes graves contra mulheres, crianças e adolescentes divulgados em notas oficiais do Governo de Goiás (PCGO, SSP-GO e PMGO).</description>"
            "<language>pt-br</language>" + "".join(itens) + "</channel></rss>\n")
