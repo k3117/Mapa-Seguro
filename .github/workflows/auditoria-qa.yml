@@ -17,7 +17,7 @@ jobs:
           git apply /tmp/p.diff
           echo "aW1wb3J0IGpzb24KZm9yIGYsayBpbiAoKCdkYXRhL29jb3JyZW5jaWFzLmpzb24nLCdvY29ycmVuY2lhcycpLCgnZGF0YS9jb2xldGFfYnJ1dGEuanNvbicsJ3JlZ2lzdHJvcycpKToKICAgIGQ9anNvbi5sb2FkKG9wZW4oZikpOyBuMT1uMj0wCiAgICBmb3IgciBpbiBkW2tdOgogICAgICAgIGlmICdyZXN1bW9fb2ZpY2lhbCcgaW4gcjogci5wb3AoJ3Jlc3Vtb19vZmljaWFsJyk7IG4xKz0xCiAgICAgICAgaWYgci5nZXQoJ2RhdGFfZmF0bycpIGFuZCByWydkYXRhX2ZhdG8nXT5yWydkYXRhX3B1YmxpY2FjYW8nXTogclsnZGF0YV9mYXRvJ109Tm9uZTsgbjIrPTEKICAgIHdpdGggb3BlbihmLCd3JykgYXMgZmg6IGpzb24uZHVtcChkLGZoLGVuc3VyZV9hc2NpaT1GYWxzZSxpbmRlbnQ9MSk7IGZoLndyaXRlKCdcbicpCiAgICBwcmludChmLCd0ZXh0b3MgcmVtb3ZpZG9zOicsbjEsJ2RhdGFzIGNvcnJpZ2lkYXM6JyxuMikK" | base64 -d > /tmp/strip.py
           python /tmp/strip.py
-          pip install -q -r scripts/requirements.txt pytest
+          pip install -q -r scripts/requirements.txt pytest reportlab
           python scripts/validar_dados.py
           python -m pytest -q tests/
           node --test tests/*.test.mjs
