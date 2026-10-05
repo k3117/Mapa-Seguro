@@ -271,5 +271,14 @@
  "Jardim das Paineiras Em Planaltina-GO|5217609": null,
  "Vila Bela|5220405": null,
  "Setor Vila Maria|5208707": null,
- "Setor Santa Maria|5211503": null
+ "Setor Santa Maria|5211503": null,
+ "Santa Helena|5208707": null,
+ "Jardim Buriti Sereno|5201405": null,
+ "Setor Expansul|5201405": null,
+ "Maracanã|5201108": {
+  "lat": -16.3139,
+  "lon": -48.9557,
+  "tipo": "suburb"
+ },
+ "Jardim das Paineiras|5217609": null
 }

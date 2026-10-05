@@ -1,53 +1,81 @@
 {
- "executado_em": "2026-10-05T01:59:16.462801+00:00",
+ "executado_em": "2026-10-05T18:43:43.819290+00:00",
  "eventos": [
   {
-   "nivel": "aviso",
-   "msg": "descoberta falhou: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/estatisticas/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7fe795204530>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
-  },
-  {
-   "nivel": "erro",
+   "nivel": "info",
    "ano": 2025,
-   "msg": "download falhou: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-content/uploads/sites/56/2026/04/Estatisticas-de-2025.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7fe795204a10>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
+   "msg": "conferido e atualizado",
+   "via": {
+    "feminicidio": "tabela",
+    "estupro": "tabela"
+   }
   },
   {
-   "nivel": "erro",
+   "nivel": "info",
    "ano": 2024,
-   "msg": "download falhou: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2024.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7fe795205100>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
+   "msg": "conferido e atualizado",
+   "via": {
+    "feminicidio": "tabela",
+    "estupro": "tabela"
+   }
   },
   {
-   "nivel": "erro",
+   "nivel": "info",
    "ano": 2023,
-   "msg": "download falhou: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2023.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7fe7952057f0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
+   "msg": "conferido e atualizado",
+   "via": {
+    "feminicidio": "tabela",
+    "estupro": "tabela"
+   }
   },
   {
-   "nivel": "erro",
+   "nivel": "info",
    "ano": 2022,
-   "msg": "download falhou: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2022.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7fe795204fe0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
+   "msg": "conferido e atualizado",
+   "via": {
+    "feminicidio": "tabela",
+    "estupro": "tabela"
+   }
   },
   {
-   "nivel": "erro",
+   "nivel": "info",
    "ano": 2021,
-   "msg": "download falhou: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2021.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7fe795204e00>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
+   "msg": "conferido e atualizado",
+   "via": {
+    "feminicidio": "tabela",
+    "estupro": "tabela"
+   }
   },
   {
-   "nivel": "erro",
+   "nivel": "info",
    "ano": 2020,
-   "msg": "download falhou: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2020.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7fe795205b80>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
+   "msg": "conferido e atualizado",
+   "via": {
+    "feminicidio": "tabela",
+    "estupro": "tabela"
+   }
   },
   {
-   "nivel": "erro",
+   "nivel": "info",
    "ano": 2019,
-   "msg": "download falhou: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2019.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7fe795206360>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
+   "msg": "conferido e atualizado",
+   "via": {
+    "feminicidio": "tabela",
+    "estupro": "tabela"
+   }
   },
   {
-   "nivel": "erro",
+   "nivel": "info",
    "ano": 2018,
-   "msg": "download falhou: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2018.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7fe795206c00>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
+   "msg": "conferido e atualizado",
+   "via": {
+    "feminicidio": "tabela",
+    "estupro": "tabela"
+   }
   },
   {
-   "nivel": "aviso",
-   "msg": "malha IBGE não atualizada: HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v3/malhas/estados/52?formato=application/vnd.geo+json&qualidade=minima (Caused by ConnectTimeoutError(<HTTPSConnection(host='servicodados.ibge.gov.br', port=443) at 0x7fe795207470>, 'Connection to servicodados.ibge.gov.br timed out. (connect timeout=60)'))"
+   "nivel": "info",
+   "msg": "malha IBGE de Goiás atualizada"
   }
  ]
 }
