@@ -1,6 +1,6 @@
 {
  "_comentario": "Gerado por scripts/coletar_ocorrencias.py a partir de notas oficiais. Nenhum texto, nome ou endereço é armazenado.",
- "gerado_em": "2026-10-05T18:43:33+00:00",
+ "gerado_em": "2026-10-05T20:53:45+00:00",
  "desde": "2015-01-01",
  "fontes_consultadas": [
   {
@@ -19,7 +19,7 @@
    "api": "https://goias.gov.br/policiamilitar/wp-json/wp/v2/posts"
   }
  ],
- "total": 2674,
+ "total": 2675,
  "ocorrencias": [
   {
    "id": "pcgo-253241",
@@ -38072,6 +38072,46 @@
    "destaque": false
   },
   {
+   "id": "pcgo-116546",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [
+    "violencia_sexual",
+    "ameaca"
+   ],
+   "publico": "criancas_adolescentes",
+   "municipio": "Goiânia",
+   "codigo_ibge": "5208707",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.6864,
+   "lon": -49.2643,
+   "data_publicacao": "2023-05-30",
+   "data_fato": "2023-05-12",
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão preventiva"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-padrasto-que-estuprou-engravidou-enteada-e-lhe-deu-remedios-abortivos/",
+     "data_publicacao": "2023-05-30",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "classificador": 6,
+   "extracao": "conteudo",
+   "coletado_em": "2026-10-05",
+   "modificado_fonte": "2023-05-30T11:08:54",
+   "possivel_duplicidade": [
+    "pcgo-116574"
+   ],
+   "reportagens": [],
+   "destaque": false
+  },
+  {
    "id": "pcgo-116572",
    "categoria": "violencia_sexual",
    "categorias_secundarias": [],
@@ -38138,7 +38178,9 @@
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2023-05-30T17:49:54",
-   "possivel_duplicidade": [],
+   "possivel_duplicidade": [
+    "pcgo-116546"
+   ],
    "reportagens": [],
    "destaque": false
   },
@@ -78149,7 +78191,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2019-01-31T16:55:10",
@@ -78401,7 +78443,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2019-01-23T12:25:41",
@@ -78729,7 +78771,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2019-01-10T12:25:59",
@@ -78836,7 +78878,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-12-26T11:14:06",
@@ -79272,7 +79314,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-11-20T10:17:55",
@@ -80429,7 +80471,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-08-23T10:53:57",
@@ -80499,7 +80541,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-08-21T11:10:02",
@@ -80870,7 +80912,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-08-07T14:41:59",
@@ -82125,7 +82167,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-07-02T10:05:39",
@@ -82745,7 +82787,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-05-29T09:41:32",
@@ -83821,7 +83863,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-04-11T16:32:26",
@@ -84121,7 +84163,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-03-23T09:12:33",
@@ -84368,7 +84410,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-03-13T16:03:36",
@@ -84403,7 +84445,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-03-12T10:59:06",
@@ -85064,7 +85106,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-02-07T10:11:40",
@@ -85423,7 +85465,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2018-01-11T09:33:04",
@@ -85683,7 +85725,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-12-19T11:17:46",
@@ -85939,7 +85981,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-12-05T16:25:01",
@@ -86011,7 +86053,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-12-04T09:14:41",
@@ -86736,7 +86778,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-10-03T10:04:26",
@@ -86918,7 +86960,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-09-12T10:27:48",
@@ -87028,7 +87070,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-09-04T11:32:53",
@@ -87208,7 +87250,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-08-11T10:03:23",
@@ -87910,7 +87952,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-07-11T12:04:15",
@@ -89011,7 +89053,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-05-02T16:38:22",
@@ -89922,7 +89964,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-02-15T16:40:08",
@@ -90427,7 +90469,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-01-27T12:04:49",
@@ -90570,7 +90612,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2017-01-10T09:31:45",
@@ -90750,7 +90792,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-12-15T12:05:26",
@@ -90787,7 +90829,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-12-14T10:39:50",
@@ -90824,7 +90866,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-12-09T10:13:10",
@@ -91003,7 +91045,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-12-01T15:57:06",
@@ -91079,7 +91121,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-11-29T13:38:15",
@@ -91263,7 +91305,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-11-10T09:57:41",
@@ -91408,7 +91450,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-11-04T09:05:49",
@@ -91445,7 +91487,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-11-04T11:53:56",
@@ -91552,7 +91594,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-10-26T10:38:25",
@@ -91626,7 +91668,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-10-17T12:11:04",
@@ -91661,7 +91703,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-10-10T10:52:16",
@@ -91731,7 +91773,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-10-06T16:25:15",
@@ -91808,7 +91850,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-09-21T09:48:56",
@@ -92167,7 +92209,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-08-30T18:53:20",
@@ -92311,7 +92353,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-08-16T08:33:41",
@@ -92641,7 +92683,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-07-26T08:32:56",
@@ -92854,7 +92896,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-07-04T10:13:16",
@@ -93224,7 +93266,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-06-14T12:36:35",
@@ -93262,7 +93304,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-06-07T10:01:48",
@@ -93341,7 +93383,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-06-03T12:00:20",
@@ -93379,7 +93421,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-06-01T16:01:21",
@@ -93743,7 +93785,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-04-21T20:13:51",
@@ -93851,7 +93893,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-04-18T11:00:41",
@@ -93886,7 +93928,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-04-15T14:38:31",
@@ -93923,7 +93965,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-04-12T10:12:43",
@@ -94031,7 +94073,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-03-29T11:59:57",
@@ -94068,7 +94110,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-03-23T11:01:14",
@@ -94103,7 +94145,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-03-23T11:46:54",
@@ -94177,7 +94219,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-03-18T09:59:26",
@@ -94326,7 +94368,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-03-14T10:36:25",
@@ -94361,7 +94403,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-03-14T10:43:52",
@@ -94760,7 +94802,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-02-10T17:02:53",
@@ -94869,7 +94911,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-02-04T12:07:29",
@@ -94946,7 +94988,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-02-04T12:48:47",
@@ -95063,7 +95105,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-01-31T19:57:01",
@@ -95098,7 +95140,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2016-01-31T20:14:11",
@@ -95574,7 +95616,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-12-11T12:58:17",
@@ -95646,7 +95688,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-12-08T08:43:06",
@@ -95720,7 +95762,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-11-24T11:03:19",
@@ -95984,7 +96026,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-10-15T11:14:35",
@@ -96093,7 +96135,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-10-01T10:36:38",
@@ -96235,7 +96277,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-09-14T10:07:46",
@@ -96343,7 +96385,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-09-03T10:37:30",
@@ -96413,7 +96455,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-09-16T09:16:34",
@@ -96594,7 +96636,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-08-26T09:19:22",
@@ -96890,7 +96932,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-08-06T09:20:39",
@@ -96997,7 +97039,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-07-21T08:37:26",
@@ -97069,7 +97111,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-07-16T11:42:12",
@@ -97106,7 +97148,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-07-20T06:38:57",
@@ -97377,7 +97419,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-07-02T10:57:01",
@@ -97451,7 +97493,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-06-22T11:37:59",
@@ -97524,7 +97566,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-06-15T10:31:14",
@@ -97559,7 +97601,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-06-15T10:40:05",
@@ -97594,7 +97636,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-06-15T11:14:18",
@@ -97633,7 +97675,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-06-02T11:06:09",
@@ -97742,7 +97784,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-05-26T09:10:16",
@@ -97812,7 +97854,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-05-18T09:24:38",
@@ -97849,7 +97891,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-05-14T12:03:39",
@@ -98261,7 +98303,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-04-24T18:38:13",
@@ -98339,7 +98381,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-04-13T08:36:38",
@@ -98376,7 +98418,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-04-09T06:59:31",
@@ -98450,7 +98492,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-04-01T07:35:47",
@@ -98485,7 +98527,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-04-06T04:21:35",
@@ -98520,7 +98562,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-04-13T10:58:57",
@@ -98592,7 +98634,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-03-24T08:10:33",
@@ -98669,7 +98711,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-03-26T01:36:39",
@@ -98782,7 +98824,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-03-20T02:15:02",
@@ -98855,7 +98897,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-03-13T01:43:40",
@@ -98890,7 +98932,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-03-11T00:17:52",
@@ -99039,7 +99081,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-02-27T11:10:29",
@@ -99412,7 +99454,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-02-09T09:21:40",
@@ -99562,7 +99604,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-01-28T09:11:00",
@@ -99779,7 +99821,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-01-07T01:52:17",
@@ -99814,7 +99856,7 @@
      "tipo": "nota_oficial"
     }
    ],
-   "classificador": 5,
+   "classificador": 6,
    "extracao": "conteudo",
    "coletado_em": "2026-10-05",
    "modificado_fonte": "2015-01-05T22:32:59",
