@@ -1,2007 +1,367 @@
 {
- "executado_em": "2026-10-04T23:22:22+00:00",
- "posts_analisados": 6742,
+ "executado_em": "2026-10-05T01:23:35+00:00",
+ "posts_analisados": 0,
  "registros": 2674,
  "eventos": [
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-suspeito-de-tentativa-de-feminicidio/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "feminicídio",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=feminic%C3%ADdio&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7410>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-suspeito-de-feminicidio-e-maus-tratos-a-companheira-idosa/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "tentativa de feminicídio",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=tentativa+de+feminic%C3%ADdio&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e74a0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/sogro-envolvido-em-morte-de-genro-e-preso/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "matou companheira",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=matou+companheira&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7b30>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-prende-envolvido-em-homicidio/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "matou esposa",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=matou+esposa&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7e30>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apoia-pcsp-em-prisao-de-autor-de-homicidio-que-chocou-itu/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "matou a ex",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=matou+a+ex&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428050>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/crimes-passionais/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "estupro",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=estupro&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428470>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-prende-condenado-que-matou-a-ex-mulher-e-deixou-a-amiga-dela-paraplegica/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "estupro de vulnerável",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=estupro+de+vulner%C3%A1vel&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e77d0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-apreende-adolescente-que-matou-homem-apos-caca/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "abuso sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=abuso+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7bf0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/gih-prende-filho-que-matou-o-proprio-pai/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "abuso sexual infantil",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=abuso+sexual+infantil&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e73b0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-matou-idosa-para-roubar-bolsa-e-preso-pela-policia-civil/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "exploração sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=explora%C3%A7%C3%A3o+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7410>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-apresenta-dupla-que-matou-adolescente-rival-no-trafico/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "pornografia infantil",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=pornografia+infantil&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de64282c0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/caso-oscar-policia-civil-apresenta-resultado-de-investigacao-sobre-morte-de-policial/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "importunação sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=importuna%C3%A7%C3%A3o+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428860>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-homem-que-matou-mae-e-filho-por-divida-de-drogas/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "violência sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=viol%C3%AAncia+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428ce0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/serial-killer-tiago-henrique-gomes-e-indiciado-pela-policia-civil-por-morte-de-prostituta-em-frente-a-motel/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "criança",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=crian%C3%A7a&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de64290d0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-marias-pcgo-prende-homem-investigado-por-estupro-de-vulneravel-apos-encontro-marcado-pela-internet/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "adolescente",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=adolescente&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429340>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-busca-contra-investigado-por-estupro-de-vulneravel-e-apreende-armas/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "maus-tratos",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=maus-tratos&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429700>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-homem-que-estuprou-mulher-apos-confraternizacao-em-sua-residencia/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "tortura criança",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=tortura+crian%C3%A7a&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429c40>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-trafico-de-drogas-e-por-manter-vitima-em-carcere-privado-ha-aproximadamente-um-ano/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "homicídio criança",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=homic%C3%ADdio+crian%C3%A7a&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642a000>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-busca-domiciliar-em-investigacao-de-estupro-praticado-contra-adolescente/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "Deam",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=Deam&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642a270>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-investigado-por-estupro-de-vulneravel-ocorrido-no-estado-do-para/"
+   "nivel": "erro",
+   "site": "PCGO",
+   "termo": "DPCA",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiacivil/wp-json/wp/v2/posts?search=DPCA&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e72f0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-estuprar-crianca-a-troco-de-r-20-e-armazenar-pornografia-infantil/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "feminicídio",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=feminic%C3%ADdio&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7b30>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pcpe-prendem-autor-de-extorsao-contra-crianca-homem-mantinha-armazenado-conteudo-pornografico-infantil/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "tentativa de feminicídio",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=tentativa+de+feminic%C3%ADdio&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7f20>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pais-e-tio-sao-presos-pela-pcgo-por-estupro-de-vulneravel-e-outros-crimes-contra-criancas/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "matou companheira",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=matou+companheira&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429a00>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-foragido-no-mt-condenado-a-mais-de-18-anos-por-diversos-crimes/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "matou esposa",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=matou+esposa&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429640>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-crimes-virtuais-envolvendo-abuso-sexual-infantil-em-operacao-da-pcrj/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "matou a ex",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=matou+a+ex&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429790>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-foragido-em-alagoas-por-estupro-de-vulneravel-importunacao-sexual-e-divulgacao-de-pornografia-infantil/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "estupro",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=estupro&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429400>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-estuprar-crianca-durante-festa-de-familia/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "estupro de vulnerável",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=estupro+de+vulner%C3%A1vel&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428b60>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-gerente-de-boate-investigado-por-embriagar-funcionaria-estupra-la-e-gravar-atos-sexuais-com-o-celular-dela/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "abuso sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=abuso+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de64288f0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-descumprimento-de-medidas-protetivas-de-urgencia-e-estupros-de-vulneraveis-contra-seus-enteados/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "abuso sexual infantil",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=abuso+sexual+infantil&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de64282c0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-mulher-segura-prisao-de-condenado/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "exploração sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=explora%C3%A7%C3%A3o+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642a840>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-mulher-segura-prisao-em-minas-gerais/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "pornografia infantil",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=pornografia+infantil&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642a8d0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-mulher-segura-prisao-por-estupro-de-vulneravel/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "importunação sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=importuna%C3%A7%C3%A3o+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642afc0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-que-estuprava-netas-de-sua-companheira-avo-teria-ignorado-o-pedido-de-socorro-das-vitimas/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "violência sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=viol%C3%AAncia+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7b90>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-em-flagrante-homem-que-tentou-estuprar-mulher-em-seu-local-de-trabalho/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "criança",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=crian%C3%A7a&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e72f0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-no-df-pai-investigado-por-drogas-e-estuprar-a-filha-de-11-anos/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "adolescente",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=adolescente&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428620>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-mulher-em-flagrante-por-omissao-em-caso-de-estupro-de-vulneravel-e-abandono-de-incapaz/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "maus-tratos",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=maus-tratos&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642a630>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-estuprar-vitima-menor-de-14-anos/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "tortura criança",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=tortura+crian%C3%A7a&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428530>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-que-abordou-mulher-no-meio-da-rua-e-a-estuprou-dentro-de-carro/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "homicídio criança",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=homic%C3%ADdio+crian%C3%A7a&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428aa0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-suspeitos-de-abusar-sexualmente-de-crianca-de-10-anos-mediante-pagamento/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "Deam",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=Deam&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428b60>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-busca-contra-homem-que-divulgou-video-intimo-como-forma-de-vinganca-contra-mulher/"
+   "nivel": "erro",
+   "site": "SSP-GO",
+   "termo": "DPCA",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /seguranca/wp-json/wp/v2/posts?search=DPCA&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429880>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pmgo-prendem-condenado-a-20-anos-por-estupro-de-vulneravel-que-estava-escondido-no-topo-de-uma-arvore/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "feminicídio",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=feminic%C3%ADdio&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429820>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-que-estuprou-obrigou-mulher-a-cozinhar-para-ele-e-roubou-sua-moto/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "tentativa de feminicídio",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=tentativa+de+feminic%C3%ADdio&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429af0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pcpa-prendem-investigado-por-estupro-de-vulneravel-e-extorsao-na-web/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "matou companheira",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=matou+companheira&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429e80>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-empresario-que-dopou-um-homem-e-manteve-com-ele-relacao-sexual-abusiva/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "matou esposa",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=matou+esposa&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642b110>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-diversos-crimes-envolvendo-pedofilia-e-pornografia-infantil/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "matou a ex",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=matou+a+ex&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642b500>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-homem-por-tentar-estuprar-vitima-menor-de-idade/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "estupro",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=estupro&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e6ae0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigado-que-deixou-computador-na-assistencia-tecnica-com-mais-de-200-arquivos-contendo-abuso-sexual-infantil/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "estupro de vulnerável",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=estupro+de+vulner%C3%A1vel&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e77d0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-condenado-por-estupro-de-vulneravel-cometido-contra-a-propria-neta/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "abuso sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=abuso+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642b0e0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-em-mg-investigado-por-estupro-de-vulneravel-e-descumprimento-de-medidas-protetivas-de-urgencia/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "abuso sexual infantil",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=abuso+sexual+infantil&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642a0f0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pcmt-prendem-foragido-por-estuprar-sobrinhas/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "exploração sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=explora%C3%A7%C3%A3o+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429820>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-prisao-do-rj-contra-cirurgiao-plastico-por-crimes-contra-ex-companheira/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "pornografia infantil",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=pornografia+infantil&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6429340>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-protecao-integral-pcgo-prende-no-rj-padrasto-e-mae-de-vitima-que-foi-estuprada-por-mais-de-10-anos/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "importunação sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=importuna%C3%A7%C3%A3o+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428b00>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-que-estuprou-crianca-de-8-anos/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "violência sexual",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=viol%C3%AAncia+sexual&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428b30>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dono-de-barraca-de-festa-junina-e-preso-por-estupro/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "criança",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=crian%C3%A7a&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642a7b0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-estupro-a-enteada-no-maranhao/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "adolescente",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=adolescente&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de6428230>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-cumpre-buscas-contro-investigado-por-estupro-e-tambem-prende-suspeito-de-trafico-de-drogas/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "maus-tratos",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=maus-tratos&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642a9c0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-investigado-por-estupro-contra-crianca-de-3-anos/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "tortura criança",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=tortura+crian%C3%A7a&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642bb00>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-procura-por-investigado-por-estuprar-adolescente-e-gravar-imagens/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "homicídio criança",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=homic%C3%ADdio+crian%C3%A7a&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de642bef0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-trafico-de-drogas-e-estupro-no-nordeste-goiano/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "Deam",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=Deam&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7bf0>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   },
   {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-prisao-do-to-por-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/lider-religioso-e-preso-por-estupro-de-fiel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-homem-que-abusou-sexualmente-de-sobrinho-da-esposa-desde-os-5-anos-de-idade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-vulnerabilis-i-mae-e-filho-sao-presos-por-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/investigado-por-estupro-de-vulneravel-e-preso-no-rn/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-motorista-de-transporte-clandestino-suspeito-de-estuprar-passageira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-em-menos-de-72-horas-ex-padrasto-por-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-pulou-muro-para-estuprar-adolescente-e-preso-pela-pcgo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-homem-por-roubar-residencia-e-estuprar-moradora/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-padrasto-por-estupro-contra-enteada-de-10-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-cumpre-mandado-contra-menor-infrator-por-ato-analogo-a-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-investigado-por-roubar-e-estuprar-mulheres/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/caso-amelia-vitoria-pcgo-prende-autor-do-crime-em-menos-de-5-dias/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-prende-filho-por-estuprar-e-praticar-outros-crimes-contra-mae-com-deficiencia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-estupro-de-vulneravel-contra-duas-criancas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/mae-e-padrasto-sao-presos-por-estupro-contra-crianca-de-12-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-utilizava-das-redes-sociais-e-perfil-falso-com-o-intuito-de-pratica-estupro-virtual-e-preso-em-flagrante-pela-policia-civil-de-barro-alto/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-no-distrito-de-bezerra-por-abusar-de-enteada-de-11-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-homem-por-importunacao-sexual-e-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-estupro-de-vulneravel-contra-crianca-de-11-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/padrasto-indiciado-por-estupro-e-preso-ao-descumprir-medidas-protetivas-contra-enteada/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/padrasto-e-preso-suspeito-de-abusar-sexualmente-de-enteada-de-10-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-foragido-do-mt-por-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/shamar-pcgo-prende-idoso-por-estupro-praticado-contra-a-propria-afilhada/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pcmg-prendem-casal-por-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/shamar-pcgo-prende-homem-por-estupro-de-vulneravel-contra-criancas-de-7-e-10-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pcmg-prendem-pai-suspeito-estuprar-a-filha/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-estuprar-e-fotografar-partes-intimas-de-criancas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-pelo-crime-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/padrasto-e-preso-apos-adolescente-contar-a-mae-que-era-vitima-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-estupro-ameaca-injuria-e-descumprimento-de-medidas-protetivas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-pai-em-flagrante-por-estupro-de-filha-de-12-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-em-mato-grosso-condenado-definitivo-por-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dono-de-oficina-e-preso-por-violentar-adolescente-que-prestava-servico-no-local/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-homem-procurado-pela-policia-civil-por-roubo-seguido-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-estupro-contra-enteada-de-10-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-divulga-imagens-de-procurado-por-roubo-seguido-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-prende-em-flagrante-funcionario-de-empresa-de-producao-de-aves-que-atacou-e-estuprou-mulher-no-local-de-trabalho/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-armazenar-pornografia-infantil-e-filmar-crianca-enquanto-a-estuprava/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-e-pm-cumprem-preventiva-de-autor-de-estupro-contra-mulher-deficiente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-ametista/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-realiza-busca-e-apreensao-em-investigacao-que-apura-crime-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-atria-localiza-adolescente-e-prende-autor-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-pela-pcgo-apos-estuprar-crianca-cuja-baba-e-sua-esposa/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-ametista-recolhe-material-genetico-de-condenados-para-elucidar-crimes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-pai-por-estuprar-a-filha-de-11-anos-na-noite-de-natal/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-estupro-de-vulneravel-apos-relacao-com-namorada-de-13-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apresenta-desfecho-de-investigacao-sobre-caso-thais-lara/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menina-de-5-anos-fala-sobre-abusos-sexuais-sofridos-a-mae-de-amiga-e-autor-e-preso/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-homem-suspeito-de-ameacar-e-tentar-estuprar-companheira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-sete-envolvidos-em-crimes-barbaros-que-somam-150-anos-de-condenacao/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-pai-investigado-por-estuprar-a-filha-quando-sua-esposa-estava-gravida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-suspeito-de-abusar-sexualmente-de-tres-sobrinhas-menores/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/estupros-em-via-publica-tem-autor-identificado-e-preso-pela-pcgo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-suspeito-de-estupro-de-menor-de-idade-com-transtorno-mental-e-procurado-pela-pcgo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-estupra-crianca-na-frente-de-sua-avo-vitima-de-carcere-privado-e-e-preso-em-flagrante/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/suspeito-de-estuprar-enteada-de-7-anos-e-preso-apos-crianca-revelar-abuso-a-professora/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-prende-mae-que-instruiu-sua-filha-a-confessar-que-sofreu-abuso-sexual-pelo-padrastro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/padrasto-e-preso-apos-embebedar-e-abusar-sexualmente-de-enteada/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-investiga-baba-por-denunciar-falso-crime-de-estupro-a-crianca-de-7/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-sleepers-conclui-investigacao-de-estupros-contra-criancas-por-pais-sociais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/investigacao-da-pcgo-sobre-estupros-vira-tema-de-documentario/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-prisao-em-desfavor-de-suspeito-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-suspeito-de-estuprar-crianca-dos-3-aos-9-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-agressor-por-estupro-lesao-corporal-e-outros-delitos-a-ex-mulher/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/resultados-da-gestao-2021/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-orgaos-da-seguranca-coletam-dna-de-presos-do-regime-externo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/idoso-de-72-anos-e-preso-por-abusar-da-neta-de-8-anos-de-idade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-investigado-por-estupro-de-crianca/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-prende-15-adultos-e-apreende-2-menores-no-entorno-sul-do-df/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-em-flagrante-por-estuprar-filha-e-enteada-vitimas-tem-11-meses-e-9-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menor-e-apreendido-por-violencia-domestica-dano-estupro-de-vulneravel-e-uso-de-drogas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-de-53-anos-e-preso-por-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/grupo-de-repressao-a-estupros-alinha-estrategias-com-banco-de-dna-forense/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/grupo-especializado-no-atendimento-a-vitima-de-crimes-raciais-e-delitos-de-intolerancia-geacri/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-cumpre-mandado-de-prisao-investigado-teria-matado-vitima-que-arremessou-palito-de-picole-no-rosto-de-sua-companheira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-implanta-unidade-de-ciencias-comportamentais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-homem-suspeito-de-abusar-de-duas-irmas-de-15-e-3-anos-de-idade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/autor-de-estupro-a-menor-de-16-anos-e-preso-pela-dpca-de-aparecida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-conjunta-entre-as-policias-civis-de-goias-e-do-df-captura-estuprador-foragido-desde-2014/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-acalento-dpca-prende-preventivamente-investigado-por-estupro-a-adolescente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/ciberneticos-prende-suspeito-de-estuprar-irmao-de-7-anos-homem-ja-havia-sido-preso-com-material-pornografico-infantil/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/acao-da-policia-civil-marca-dia-nacional-de-combate-ao-abuso-e-a-exploracao-sexual-infantil/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/gere-numero-para-denuncias/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/idoso-e-preso-por-abusar-sexualmente-de-neta-de-9-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-indicia-homem-por-estupro-de-duas-criancas-suspeito-esta-foragido/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-aparecida-faz-forca-tarefa-e-remete-mais-de-100-procedimentos-a-justica/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-em-flagrante-suspeito-de-estupro-na-vila-mutirao/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-investigado-por-estupro-a-menor/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-preventivamente-homem-investigado-suspeito-de-estupro-a-filha-adolescente-menina-ficou-gravida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-homem-suspeito-de-anunciar-falsas-vagas-de-emprego-e-ainda-tentar-estuprar-mulheres-candidatas-as-vagas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-foragido-suspeito-de-estupro-de-vulneravel-e-homicidio-qualificado/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/equipe-plantonista-da-deam-prende-suspeito-de-estupro-autor-usava-tornozeleira-eletronica/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-homem-que-praticou-homicidio-apos-ter-o-celular-furtado/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/mae-e-presa-por-nao-denunciar-abusos-sexuais-do-marido-contra-quatro-filhos-menores/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-de-estupro-praticado-contra-o-crime-autor-gravou-audio-para-pedir-desculpa-aos-pais-da-vitima/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-de-estupro-e-tortura-a-sobrinha-com-microcefalia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-investigado-por-estupro-de-vulneravel-contra-a-propria-filha/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-suspeito-de-estupro-de-vulneravel-a-enteada-autor-mora-na-zona-rural/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/foragido-do-sistema-prisional-e-preso-por-manter-relacao-com-menina-de-13-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-anjo-mau-prende-pastor-investigado-por-estupro-a-crianca-de-10-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pai-suspeito-de-estuprar-filha-e-colocado-em-prisao-domiciliar/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/solucionado-caso-de-sequestro-cometido-pelo-pai-contra-os-filhos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-suspeito-de-abusar-de-enteadas-e-preso/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-esclarece-homicidio-de-mulher-cujo-corpo-foi-deixado-na-praca-do-trabalhador/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/depai-apreende-autor-de-homicidio-a-facadas-ocorrido-em-novembro-do-ano-passado/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/com-mais-duas-acoes-equipe-da-depai-chega-a-84-mandados-cumpridos-neste-ano/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-suspeito-por-estuprar-bebe-de-menos-de-dois-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-suspeito-de-abusar-das-proprias-filhas-sendo-uma-delas-portadora-de-necessidades-especiais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-foragido-que-se-escondia-ha-19-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/depai-cumpre-60-mandados-de-apreensao-de-menores-e-apreende-40-adolescentes-infratores-em-marco-e-abril-deste-ano/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deam-de-aparecida-prende-individuo-em-flagrante-por-tentativa-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-ceos-dpca-prende-suspeito-por-roubo-e-tentativa-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/direitos-humanos-sem-igualdade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-prende-foragido-das-justicas-da-bahia-e-do-df-com-tres-mandados-de-prisoes-em-aberto/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-prisao-contra-idoso-acusado-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deam-prende-morador-de-rua-suspeito-por-estupro-e-tentativa-de-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-apresenta-suspeito-de-matar-mulher-e-abandonar-o-corpo-na-br-060/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/procurado-por-roubo-e-preso-em-flagrante-por-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-de-estuprar-netas-de-11-anos-de-sua-companheira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-homem-suspeito-de-estuprar-adolescente-de-12-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-estuprou-adolescente-no-parque-das-laranjeiras-e-preso-pela-dpca/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/escriva-da-dpca-apresenta-tese-de-doutorado-em-psicologia-na-puc-go/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-conclui-inquerito-que-apurava-enforcamento-gravado-dentro-de-presidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-homem-que-estuprou-e-engravidou-menor-deficiente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/1a-deam-apresenta-preso-e-recebe-premio-delegacia-do-mes-de-janeiro-da-diretoria-da-pcgo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/professor-de-danca-e-preso-suspeito-de-estuprar-aluno-de-13-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/casal-e-preso-em-sao-luis-suspeito-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-roubou-menor-de-12-anos-com-faca-e-preso-no-jardim-guanabara/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-suspeito-de-estuprar-menina-abordada-na-saida-de-escola/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/denarc-divisao-de-capturas-cumpriu-344-mandados-de-prisao-em-8-meses/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/em-sao-luis-pai-e-preso-por-abusar-da-propria-filha/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/cultura-do-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/foragido-que-vivia-em-praca-de-goiania-e-preso-por-agentes-da-denarc/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/cartorio-recem-criado-na-denarc-realiza-40-prisoes-em-marco/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/sexo-com-cadaver-e-crime/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/subjetividade-objetivada-falacias-estatisticas-na-apresentacao-dos-resultados-da-analise-criminal/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/idoso-e-preso-suspeito-de-estuprar-crianca-de-4-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-marias-pcgo-realiza-acao-educativa-em-escola-e-prende-suspeito-de-abuso-sexual-de-adolescente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/crimes-ciberneticos-operacao-prende-investigado-no-df-por-armazenar-material-de-pornografia-infantil/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/apos-investigacao-da-policia-civil-homem-suspeito-de-estuprar-a-filha-de-12-anos-e-localizado-e-preso-na-bahia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-investigado-por-crimes-sexuais-contra-adolescente-que-treinava-para-ser-jogador-de-futebol/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-armazenar-material-de-exploracao-sexual-envolvendo-criancas-e-adolescentes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-cumpre-buscas-e-prende-homem-por-armazenar-pornografia-infantil-em-celular/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-em-flagrante-por-abusar-sexualmente-de-irma/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-abuso-sexual-infantil-e-armazenamento-de-conteudo-envolvendo-criancas-e-animais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/mulher-e-presa-suspeita-de-abusar-sexualmente-da-propria-sobrinha-menor-de-idade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-luz-na-infancia-8-ciberneticos-cumpre-mandados-de-buscas-em-5-cidades-goianas-contra-suspeitos-de-pornografia-infantil-na-internet/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pmmg-investigam-e-prendem-pai-suspeito-de-abuso-sexual-contra-a-filha-crime-foi-transmitido-pela-web/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-luz-da-infancia-4-cumpre-mais-de-30-mandados-judiciais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-de-abuso-sexual-a-menor/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-de-abuso-sexual-contra-crianca-em-2014/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/padrasto-e-preso-suspeito-de-abusar-sexualmente-de-enteadas-com-conivencia-da-mulher/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deic-apresenta-caso-do-menino-antonyo-a-imprensa/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/agenda-do-delegado-geral-e-do-delegado-geral-adjunto-313/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/delegada-da-mulher-capacita-profissionais-de-saude-no-combate-a-violencia-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-vozes-invisiveis-2-pcgo-cumpre-buscas-contra-rede-de-exploracao-sexual-de-menores-na-internet/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-armazenar-material-de-exploracao-sexual-de-criancas-e-adolescentes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-deflagra-operacao-caminhos-seguros-em-todo-o-estado/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-favorecimento-da-prostituicao-e-exploracao-sexual-de-adolescente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/mae-e-condenada-e-presa-por-submeter-a-filha-menor-a-exploracao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-xyz-prende-pessoa-que-gravava-e-vendia-material-de-exploracao-sexual-juvenil/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-combate-exploracao-sexual-e-induzimento-a-automutilacao-de-menores/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-contra-pornografia-infantil-na-internet-flagra-27-mil-arquivos-em-um-unico-alvo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-visibilis-dpca-prende-investigado-por-tentativa-de-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policiais-de-aparecida-realizam-operacao-contra-exploracao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/resultados-da-espc-do-ano-de-2016/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-grupo-de-travestis-suspeito-de-homicidios-e-exploracao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policiais-civis-se-capacitam-no-combate-a-exploracao-sexual-infantil/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pcsp-identificam-e-prendem-suspeito-que-usava-perfil-falso-para-coagir-adolescentes-2/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-contra-motorista-de-aplicativo-investigado-por-possuir-material-de-pornografia-infantil/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-lider-religioso-por-pornografia-infantil-e-realiza-buscas-por-assedio-e-importunacao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-em-flagrante-por-extorquir-adolescente-para-nao-divulgar-fotos-intimas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-conclui-que-mortes-de-ex-sogro-e-a-mae-dele-foi-motivada-por-envenenamento/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-mulher-por-vender-pornografia-infantil-da-filha-de-8-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-crianca-segura-pcgo-combate-crimes-de-pornografia-infantil-na-internet/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/ciberneticos-deflagra-operacao-meu-zeloso-guardador-ii-contra-pornografia-infantil-pela-internet/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/alego-realiza-mocao-de-aplauso-a-dercc-em-reconhecimento-a-participacao-da-especializada-na-operacao-luz-na-infancia-2/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-apreende-material-de-pornografia-infantil/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-buscas-e-investiga-importunacao-sexual-por-parte-de-homem-que-se-despia-durante-prestacao-de-servicos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-contra-padrasto-por-importunacao-sexual-e-por-armazenar-imagens-intimas-de-enteada/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-importunar-sexualmente-enteada-adolescente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-homem-que-perseguia-mulheres-para-praticar-importunacao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-pecattor-pcgo-prende-pastor-investigado-por-crimes-sexuais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/motociclista-que-importunava-mulheres-em-via-publica-e-preso-em-flagrante/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/diretor-de-escola-e-investigado-por-crimes-de-importunacao-e-assedio-sexual-contra-estudante/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-mundare-pcgo-prende-servidor-publico-por-assedio-e-importunacao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-em-flagrante-por-importunacao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-importunacao-sexual-perseguicao-e-ameaca-a-filha/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-preventiva-de-suspeito-por-importunacao-sexual-e-ameaca-contra-mulheres/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-montador-de-moveis-suspeito-de-estuprar-crianca-autista-durante-o-trabalho/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-dois-homens-em-flagrante-por-violencia-sexual-contra-cadela/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-agata/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-protetor-pcgo-realiza-buscas-em-casa-de-homem-que-perseguia-fiel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-estuprar-e-manter-a-propria-esposa-em-carcere-privado/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-violentar-sexualmente-crianca-de-7-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/assedio-sexual-violencia-contra-a-trabalhadora/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-busca-e-apreensao-contra-suspeito-de-fazer-montagem-de-fotos-com-cunho-sexual-contra-adolescente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pces-prendem-investigado-por-crimes-sexuais-envolvendo-criancas-e-adolescentes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-sequestra-patrimonio-de-lider-de-faccao-criminosa-ja-sao-20-imoveis-bloqueados-em-2025/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-fecha-casa-de-prostituicao-e-prende-duas-mulheres-por-maus-tratos-a-criancas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-relacionado-a-trafico-e-corrupcao-de-menores-contra-homem-preso-por-crime-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-identifica-mulher-que-gravou-videos-torturando-filha/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-36-medidas-judiciais-no-rs-contra-grupo-criminoso-investigado-por-sextorsao/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-mulher-que-torturava-filha-de-1-ano-para-obrigar-ex-a-reatar-relacao/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pmgo-prendem-em-flagrante-homem-por-assedio-sexual-e-perseguicao-contra-criancas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-em-alagoas-homem-suspeito-de-crime-de-tortura-mediante-sequestro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-agredir-xingar-ameacar-estuprar-e-manter-em-carcere-sua-ex-companheira-por-tres-dias/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-faz-buscas-por-autoria-de-crimes-sexuais-praticados-contra-adolescente-em-rede-social/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/foragido-da-justica-goiana-e-preso-no-estado-de-minas-gerais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-faz-buscas-contra-adolescente-por-divulgar-imagens-pornograficas-nas-redes-sociais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-mae-e-madrasta-de-crianca-por-tentativa-de-homicidio-contra-a-menor/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-conclui-investigacao-sobre-morte-de-crianca-vitima-de-disparo-acidental/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-caronte-2a-fase-e-deflagrada-e-prende-entre-outros-guardas-investigados-por-morte-de-casal/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-procura-por-mae-suspeita-de-queimar-filha-de-8-anos-com-colher-aquecida-no-fogo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-prende-suspeito-de-tentar-matar-desafeto-errar-tiro-e-acertar-crianca/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menina-de-menos-de-2-anos-e-operada-apos-ser-estuprada-pelo-pai-preso-em-flagrante/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-em-flagrante-em-conjunto-com-a-pm-mae-e-padrasto-por-tortura-a-crianca/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-cumpre-mandado-de-prisao-de-suspeito-de-homicidio-crime-foi-motivado-por-ciumes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-dois-suspeitos-do-homicidio-do-menino-danilo-de-souza-7-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-em-sao-paulo-homem-que-se-masturbou-diante-de-pessoa-com-deficiencia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-faz-operacao-no-dia-mundial-da-infancia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apoia-coirma-do-mato-grosso-na-elucidacao-de-serie-de-homicidios-nesse-estado/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-lavra-bocs-contra-menor-por-uso-de-documento-falso-e-falsidade-ideologica/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-envolvido-em-morte-de-jovem-no-residencial-vale-dos-sonhos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-por-abusar-sexualmente-de-vizinho-de-9-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/especializadas-da-5a-drpc-realizam-prisoes-e-apreensoes-no-entorno-do-df/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-e-pm-apresentam-fatos-do-caso-ana-clara-em-coletiva/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/traficante-e-preso-ao-comercializar-drogas-na-presenca-de-crianca/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/prosseguem-investigacoes-sobre-mae-homicida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/casal-suspeito-de-morte-de-crianca-e-preso-e-apresentado-pela-dih/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/delegacias-especializadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-de-aparecida-prende-suspeito-de-estuprar-a-propria-sobrinha/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-pms-serao-indiciados-por-disparos-que-atingiram-crianca-no-setor-bueno/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigados-por-homicidio-e-tentativa-de-homicidio-apos-emboscada-entre-torcidas-organizadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-adolescente-por-ato-infracional-analogo-ao-trafico-e-apreende-grande-quantidade-de-drogas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-south-side-pcgo-prende-dois-investigados-por-homicidio-qualificado-e-corrupcao-de-menores/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-adolescentes-ligados-a-organizacao-criminosa-durante-cumprimento-de-mandados/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-e-apreensao-de-adolescente-suspeito-de-ato-infracional-analogo-a-tentativa-de-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-buscas-contra-adolescente-suspeita-de-criar-perfis-falsos-em-redes-sociais-para-porn-revenge/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/foragido-por-homicidio-e-preso-pela-pcgo-no-distrito-federal/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-adolescente-envolvido-em-tentativa-de-latrocinio-contra-motorista-de-app/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-adolescente-por-matar-amigo-apos-discussao-por-motivo-banal-enquanto-ingeriam-bebidas-alcoolicas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-tentativa-de-homicidio-e-apreende-drogas-com-adolescente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-keres-apreende-adolescente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/adolescentes-sao-apreendidos-por-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-mae-por-arremessar-faca-contra-filha-de-12-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandados-de-busca-e-apreensao-relacionados-a-tentativa-de-homicidio-e-prende-suspeito/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-apreende-adolescente-por-envolvimento-em-homicidios-e-organizacao-criminosa/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-caminhao-envolvido-em-atropelamento-de-adolescente-apos-rabeira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/adolescente-e-apreendido-por-ato-infracional-analogo-ao-crime-de-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menor-envolvida-em-homicidio-e-apreendida-pela-dih-logo-apos-crime/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menor-suspeito-de-matar-outro-adolescente-e-apreendido-menos-de-12-horas-apos-delito/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-autua-mae-e-padrasto-por-maus-tratos-a-adolescentes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-suspeito-de-abusar-sexualmente-de-adolescente-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/padrasto-e-indiciado-apos-enteado-ter-a-perna-triturada-em-maquina-agricola-e-morrer/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/depai-cumpre-internacao-provisoria-de-adolescente-por-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/caso-ariane-mais-um-adolescente-e-apreendido-suspeito-de-envolvimento-no-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-hooligans-dpca-indicia-16-envolvidos-com-torcidas-organizadas-suspeitos-de-tentativa-de-homicidio-e-outros-crimes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menor-envolvido-em-homicidio-e-apreendido-por-depai-de-aparecida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/gih-de-aparecida-prende-um-dos-autores-de-morte-de-adolescente-em-festa-de-torcida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-lei-e-ordem-policia-civil-prende-investigados-por-tentativas-de-homicidio-e-organizacao-criminosa-uma-das-vitimas-e-adolescente-de-13-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/irmaos-denunciados-pela-morte-de-um-adolescente-sao-presos-na-bahia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-prende-ultimo-envolvido-em-homicidio-por-torcida-organizada/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/depai-aparecida-apreende-adolescente-suspeito-de-latrocinio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-esclarece-todos-os-homicidios-ocorridos-no-setor-campinas-entre-2018-e-2019/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-e-depai-apreendem-jovem-que-quando-menor-cometeu-cinco-homicidios-no-setor-pedro-ludovico/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/presa-dupla-que-atirou-contra-irmaos-e-comemorou-crime-em-distribuidora/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homicidios-e-policia-militar-prendem-autores-de-chacina/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-prende-segundo-suspeito-de-homicidio-contra-menores/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/crime-barbaro-presas-tres-pessoas-suspeitas-de-matarem-adolescente-de-13-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/adolescente-e-apreendida-por-trafico-de-drogas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/serial-killer-tiago-4-anos-apos-prisao-coordenador-da-forca-tarefa-da-pcgo-fala-sobre-desafios-do-caso/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-esclarece-tentativa-de-homicidio-praticada-contra-adolescente-em-2015/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/gih-valparaiso-apreende-menores-responsaveis-por-atos-infracionais-analogos-aos-crimes-de-homicidio-e-ocultacao-de-cadaver/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menor-e-apreendido-pela-policia-suspeito-de-participar-de-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-elucida-homicidio-que-teve-adolescente-como-mandante/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-integrantes-da-quadrilha-chefiada-por-iterley-martins/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-acusado-de-vingar-morte-do-irmao/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-internacao-em-desfavor-de-menor-infrator/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-mulher-por-maus-tratos-e-carcere-privado-contra-marido-idoso-e-filho-com-necessidades-especiais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-maus-tratos-carcere-privado-e-exploracao-financeira-contra-propria-mae/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-filho-em-flagrante-por-maus-tratos-contra-a-mae-idosa-de-78-anos-vitima-estava-amarrada-e-nao-se-alimentava-ha-dias/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-advogado-pela-segunda-vez-por-crimes-de-maus-tratos-contra-a-propria-mae-idosa/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/139666/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-investiga-mulher-por-maus-tratos-ao-filho-de-5-meses-mandado-de-prisao-por-furto-em-aberto-foi-cumprido/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-prende-mulher-que-se-apropriou-de-casa-e-rendimentos-do-pai-idoso/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-santana-pcgo-apura-denuncias-de-maus-tratos-contra-idosos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-da-pcgo-visita-idoso-para-apurar-denuncia-de-maus-tratos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/filho-e-preso-por-maus-tratos-contra-mae-de-80-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-encontra-internos-em-situacao-de-maus-tratos-em-clinica-de-aparecida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/filho-e-preso-por-manter-pai-idoso-em-carcere-privado-e-situacao-extrema-de-abandono/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-cuidadora-que-maltratava-idosa-e-filha-com-necessidades-especiais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-da-pcgo-prende-filho-por-maus-tratos-a-mae-de-87-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-desamparo-prende-filha-por-explorar-mae-idosa-e-nao-lhe-prestar-socorro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-preventiva-de-homem-que-mutilou-cachorro-apos-dona-do-animal-cobra-lo-divida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-vetus-ii-preso-filho-por-deixar-idosa-passar-fome-e-usar-seu-beneficio-do-inss/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/filho-que-agredia-pai-idoso-e-o-obrigava-a-tomar-calmantes-e-preso-pela-deai/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/delegacia-de-policia-24hs/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-auxilia-filha-a-retirar-pertences-e-prende-mae-com-mandado-de-prisao-por-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-apos-tentar-atropelar-ex-companheira-e-o-atual-parceiro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-mulher-segura-apreensao-de-armas-de-fogo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-que-descumpriu-protetivas-e-divulgou-imagens-intimas-de-ex-mulher/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-falso-conselheiro-tutelar-que-tambem-se-passava-por-medico-por-crime-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-homem-que-perseguiu-ameacou-ex-namorada-e-divulgou-suas-imagens-intimas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-prende-grupo-que-se-passava-por-delegado-para-extorquir-vitimas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-civil-de-goias-apresenta-resultados-recordes-em-2024/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/portaria-no-33-25-rop-rai-ead-ciclo-1-2025/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-reduz-criminalidade-pelo-sexto-ano-consecutivo-com-queda-historica-nos-indices-de-violencia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/seguranca-publica-de-goias-divulga-expressivo-balanco-das-acoes-do-3-trimestre-de-2024/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-arcanjo-gabriel-pcgo-prende-padrasto-investigado-por-estuprar-criancas-e-matar-companheira-ateando-fogo-nela/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-reforca-combate-a-violencia-contra-mulher/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/ssp-divulga-balanco-das-acoes-das-forcas-de-seguranca-do-primeiro-semestre-de-2024/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-indicia-fisiculturista-por-feminicidio-contra-sua-companheira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pmgo-deflagra-operacao-divisas-blindadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/revista-veja-destaca-goias-como-bom-exemplo-de-reducao-de-criminalidade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/integrantes-da-seguranca-de-goias-participam-de-encontro-no-mjsp-em-brasilia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/ssp-faz-balanco-da-operacao-vanguarda/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/mjsp-vai-dobrar-investimento-em-operacao-voltada-ao-combate-da-violencia-de-genero/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/secretaria-de-seguranca-publica-divulga-balanco-da-operacao-shamar/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/acao-integrada-secretaria-de-seguranca-publica-lanca-operacao-shamar/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/secretaria-de-seguranca-publica-faz-balanco-de-acoes-das-forcas-de-seguranca-e-divulga-indicadores-criminais-do-primeiro-semestre-de-2023/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-atria-mais-de-quatro-mil-presos-e-45-mil-vitimas-socorridas-no-brasil/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-alcanca-reducao-historica-em-indicadores-de-crimes-violento/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/homem-preso-por-matar-esposa-e-enteada-e-indiciado-agora-por-importunacao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-e-policia-cientifica-elucidam-morte-de-mae-e-filho-em-incendio-criminoso/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/foram-800-vidas-poupadas-diz-caiado-ao-celebrar-indices-que-apontam-menor-numero-de-homicidios-em-goias-registrado-nos-ultimos-10-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/em-live-com-municipios-policia-apresenta-balanco-da-maior-operacao-de-combate-a-violencia-contra-mulher/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/estuprador-em-serie-investigacao-feita-em-goias-e-reconhecida-internacionalmente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-da-policia-civil-prende-80-acusados-de-violencia-contra-mulheres/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-continua-registrando-queda-em-crimes-violentos-em-2019/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-cientifica-faz-operacao-em-presidios-de-goias-para-ampliar-banco-estadual-de-dna/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/seguranca-publica-de-goias-divulga-balanco-das-acoes-de-2024/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-prende-suspeito-de-crime-sexual-apos-abordagem-a-mulher-em-via-publica/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/dispensa-eletronica-88-2024-homologacao/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-lidera-ranking-nacional-em-analise-de-dna-forense-e-fortalece-combate-a-criminalidade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/caso-amelia-vitoria-pcgo-prende-autor-do-crime-em-menos-de-cinco-dias/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-civil-prende-investigado-por-armazenar-pornografia-infantil-e-filmar-crianca-enquanto-a-estuprava/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-ametista-recolhe-material-genetico-de-condenados-para-elucidar-crimes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/forcas-de-seguranca-de-goias-elucidam-morte-de-adolescente-desaparecida-em-2019/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-civil-de-goias-encontra-corpo-de-menina-desaparecida-e-prende-suspeito-de-matar-e-ocultar-cadaver/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/suspeito-de-estuprar-enteada-de-7-anos-e-preso-apos-crianca-revelar-abuso-a-professora/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/tudo-isso-atrapalha-afirma-secretario-rodney-sobre-grande-numero-de-fake-news-que-circulam-sobre-buscas-por-lazaro-barbosa/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/dgap-realiza-reuniao-com-a-policia-cientifica-para-coletar-dna-de-condenados-por-crimes-hediondos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-civil-conclui-investigacao-e-indicia-homem-por-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/todos-indices-de-criminalidade-tem-queda-na-gestao-do-governador-ronaldo-caiado/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-da-policia-de-goias-e-reconhecida-como-uma-das-17-investigacoes-criminais-mais-importantes-do-mundo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-apresenta-queda-em-todos-os-crimes-de-violencia-em-2019/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/com-mais-de-200-prisoes-efetuadas-policia-civil-se-destaca-em-operacao-de-ambito-nacional/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-registra-queda-em-homicidios-e-outros-crimes-contra-a-vida-durante-o-carnaval/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-apresenta-queda-em-todos-os-indicadores-criminais-em-2018/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-registra-queda-da-criminalidade-pelo-14o-mes-consecutivo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-registra-queda-significativa-no-numero-de-homicidios-e-roubos-neste-ano/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-registra-queda-em-todos-indicadores-criminais-monitorados-pela-ssp-em-2017/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-prende-homem-em-flagrante-por-armazenar-material-de-exploracao-sexual-de-criancas-e-adolescentes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/ssp-go-lanca-operacao-caminhos-seguros-de-combate-a-exploracao-sexual-de-criancas-e-adolescentes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-militar-deflagra-operacao-contra-importunacao-sexual-e-furtos-nos-terminais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/acao-integrada-sptc-e-policia-penal-reforcam-cadastro-de-presos-no-banco-de-dados-das-policias/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policiais-penais-recapturam-foragido-da-justica-do-para/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/governo-de-goias-lanca-operacao-para-combater-infracoes-em-terminais-de-transporte-publico/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-e-pmgo-prendem-em-flagrante-homem-por-assedio-sexual-e-perseguicao-contra-criancas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/lei-veda-visitas-intimas-no-sistema-penitenciario-goiano/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-civil-conclui-investigacao-e-indicia-16-pessoas-envolvidas-em-conflito-de-torcidas-organizadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-prende-investigados-por-homicidio-e-tentativa-de-homicidio-apos-emboscada-entre-torcidas-organizadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/homem-que-ateou-fogo-em-apartamento-da-ex-e-tentou-matar-os-dois-filhos-adolescentes-queimados-e-preso-pela-pcgo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-prende-advogado-pela-segunda-vez-por-crimes-de-maus-tratos-contra-a-propria-mae-idosa/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-da-pcgo-encontra-internos-em-situacao-de-maus-tratos-em-clinica-de-aparecida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/portaria-n-0582-21-popseg-ead-ciclo-03-2021/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/portaria_n__0237_21___popseg___ead___ciclo_02_2021/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/portaria-n-0096-21-popseg-ead-ciclo-01-2021/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-delegado-fake-policia-civil-cumpre-mandados-contra-organizacao-criminosa-investigada-por-crimes-de-estelionato-e-extorsao/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/operacao-shamar-combate-a-violencia-domestica-e-familiar-contra-a-mulher-e-ao-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/rotam-prende-autor-de-feminicidio-e-tentativa-de-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/27o-bpm-prende-autor-de-tentativa-de-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/operacao-mancha-criminal-2-bpmchoque-desmantela-caso-de-feminicidio-e-efetua-prisao-em-flagrante/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/revista-veja-destaca-goias-como-bom-exemplo-de-reducao-de-criminalidade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/reducao-dos-indices-de-criminalidade-de-goias/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/19-bpm-prende-autor-de-tentativa-de-feminicidio-com-arma-de-fogo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/pmgo-2o-crpm-deflagra-a-operacao-parabellum-i/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/apos-tentar-matar-companheira-a-facadas-foragido-da-justica-e-preso-por-equipes-do-27o-bpm-2o-crpm/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/operacao-noctua-oculos-16-coipm-da-pmgo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/goias-alcanca-reducao-historica-em-indicadores-de-crimes-violentos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/bpmrural-prende-homem-por-tentativa-de-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/8o-bpm-prende-suspeito-de-dupla-tentativa-de-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/cpe-41-bpm-no-combate-ao-crime-de-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/batalhao-rural-no-combate-ao-sequestro-e-tentativa-de-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/batalhao-maria-da-penha-localiza-e-prende-autor-de-tentativa-de-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/rotam-prende-suspeito-de-matar-mulher-a-facadas-por-ciumes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/batalhao-maria-da-penha-no-combate-ao-crime-de-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/bpmchoque-prende-autor-de-feminicidio-e-de-tentativa-de-latrocinio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/rotam-prende-autor-de-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/pmgo-prende-em-flagrante-autor-de-feminicidio-no-jardim-inga/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/18o-bpm-no-combate-ao-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/rotam-apreende-adolescente-que-matou-homem-a-facadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/cpe-aparecida-no-combate-ao-crime-de-parricidio-homicidio-do-pai-praticado-pelo-filho/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/maustratosnao-23a-cipm-prende-mulher-que-matou-um-gato/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/2o-bpmchoque-apreende-armas-de-fogo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/41obpm-02ocrpm-recaptura-05-foragidos-da-justica-em-menos-de-12-horas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/batalhao-rural-recaptura-foragido-da-justica-pelo-crime-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/bpmrural-no-combate-aos-crimes-contra-a-dignidade-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/pm-age-rapido-e-impede-estupro-de-crianca-de-8-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/71339-2/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/6o-bpm-prende-homem-por-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/41o-bpm-prende-foragido-da-justica-pelo-crime-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/46-bpm-e-bpmrural-prendem-autor-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/batalhao-rural-captura-sete-foragidos-da-justica-na-zona-rural-de-goias/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/bpmfaz-recaptura-foragida-da-justica-do-estado-do-para/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/41obpm-prende-em-flagrante-suspeito-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/38o-bpm-no-combate-ao-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/batalhao-rural-e-44-batalhao-prendem-autores-de-violencia-domestica-e-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/bpmrural-recaptura-dois-foragidos-da-justica-na-zona-rural/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/cpe-aparecida-no-combate-aos-crimes-de-estupro-e-roubo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/rotam-no-combate-a-evasao-carceraria/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/8o-bpm-prende-individuo-por-tentativa-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/46o-bpm-prende-suspeito-de-estupro-com-mandado-de-prisao-em-aberto/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/__trashed-5/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/ex-companheiro-acusado-de-estupro-e-preso-por-descumprir-medida-protetiva/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/policiais-militares-do-30-bpm-apreende-arma-de-fogo-durante-abordagem/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/pm-prende-autor-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/2a-cipm-resgata-vitima-de-roubo-estupro-e-prende-autor-no-jardim-inga/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/pmgo-deflagra-operacao-seguranca-em-acao-xviii-1o-crpm/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/18o-batalhao-prende-suspeito-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/policia-militar-realiza-operacao-18o-crpm-mais-seguro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/13o-bpm-apresenta-reducao-significativa-dos-indices-de-criminalidade-na-regiao-noroeste-da-capital/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/estagio-de-prevencao-de-exploracao-abuso-e-assedio-sexual-pseah-pm-igpm-ch-mis-paz-av-igpm-coter/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/dia-nacional-de-combate-ao-abuso-e-exploracao-sexual-de-criancas-e-adolescentes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/operacao-integrada-parador-27/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/bpmrural-no-combate-aos-crimes-sexuais-contra-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/pmgo-prende-individuo-que-tirava-fotos-escondidas-de-mulheres-dentro-de-banheiro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/bpm-terminal-prende-idoso-por-importunacao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/4-bpm-prende-suspeito-de-receptacao-e-importunacao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/24-bpm-combate-aos-crimes-de-ameaca-perseguicao-e-importunacao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/desacato-em-audiencia-resulta-em-prisao-em-flagrante-no-tjgo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/importunacao-sexual-individuo-e-preso-em-onibus-do-transporte-coletivo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/pmgo-prende-autor-de-tentativa-de-homicidio-ocorrido-no-residencial-elza-fronza/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/8o-crpm-e-19a-cipm-cpe-e-pcgo-prendem-padastro-por-homicidio-de-crianca-de-02-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/12a-cipm-preso-autor-de-triplo-homicidio-praticado-em-gurinhata-mg/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/policia-militar-no-combate-a-violencia-infantil/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/a-policia-militar-de-goias-alerta-o-uso-de-linha-com-cerol-ou-outro-material-cortante-ao-empinar-pipa-e-crime/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/policial-militar-de-folga-prende-estuprador-e-autor-de-roubo-no-jardim-inga/"
+   "nivel": "erro",
+   "site": "PMGO",
+   "termo": "DPCA",
+   "msg": "falha de rede: HTTPSConnectionPool(host='goias.gov.br', port=443): Max retries exceeded with url: /policiamilitar/wp-json/wp/v2/posts?search=DPCA&after=2015-01-01T00%3A00%3A00&orderby=date&order=desc&per_page=100&page=1&_fields=id%2Cdate%2Cmodified%2Clink%2Ctitle%2Ccontent (Caused by ConnectTimeoutError(<HTTPSConnection(host='goias.gov.br', port=443) at 0x7f0de65e7710>, 'Connection to goias.gov.br timed out. (connect timeout=60)'))"
   }
  ]
 }
