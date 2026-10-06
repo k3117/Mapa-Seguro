@@ -7,7 +7,7 @@
   "uf": "GO",
   "codigo_ibge": "52"
  },
- "gerado_em": "2026-10-05",
+ "gerado_em": "2026-10-06",
  "indicadores": {
   "feminicidio": {
    "nome_oficial": "FEMINICÍDIO",
@@ -31,7 +31,7 @@
    "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2018.pdf",
    "pdf_sha256": "a0c04519c44e5e5674cc57290fbae96cd27649c3f459a7118869763a4e55e551",
    "data_consulta_fonte": "2026-02-02",
-   "data_coleta": "2026-10-05",
+   "data_coleta": "2026-10-06",
    "metodo_extracao": "pdfplumber",
    "conferencia_automatica": "ok",
    "valores": {
@@ -75,7 +75,7 @@
    "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2019.pdf",
    "pdf_sha256": "3746d5d036ff7a035c22230a6a6c20f7204e09d608105bd53eb262ba5ea5fd8e",
    "data_consulta_fonte": "2026-02-02",
-   "data_coleta": "2026-10-05",
+   "data_coleta": "2026-10-06",
    "metodo_extracao": "pdfplumber",
    "conferencia_automatica": "ok",
    "valores": {
@@ -119,7 +119,7 @@
    "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2020.pdf",
    "pdf_sha256": "d77490ed832d855c56ec1e47f5d6528d3d143f0fb83641572db7822c18247c3f",
    "data_consulta_fonte": "2026-02-02",
-   "data_coleta": "2026-10-05",
+   "data_coleta": "2026-10-06",
    "metodo_extracao": "pdfplumber",
    "conferencia_automatica": "ok",
    "valores": {
@@ -163,7 +163,7 @@
    "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2021.pdf",
    "pdf_sha256": "3cf265d0afcf62c7c8de459d24170a4b912314ed19cad789bf06282c72acf861",
    "data_consulta_fonte": "2026-02-02",
-   "data_coleta": "2026-10-05",
+   "data_coleta": "2026-10-06",
    "metodo_extracao": "pdfplumber",
    "conferencia_automatica": "ok",
    "valores": {
@@ -207,7 +207,7 @@
    "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2022.pdf",
    "pdf_sha256": "aa75f801cf8bd5b1d0186e54400bdf5f53e4cc473cf475b10c2bd9b6fc443f56",
    "data_consulta_fonte": "2026-02-02",
-   "data_coleta": "2026-10-05",
+   "data_coleta": "2026-10-06",
    "metodo_extracao": "pdfplumber",
    "conferencia_automatica": "ok",
    "valores": {
@@ -251,7 +251,7 @@
    "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2023.pdf",
    "pdf_sha256": "a44a07ff37a1f7177ab421517829b3074e9b6c6a063beae8f7ab4003fd3354be",
    "data_consulta_fonte": "2026-02-02",
-   "data_coleta": "2026-10-05",
+   "data_coleta": "2026-10-06",
    "metodo_extracao": "pdfplumber",
    "conferencia_automatica": "ok",
    "valores": {
@@ -295,7 +295,7 @@
    "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2024.pdf",
    "pdf_sha256": "2b583fe30177661895ced7412ed8858f734d08ce5fe5be29e8574b7bc34f5771",
    "data_consulta_fonte": "2026-02-02",
-   "data_coleta": "2026-10-05",
+   "data_coleta": "2026-10-06",
    "metodo_extracao": "pdfplumber",
    "conferencia_automatica": "ok",
    "valores": {
@@ -339,7 +339,7 @@
    "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/04/Estatisticas-de-2025.pdf",
    "pdf_sha256": "4607d6519a3581f7a58d076bae653256677ec680c18c9cf8ed552c90f6ce3aa0",
    "data_consulta_fonte": "2026-04-10",
-   "data_coleta": "2026-10-05",
+   "data_coleta": "2026-10-06",
    "metodo_extracao": "pdfplumber",
    "conferencia_automatica": "ok",
    "valores": {
