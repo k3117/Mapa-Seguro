@@ -1,6 +1,6 @@
 {
- "executado_em": "2026-10-15T14:27:27+00:00",
- "posts_analisados": 6696,
+ "executado_em": "2026-10-16T14:15:53+00:00",
+ "posts_analisados": 6746,
  "registros": 2676,
  "eventos": [
   {
@@ -1149,6 +1149,38 @@
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/especializadas-da-5a-drpc-realizam-prisoes-e-apreensoes-no-entorno-do-df/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-e-pm-apresentam-fatos-do-caso-ana-clara-em-coletiva/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/traficante-e-preso-ao-comercializar-drogas-na-presenca-de-crianca/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/prosseguem-investigacoes-sobre-mae-homicida/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/casal-suspeito-de-morte-de-crianca-e-preso-e-apresentado-pela-dih/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/delegacias-especializadas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-de-aparecida-prende-suspeito-de-estuprar-a-propria-sobrinha/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-pms-serao-indiciados-por-disparos-que-atingiram-crianca-no-setor-bueno/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigados-por-homicidio-e-tentativa-de-homicidio-apos-emboscada-entre-torcidas-organizadas/"
   },
   {
@@ -1329,22 +1361,6 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/traficante-e-preso-ao-comercializar-drogas-na-presenca-de-crianca/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/delegacias-especializadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-de-aparecida-prende-suspeito-de-estuprar-a-propria-sobrinha/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-pms-serao-indiciados-por-disparos-que-atingiram-crianca-no-setor-bueno/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-internacao-em-desfavor-de-menor-infrator/"
   },
   {
@@ -1418,22 +1434,6 @@
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/filho-que-agredia-pai-idoso-e-o-obrigava-a-tomar-calmantes-e-preso-pela-deai/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/especializadas-da-5a-drpc-realizam-prisoes-e-apreensoes-no-entorno-do-df/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-e-pm-apresentam-fatos-do-caso-ana-clara-em-coletiva/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/prosseguem-investigacoes-sobre-mae-homicida/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/casal-suspeito-de-morte-de-crianca-e-preso-e-apresentado-pela-dih/"
   },
   {
    "nivel": "info",
