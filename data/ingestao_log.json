@@ -1,5 +1,5 @@
 {
- "executado_em": "2026-10-21T14:47:42.857088+00:00",
+ "executado_em": "2026-10-22T15:00:28.763119+00:00",
  "eventos": [
   {
    "nivel": "info",
@@ -74,8 +74,8 @@
    }
   },
   {
-   "nivel": "info",
-   "msg": "malha IBGE de Goiás atualizada"
+   "nivel": "aviso",
+   "msg": "malha IBGE não atualizada: HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v3/malhas/estados/52?formato=application/vnd.geo+json&qualidade=minima (Caused by NewConnectionError(\"HTTPSConnection(host='servicodados.ibge.gov.br', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
   }
  ]
 }
