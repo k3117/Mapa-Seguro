@@ -1,8 +1,40 @@
 {
- "executado_em": "2026-10-25T13:57:25+00:00",
- "posts_analisados": 6747,
+ "executado_em": "2026-10-26T16:22:53+00:00",
+ "posts_analisados": 6696,
  "registros": 2676,
  "eventos": [
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-causou-incendio-respondera-por-tentativa-de-homicidio-contra-mulher-e-filhos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deam-de-aparecida-conclui-investigacoes-sobre-caso-de-atropelamento/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-respeito-deam-aparecida-prende-homem-que-tentou-matar-ex-namorada-apos-fim-do-relacionamento/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/gih-aparecida-prende-terceiro-envolvido-em-homicidio-contra-adolescente-de-16-anos-corpo-foi-carbonizado/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-ao-matar-mae-e-tentar-matar-a-irma-autor-alegou-que-uma-voz-determinou-que-ele-praticasse-o-crime/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-prisao-contra-homem-que-tentou-matar-ex-companheira-e-seu-sobrinho/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-mulher-que-ateou-fogo-em-companheira/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-matou-companheira-em-planatina-e-preso/"
+  },
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-suspeito-de-tentativa-de-feminicidio/"
@@ -693,27 +725,7 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-ceos-dpca-prende-suspeito-por-roubo-e-tentativa-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/direitos-humanos-sem-igualdade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-prende-foragido-das-justicas-da-bahia-e-do-df-com-tres-mandados-de-prisoes-em-aberto/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-prisao-contra-idoso-acusado-de-estupro/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deam-prende-morador-de-rua-suspeito-por-estupro-e-tentativa-de-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-apresenta-suspeito-de-matar-mulher-e-abandonar-o-corpo-na-br-060/"
   },
   {
    "nivel": "info",
@@ -725,23 +737,7 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-homem-suspeito-de-estuprar-adolescente-de-12-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-estuprou-adolescente-no-parque-das-laranjeiras-e-preso-pela-dpca/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/escriva-da-dpca-apresenta-tese-de-doutorado-em-psicologia-na-puc-go/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-conclui-inquerito-que-apurava-enforcamento-gravado-dentro-de-presidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-homem-que-estuprou-e-engravidou-menor-deficiente/"
   },
   {
    "nivel": "info",
@@ -749,15 +745,7 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/professor-de-danca-e-preso-suspeito-de-estuprar-aluno-de-13-anos/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/casal-e-preso-em-sao-luis-suspeito-de-estupro-de-vulneravel/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-roubou-menor-de-12-anos-com-faca-e-preso-no-jardim-guanabara/"
   },
   {
    "nivel": "info",
@@ -765,35 +753,11 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/denarc-divisao-de-capturas-cumpriu-344-mandados-de-prisao-em-8-meses/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/em-sao-luis-pai-e-preso-por-abusar-da-propria-filha/"
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/cultura-do-estupro/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/foragido-que-vivia-em-praca-de-goiania-e-preso-por-agentes-da-denarc/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/cartorio-recem-criado-na-denarc-realiza-40-prisoes-em-marco/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/sexo-com-cadaver-e-crime/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/subjetividade-objetivada-falacias-estatisticas-na-apresentacao-dos-resultados-da-analise-criminal/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/idoso-e-preso-suspeito-de-estuprar-crianca-de-4-anos/"
   },
   {
    "nivel": "info",
@@ -857,11 +821,19 @@
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-homem-que-estuprou-e-engravidou-menor-deficiente/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deic-apresenta-caso-do-menino-antonyo-a-imprensa/"
   },
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/agenda-do-delegado-geral-e-do-delegado-geral-adjunto-313/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/cultura-do-estupro/"
   },
   {
    "nivel": "info",
@@ -1149,11 +1121,27 @@
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-ceos-dpca-prende-suspeito-por-roubo-e-tentativa-de-estupro/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-homem-suspeito-de-estuprar-adolescente-de-12-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-estuprou-adolescente-no-parque-das-laranjeiras-e-preso-pela-dpca/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/especializadas-da-5a-drpc-realizam-prisoes-e-apreensoes-no-entorno-do-df/"
   },
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-e-pm-apresentam-fatos-do-caso-ana-clara-em-coletiva/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/professor-de-danca-e-preso-suspeito-de-estuprar-aluno-de-13-anos/"
   },
   {
    "nivel": "info",
@@ -1178,6 +1166,10 @@
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-pms-serao-indiciados-por-disparos-que-atingiram-crianca-no-setor-bueno/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/idoso-e-preso-suspeito-de-estuprar-crianca-de-4-anos/"
   },
   {
    "nivel": "info",
@@ -1361,6 +1353,10 @@
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-roubou-menor-de-12-anos-com-faca-e-preso-no-jardim-guanabara/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-internacao-em-desfavor-de-menor-infrator/"
   },
   {
@@ -1462,6 +1458,10 @@
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-homem-que-perseguiu-ameacou-ex-namorada-e-divulgou-suas-imagens-intimas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deam-prende-morador-de-rua-suspeito-por-estupro-e-tentativa-de-homicidio/"
   },
   {
    "nivel": "info",
