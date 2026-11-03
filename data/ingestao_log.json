@@ -1,5 +1,5 @@
 {
- "executado_em": "2026-11-02T19:40:30.262050+00:00",
+ "executado_em": "2026-11-03T17:10:23.049755+00:00",
  "eventos": [
   {
    "nivel": "info",
@@ -75,7 +75,7 @@
   },
   {
    "nivel": "aviso",
-   "msg": "malha IBGE não atualizada: HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v3/malhas/estados/52?formato=application/vnd.geo+json&qualidade=minima (Caused by ConnectTimeoutError(<HTTPSConnection(host='servicodados.ibge.gov.br', port=443) at 0x7e94fe89b980>, 'Connection to servicodados.ibge.gov.br timed out. (connect timeout=60)'))"
+   "msg": "malha IBGE não atualizada: HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v3/malhas/estados/52?formato=application/vnd.geo+json&qualidade=minima (Caused by ConnectTimeoutError(<HTTPSConnection(host='servicodados.ibge.gov.br', port=443) at 0x781650d3be30>, 'Connection to servicodados.ibge.gov.br timed out. (connect timeout=60)'))"
   }
  ]
 }
