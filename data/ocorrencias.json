@@ -1,6 +1,6 @@
 {
  "_comentario": "Gerado por scripts/coletar_ocorrencias.py a partir de notas oficiais. Nenhum texto, nome ou endereço é armazenado.",
- "gerado_em": "2026-11-02T19:39:19+00:00",
+ "gerado_em": "2026-11-04T17:24:24+00:00",
  "desde": "2015-01-01",
  "fontes_consultadas": [
   {
@@ -19,8 +19,43 @@
    "api": "https://goias.gov.br/policiamilitar/wp-json/wp/v2/posts"
   }
  ],
- "total": 2676,
+ "total": 2677,
  "ocorrencias": [
+  {
+   "id": "pcgo-264043",
+   "categoria": "feminicidio",
+   "categorias_secundarias": [],
+   "publico": "mulheres",
+   "municipio": "Niquelândia",
+   "codigo_ibge": "5214606",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -14.4662,
+   "lon": -48.4599,
+   "data_publicacao": "2026-11-03",
+   "data_fato": "2026-10-31",
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão preventiva"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-cumpre-em-niquelandia-prisao-preventiva-de-investigado-por-feminicidio/",
+     "data_publicacao": "2026-11-03",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "classificador": 6,
+   "extracao": "conteudo",
+   "coletado_em": "2026-11-04",
+   "modificado_fonte": "2026-11-03T17:22:40",
+   "possivel_duplicidade": [],
+   "reportagens": [],
+   "destaque": false
+  },
   {
    "id": "pcgo-261070",
    "categoria": "violencia_sexual",
