@@ -1,81 +1,49 @@
 {
- "executado_em": "2026-11-12T17:48:23.343636+00:00",
+ "executado_em": "2026-11-13T17:24:49.350488+00:00",
  "eventos": [
   {
-   "nivel": "info",
+   "nivel": "erro",
    "ano": 2025,
-   "msg": "conferido e atualizado",
-   "via": {
-    "feminicidio": "tabela",
-    "estupro": "tabela"
-   }
+   "msg": "download falhou: 500 Server Error: Internal Server Error for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/04/Estatisticas-de-2025.pdf"
   },
   {
-   "nivel": "info",
+   "nivel": "erro",
    "ano": 2024,
-   "msg": "conferido e atualizado",
-   "via": {
-    "feminicidio": "tabela",
-    "estupro": "tabela"
-   }
+   "msg": "download falhou: 404 Client Error: Not Found for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2024.pdf"
   },
   {
-   "nivel": "info",
+   "nivel": "erro",
    "ano": 2023,
-   "msg": "conferido e atualizado",
-   "via": {
-    "feminicidio": "tabela",
-    "estupro": "tabela"
-   }
+   "msg": "download falhou: 404 Client Error: Not Found for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2023.pdf"
   },
   {
-   "nivel": "info",
+   "nivel": "erro",
    "ano": 2022,
-   "msg": "conferido e atualizado",
-   "via": {
-    "feminicidio": "tabela",
-    "estupro": "tabela"
-   }
+   "msg": "download falhou: 404 Client Error: Not Found for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2022.pdf"
   },
   {
-   "nivel": "info",
+   "nivel": "erro",
    "ano": 2021,
-   "msg": "conferido e atualizado",
-   "via": {
-    "feminicidio": "tabela",
-    "estupro": "tabela"
-   }
+   "msg": "download falhou: 404 Client Error: Not Found for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2021.pdf"
   },
   {
-   "nivel": "info",
+   "nivel": "erro",
    "ano": 2020,
-   "msg": "conferido e atualizado",
-   "via": {
-    "feminicidio": "tabela",
-    "estupro": "tabela"
-   }
+   "msg": "download falhou: 404 Client Error: Not Found for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2020.pdf"
   },
   {
-   "nivel": "info",
+   "nivel": "erro",
    "ano": 2019,
-   "msg": "conferido e atualizado",
-   "via": {
-    "feminicidio": "tabela",
-    "estupro": "tabela"
-   }
+   "msg": "download falhou: 404 Client Error: Not Found for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2019.pdf"
   },
   {
-   "nivel": "info",
+   "nivel": "erro",
    "ano": 2018,
-   "msg": "conferido e atualizado",
-   "via": {
-    "feminicidio": "tabela",
-    "estupro": "tabela"
-   }
+   "msg": "download falhou: 404 Client Error: Not Found for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2018.pdf"
   },
   {
    "nivel": "aviso",
-   "msg": "malha IBGE não atualizada: HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v3/malhas/estados/52?formato=application/vnd.geo+json&qualidade=minima (Caused by ConnectTimeoutError(<HTTPSConnection(host='servicodados.ibge.gov.br', port=443) at 0x70c9ae9fbec0>, 'Connection to servicodados.ibge.gov.br timed out. (connect timeout=60)'))"
+   "msg": "malha IBGE não atualizada: HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v3/malhas/estados/52?formato=application/vnd.geo+json&qualidade=minima (Caused by ConnectTimeoutError(<HTTPSConnection(host='servicodados.ibge.gov.br', port=443) at 0x79716b41c9e0>, 'Connection to servicodados.ibge.gov.br timed out. (connect timeout=60)'))"
   }
  ]
 }
