@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-13T17:23:40+00:00",
+ "gerado_em": "2026-11-15T16:33:08+00:00",
  "registros": [
   {
    "id": "pcgo-100006",
@@ -93479,8 +93479,8 @@
    ],
    "classificador": 6,
    "extracao": "conteudo",
-   "coletado_em": "2026-10-05",
-   "modificado_fonte": "2024-03-01T18:00:26"
+   "coletado_em": "2026-11-15",
+   "modificado_fonte": "2026-11-13T15:52:14"
   },
   {
    "id": "sspgo-96414",
@@ -93514,8 +93514,8 @@
    ],
    "classificador": 6,
    "extracao": "conteudo",
-   "coletado_em": "2026-10-05",
-   "modificado_fonte": "2024-03-13T18:16:42"
+   "coletado_em": "2026-11-15",
+   "modificado_fonte": "2026-11-13T15:52:26"
   },
   {
    "id": "sspgo-96542",
@@ -93549,8 +93549,8 @@
    ],
    "classificador": 6,
    "extracao": "conteudo",
-   "coletado_em": "2026-10-05",
-   "modificado_fonte": "2024-03-15T15:32:53"
+   "coletado_em": "2026-11-15",
+   "modificado_fonte": "2026-11-13T15:52:30"
   },
   {
    "id": "sspgo-96550",
@@ -93581,8 +93581,8 @@
    ],
    "classificador": 6,
    "extracao": "conteudo",
-   "coletado_em": "2026-10-05",
-   "modificado_fonte": "2024-03-15T17:02:06"
+   "coletado_em": "2026-11-15",
+   "modificado_fonte": "2026-11-13T15:52:30"
   },
   {
    "id": "sspgo-96763",
