@@ -1,10 +1,14 @@
 {
- "executado_em": "2026-11-15T16:34:16.839703+00:00",
+ "executado_em": "2026-11-16T19:54:03.882281+00:00",
  "eventos": [
   {
-   "nivel": "erro",
+   "nivel": "info",
    "ano": 2025,
-   "msg": "download falhou: 500 Server Error: Internal Server Error for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/04/Estatisticas-de-2025.pdf"
+   "msg": "conferido e atualizado",
+   "via": {
+    "feminicidio": "tabela",
+    "estupro": "tabela"
+   }
   },
   {
    "nivel": "erro",
@@ -42,8 +46,8 @@
    "msg": "download falhou: 404 Client Error: Not Found for url: https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/02/estatisticas_2018.pdf"
   },
   {
-   "nivel": "aviso",
-   "msg": "malha IBGE não atualizada: HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v3/malhas/estados/52?formato=application/vnd.geo+json&qualidade=minima (Caused by ConnectTimeoutError(<HTTPSConnection(host='servicodados.ibge.gov.br', port=443) at 0x7c349fc20800>, 'Connection to servicodados.ibge.gov.br timed out. (connect timeout=60)'))"
+   "nivel": "info",
+   "msg": "malha IBGE de Goiás atualizada"
   }
  ]
 }

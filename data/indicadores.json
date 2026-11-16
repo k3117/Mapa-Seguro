@@ -7,7 +7,7 @@
   "uf": "GO",
   "codigo_ibge": "52"
  },
- "gerado_em": "2026-11-15",
+ "gerado_em": "2026-11-16",
  "indicadores": {
   "feminicidio": {
    "nome_oficial": "FEMINICÍDIO",
@@ -339,7 +339,7 @@
    "pdf_url": "https://goias.gov.br/seguranca/wp-content/uploads/sites/56/2026/04/Estatisticas-de-2025.pdf",
    "pdf_sha256": "4607d6519a3581f7a58d076bae653256677ec680c18c9cf8ed552c90f6ce3aa0",
    "data_consulta_fonte": "2026-04-10",
-   "data_coleta": "2026-11-12",
+   "data_coleta": "2026-11-16",
    "metodo_extracao": "pdfplumber",
    "conferencia_automatica": "ok",
    "valores": {
