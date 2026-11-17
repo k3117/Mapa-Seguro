@@ -1,6 +1,6 @@
 {
  "_comentario": "Gerado por scripts/coletar_ocorrencias.py a partir de notas oficiais. Nenhum texto, nome ou endereço é armazenado.",
- "gerado_em": "2026-11-16T19:53:54+00:00",
+ "gerado_em": "2026-11-17T18:46:04+00:00",
  "desde": "2015-01-01",
  "fontes_consultadas": [
   {
@@ -24653,8 +24653,8 @@
    ],
    "classificador": 6,
    "extracao": "conteudo",
-   "coletado_em": "2026-11-15",
-   "modificado_fonte": "2026-11-13T15:52:30",
+   "coletado_em": "2026-11-17",
+   "modificado_fonte": "2026-11-17T15:21:04",
    "possivel_duplicidade": [],
    "reportagens": [],
    "destaque": false
@@ -24763,8 +24763,8 @@
    ],
    "classificador": 6,
    "extracao": "conteudo",
-   "coletado_em": "2026-11-15",
-   "modificado_fonte": "2026-11-13T15:52:26",
+   "coletado_em": "2026-11-17",
+   "modificado_fonte": "2026-11-17T15:20:58",
    "possivel_duplicidade": [],
    "reportagens": [],
    "destaque": false
@@ -25494,8 +25494,8 @@
    ],
    "classificador": 6,
    "extracao": "conteudo",
-   "coletado_em": "2026-11-15",
-   "modificado_fonte": "2026-11-13T15:52:14",
+   "coletado_em": "2026-11-17",
+   "modificado_fonte": "2026-11-17T15:20:42",
    "possivel_duplicidade": [],
    "reportagens": [],
    "destaque": false
