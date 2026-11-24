@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-23T21:31:20+00:00",
+ "gerado_em": "2026-11-24T20:22:47+00:00",
  "registros": [
   {
    "id": "pcgo-100006",
@@ -43327,6 +43327,41 @@
    "extracao": "conteudo",
    "coletado_em": "2026-11-04",
    "modificado_fonte": "2026-11-03T17:22:40"
+  },
+  {
+   "id": "pcgo-264285",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [
+    "violencia_sexual",
+    "ameaca"
+   ],
+   "publico": "criancas_adolescentes",
+   "municipio": "Luziânia",
+   "codigo_ibge": "5212501",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.253,
+   "lon": -47.95,
+   "data_publicacao": "2026-11-24",
+   "data_fato": "2026-11-07",
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão preventiva"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-homem-por-estupro-contra-adolescente-e-por-ameacar-testemunha-em-luziania/",
+     "data_publicacao": "2026-11-24",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "classificador": 6,
+   "extracao": "conteudo",
+   "coletado_em": "2026-11-24",
+   "modificado_fonte": "2026-11-24T16:03:46"
   },
   {
    "id": "pcgo-32535",
