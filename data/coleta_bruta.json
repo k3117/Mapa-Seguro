@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-26T19:06:28+00:00",
+ "gerado_em": "2026-11-27T19:30:14+00:00",
  "registros": [
   {
    "id": "pcgo-100006",
@@ -43362,6 +43362,40 @@
    "extracao": "conteudo",
    "coletado_em": "2026-11-24",
    "modificado_fonte": "2026-11-24T16:03:46"
+  },
+  {
+   "id": "pcgo-264328",
+   "categoria": "violencia_sexual_crianca",
+   "categorias_secundarias": [
+    "violencia_sexual"
+   ],
+   "publico": "criancas_adolescentes",
+   "municipio": "Anápolis",
+   "codigo_ibge": "5201108",
+   "bairro": null,
+   "precisao_local": "municipio",
+   "lat": -16.3281,
+   "lon": -48.953,
+   "data_publicacao": "2026-11-27",
+   "data_fato": null,
+   "status_juridico": "investigacao",
+   "medidas": [
+    "prisão em flagrante"
+   ],
+   "fonte_status": "oficial_confirmada",
+   "fontes": [
+    {
+     "orgao": "Polícia Civil do Estado de Goiás",
+     "sigla": "PCGO",
+     "url": "https://goias.gov.br/policiacivil/pcgo-prende-homem-por-violencia-sexual-contra-a-propria-filha-em-anapolis/",
+     "data_publicacao": "2026-11-27",
+     "tipo": "nota_oficial"
+    }
+   ],
+   "classificador": 6,
+   "extracao": "conteudo",
+   "coletado_em": "2026-11-27",
+   "modificado_fonte": "2026-11-27T15:39:51"
   },
   {
    "id": "pcgo-32535",

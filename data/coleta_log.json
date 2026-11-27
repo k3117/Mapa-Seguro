@@ -1,165 +1,19 @@
 {
- "executado_em": "2026-11-26T19:06:28+00:00",
- "posts_analisados": 3798,
- "registros": 2678,
+ "executado_em": "2026-11-27T19:30:14+00:00",
+ "posts_analisados": 6764,
+ "registros": 2679,
  "eventos": [
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "feminicídio",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "matou a ex",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "estupro de vulnerável",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "abuso sexual",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "exploração sexual",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "pornografia infantil",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "importunação sexual",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "criança",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "adolescente",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "maus-tratos",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "homicídio criança",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "Deam",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PCGO",
-   "termo": "DPCA",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-suspeito-de-tentativa-de-feminicidio-perseguicao-e-ameaca-cometidos-contra-sua-ex-companheira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-tentar-matar-cunhada-a-facadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-desmantela-esquema-de-fraude-e-extorsao-em-redes-sociais/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deam-aparecida-finalizara-inquerito-sobre-fisiculturista-suspeito-de-feminicidio-contra-companheira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-tentar-matar-companheira-apos-ataque-de-ciumes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-prende-suspeito-de-tentativa-de-feminicidio-ocorrido-em-sp/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-em-flagrante-apos-atirar-na-mulher-que-lhe-pediu-dinheiro-para-comprar-fraldas-para-o-filho/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/tentativa-de-feminicidio-seguida-de-morte-do-autor-e-investigada-pela-pcgo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-tentativa-de-feminicidio-contra-ex-companheira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/mandado-e-cumprido-em-uti-de-hospital-e-homem-e-preso-por-tentativa-de-feminicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-causou-incendio-respondera-por-tentativa-de-homicidio-contra-mulher-e-filhos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deam-de-aparecida-conclui-investigacoes-sobre-caso-de-atropelamento/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-respeito-deam-aparecida-prende-homem-que-tentou-matar-ex-namorada-apos-fim-do-relacionamento/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-ao-matar-mae-e-tentar-matar-a-irma-autor-alegou-que-uma-voz-determinou-que-ele-praticasse-o-crime/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-prisao-contra-homem-que-tentou-matar-ex-companheira-e-seu-sobrinho/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-mulher-que-ateou-fogo-em-companheira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-matou-companheira-em-planatina-e-preso/"
-  },
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-suspeito-de-tentativa-de-feminicidio/"
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/sogro-envolvido-em-morte-de-genro-e-preso/"
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-suspeito-de-feminicidio-e-maus-tratos-a-companheira-idosa/"
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-preso-por-matar-esposa-e-enteada-e-indiciado-agora-por-importunacao-sexual/"
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/sogro-envolvido-em-morte-de-genro-e-preso/"
   },
   {
    "nivel": "info",
@@ -176,6 +30,34 @@
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-prende-condenado-que-matou-a-ex-mulher-e-deixou-a-amiga-dela-paraplegica/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-apreende-adolescente-que-matou-homem-apos-caca/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/gih-prende-filho-que-matou-o-proprio-pai/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-que-matou-idosa-para-roubar-bolsa-e-preso-pela-policia-civil/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-apresenta-dupla-que-matou-adolescente-rival-no-trafico/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/caso-oscar-policia-civil-apresenta-resultado-de-investigacao-sobre-morte-de-policial/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-homem-que-matou-mae-e-filho-por-divida-de-drogas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/serial-killer-tiago-henrique-gomes-e-indiciado-pela-policia-civil-por-morte-de-prostituta-em-frente-a-motel/"
   },
   {
    "nivel": "info",
@@ -323,10 +205,6 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-arcanjo-gabriel-pcgo-prende-padrasto-investigado-por-estuprar-criancas-e-matar-companheira-ateando-fogo-nela/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-prisao-do-rj-contra-cirurgiao-plastico-por-crimes-contra-ex-companheira/"
   },
   {
@@ -399,15 +277,7 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/xadrez-121-dupla-e-presa-em-flagrante-por-subtrair-semijoias-de-comercio/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-padrasto-por-estupro-contra-enteada-de-10-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/xadrez-121-pcgo-deflagra-operacao-para-cumprimento-de-mandados-de-prisoes-e-flagrantes/"
   },
   {
    "nivel": "info",
@@ -543,10 +413,6 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/balanco-pcgo-instaura-quase-2-mil-inqueritos-durante-operacao-atria/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-atria-localiza-adolescente-e-prende-autor-de-estupro-de-vulneravel/"
   },
   {
@@ -676,10 +542,6 @@
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/grupo-especializado-no-atendimento-a-vitima-de-crimes-raciais-e-delitos-de-intolerancia-geacri/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/gih-aparecida-prende-terceiro-envolvido-em-homicidio-contra-adolescente-de-16-anos-corpo-foi-carbonizado/"
   },
   {
    "nivel": "info",
@@ -967,11 +829,39 @@
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/mulher-e-presa-suspeita-de-abusar-sexualmente-da-propria-sobrinha-menor-de-idade/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-luz-na-infancia-8-ciberneticos-cumpre-mandados-de-buscas-em-5-cidades-goianas-contra-suspeitos-de-pornografia-infantil-na-internet/"
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pmmg-investigam-e-prendem-pai-suspeito-de-abuso-sexual-contra-a-filha-crime-foi-transmitido-pela-web/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-luz-da-infancia-4-cumpre-mais-de-30-mandados-judiciais/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-de-abuso-sexual-a-menor/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-de-abuso-sexual-contra-crianca-em-2014/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/padrasto-e-preso-suspeito-de-abusar-sexualmente-de-enteadas-com-conivencia-da-mulher/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/deic-apresenta-caso-do-menino-antonyo-a-imprensa/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/agenda-do-delegado-geral-e-do-delegado-geral-adjunto-313/"
   },
   {
    "nivel": "info",
@@ -1011,6 +901,110 @@
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-visibilis-dpca-prende-investigado-por-tentativa-de-homicidio/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policiais-de-aparecida-realizam-operacao-contra-exploracao-sexual/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/resultados-da-espc-do-ano-de-2016/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-grupo-de-travestis-suspeito-de-homicidios-e-exploracao-sexual/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policiais-civis-se-capacitam-no-combate-a-exploracao-sexual-infantil/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pcsp-identificam-e-prendem-suspeito-que-usava-perfil-falso-para-coagir-adolescentes-2/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-contra-motorista-de-aplicativo-investigado-por-possuir-material-de-pornografia-infantil/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-lider-religioso-por-pornografia-infantil-e-realiza-buscas-por-assedio-e-importunacao-sexual/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-em-flagrante-por-extorquir-adolescente-para-nao-divulgar-fotos-intimas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-conclui-que-mortes-de-ex-sogro-e-a-mae-dele-foi-motivada-por-envenenamento/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-mulher-por-vender-pornografia-infantil-da-filha-de-8-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-crianca-segura-pcgo-combate-crimes-de-pornografia-infantil-na-internet/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/ciberneticos-deflagra-operacao-meu-zeloso-guardador-ii-contra-pornografia-infantil-pela-internet/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/alego-realiza-mocao-de-aplauso-a-dercc-em-reconhecimento-a-participacao-da-especializada-na-operacao-luz-na-infancia-2/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-apreende-material-de-pornografia-infantil/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-buscas-e-investiga-importunacao-sexual-por-parte-de-homem-que-se-despia-durante-prestacao-de-servicos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-contra-padrasto-por-importunacao-sexual-e-por-armazenar-imagens-intimas-de-enteada/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-por-importunar-sexualmente-enteada-adolescente/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-homem-que-perseguia-mulheres-para-praticar-importunacao-sexual/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-pecattor-pcgo-prende-pastor-investigado-por-crimes-sexuais/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/motociclista-que-importunava-mulheres-em-via-publica-e-preso-em-flagrante/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/diretor-de-escola-e-investigado-por-crimes-de-importunacao-e-assedio-sexual-contra-estudante/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-mundare-pcgo-prende-servidor-publico-por-assedio-e-importunacao-sexual/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-em-flagrante-por-importunacao-sexual/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-importunacao-sexual-perseguicao-e-ameaca-a-filha/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-preventiva-de-suspeito-por-importunacao-sexual-e-ameaca-contra-mulheres/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-montador-de-moveis-suspeito-de-estuprar-crianca-autista-durante-o-trabalho/"
   },
   {
@@ -1035,15 +1029,7 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-importunacao-sexual-perseguicao-e-ameaca-a-filha/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/assedio-sexual-violencia-contra-a-trabalhadora/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-grupo-de-travestis-suspeito-de-homicidios-e-exploracao-sexual/"
   },
   {
    "nivel": "info",
@@ -1051,15 +1037,7 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-em-flagrante-autor-de-feminicidio-qualificado-praticado-na-presenca-da-filha-da-vitima/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pces-prendem-investigado-por-crimes-sexuais-envolvendo-criancas-e-adolescentes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pcsp-identificam-e-prendem-suspeito-que-usava-perfil-falso-para-coagir-adolescentes-2/"
   },
   {
    "nivel": "info",
@@ -1068,10 +1046,6 @@
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-fecha-casa-de-prostituicao-e-prende-duas-mulheres-por-maus-tratos-a-criancas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-contra-motorista-de-aplicativo-investigado-por-possuir-material-de-pornografia-infantil/"
   },
   {
    "nivel": "info",
@@ -1091,15 +1065,7 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigados-por-homicidio-e-tentativa-de-homicidio-apos-emboscada-entre-torcidas-organizadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-adolescente-por-ato-infracional-analogo-ao-trafico-e-apreende-grande-quantidade-de-drogas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-south-side-pcgo-prende-dois-investigados-por-homicidio-qualificado-e-corrupcao-de-menores/"
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-e-pmgo-prendem-em-flagrante-homem-por-assedio-sexual-e-perseguicao-contra-criancas/"
   },
   {
    "nivel": "info",
@@ -1107,19 +1073,19 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-procura-por-mae-suspeita-de-queimar-filha-de-8-anos-com-colher-aquecida-no-fogo/"
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homem-e-preso-por-agredir-xingar-ameacar-estuprar-e-manter-em-carcere-sua-ex-companheira-por-tres-dias/"
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-em-flagrante-em-conjunto-com-a-pm-mae-e-padrasto-por-tortura-a-crianca/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-lider-religioso-por-pornografia-infantil-e-realiza-buscas-por-assedio-e-importunacao-sexual/"
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-faz-buscas-por-autoria-de-crimes-sexuais-praticados-contra-adolescente-em-rede-social/"
   },
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/foragido-da-justica-goiana-e-preso-no-estado-de-minas-gerais/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-faz-buscas-contra-adolescente-por-divulgar-imagens-pornograficas-nas-redes-sociais/"
   },
   {
    "nivel": "info",
@@ -1135,11 +1101,339 @@
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-procura-por-mae-suspeita-de-queimar-filha-de-8-anos-com-colher-aquecida-no-fogo/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-prende-suspeito-de-tentar-matar-desafeto-errar-tiro-e-acertar-crianca/"
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menina-de-menos-de-2-anos-e-operada-apos-ser-estuprada-pelo-pai-preso-em-flagrante/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-em-flagrante-em-conjunto-com-a-pm-mae-e-padrasto-por-tortura-a-crianca/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-cumpre-mandado-de-prisao-de-suspeito-de-homicidio-crime-foi-motivado-por-ciumes/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-dois-suspeitos-do-homicidio-do-menino-danilo-de-souza-7-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-em-sao-paulo-homem-que-se-masturbou-diante-de-pessoa-com-deficiencia/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-faz-operacao-no-dia-mundial-da-infancia/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apoia-coirma-do-mato-grosso-na-elucidacao-de-serie-de-homicidios-nesse-estado/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-lavra-bocs-contra-menor-por-uso-de-documento-falso-e-falsidade-ideologica/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-envolvido-em-morte-de-jovem-no-residencial-vale-dos-sonhos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-por-abusar-sexualmente-de-vizinho-de-9-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/especializadas-da-5a-drpc-realizam-prisoes-e-apreensoes-no-entorno-do-df/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-e-pm-apresentam-fatos-do-caso-ana-clara-em-coletiva/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/traficante-e-preso-ao-comercializar-drogas-na-presenca-de-crianca/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/prosseguem-investigacoes-sobre-mae-homicida/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/casal-suspeito-de-morte-de-crianca-e-preso-e-apresentado-pela-dih/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/delegacias-especializadas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-de-aparecida-prende-suspeito-de-estuprar-a-propria-sobrinha/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-pms-serao-indiciados-por-disparos-que-atingiram-crianca-no-setor-bueno/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigados-por-homicidio-e-tentativa-de-homicidio-apos-emboscada-entre-torcidas-organizadas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-adolescente-por-ato-infracional-analogo-ao-trafico-e-apreende-grande-quantidade-de-drogas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-south-side-pcgo-prende-dois-investigados-por-homicidio-qualificado-e-corrupcao-de-menores/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-adolescentes-ligados-a-organizacao-criminosa-durante-cumprimento-de-mandados/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-e-apreensao-de-adolescente-suspeito-de-ato-infracional-analogo-a-tentativa-de-homicidio/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-buscas-contra-adolescente-suspeita-de-criar-perfis-falsos-em-redes-sociais-para-porn-revenge/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/foragido-por-homicidio-e-preso-pela-pcgo-no-distrito-federal/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-adolescente-envolvido-em-tentativa-de-latrocinio-contra-motorista-de-app/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-adolescente-por-matar-amigo-apos-discussao-por-motivo-banal-enquanto-ingeriam-bebidas-alcoolicas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-investigado-por-tentativa-de-homicidio-e-apreende-drogas-com-adolescente/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-keres-apreende-adolescente/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/adolescentes-sao-apreendidos-por-homicidio/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-mae-por-arremessar-faca-contra-filha-de-12-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandados-de-busca-e-apreensao-relacionados-a-tentativa-de-homicidio-e-prende-suspeito/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-apreende-adolescente-por-envolvimento-em-homicidios-e-organizacao-criminosa/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-apreende-caminhao-envolvido-em-atropelamento-de-adolescente-apos-rabeira/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/adolescente-e-apreendido-por-ato-infracional-analogo-ao-crime-de-homicidio/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menor-envolvida-em-homicidio-e-apreendida-pela-dih-logo-apos-crime/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menor-suspeito-de-matar-outro-adolescente-e-apreendido-menos-de-12-horas-apos-delito/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-autua-mae-e-padrasto-por-maus-tratos-a-adolescentes/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-suspeito-de-abusar-sexualmente-de-adolescente-vulneravel/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/padrasto-e-indiciado-apos-enteado-ter-a-perna-triturada-em-maquina-agricola-e-morrer/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/depai-cumpre-internacao-provisoria-de-adolescente-por-homicidio/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/caso-ariane-mais-um-adolescente-e-apreendido-suspeito-de-envolvimento-no-homicidio/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-hooligans-dpca-indicia-16-envolvidos-com-torcidas-organizadas-suspeitos-de-tentativa-de-homicidio-e-outros-crimes/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menor-envolvido-em-homicidio-e-apreendido-por-depai-de-aparecida/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/gih-de-aparecida-prende-um-dos-autores-de-morte-de-adolescente-em-festa-de-torcida/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-lei-e-ordem-policia-civil-prende-investigados-por-tentativas-de-homicidio-e-organizacao-criminosa-uma-das-vitimas-e-adolescente-de-13-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/irmaos-denunciados-pela-morte-de-um-adolescente-sao-presos-na-bahia/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-prende-ultimo-envolvido-em-homicidio-por-torcida-organizada/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/depai-aparecida-apreende-adolescente-suspeito-de-latrocinio/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-esclarece-todos-os-homicidios-ocorridos-no-setor-campinas-entre-2018-e-2019/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-e-depai-apreendem-jovem-que-quando-menor-cometeu-cinco-homicidios-no-setor-pedro-ludovico/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/presa-dupla-que-atirou-contra-irmaos-e-comemorou-crime-em-distribuidora/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/homicidios-e-policia-militar-prendem-autores-de-chacina/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-prende-segundo-suspeito-de-homicidio-contra-menores/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/crime-barbaro-presas-tres-pessoas-suspeitas-de-matarem-adolescente-de-13-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/adolescente-e-apreendida-por-trafico-de-drogas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/serial-killer-tiago-4-anos-apos-prisao-coordenador-da-forca-tarefa-da-pcgo-fala-sobre-desafios-do-caso/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-esclarece-tentativa-de-homicidio-praticada-contra-adolescente-em-2015/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/gih-valparaiso-apreende-menores-responsaveis-por-atos-infracionais-analogos-aos-crimes-de-homicidio-e-ocultacao-de-cadaver/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menor-e-apreendido-pela-policia-suspeito-de-participar-de-homicidio/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dih-elucida-homicidio-que-teve-adolescente-como-mandante/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-integrantes-da-quadrilha-chefiada-por-iterley-martins/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-acusado-de-vingar-morte-do-irmao/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-cumpre-mandado-de-internacao-em-desfavor-de-menor-infrator/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-mulher-por-maus-tratos-e-carcere-privado-contra-marido-idoso-e-filho-com-necessidades-especiais/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-por-maus-tratos-carcere-privado-e-exploracao-financeira-contra-propria-mae/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-filho-em-flagrante-por-maus-tratos-contra-a-mae-idosa-de-78-anos-vitima-estava-amarrada-e-nao-se-alimentava-ha-dias/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-advogado-pela-segunda-vez-por-crimes-de-maus-tratos-contra-a-propria-mae-idosa/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/139666/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-investiga-mulher-por-maus-tratos-ao-filho-de-5-meses-mandado-de-prisao-por-furto-em-aberto-foi-cumprido/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-prende-mulher-que-se-apropriou-de-casa-e-rendimentos-do-pai-idoso/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-santana-pcgo-apura-denuncias-de-maus-tratos-contra-idosos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-da-pcgo-visita-idoso-para-apurar-denuncia-de-maus-tratos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/filho-e-preso-por-maus-tratos-contra-mae-de-80-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-encontra-internos-em-situacao-de-maus-tratos-em-clinica-de-aparecida/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/filho-e-preso-por-manter-pai-idoso-em-carcere-privado-e-situacao-extrema-de-abandono/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policia-civil-prende-cuidadora-que-maltratava-idosa-e-filha-com-necessidades-especiais/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-da-pcgo-prende-filho-por-maus-tratos-a-mae-de-87-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-desamparo-prende-filha-por-explorar-mae-idosa-e-nao-lhe-prestar-socorro/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-preventiva-de-homem-que-mutilou-cachorro-apos-dona-do-animal-cobra-lo-divida/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-vetus-ii-preso-filho-por-deixar-idosa-passar-fome-e-usar-seu-beneficio-do-inss/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/filho-que-agredia-pai-idoso-e-o-obrigava-a-tomar-calmantes-e-preso-pela-deai/"
   },
   {
    "nivel": "info",
@@ -1151,14 +1445,6 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-que-tentou-matar-ex-companheira-a-facadas-por-nao-aceitar-fim-do-relacionamento/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-cumpre-mandado-de-busca-contra-padrasto-por-importunacao-sexual-e-por-armazenar-imagens-intimas-de-enteada/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-em-flagrante-apos-tentar-atropelar-ex-companheira-e-o-atual-parceiro/"
   },
   {
@@ -1167,11 +1453,15 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pc-investiga-mulher-por-maus-tratos-ao-filho-de-5-meses-mandado-de-prisao-por-furto-em-aberto-foi-cumprido/"
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-homem-que-descumpriu-protetivas-e-divulgou-imagens-intimas-de-ex-mulher/"
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/menina-de-menos-de-2-anos-e-operada-apos-ser-estuprada-pelo-pai-preso-em-flagrante/"
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/pcgo-prende-falso-conselheiro-tutelar-que-tambem-se-passava-por-medico-por-crime-sexual/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/preso-homem-que-perseguiu-ameacou-ex-namorada-e-divulgou-suas-imagens-intimas/"
   },
   {
    "nivel": "info",
@@ -1179,101 +1469,11 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-hooligans-dpca-indicia-16-envolvidos-com-torcidas-organizadas-suspeitos-de-tentativa-de-homicidio-e-outros-crimes/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-faz-operacao-no-dia-mundial-da-infancia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-de-abuso-sexual-a-menor/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-de-abuso-sexual-contra-crianca-em-2014/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/operacao-visibilis-dpca-prende-investigado-por-tentativa-de-homicidio/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/dpca-prende-suspeito-por-abusar-sexualmente-de-vizinho-de-9-anos/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiacivil/policiais-de-aparecida-realizam-operacao-contra-exploracao-sexual/"
-  },
-  {
-   "nivel": "erro",
-   "site": "SSP-GO",
-   "termo": "feminicídio",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "SSP-GO",
-   "termo": "matou companheira",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "SSP-GO",
-   "termo": "matou esposa",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "SSP-GO",
-   "termo": "abuso sexual infantil",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "SSP-GO",
-   "termo": "pornografia infantil",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pmgo-deflagra-operacao-divisas-blindadas/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/revista-veja-destaca-goias-como-bom-exemplo-de-reducao-de-criminalidade/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-continua-registrando-queda-em-crimes-violentos-em-2019/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/homem-preso-por-matar-esposa-e-enteada-e-indiciado-agora-por-importunacao-sexual/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-e-policia-cientifica-elucidam-morte-de-mae-e-filho-em-incendio-criminoso/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-cientifica-faz-operacao-em-presidios-de-goias-para-ampliar-banco-estadual-de-dna/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-civil-de-goias-apresenta-resultados-recordes-em-2024/"
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/seguranca-publica-de-goias-divulga-balanco-das-acoes-de-2024/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/portaria-no-33-25-rop-rai-ead-ciclo-1-2025/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-prende-suspeito-de-crime-sexual-apos-abordagem-a-mulher-em-via-publica/"
   },
   {
    "nivel": "info",
@@ -1285,6 +1485,102 @@
   },
   {
    "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-arcanjo-gabriel-pcgo-prende-padrasto-investigado-por-estuprar-criancas-e-matar-companheira-ateando-fogo-nela/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-reforca-combate-a-violencia-contra-mulher/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/ssp-divulga-balanco-das-acoes-das-forcas-de-seguranca-do-primeiro-semestre-de-2024/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-indicia-fisiculturista-por-feminicidio-contra-sua-companheira/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pmgo-deflagra-operacao-divisas-blindadas/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/revista-veja-destaca-goias-como-bom-exemplo-de-reducao-de-criminalidade/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/integrantes-da-seguranca-de-goias-participam-de-encontro-no-mjsp-em-brasilia/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/ssp-faz-balanco-da-operacao-vanguarda/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/mjsp-vai-dobrar-investimento-em-operacao-voltada-ao-combate-da-violencia-de-genero/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/secretaria-de-seguranca-publica-divulga-balanco-da-operacao-shamar/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/acao-integrada-secretaria-de-seguranca-publica-lanca-operacao-shamar/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/secretaria-de-seguranca-publica-faz-balanco-de-acoes-das-forcas-de-seguranca-e-divulga-indicadores-criminais-do-primeiro-semestre-de-2023/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-atria-mais-de-quatro-mil-presos-e-45-mil-vitimas-socorridas-no-brasil/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-alcanca-reducao-historica-em-indicadores-de-crimes-violento/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/homem-preso-por-matar-esposa-e-enteada-e-indiciado-agora-por-importunacao-sexual/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-e-policia-cientifica-elucidam-morte-de-mae-e-filho-em-incendio-criminoso/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/foram-800-vidas-poupadas-diz-caiado-ao-celebrar-indices-que-apontam-menor-numero-de-homicidios-em-goias-registrado-nos-ultimos-10-anos/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/em-live-com-municipios-policia-apresenta-balanco-da-maior-operacao-de-combate-a-violencia-contra-mulher/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/estuprador-em-serie-investigacao-feita-em-goias-e-reconhecida-internacionalmente/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-da-policia-civil-prende-80-acusados-de-violencia-contra-mulheres/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/goias-continua-registrando-queda-em-crimes-violentos-em-2019/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-cientifica-faz-operacao-em-presidios-de-goias-para-ampliar-banco-estadual-de-dna/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/seguranca-publica-de-goias-divulga-balanco-das-acoes-de-2024/"
+  },
+  {
+   "nivel": "info",
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-prende-suspeito-de-crime-sexual-apos-abordagem-a-mulher-em-via-publica/"
+  },
+  {
+   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/dispensa-eletronica-88-2024-homologacao/"
   },
   {
@@ -1293,31 +1589,11 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-arcanjo-gabriel-pcgo-prende-padrasto-investigado-por-estuprar-criancas-e-matar-companheira-ateando-fogo-nela/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/ssp-divulga-balanco-das-acoes-das-forcas-de-seguranca-do-primeiro-semestre-de-2024/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/integrantes-da-seguranca-de-goias-participam-de-encontro-no-mjsp-em-brasilia/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/mjsp-vai-dobrar-investimento-em-operacao-voltada-ao-combate-da-violencia-de-genero/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/caso-amelia-vitoria-pcgo-prende-autor-do-crime-em-menos-de-cinco-dias/"
   },
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/policia-civil-prende-investigado-por-armazenar-pornografia-infantil-e-filmar-crianca-enquanto-a-estuprava/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-atria-mais-de-quatro-mil-presos-e-45-mil-vitimas-socorridas-no-brasil/"
   },
   {
    "nivel": "info",
@@ -1349,23 +1625,11 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/em-live-com-municipios-policia-apresenta-balanco-da-maior-operacao-de-combate-a-violencia-contra-mulher/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/todos-indices-de-criminalidade-tem-queda-na-gestao-do-governador-ronaldo-caiado/"
   },
   {
    "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-da-policia-de-goias-e-reconhecida-como-uma-das-17-investigacoes-criminais-mais-importantes-do-mundo/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/estuprador-em-serie-investigacao-feita-em-goias-e-reconhecida-internacionalmente/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-da-policia-civil-prende-80-acusados-de-violencia-contra-mulheres/"
   },
   {
    "nivel": "info",
@@ -1461,39 +1725,7 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/pcgo-indicia-fisiculturista-por-feminicidio-contra-sua-companheira/"
-  },
-  {
-   "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/acao-integrada-secretaria-de-seguranca-publica-lanca-operacao-shamar/"
-  },
-  {
-   "nivel": "info",
    "msg": "sem município de Goiás identificado: https://goias.gov.br/seguranca/operacao-delegado-fake-policia-civil-cumpre-mandados-contra-organizacao-criminosa-investigada-por-crimes-de-estelionato-e-extorsao/"
-  },
-  {
-   "nivel": "erro",
-   "site": "PMGO",
-   "termo": "tentativa de feminicídio",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PMGO",
-   "termo": "criança",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PMGO",
-   "termo": "tortura criança",
-   "msg": "HTTP 503"
-  },
-  {
-   "nivel": "erro",
-   "site": "PMGO",
-   "termo": "DPCA",
-   "msg": "HTTP 503"
   },
   {
    "nivel": "info",
@@ -1765,11 +1997,11 @@
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/policial-militar-de-folga-prende-estuprador-e-autor-de-roubo-no-jardim-inga/"
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/a-policia-militar-de-goias-alerta-o-uso-de-linha-com-cerol-ou-outro-material-cortante-ao-empinar-pipa-e-crime/"
   },
   {
    "nivel": "info",
-   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/a-policia-militar-de-goias-alerta-o-uso-de-linha-com-cerol-ou-outro-material-cortante-ao-empinar-pipa-e-crime/"
+   "msg": "sem município de Goiás identificado: https://goias.gov.br/policiamilitar/policial-militar-de-folga-prende-estuprador-e-autor-de-roubo-no-jardim-inga/"
   }
  ]
 }
